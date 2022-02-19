@@ -36,7 +36,8 @@
                                     <i class="menu-icon icon-flash_on"></i><span>Pages</span><i class="accordion-icon fa fa-angle-left"></i>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li><router-link :to="{name: 'AdminAboutUs'}">Admin About Us</router-link></li>
+                                    <li><router-link :to="{name: 'AdminAboutUsList'}">Admin About Us List</router-link></li>
+                                    <li><router-link :to="{name: 'CreateAdminAboutUs'}">Create Admin About Us</router-link></li>
                                     <li><router-link :to="{name: 'AdminAboutHistory'}">Admin About History</router-link></li>
                                 </ul>
                             </li>

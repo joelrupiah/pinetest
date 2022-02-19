@@ -19,7 +19,9 @@ import AdminTrash from '../components/admin/pages/admin/AdminTrash'
 import ParentsBulkEmail from '../components/admin/pages/email/ParentsBulkEmail'
 import TeachersBulkEmail from '../components/admin/pages/email/TeachersBulkEmail'
 
-import AdminAboutUs from '../components/admin/pages/about/AdminAboutUs'
+import AdminAboutUsList from '../components/admin/pages/about/AdminAboutUsList'
+import CreateAdminAboutUs from '../components/admin/pages/about/CreateAdminAboutUs'
+import EditAdminAboutUs from '../components/admin/pages/about/EditAdminAboutUs'
 import AdminAboutHistory from '../components/admin/pages/about/AdminAboutHistory'
 
 const router = new VueRouter({
@@ -44,7 +46,9 @@ const router = new VueRouter({
         {path:'/api/admin/parents-bulk-email', component: ParentsBulkEmail, name: 'ParentsBulkEmail', meta: { requiresAuth: true } },
         {path:'/api/admin/teachers-bulk-email', component: TeachersBulkEmail, name: 'TeachersBulkEmail', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/admin-about-us', component: AdminAboutUs, name: 'AdminAboutUs', meta: { requiresAuth: true } },
+        {path:'/api/admin/admin-about-us-list', component: AdminAboutUsList, name: 'AdminAboutUsList', meta: { requiresAuth: true } },
+        {path:'/api/admin/create-admin-about-us', component: CreateAdminAboutUs, name: 'CreateAdminAboutUs', meta: { requiresAuth: true } },
+        {path:'/api/admin/edit-admin-about-us', component: EditAdminAboutUs, name: 'EditAdminAboutUs', meta: { requiresAuth: true } },
         {path:'/api/admin/admin-about-history', component: AdminAboutHistory, name: 'AdminAboutHistory', meta: { requiresAuth: true } },
 
     ]
