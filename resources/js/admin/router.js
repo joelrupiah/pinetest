@@ -22,7 +22,10 @@ import TeachersBulkEmail from '../components/admin/pages/email/TeachersBulkEmail
 import AdminAboutUsList from '../components/admin/pages/about/AdminAboutUsList'
 import CreateAdminAboutUs from '../components/admin/pages/about/CreateAdminAboutUs'
 import EditAdminAboutUs from '../components/admin/pages/about/EditAdminAboutUs'
-import AdminAboutHistory from '../components/admin/pages/about/AdminAboutHistory'
+
+import AdminAboutHistoryList from '../components/admin/pages/about/AdminAboutHistoryList'
+import CreateAboutHistory from '../components/admin/pages/about/CreateAboutHistory'
+import EditAboutHistory from '../components/admin/pages/about/EditAboutHistory'
 
 const router = new VueRouter({
     mode: 'history',
@@ -48,8 +51,11 @@ const router = new VueRouter({
 
         {path:'/api/admin/admin-about-us-list', component: AdminAboutUsList, name: 'AdminAboutUsList', meta: { requiresAuth: true } },
         {path:'/api/admin/create-admin-about-us', component: CreateAdminAboutUs, name: 'CreateAdminAboutUs', meta: { requiresAuth: true } },
-        {path:'/api/admin/edit-admin-about-us', component: EditAdminAboutUs, name: 'EditAdminAboutUs', meta: { requiresAuth: true } },
-        {path:'/api/admin/admin-about-history', component: AdminAboutHistory, name: 'AdminAboutHistory', meta: { requiresAuth: true } },
+        {path:'/api/admin/edit-admin-about-us/:id', component: EditAdminAboutUs, name: 'EditAdminAboutUs', meta: { requiresAuth: true } },
+       
+        {path:'/api/admin/admin-about-history-list', component: AdminAboutHistoryList, name: 'AdminAboutHistoryList', meta: { requiresAuth: true } },
+        {path:'/api/admin/create-about-history', component: CreateAboutHistory, name: 'CreateAboutHistory', meta: { requiresAuth: true } },
+        {path:'/api/admin/edit-about-history/:id', component: EditAboutHistory, name: 'EditAboutHistory', meta: { requiresAuth: true } },
 
     ]
 })

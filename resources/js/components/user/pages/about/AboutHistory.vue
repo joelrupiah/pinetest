@@ -22,6 +22,7 @@
             </div>
         </section>
         <!--End breadcrumb area-->
+
         <!--Start Company Overview Area-->
         <section class="company-overview-area">
             <div class="container">
@@ -29,7 +30,7 @@
                     <div class="col-xl-12">
                         <div class="intro-box clearfix">
                             <div class="sec-title">
-                                <p>History Overview</p>
+                                <p>Company Overview</p>
                                 <div class="title">Modern & Luxury<br> <span>Interior Designers in USA</span></div>
                             </div>
                             <div class="text">
@@ -64,106 +65,40 @@
                                     </div>
                                 </div>
                                 <!--End Single History Content-->
-                                <!--Start Single History Content-->
-                                <div class="single-history-content">
-                                    <div class="img-box">
-                                        <div class="inner">
-                                            <img src="/frontend/images/resources/history-2.jpg" alt="Awesome Image">
-                                        </div>
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="inner">
-                                            <div class="date">
-                                                <h3>1984</h3>
-                                            </div>
-                                            <div class="title">
-                                                <h3>Crystalo Was Founded by<br> Chris Miller in USA.</h3>
-                                            </div>
-                                            <div class="text">
-                                                <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee shrinking from toil and pain.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Single History Content-->
-                                <!--Start Single History Content-->
-                                <div class="single-history-content">
-                                    <div class="img-box">
-                                        <div class="inner">
-                                            <img src="/frontend/images/resources/history-1.jpg" alt="Awesome Image">
-                                        </div>
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="inner">
-                                            <div class="date">
-                                                <h3>1985</h3>
-                                            </div>
-                                            <div class="title">
-                                                <h3>Crystalo Was Founded by<br> Chris Miller in USA.</h3>
-                                            </div>
-                                            <div class="text">
-                                                <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee shrinking from toil and pain.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Single History Content-->
-                                <!--Start Single History Content-->
-                                <div class="single-history-content">
-                                    <div class="img-box">
-                                        <div class="inner">
-                                            <img src="/frontend/images/resources/history-2.jpg" alt="Awesome Image">
-                                        </div>
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="inner">
-                                            <div class="date">
-                                                <h3>1986</h3>
-                                            </div>
-                                            <div class="title">
-                                                <h3>Crystalo Was Founded by<br> Chris Miller in USA.</h3>
-                                            </div>
-                                            <div class="text">
-                                                <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee shrinking from toil and pain.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Single History Content-->
-                                <!--Start Single History Content-->
-                                <div class="single-history-content">
-                                    <div class="img-box">
-                                        <div class="inner">
-                                            <img src="/frontend/images/resources/history-2.jpg" alt="Awesome Image">
-                                        </div>
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="inner">
-                                            <div class="date">
-                                                <h3>1987</h3>
-                                            </div>
-                                            <div class="title">
-                                                <h3>Crystalo Was Founded by<br> Chris Miller in USA.</h3>
-                                            </div>
-                                            <div class="text">
-                                                <p>Indignation and dislike men who are so beguiled and demoralized by the charms pleasure of the moment, so blinded by desire, that they cannot foresee shrinking from toil and pain.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Single History Content-->
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
         <!--End Company Overview Area-->
+
     </div>
 </template>
 
 <script>
 export default {
-    name: 'AboutHistory'
+    name: 'AboutHistory',
+    data(){
+        return {
+            abouthistories: []
+        }
+    },
+    methods: {
+        fileLink(name){
+        	return '/uploads/img/about-history/' + name
+      	},
+        getAboutHistory(){
+            axios.get('/api/get-about-history')
+                .then((response) => {
+                    this.abouthistories = response.data.abouthistories
+                })
+        }
+    },
+    computed: {},
+    mounted(){
+        this.getAboutHistory()
+    }
 }
 </script>

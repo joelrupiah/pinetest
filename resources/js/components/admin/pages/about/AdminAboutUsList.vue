@@ -26,13 +26,17 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Joel Jeremiah</td>
-                                                    <td>Why Not</td>
+                                                <tr v-for="(about, index) in abouts" :key="about.id">
+                                                    <th scope="row">{{ index+1 }}</th>
+                                                    <td>{{ about.heading }}</td>
+                                                    <td>{{about.created_at | time  }}</td>
                                                     <td>
                                                         <div>
-                                                            <button class="btn btn-xs btn-warning">Edit</button>
+                                                            <router-link :to="`/api/admin/edit-admin-about-us/${about.id}`">
+                                                                <button class="btn btn-xs btn-warning">
+                                                                    Edit
+                                                                </button>
+                                                            </router-link>
                                                             <button class="btn btn-xs btn-danger">Delete</button>
                                                         </div>
                                                     </td>
@@ -65,6 +69,10 @@ export default {
                     this.abouts = response.data.abouts
                 })
         }
+    },
+    computed:{},
+    created(){
+        this.getAllAboutData()
     }
 }
 </script>

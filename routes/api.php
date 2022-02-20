@@ -8,6 +8,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ResetAdminPasswordController;
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AboutHistoryController;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -40,8 +41,19 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::post('/edit-permission/{id}', [PermissionController::class, 'update']);
 
     Route::post('create-about', [AboutUsController::class, 'store']);
+    Route::get('get-all-admin-about-data', [AboutUsController::class, 'index']);
+    Route::get('get-about-data/{id}', [AboutUsController::class, 'show']);
+    Route::post('update-about-us/{id}', [AboutUsController::class, 'update']);
+
+    Route::post('create-about-history', [AboutHistoryController::class, 'store']);
+    Route::get('get-admin-about-history', [AboutHistoryController::class, 'index']);
+    Route::get('get-about-history/{id}', [AboutHistoryController::class, 'show']);
+    Route::post('update-about-history/{id}', [AboutHistoryController::class, 'update']);
 
 });
+
+Route::get('get-user-about', [AboutUsController::class, 'getUserAbout']);
+Route::get('get-about-history', [AboutHistoryController::class, 'getAboutHistory']);
 
 Route::prefix('admin')->group(function(){
     Route::post('reset-admin-password', [ResetAdminPasswordController::class, 'resetAdminPassword']);

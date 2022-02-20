@@ -26,18 +26,17 @@
         <!--Start blog single area-->
         <section id="blog-area" class="blog-single-area mt-5">
             <div class="container">
-                <div class="row">
+                <div class="row" v-for="about in abouts" :key="about.id">
                     <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
                         <div class="blog-post">
                             
                             <div class="single-blog-post">
                                 <div class="main-image-box">
-                                    <img src="/frontend/images/blog/blog-single.jpg" alt="Awesome Image">
+                                    <img 
+                                    :src="fileLinkTwo(about.imageTwo)" alt="Awesome Image">
                                 </div>
                                 <div class="top-text-box">
-                                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble
-                                        that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy
-                                        to distinguish.
+                                    <p v-html="about.mainDescription">
                                     </p>
                                 </div>
                             </div>
@@ -73,6 +72,26 @@
 
 <script>
 export default {
-    name: 'About Us'
+    name: 'AboutUs',
+    data(){
+        return {
+            abouts: []
+        }
+    },
+    methods: {
+        fileLinkTwo(name){
+        	return '/uploads/img/about/' + name
+      	},
+        getUserAbout: async function(){
+            axios.get('/api/get-user-about')
+                .then((response) => {
+                    this.abouts = response.data.abouts
+                })
+        }
+    },
+    computed: {},
+    created(){
+        this.getUserAbout()
+    }
 }
 </script>
