@@ -1,1275 +1,351 @@
 <template>
     <div id="home">
-        <!--Main Slider-->
-        <section class="main-slider style2">
-            <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
-                <div class="rev_slider fullwidthabanner" id="rev_slider_two" data-version="5.4.1">
-                    <ul>
-                        <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default"
-                            data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="/frontend/images/slides/v2-1.jpg"
-                            data-title="Slide Title" data-transition="parallaxvertical">
+    <!-- Content -->
+    <div class="page-content bg-white">
+        <!-- Main Slider -->
+        <div class="rev-slider">
+			<div id="rev_slider_486_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery36" data-source="gallery" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
+				<!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
+				<div id="rev_slider_486_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+					<ul>	<!-- SLIDE  -->
+						<li data-index="rs-100" 
+						data-transition="parallaxvertical" 
+						data-slotamount="default" 
+						data-hideafterloop="0" 
+						data-hideslideonmobile="off" 
+						data-easein="default" 
+						data-easeout="default" 
+						data-masterspeed="default" 
+						data-thumb="error-404.html" 
+						data-rotate="0" 
+						data-fstransition="fade" 
+						data-fsmasterspeed="1500" 
+						data-fsslotamount="7" 
+						data-saveperformance="off" 
+						data-title="A STUDY ON HAPPINESS" 
+						data-param1="" data-param2="" 
+						data-param3="" data-param4="" 
+						data-param5="" data-param6="" 
+						data-param7="" data-param8="" 
+						data-param9="" data-param10="" 
+						data-description="Science says that Women are generally happier"
+						v-for="carousel in carousels" :key="carousel.id" >
+							<!-- MAIN IMAGE -->
+							<img :src="fileLinkCarousel(carousel.image)" alt="" 
+								data-bgposition="center center" 
+								data-bgfit="cover" 
+								data-bgrepeat="no-repeat" 
+								data-bgparallax="10" 
+								class="rev-slidebg" 
+								data-no-retina />
+								
+							<!-- LAYER NR. 1 -->
+							<div class="tp-caption tp-shape tp-shapewrapper " 
+								id="slide-100-layer-1" 
+								data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+								data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+								data-width="full"
+								data-height="full"
+								data-whitespace="nowrap"
+								data-type="shape" 
+								data-basealign="slide" 
+								data-responsive_offset="off" 
+								data-responsive="off"
+								data-frames='[{"from":"opacity:0;","speed":1,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":1,"to":"opacity:0;","ease":"Power4.easeOut"}]'
+								data-textAlign="['left','left','left','left']"
+								data-paddingtop="[0,0,0,0]"
+								data-paddingright="[0,0,0,0]"
+								data-paddingbottom="[0,0,0,0]"
+								data-paddingleft="[0,0,0,0]"
+								style="z-index: 5;background-color:rgba(2, 0, 11, 0.80);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>	
+							<!-- LAYER NR. 2 -->
+							<div class="tp-caption Newspaper-Title   tp-resizeme" 
+								id="slide-100-layer-2" 
+								data-x="['center','center','center','center']" 
+								data-hoffset="['0','0','0','0']" 
+								data-y="['top','top','top','top']" 
+								data-voffset="['250','250','250','240']" 
+								data-fontsize="['50','50','50','30']"
+								data-lineheight="['55','55','55','35']"
+								data-width="full"
+								data-height="none"
+								data-whitespace="normal"
+								data-type="text" 
+								data-responsive_offset="on" 
+								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+								data-textAlign="['center','center','center','center']"
+								data-paddingtop="[0,0,0,0]"
+								data-paddingright="[0,0,0,0]"
+								data-paddingbottom="[10,10,10,10]"
+								data-paddingleft="[0,0,0,0]"
+								style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;">
+									{{ carousel.title }}
+							</div>
 
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/frontend/images/slides/v2-1.jpg">
-
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['-80','-95','-80','-90']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                                style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="big-title">
-                                        Finest bespoke<br> interiors.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['25','0','-5','-20']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
-                        {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="text">Creating lasting impressions through interior design.</div>
-                                </div>
-                            </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['105','90','75','65']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                                style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="btn-box">
-                                        <a class="html5lightbox play-button" title="crystalo Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                            <span class="flaticon-play-button"></span>
-                                        </a>
-                                        <a class="slide-style2-button" href="#">More About Us</a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </li>
-
-                        <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default"
-                            data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="/frontend/images/slides/v2-2.jpg"
-                            data-title="Slide Title" data-transition="parallaxvertical">
-
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/frontend/images/slides/v2-2.jpg">
-
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['-80','-95','-80','-90']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                                style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="big-title">
-                                        Beautiful Living<br> Solutions.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['25','0','-5','-20']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
-                        {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="text">Creating lasting impressions through interior design.</div>
-                                </div>
-                            </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['105','90','75','65']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                                style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="btn-box">
-                                        <a class="html5lightbox play-button" title="crystalo Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                            <span class="flaticon-play-button"></span>
-                                        </a>
-                                        <a class="slide-style2-button" href="#">Services We Provide</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-
-                        <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default"
-                            data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="/frontend/images/slides/v2-3.jpg"
-                            data-title="Slide Title" data-transition="parallaxvertical">
-
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/frontend/images/slides/v2-3.jpg">
-
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['-80','-95','-80','-90']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                                style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="big-title">
-                                        Uniting design &<br> technology.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['25','0','-5','-20']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
-                        {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="text">Creating lasting impressions through interior design.</div>
-                                </div>
-                            </div>
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['800','800','700','400']" data-whitespace="normal"
-                                data-hoffset="['15','15','15','15']" data-voffset="['105','90','75','65']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                                style="z-index: 7; white-space: nowrap;">
-                                <div class="slide-content left-slide">
-                                    <div class="btn-box">
-                                        <a class="html5lightbox play-button" title="crystalo Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                            <span class="flaticon-play-button"></span>
-                                        </a>
-                                        <a class="slide-style2-button" href="#">View Our Projects</a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </li>
-                    </ul>
-                </div>
+							<!-- LAYER NR. 3 -->
+							<div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
+								id="slide-100-layer-4" 
+								data-x="['center','center','center','center']" 
+								data-hoffset="['0','0','0','0']" 
+								data-y="['top','top','top','top']" 
+								data-voffset="['320','320','320','290']" 
+								data-width="['800','800','700','420']"
+								data-height="['100','100','100','120']"
+								data-whitespace="unset"
+								data-type="text" 
+								data-responsive_offset="on"
+								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+								data-textAlign="['center','center','center','center']"
+								data-paddingtop="[0,0,0,0]"
+								data-paddingright="[0,0,0,0]"
+								data-paddingbottom="[0,0,0,0]"
+								data-paddingleft="[0,0,0,0]"
+								style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;"
+								v-html="carousel.description" >
+									 
+							</div>
+							<!-- LAYER NR. 4 -->
+							<div class="tp-caption Newspaper-Button rev-btn " 
+								id="slide-100-layer-5" 
+								data-x="['center','center','center','center']" 
+								data-hoffset="['90','80','75','90']" 
+								data-y="['top','top','top','top']" 
+								data-voffset="['400','400','400','420']" 
+								data-width="none"
+								data-height="none"
+								data-whitespace="nowrap"
+								data-type="button" 
+								data-responsive_offset="on" 
+								data-responsive="off"
+								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
+								data-textAlign="['center','center','center','center']"
+								data-paddingtop="[12,12,12,12]"
+								data-paddingright="[30,35,35,15]"
+								data-paddingbottom="[12,12,12,12]"
+								data-paddingleft="[30,35,35,15]"
+								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;">READ MORE </div>
+							<div class="tp-caption Newspaper-Button rev-btn" 
+								id="slide-100-layer-6" 
+								data-x="['center','center','center','center']" 
+								data-hoffset="['-90','-80','-75','-90']" 
+								data-y="['top','top','top','top']" 
+								data-voffset="['400','400','400','420']" 
+								data-width="none"
+								data-height="none"
+								data-whitespace="nowrap"
+								data-type="button" 
+								data-responsive_offset="on" 
+								data-responsive="off"
+								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
+								data-textAlign="['center','center','center','center']"
+								data-paddingtop="[12,12,12,12]"
+								data-paddingright="[30,35,35,15]"
+								data-paddingbottom="[12,12,12,12]"
+								data-paddingleft="[30,35,35,15]"
+								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>
+						</li>
+						<!-- SLIDE  -->
+					</ul>
+				</div><!-- END REVOLUTION SLIDER -->  
+			</div>  
+		</div>  
+        <!-- Main Slider -->
+		<div class="content-block">
+            
+			<!-- Our Services -->
+			<div class="section-area content-inner service-info-bx">
+                <div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="service-bx">
+								<div class="action-box">
+									<img src="/frontend/assets/images/our-services/pic1.jpg" alt="">
+								</div>
+								<div class="info-bx text-center">
+									<div class="feature-box-sm radius bg-white">
+										<i class="fa fa-bank text-primary"></i>
+									</div>
+									<h4><a href="#">Best Industry Leaders</a></h4>
+									<a href="#" class="btn radius-xl">View More</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="service-bx">
+								<div class="action-box">
+									<img src="/frontend/assets/images/our-services/pic2.jpg" alt="">
+								</div>
+								<div class="info-bx text-center">
+									<div class="feature-box-sm radius bg-white">
+										<i class="fa fa-book text-primary"></i>
+									</div>
+									<h4><a href="#">Learn Courses Online</a></h4>
+									<a href="#" class="btn radius-xl">View More</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12">
+							<div class="service-bx m-b0">
+								<div class="action-box">
+									<img src="/frontend/assets/images/our-services/pic3.jpg" alt="">
+								</div>
+								<div class="info-bx text-center">
+									<div class="feature-box-sm radius bg-white">
+										<i class="fa fa-file-text-o text-primary"></i>
+									</div>
+									<h4><a href="#">Book Library & Store</a></h4>
+									<a href="#" class="btn radius-xl">View More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
             </div>
-        </section>
-        <!--End Main Slider-->
-
-        <!--Start About Style2 Area-->
-        <section class="about-style2-area">
-            <div class="container">
-                <div class="row" v-for="about in abouts" :key="about.id">
-                    <div class="col-xl-5">
-                        <div class="about-style2-text">
-                            <div class="sec-title">
-                                <p>About School</p>
-                                <div class="title">
-                                    {{ about.heading }}
-                                </div>
-                            </div>
-                            <div class="text">
-                                <p v-html="about.smallDescription">
-                                </p>
-                            </div>
-                            <div class="button">
-                                <a class="btn-one" href="/api/about-us">More About Us<span class="flaticon-next"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-7">
-                        <div class="about-style2-image-box">
-                            <div class="pattern wow slideInUp" data-wow-delay="100ms" data-wow-duration="1500ms"></div>
-                            <div class="image">
-                                <img 
-                                :src="fileLinkOne(about.imageOne)" 
-                                alt="Awesome Image">
-                                <div class="overlay-box">
-                                    <div class="title">
-                                        <h1>27 <span>Years Experience<br> in this Field</span></h1>
-                                    </div>
-                                    <div class="button">
-                                        <a href="/api/about-us/history"><span class="icon-back"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End About Style2 Area-->
-
-        <!--Start Working style2 Area-->
-        <section class="working-style2-area" style="background-image:url(/frontend/images/parallax-background/working-style2-bg.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="working-style2-content clearfix">
-                            <!--Start Single Working Box Style2-->
-                            <div class="single-working-box-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/working-v2-1.jpg" alt="Awesome Image">
-                                    <div class="static-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-architecture-and-city"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>Residential Design</h3>
-                                                        <div class="count">01</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="overlay-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-architecture-and-city"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>Residential Design</h3>
-                                                        <div class="count">01</div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Which is the same as saying in<br> through shrrinkings from toil and<br> cases are perfectly.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="read-more">
-                                    <a href="#"><span class="icon-next"></span></a>
-                                </div>
-                            </div>
-                            <!--End Single Working Box Style2-->
-                            <!--Start Single Working Box Style2-->
-                            <div class="single-working-box-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/working-v2-2.jpg" alt="Awesome Image">
-                                    <div class="static-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-sheriff"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>Commercial Design</h3>
-                                                        <div class="count">02</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="overlay-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-sheriff"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>Commercial Design</h3>
-                                                        <div class="count">02</div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Which is the same as saying in<br> through shrrinkings from toil and<br> cases are perfectly.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="read-more">
-                                    <a href="#"><span class="icon-next"></span></a>
-                                </div>
-                            </div>
-                            <!--End Single Working Box Style2-->
-                            <!--Start Single Working Box Style2-->
-                            <div class="single-working-box-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/working-v2-3.jpg" alt="Awesome Image">
-                                    <div class="static-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-cross"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>Hospitality Design</h3>
-                                                        <div class="count">03</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="overlay-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="icon-cross"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>Hospitality Design</h3>
-                                                        <div class="count">03</div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Which is the same as saying in<br> through shrrinkings from toil and<br> cases are perfectly.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="read-more">
-                                    <a href="#"><span class="icon-next"></span></a>
-                                </div>
-                            </div>
-                            <!--End Single Working Box Style2-->
-                            <!--Start Single Working Box Style2-->
-                            <div class="single-working-box-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/working-v2-4.jpg" alt="Awesome Image">
-                                    <div class="static-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="flaticon-architecture-and-city"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>Industrial Design</h3>
-                                                        <div class="count">04</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="overlay-content">
-                                        <div class="box">
-                                            <div class="inner">
-                                                <div class="icon-holder">
-                                                    <span class="flaticon-architecture-and-city"></span>
-                                                </div>
-                                                <div class="text-holder">
-                                                    <div class="title">
-                                                        <h3>Industrial Design</h3>
-                                                        <div class="count">04</div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Which is the same as saying in<br> through shrrinkings from toil and<br> cases are perfectly.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="read-more">
-                                    <a href="#"><span class="icon-next"></span></a>
-                                </div>
-                            </div>
-                            <!--End Single Working Box Style2-->
-                        </div>
-                        <div class="working-style-bottom text-center">
-                            <p>Wanna Work With Our Experienced Profesional Team? Make an Appointment.</p>
-                            <div class="button">
-                                <a class="btn-one" href="#">View All Industries<span class="flaticon-next"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Working style2 Area-->
-
-        <!--Start services style1 area-->
-        <section class="services-style1-area">
-            <div class="container">
-                <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                    <p>What We Do</p>
-                    <div class="title">Some Special <span>Services</span></div>
-                    <p class="bottom-text">We are an Interior Designer, Who believe in excellence, quality and honesty, yes we design beautiful home interiors.</p>
-                </div>
-                <div class="row">
-                    <!--Start single service style1-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="/frontend/images/services/1.jpg" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                                <div class="overlay-content-box">
-                                    <div class="box">
-                                        <div class="inner">
-                                            <div class="icon">
-                                                <span class="icon-lamp"></span>
-                                            </div>
-                                            <div class="title">
-                                                <h3>Lighting</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-holder">
-                                <div class="inner-content">
-                                    <div class="top">
-                                        <div class="icon">
-                                            <span class="icon-lamp"></span>
-                                        </div>
-                                        <div class="count">
-                                            <h1>01</h1>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">
-                                            <h3>Lighting</h3>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="#"><span class="icon-next"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
-                                    </div>
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single service style1-->
-                    <!--Start single service style1-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="/frontend/images/services/2.jpg" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                                <div class="overlay-content-box">
-                                    <div class="box">
-                                        <div class="inner">
-                                            <div class="icon">
-                                                <span class="icon-paint"></span>
-                                            </div>
-                                            <div class="title">
-                                                <h3>Coloring</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-holder">
-                                <div class="inner-content">
-                                    <div class="top">
-                                        <div class="icon">
-                                            <span class="icon-paint"></span>
-                                        </div>
-                                        <div class="count">
-                                            <h1>02</h1>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">
-                                            <h3>Coloring</h3>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="#"><span class="icon-next"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
-                                    </div>
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single service style1-->
-                    <!--Start single service style1-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="/frontend/images/services/3.jpg" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                                <div class="overlay-content-box">
-                                    <div class="box">
-                                        <div class="inner">
-                                            <div class="icon">
-                                                <span class="icon-floor"></span>
-                                            </div>
-                                            <div class="title">
-                                                <h3>Patterns</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-holder">
-                                <div class="inner-content">
-                                    <div class="top">
-                                        <div class="icon">
-                                            <span class="icon-floor"></span>
-                                        </div>
-                                        <div class="count">
-                                            <h1>03</h1>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">
-                                            <h3>Patterns</h3>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="#"><span class="icon-next"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
-                                    </div>
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single service style1-->
-                    <!--Start single service style1-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="single-service-style1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="/frontend/images/services/4.jpg" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                                <div class="overlay-content-box">
-                                    <div class="box">
-                                        <div class="inner">
-                                            <div class="icon">
-                                                <span class="icon-window"></span>
-                                            </div>
-                                            <div class="title">
-                                                <h3>Textures</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-holder">
-                                <div class="inner-content">
-                                    <div class="top">
-                                        <div class="icon">
-                                            <span class="icon-window"></span>
-                                        </div>
-                                        <div class="count">
-                                            <h1>04</h1>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="title">
-                                            <h3>Textures</h3>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="#"><span class="icon-next"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="overlay-content">
-                                    <div class="text">
-                                        <p>On that others hand, we will denounce with all righteous of demoralized charms.</p>
-                                    </div>
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single service style1-->
-                </div>
-            </div>
-        </section>
-        <!--End services style1 area-->
-
-        <!--Start Why choose Area-->
-        <section class="why-choose-area" style="background-image:url(/frontend/images/parallax-background/why-choose-bg.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="why-choose-title float-left">
-                            <div class="sec-title">
-                                <div class="icon"><img src="/frontend/images/icon/home-1.png" alt="Awesome Logo"></div>
-                                <div class="title">Why People <br>Choose <span>Crystalo</span></div>
-                            </div>
-                            <ul>
-                                <li>Well Considered Design</li>
-                                <li>We Create For You</li>
-                                <li>Leave The Details To Us</li>
-                            </ul>
-                            <div class="button">
-                                <a class="btn-one" href="#">Make an Appointment<span class="flaticon-next"></span></a>
-                            </div>
-                        </div>
-                        <div class="why-choose-content float-right">
-                            <!--Start Single Box-->
-                            <div class="single-box redbg">
-                                <div class="icon-holder">
-                                    <span class="icon-scheme"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h3>Experienced Team</h3>
-                                    <p>Righteous indignations working beguileds all demoralized that blinded our works.</p>
-                                </div>
-                            </div>
-                            <!--End Single Box-->
-                            <!--Start Single Box-->
-                            <div class="single-box whitebg">
-                                <div class="icon-holder">
-                                    <span class="icon-guarantee-certificate1"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h3>Guaranteed Works</h3>
-                                    <p>Have to be repudiated annoyances accepted The wise man therefore always holds.</p>
-                                </div>
-                            </div>
-                            <!--End Single Box-->
-                            <!--Start Single Box-->
-                            <div class="single-box whitebg">
-                                <div class="icon-holder">
-                                    <span class="icon-hr1"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h3>Free Consultation</h3>
-                                    <p>Rejects pleasures to secure other pleasures, endures pains to avoid worse.</p>
-                                </div>
-                            </div>
-                            <!--End Single Box-->
-                            <!--Start Single Box-->
-                            <div class="single-box blackbg">
-                                <div class="icon-holder">
-                                    <span class="icon-wallet1"></span>
-                                </div>
-                                <div class="text-holder">
-                                    <h3>Reasonable price</h3>
-                                    <p>Our power of choice is untrammelled & when nothing prevents our being able.</p>
-                                </div>
-                            </div>
-                            <!--End Single Box-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Why choose Area-->
-
-        <!--Start Recently Project style2 Area-->
-        <section class="recently-project-style2-area">
-            <div class="container">
-                <div class="sec-title text-center">
-                    <p>Projects</p>
-                    <div class="title">Recently Completed <span>Works</span></div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="project-carousel-v2 owl-carousel owl-theme">
-                            <!--Start single project style1-->
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/projects/lat-pro-v2-1.jpg" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        <span>Modern Design</span>
-                                        <h3>Art Family Residence</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single project style1-->
-                            <!--Start single project style1-->
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/projects/lat-pro-v2-2.jpg" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        <span>Contemporary</span>
-                                        <h3>Nathan Brooke House</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single project style1-->
-                            <!--Start single project style1-->
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/projects/lat-pro-v2-3.jpg" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        <span>Traditional</span>
-                                        <h3>Office Partition Walls</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single project style1-->
-
-                            <!--Start single project style1-->
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/projects/lat-pro-v2-1.jpg" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        <span>Modern Design</span>
-                                        <h3>Art Family Residence</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single project style1-->
-                            <!--Start single project style1-->
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/projects/lat-pro-v2-2.jpg" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        <span>Contemporary</span>
-                                        <h3>Nathan Brooke House</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single project style1-->
-                            <!--Start single project style1-->
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/projects/lat-pro-v2-3.jpg" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        <span>Traditional</span>
-                                        <h3>Office Partition Walls</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single project style1-->
-
-                            <!--Start single project style1-->
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/projects/lat-pro-v2-1.jpg" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        <span>Modern Design</span>
-                                        <h3>Art Family Residence</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single project style1-->
-                            <!--Start single project style1-->
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/projects/lat-pro-v2-2.jpg" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        <span>Contemporary</span>
-                                        <h3>Nathan Brooke House</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single project style1-->
-                            <!--Start single project style1-->
-                            <div class="single-project-style2">
-                                <div class="img-holder">
-                                    <img src="/frontend/images/projects/lat-pro-v2-3.jpg" alt="Awesome Image">
-                                    <div class="read-more">
-                                        <a href="#"><span class="icon-next"></span></a>
-                                    </div>
-                                    <div class="title-box">
-                                        <span>Traditional</span>
-                                        <h3>Office Partition Walls</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End single project style1-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Recently Project style2 Area-->
-
-        <!--Start Working Process Style2 Area-->
-        <section class="working-process-style2-area" style="background-image:url(/frontend/images/parallax-background/working-process-bg-style3.jpg);">
-            <div class="container">
-                <div class="sec-title">
-                    <div class="title">Our Working <span>process</span></div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12">
-                        <div class="working-process-carousel owl-carousel owl-theme">
-                            <!--Start Single Working Process-->
-                            <div class="single-working-process-style2">
-                                <div class="top-box clearfix">
-                                    <div class="count">
-                                        <h1>01</h1>
-                                    </div>
-                                    <div class="icon">
-                                        <span class="icon-productive"></span>
-                                    </div>
-                                </div>
-                                <div class="inner">
-                                    <h3>Idea & Design</h3>
-                                    <p>Dedignation and dislike men who are beguileds & demoralized by the charms pleasue certain circumstances.</p>
-                                </div>
-                            </div>
-                            <!--End Single Working Process-->
-                            <!--Start Single Working Process-->
-                            <div class="single-working-process-style2">
-                                <div class="top-box clearfix">
-                                    <div class="count">
-                                        <h1>02</h1>
-                                    </div>
-                                    <div class="icon">
-                                        <span class="icon-document"></span>
-                                    </div>
-                                </div>
-                                <div class="inner">
-                                    <h3>Specification</h3>
-                                    <p>Owing to the claims of duty or business will frequently occur that pleasures have to be repudiated and annoyances.</p>
-                                </div>
-                            </div>
-                            <!--End Single Working Process-->
-                            <!--Start Single Working Process-->
-                            <div class="single-working-process-style2">
-                                <div class="top-box clearfix">
-                                    <div class="count">
-                                        <h1>03</h1>
-                                    </div>
-                                    <div class="icon">
-                                        <span class="icon-kitchen"></span>
-                                    </div>
-                                </div>
-                                <div class="inner">
-                                    <h3>Execution</h3>
-                                    <p>Same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
-                                </div>
-                            </div>
-                            <!--End Single Working Process-->
-
-                            <!--Start Single Working Process-->
-                            <div class="single-working-process-style2">
-                                <div class="top-box clearfix">
-                                    <div class="count">
-                                        <h1>01</h1>
-                                    </div>
-                                    <div class="icon">
-                                        <span class="icon-productive"></span>
-                                    </div>
-                                </div>
-                                <div class="inner">
-                                    <h3>Idea & Design</h3>
-                                    <p>Dedignation and dislike men who are beguileds & demoralized by the charms pleasue certain circumstances.</p>
-                                </div>
-                            </div>
-                            <!--End Single Working Process-->
-                            <!--Start Single Working Process-->
-                            <div class="single-working-process-style2">
-                                <div class="top-box clearfix">
-                                    <div class="count">
-                                        <h1>02</h1>
-                                    </div>
-                                    <div class="icon">
-                                        <span class="icon-document"></span>
-                                    </div>
-                                </div>
-                                <div class="inner">
-                                    <h3>Specification</h3>
-                                    <p>Owing to the claims of duty or business will frequently occur that pleasures have to be repudiated and annoyances.</p>
-                                </div>
-                            </div>
-                            <!--End Single Working Process-->
-                            <!--Start Single Working Process-->
-                            <div class="single-working-process-style2">
-                                <div class="top-box clearfix">
-                                    <div class="count">
-                                        <h1>03</h1>
-                                    </div>
-                                    <div class="icon">
-                                        <span class="icon-kitchen"></span>
-                                    </div>
-                                </div>
-                                <div class="inner">
-                                    <h3>Execution</h3>
-                                    <p>Same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
-                                </div>
-                            </div>
-                            <!--End Single Working Process-->
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
-        <!--End Working Process Style2 Area-->
-
-        <!--Start Testimonial Style2 Area-->
-        <section class="testimonial-style2-area">
-            <div class="container">
-                <div class="sec-title text-center">
-                    <p>Testimonials</p>
-                    <div class="title">Satisfied Parents <span>Comments</span></div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12">
-                        <div class="testimonial-style2-content">
-                            <div class="testimonial-carousel owl-carousel owl-theme">
-                                <!--Start Single Testimonial style2-->
-                                <div class="single-testimonial-style2 text-center">
-                                    <div class="inner-content">
-                                        <div class="static-content">
-                                            <div class="quote-icon">
-                                                <span class="icon-quote3"></span>
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.</p>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Z. Gartrell Wright</h3>
-                                            </div>
-                                        </div>
-                                        <div class="overlay-content">
-                                            <div class="img-box">
-                                                <img src="/frontend/images/testimonial/testi-style2-1.png" alt="Awesome Image">
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Your guys were great knowledgeable, well experienced, efficient and neat. A true to work with Crystalo.</p>
-                                                <div class="quote-icon">
-                                                    <span class="icon-quote3"></span>
-                                                </div>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Z. Gartrell Wright</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Single Testimonial style2 -->
-
-                                <!--Start Single Testimonial style2-->
-                                <div class="single-testimonial-style2 text-center">
-                                    <div class="inner-content">
-                                        <div class="static-content">
-                                            <div class="quote-icon">
-                                                <span class="icon-quote3"></span>
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Indignation & dislike men who are so beguiled and demoralizeds by the charms ofpleasure of the moment.</p>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Cathrine Wagner</h3>
-                                            </div>
-                                        </div>
-                                        <div class="overlay-content">
-                                            <div class="img-box">
-                                                <img src="/frontend/images/testimonial/testi-style2-2.png" alt="Awesome Image">
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Indignation & dislike men who are so beguiled and demoralizeds by the charms ofpleasure of the moment.</p>
-                                                <div class="quote-icon">
-                                                    <span class="icon-quote3"></span>
-                                                </div>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Cathrine Wagner</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Single Testimonial style2 -->
-
-                                <!--Start Single Testimonial style2-->
-                                <div class="single-testimonial-style2 text-center">
-                                    <div class="inner-content">
-                                        <div class="static-content">
-                                            <div class="quote-icon">
-                                                <span class="icon-quote3"></span>
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Same as saying through shrinking from all pain these cases are perfectly simple easy to distinguish.</p>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Cuthbert Brain</h3>
-                                            </div>
-                                        </div>
-                                        <div class="overlay-content">
-                                            <div class="img-box">
-                                                <img src="/frontend/images/testimonial/testi-style2-3.png" alt="Awesome Image">
-                                            </div>
-                                            <div class="text-box">
-                                                <p>Same as saying through shrinking from all pain these cases are perfectly simple easy to distinguish.</p>
-                                                <div class="quote-icon">
-                                                    <span class="icon-quote3"></span>
-                                                </div>
-                                            </div>
-                                            <div class="client-info">
-                                                <div class="review-box">
-                                                    <ul>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <h3>Cuthbert Brain</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Single Testimonial style2 -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Testimonial Style2 Area-->
-
-        <!--Start Contact details Area-->
-        <section class="contact-details-area">
-            <div class="sec-title text-center">
-                <p>Contact Details</p>
-                <div class="title">How Can We <span>Help You?</span></div>
-            </div>
-            <div class="parallax-background" style="background-image:url(/frontend/images/parallax-background/contact-details-bg.html);"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="contact-details-content">
-
-                            <div class="row">
-                                <div class="col-xl-6 col-lg-6">
-                                    <div class="content-info-box" style="background-image:url(/frontend/images/parallax-background/contact-info-box-bg.jpg);">
-                                        <div class="inner-content">
-                                            <div class="inner">
-                                                <div class="single-info-box wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                                                    <div class="icon">
-                                                        <span class="icon-global"></span>
-                                                    </div>
-                                                    <div class="text">
-                                                        <h3>Visit Our School</h3>
-                                                        <p>Flat A, 20/7, Reynolds Neck Str, North Helenaville</p>
-                                                    </div>
-                                                </div>
-                                                <div class="single-info-box white-bg wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1200ms">
-                                                    <div class="icon">
-                                                        <span class="icon-global"></span>
-                                                    </div>
-                                                    <div class="text">
-                                                        <h3>Visit Our School</h3>
-                                                        <p>Flat A, 20/7, Reynolds Neck Str, North Helenaville</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-lg-6">
-                                    <div class="contact-details-form-box">
-                                        <div class="title-box">
-                                            <h2>Send us<br> a Message</h2>
-                                        </div>
-                                        <div class="contact-details-box">
-                                            <form class="contact-details-form">
-                                                <div class="row">
-                                                    <div class="col-xl-6">
-                                                        <div class="single-box">
-                                                            <input type="text" name="form_name" value="" placeholder="Name" required="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-6">
-                                                        <div class="single-box">
-                                                            <input type="email" name="form_email" value="" placeholder="Email" required="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xl-12">
-                                                        <div class="single-box">
-                                                            <select class="selectpicker" data-width="100%">
-                                                            <option selected="selected">Select Your Service</option>
-                                                            <option>Concept Designs</option>
-                                                            <option>Project Designs</option>
-                                                            <option>Make Overs</option>
-                                                            <option>Consulting</option>
-                                                            <option>Glass & Wrought</option>
-                                                            <option>Space Planning</option>
-                                                        </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xl-12">
-                                                        <div class="single-box">
-                                                            <textarea name="form_request" placeholder="Special Request" required=""></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xl-12">
-                                                        <div class="single-box">
-                                                            <button class="btn-one" type="submit">Send Request<span class="flaticon-next"></span></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Contact details Area-->
-
-        <!--Start Instagram Area-->
-        <section class="instagram-area mb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4">
-                        <div class="instagram-title">
-                            <div class="pattern-bg wow slideInLeft" data-wow-delay="100ms" data-wow-duration="1500ms"></div>
-                            <h3>Looking for interior inspiration?<br> for your place.</h3>
-                            <a class="btn-two" href="blog.html">Follous Us On Instagram<span class="flaticon-next"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-8">
-                        <ul class="instagram-items clearfix">
-                            <li>
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/instagram-1.jpg" alt="Awesome Image">
-                                    <div class="overlay-style-two"></div>
-                                    <div class="overlay">
-                                        <div class="box">
-                                            <div class="link-icon">
-                                                <a href="#"><span class="icon-instagram"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/instagram-2.jpg" alt="Awesome Image">
-                                    <div class="overlay-style-two"></div>
-                                    <div class="overlay">
-                                        <div class="box">
-                                            <div class="link-icon">
-                                                <a href="#"><span class="icon-instagram"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/instagram-3.jpg" alt="Awesome Image">
-                                    <div class="overlay-style-two"></div>
-                                    <div class="overlay">
-                                        <div class="box">
-                                            <div class="link-icon">
-                                                <a href="#"><span class="icon-instagram"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/instagram-4.jpg" alt="Awesome Image">
-                                    <div class="overlay-style-two"></div>
-                                    <div class="overlay">
-                                        <div class="box">
-                                            <div class="link-icon">
-                                                <a href="#"><span class="icon-instagram"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/instagram-5.jpg" alt="Awesome Image">
-                                    <div class="overlay-style-two"></div>
-                                    <div class="overlay">
-                                        <div class="box">
-                                            <div class="link-icon">
-                                                <a href="#"><span class="icon-instagram"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-holder">
-                                    <img src="/frontend/images/resources/instagram-6.jpg" alt="Awesome Image">
-                                    <div class="overlay-style-two"></div>
-                                    <div class="overlay">
-                                        <div class="box">
-                                            <div class="link-icon">
-                                                <a href="#"><span class="icon-instagram"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Instagram Area-->
+            <!-- Our Services END -->
+			
+			<div class="section-area section-sp2">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center heading-bx">
+							<h2 class="title-head m-b0">Upcoming <span>Events</span></h2>
+							<p class="m-b0">Upcoming Education Events To Feed Brain. </p>
+						</div>
+					</div>
+					<div class="row">
+					<div class="upcoming-event-carousel owl-carousel owl-btn-center-lr owl-btn-1 col-12 p-lr0  m-b30">
+						<div class="item" v-for="event in events" :key="event.id">
+							<div class="event-bx">
+								<div class="action-box">
+									<img :src="fileLinkEvent(event.image)" alt="">
+								</div>
+								<div class="info-bx d-flex">
+									<div class="event-info">
+										<h4 class="event-title"><a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
+											{{ event.title }}</a></h4>
+										<ul class="media-post">
+											<li><a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
+												<i class="fa fa-clock-o"></i> {{ event.start_time }} - {{ event.end_time }}</a></li>
+											<li><a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
+												<i class="fa fa-map-marker"></i> {{ event.location }}</a></li>
+										</ul>
+										<p v-html="event.description"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="text-center">
+						<a href="api/events" class="btn">View All Event</a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Testimonials -->
+			<div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(/frontend/assets/images/background/bg1.jpg);">
+                <div class="container">
+					<div class="row">
+						<div class="col-md-12 text-white heading-bx left">
+							<h2 class="title-head text-uppercase">what people <span>say</span></h2>
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+						</div>
+					</div>
+					<div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+						<div class="item" v-for="faq in faqs" :key="faq.id">
+							<div class="testimonial-bx">
+								<div class="testimonial-thumb">
+									<img :src="fileLinkFaq(faq.image)" alt="">
+								</div>
+								<div class="testimonial-info">
+									<h5 class="name">{{ faq.name }}</h5>
+									<p>-Art Director</p>
+								</div>
+								<div class="testimonial-content">
+									<p v-html="faq.message"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Testimonials END -->
+			
+			<!-- Recent News -->
+			<div class="section-area section-sp2">
+                <div class="container">
+					<div class="row">
+						<div class="col-md-12 heading-bx left">
+							<h2 class="title-head">Recent <span>News</span></h2>
+							<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+						</div>
+					</div>
+					<div class="recent-news-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+						<div class="item">
+							<div class="recent-news">
+								<div class="action-box">
+									<img src="/frontend/assets/images/blog/latest-blog/pic1.jpg" alt="">
+								</div>
+								<div class="info-bx">
+									<ul class="media-post">
+										<li><a href="#"><i class="fa fa-calendar"></i>Jan 02 2019</a></li>
+										<li><a href="#"><i class="fa fa-user"></i>By William</a></li>
+									</ul>
+									<h5 class="post-title"><a href="blog-details.html">This Story Behind Education Will Haunt You Forever.</a></h5>
+									<p>Knowing that, you’ve optimised your pages countless amount of times, written tons.</p>
+									<div class="post-extra">
+										<a href="#" class="btn-link">READ MORE</a>
+										<a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>20 Comment</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="recent-news">
+								<div class="action-box">
+									<img src="/frontend/assets/images/blog/latest-blog/pic2.jpg" alt="">
+								</div>
+								<div class="info-bx">
+									<ul class="media-post">
+										<li><a href="#"><i class="fa fa-calendar"></i>Feb 05 2019</a></li>
+										<li><a href="#"><i class="fa fa-user"></i>By John</a></li>
+									</ul>
+									<h5 class="post-title"><a href="blog-details.html">What Will Education Be Like In The Next 50 Years?</a></h5>
+									<p>As desperate as you are right now, you have done everything you can on your.</p>
+									<div class="post-extra">
+										<a href="#" class="btn-link">READ MORE</a>
+										<a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>14 Comment</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="recent-news">
+								<div class="action-box">
+									<img src="/frontend/assets/images/blog/latest-blog/pic3.jpg" alt="">
+								</div>
+								<div class="info-bx">
+									<ul class="media-post">
+										<li><a href="#"><i class="fa fa-calendar"></i>April 14 2019</a></li>
+										<li><a href="#"><i class="fa fa-user"></i>By George</a></li>
+									</ul>
+									<h5 class="post-title"><a href="blog-details.html">Master The Skills Of Education And Be.</a></h5>
+									<p>You will see in the guide all my years of valuable experience together with.</p>
+									<div class="post-extra">
+										<a href="#" class="btn-link">READ MORE</a>
+										<a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>23 Comment</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Recent News End -->
+			
+        </div>
+		<!-- contact area END -->
+    </div>
+    <!-- Content END-->
     </div>
 </template>
 
@@ -1279,23 +355,64 @@ export default {
     name: 'Home',
     data(){
         return {
-            abouts: []
+            abouts: [],
+            abouthistories: [],
+			events: [],
+			faqs: [],
+			carousels: []
         }
     },
     methods: {
         fileLinkOne(name){
         	return '/uploads/img/about/' + name
       	},
+		fileLinkEvent(name){
+        	return '/uploads/img/event/' + name
+      	},
+		fileLinkFaq(name){
+        	return '/uploads/img/faq/' + name
+      	},
+		fileLinkCarousel(name){
+        	return '/uploads/img/carousel/' + name
+      	},
         getUserAbout: async function(){
             axios.get('/api/get-user-about')
                 .then((response) => {
                     this.abouts = response.data.abouts
+                })
+        },
+		getUserCarousel: async function(){
+            axios.get('/api/get-user-carousels')
+                .then((response) => {
+                    this.carousels = response.data.carousels
+                })
+		},
+		getUserFaqs: async function(){
+            axios.get('/api/get-user-faqs')
+                .then((response) => {
+                    this.faqs = response.data.faqs
+                })
+        },
+		getUserEvents: async function(){
+            axios.get('/api/get-user-events')
+                .then((response) => {
+                    this.events = response.data.events
+                })
+        },
+        getAboutHistory: async function(){
+            axios.get('/api/get-about-history')
+                .then((response) => {
+                    this.abouthistories = response.data.abouthistories
                 })
         }
     },
     computed:{},
     created(){
         this.getUserAbout()
+        this.getAboutHistory()
+		this.getUserEvents()
+		this.getUserFaqs()
+		this.getUserCarousel()
     }
 }
 </script>

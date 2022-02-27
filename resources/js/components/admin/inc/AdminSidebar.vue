@@ -1,59 +1,173 @@
 <template>
     <div id="admin-sidebar">
-        <!-- Page Sidebar -->
-            <div class="page-sidebar">
-                <a class="logo-box" href="index.html">
-                    <span>ecaps</span>
-                    <i class="icon-radio_button_unchecked" id="fixed-sidebar-toggle-button"></i>
-                    <i class="icon-close" id="sidebar-toggle-button-close"></i>
-                </a>
-                <div class="page-sidebar-inner">
-                    <div class="page-sidebar-menu">
-                        <ul class="accordion-menu">
-                            <li class="active-page">
-                                <a href="/api/admin">
-                                    <i class="menu-icon icon-home4"></i><span>Dashboard</span>
-                                </a>
-                            </li>
-                            <li>
-                                <router-link :to="{name: 'AdminProfile'}">
-                                    <i class="menu-icon icon-inbox"></i><span>Profile</span>
+	<!-- Left sidebar menu start -->
+	<div class="ttr-sidebar">
+		<div class="ttr-sidebar-wrapper content-scroll">
+			<!-- side menu logo start -->
+			<div class="ttr-sidebar-logo">
+				<a href="#"><img alt="" src="/backend/assets/images/logo.png" width="122" height="27"></a>
+				<div class="ttr-sidebar-toggle-button">
+					<i class="ti-arrow-left"></i>
+				</div>
+			</div>
+			<!-- side menu logo end -->
+			<!-- sidebar menu start -->
+			<nav class="ttr-sidebar-navi">
+				<ul>
+					<li>
+						<a href="/api/admin" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-home"></i></span>
+		                	<span class="ttr-label">Dashboard</span>
+		                </a>
+		            </li>
+					<li>
+						<router-link :to="{name: 'GradeList'}" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-home"></i></span>
+		                	<span class="ttr-label">Grade List</span>
+		                </router-link>
+		            </li>
+					<li>
+						<router-link :to="{name: 'GalleryList'}" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-home"></i></span>
+		                	<span class="ttr-label">Gallery List</span>
+		                </router-link>
+		            </li>
+					<li>
+						<router-link :to="{name: 'CarouselList'}" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-home"></i></span>
+		                	<span class="ttr-label">Carousel List</span>
+		                </router-link>
+		            </li>
+					<li>
+						<router-link :to="{name: 'AdminProfile'}" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-book"></i></span>
+		                	<span class="ttr-label">Profile</span>
+		                </router-link>
+		            </li>
+					<li>
+						<a href="#" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-email"></i></span>
+		                	<span class="ttr-label">Admins</span>
+		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
+		                </a>
+		                <ul>
+		                	<li>
+		                		<router-link :to="{name: 'RoleList'}" class="ttr-material-button">
+                                    <span class="ttr-label">Roles</span>
                                 </router-link>
-                            </li>
+		                	</li>
+		                	<li>
+		                		<router-link :to="{name: 'PermissionList'}" class="ttr-material-button">
+                                    <span class="ttr-label">Permissions</span>
+                                </router-link>
+		                	</li>
+							<li>
+		                		<router-link :to="{name: 'AdminList'}" class="ttr-material-button">
+                                    <span class="ttr-label">Admin List</span>
+                                </router-link>
+		                	</li>
                             <li>
-                                <a href="javascript:void(0)">
-                                    <i class="menu-icon icon-flash_on"></i><span>Admins</span><i class="accordion-icon fa fa-angle-left"></i>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li><router-link :to="{name: 'RoleList'}">Roles</router-link></li>
-                                    <li><router-link :to="{name: 'PermissionList'}">Permissions</router-link></li>
-                                    <li><router-link :to="{name: 'AdminList'}">Admin List</router-link></li>
-                                    <li><router-link :to="{name: 'AdminTrash'}">Admin Trash</router-link></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <i class="menu-icon icon-flash_on"></i><span>Pages</span><i class="accordion-icon fa fa-angle-left"></i>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li><router-link :to="{name: 'AdminAboutUsList'}">Admin About Us List</router-link></li>
-                                    <li><router-link :to="{name: 'CreateAdminAboutUs'}">Create Admin About Us</router-link></li>
-                                    <li><router-link :to="{name: 'AdminAboutHistoryList'}">Admin About History</router-link></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <i class="menu-icon icon-flash_on"></i><span>Emailing</span><i class="accordion-icon fa fa-angle-left"></i>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li><router-link :to="{name: 'ParentsBulkEmail'}">Parents Bulk Email</router-link></li>
-                                    <li><router-link :to="{name: 'TeachersBulkEmail'}">Teachers Bulk Email</router-link></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- /Page Sidebar -->
+		                		<router-link :to="{name: 'AdminTrash'}" class="ttr-material-button">
+                                    <span class="ttr-label">Admin Trash</span>
+                                </router-link>
+		                	</li>
+		                </ul>
+		            </li>
+					<li>
+						<a href="#" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-email"></i></span>
+		                	<span class="ttr-label">Events</span>
+		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
+		                </a>
+		                <ul>
+		                	<li>
+		                		<router-link :to="{name: 'EventList'}" class="ttr-material-button">
+                                    <span class="ttr-label">Event List</span>
+                                </router-link>
+		                	</li>
+							<li>
+		                		<router-link :to="{name: 'CreateEvent'}" class="ttr-material-button">
+                                    <span class="ttr-label">Create Event</span>
+                                </router-link>
+		                	</li>
+		                </ul>
+		            </li>
+					<li>
+						<a href="#" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-email"></i></span>
+		                	<span class="ttr-label">Faqs</span>
+		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
+		                </a>
+		                <ul>
+		                	<li>
+		                		<router-link :to="{name: 'FaqList'}" class="ttr-material-button">
+                                    <span class="ttr-label">Faqs</span>
+                                </router-link>
+		                	</li>
+							<li>
+		                		<router-link :to="{name: 'CreatedFaqList'}" class="ttr-material-button">
+                                    <span class="ttr-label">Created Faqs</span>
+                                </router-link>
+		                	</li>
+		                	<li>
+		                		<router-link :to="{name: 'CreateFaq'}" class="ttr-material-button">
+                                    <span class="ttr-label">Create Faq</span>
+                                </router-link>
+		                	</li>
+		                </ul>
+		            </li>
+                    <li>
+						<a href="#" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-email"></i></span>
+		                	<span class="ttr-label">Pages</span>
+		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
+		                </a>
+		                <ul>
+		                	<li>
+		                		<router-link :to="{name: 'AdminAboutUsList'}" class="ttr-material-button">
+                                    <span class="ttr-label">Admin About Us List</span>
+                                </router-link>
+		                	</li>
+		                	<li>
+		                		<router-link :to="{name: 'CreateAdminAboutUs'}" class="ttr-material-button">
+                                    <span class="ttr-label">Create Admin About Us</span>
+                                </router-link>
+		                	</li>
+							<li>
+		                		<router-link :to="{name: 'AdminAboutHistoryList'}" class="ttr-material-button">
+                                    <span class="ttr-label">Admin About History</span>
+                                </router-link>
+		                	</li>
+		                </ul>
+		            </li>
+                    <li>
+						<a href="#" class="ttr-material-button">
+							<span class="ttr-icon"><i class="ti-email"></i></span>
+		                	<span class="ttr-label">Emailing</span>
+		                	<span class="ttr-arrow-icon"><i class="fa fa-angle-down"></i></span>
+		                </a>
+		                <ul>
+		                	<li>
+		                		<router-link :to="{name: 'ParentsBulkEmail'}" class="ttr-material-button">
+                                    <span class="ttr-label">Parents Bulk Email</span>
+                                </router-link>
+		                	</li>
+		                	<li>
+		                		<router-link :to="{name: 'TeachersBulkEmail'}" class="ttr-material-button">
+                                    <span class="ttr-label">Teachers Bulk Email</span>
+                                </router-link>
+		                	</li>
+		                </ul>
+		            </li>
+		            <li class="ttr-seperate"></li>
+				</ul>
+				<!-- sidebar menu end -->
+			</nav>
+			<!-- sidebar menu end -->
+		</div>
+	</div>
+	<!-- Left sidebar menu end -->
+
     </div>
 </template>
 

@@ -38,40 +38,45 @@ class AboutUsController extends Controller
         // return $request;
         $request->validate([
             'heading' => 'required',
-            'smallText' => 'required',
-            'smallDescription' => 'required',
-            'mainDescription' => 'required',
+            'description' => 'required',
+            'headerOne' => 'required',
+            'headerTwo' => 'required',
+            'headerThree' => 'required',
+            'headerFour' => 'required',
+            'descriptionOne' => 'required',
+            'descriptionTwo' => 'required',
+            'descriptionThree' => 'required',
+            'descriptionFour' => 'required',
+            'descriptionFive' => 'required',
+            'video' => 'required',
             // 'imageOne' => 'required|image|mimes:jpeg,bmp,png,gif,svg,pdf',
             // 'imageTwo' => 'required|image|mimes:jpeg,bmp,png,gif,svg'
         ]);
 
-        $fileOne = explode(';', $request->imageOne);
-        $fileOne = explode('/', $fileOne[0]);
-        $file_one_ex = end($fileOne);
+        $file = explode(';', $request->image);
+        $file = explode('/', $file[0]);
+        $file_ex = end($file);
 
-        $fileTwo = explode(';', $request->imageTwo);
-        $fileTwo = explode('/', $fileTwo[0]);
-        $file_two_ex = end($fileTwo);
+        $file_name = \Str::random(10) . '.' . $file_ex;
 
-        $file_one_name = \Str::random(10) . '.' . $file_one_ex;
-        $file_two_name = \Str::random(10) . '.' . $file_two_ex;
-
-
-        $product = AboutUs::create([
+        $about = AboutUs::create([
             'heading' => $request->heading,
-            'smallText' => $request->smallText,
-            'smallDescription' => $request->smallDescription,
-            'mainDescription' => $request->mainDescription,
-            'imageOne' => $file_one_name,
-            'imageTwo' => $file_two_name,
+            'description' => $request->description,
+            'headerOne' => $request->headerOne,
+            'headerTwo' => $request->headerTwo,
+            'headerThree' => $request->headerThree,
+            'headerFour' => $request->headerFour,
+            'descriptionOne' => $request->descriptionOne,
+            'descriptionTwo' => $request->descriptionTwo,
+            'descriptionThree' => $request->descriptionThree,
+            'descriptionFour' => $request->descriptionFour,
+            'descriptionFive' => $request->descriptionFive,
+            'image' => $file_name,
+            'video' => $request->video
         ]);
 
-        Image::make($request->imageOne)->resize(470, 545)->save(public_path('/uploads/img/about/').$file_one_name);
-        // Image::make($request->imageOne)->resize(458, 458)->save(public_path('/uploads/products/').$file_one_name);
+        Image::make($request->image)->resize(470, 545)->save(public_path('/uploads/img/about/').$file_name);
         
-        Image::make($request->imageTwo)->resize(835, 470)->save(public_path('/uploads/img/about/').$file_two_name);
-        // Image::make($request->imageTwo)->resize(458, 458)->save(public_path('/uploads/products/').$file_two_name);
-
         return response()->json('success', 200);
         
     }
@@ -97,31 +102,27 @@ class AboutUsController extends Controller
         $about = AboutUs::find($request->id);
 
         $about->heading = $request->heading;
-        $about->smallText = $request->smallText;
-        $about->smallDescription = $request->smallDescription;
-        $about->mainDescription = $request->mainDescription;
+        $about->description = $request->description;
+        $about->headerOne = $request->headerOne;
+        $about->headerTwo = $request->headerTwo;
+        $about->headerThree = $request->headerThree;
+        $about->headerFour = $request->headerFour;
+        $about->descriptionOne = $request->descriptionOne;
+        $about->descriptionTwo = $request->descriptionTwo;
+        $about->descriptionThree = $request->descriptionThree;
+        $about->descriptionFour = $request->descriptionFour;
+        $about->descriptionFive = $request->descriptionFive;
+        $about->video = $request->video;
 
-        if ($request->imageOne != $about->imageOne) {
-            $fileOne = explode(';', $request->imageOne);
-            $fileOne = explode('/', $fileOne[0]);
-            $file_one_ex = end($fileOne);
-            $file_one_name = \Str::random(10) . '.' . $file_one_ex;
-            $about->imageOne = $file_one_name;
+        if ($request->image != $about->image) {
+            $file = explode(';', $request->image);
+            $file = explode('/', $file[0]);
+            $file_ex = end($file);
+            $file_name = \Str::random(10) . '.' . $file_ex;
+            $about->image = $file_name;
 
-            Image::make($request->imageOne)->resize(470, 545)->save(public_path('/uploads/img/about/').$file_one_name);
-            // Image::make($request->imageOne)->resize(800, 600)->save(public_path('/uploads/service/main/').$file_one_name);
+            Image::make($request->image)->resize(470, 545)->save(public_path('/uploads/img/about/').$file_name);
 
-        }
-        
-        if ($request->imageTwo != $about->imageTwo) {
-            $fileTwo = explode(';', $request->imageTwo);
-            $fileTwo = explode('/', $fileTwo[0]);
-            $file_two_ex = end($fileTwo);
-            $file_two_name = \Str::random(10) . '.' . $file_two_ex;
-            $about->imageTwo = $file_two_name;
-
-            Image::make($request->imageTwo)->resize(835, 470)->save(public_path('/uploads/img/about/').$file_two_name);
-            // Image::make($request->imageTwo)->resize(800, 600)->save(public_path('/uploads/service/main/').$file_two_name);
         }
 
         $about->save();

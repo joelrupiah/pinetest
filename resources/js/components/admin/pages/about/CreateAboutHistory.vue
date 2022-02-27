@@ -1,111 +1,174 @@
 <template>
     <div id="create_admin_about_history">
-                <div class="page-inner">
-                    <div class="page-title">
-                        <h3 class="breadcrumb-header">Create Pinecrest History</h3>
-                    </div>
-                <div id="main-wrapper">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="panel panel-white">
-                                <div class="panel-body">
-                                    <div id="rootwizard">
-                                        <ul class="nav nav-tabs" role="tablist">
-                                            <li role="presentation" class="active"><a href="#tab1" data-toggle="tab"><i class="fa fa-user m-r-xs"></i>Home Page</a></li>
-                                        </ul>
-                                        <div class="progress progress-sm m-t-sm">
-                                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                            </div>
-                                        </div>
-                                        <form id="wizardForm">
-                                            <div class="tab-content">
-                                                <div class="tab-pane active fade in" id="tab1">
-                                                    <div class="row m-b-lg">
-                                                        <div class="col-md-12">
-                                                            <div class="row">
-                                                                <div class="form-group col-md-3">
-                                                                    <label for="heading">Heading</label>
-                                                                    <input type="text" class="form-control" 
-                                                                    v-model="form.heading" name="heading" id="heading" placeholder="Input Small Heading">
-                                                                    <p class="text-danger text-sm" v-if="errors.heading">
-                                                                        {{ errors.heading[0] }}
-                                                                    </p>
-                                                                </div>
-                                                                <div class="form-group col-md-3">
-                                                                    <label>Year</label>
-                                                                    <el-date-picker
-                                                                        v-model="form.year"
-                                                                        type="year"
-                                                                        placeholder="Pick a year">
-                                                                    </el-date-picker>
-                                                                    <p class="text-danger text-sm" v-if="errors.year">
-                                                                        {{ errors.year[0] }}
-                                                                    </p>
-                                                                </div>
-                                                                <div class="form-group col-md-3">
-                                                                    <label for="headingYear">Heading Year</label>
-                                                                    <input type="text" class="form-control" 
-                                                                    v-model="form.headingYear" name="headingYear" id="headingYear" placeholder="Input Small Heading">
-                                                                    <p class="text-danger text-sm" v-if="errors.headingYear">
-                                                                        {{ errors.headingYear[0] }}
-                                                                    </p>
-                                                                </div>
-                                                                <div class="form-group col-md-12">
-                                                                    <label>First Description</label>
-                                                                    <ckeditor :editor="editor" v-model="form.firstDescription" :config="editorConfig">
-                                                                    </ckeditor>
-                                                                    <p class="text-danger text-sm" v-if="errors.firstDescription">
-                                                                        {{ errors.firstDescription[0] }}
-                                                                    </p>
-                                                                </div>
-                                                                <div class="form-group col-md-12">
-                                                                    <label>Last Description</label>
-                                                                    <ckeditor :editor="editor" v-model="form.lastDescription" :config="editorConfig">
-                                                                    </ckeditor>
-                                                                    <p class="text-danger text-sm" v-if="errors.lastDescription">
-                                                                        {{ errors.lastDescription[0] }}
-                                                                    </p>
-                                                                </div>
-                                                                <div class="form-group col-md-6">
-                                                                    <label for="image">Photo</label>
-                                                                    <input type="file" class="form-control" name="image" id="image" 
-                                                                    @change="loadImage($event)" placeholder="Pick an image" >
-                                                                    <p class="text-danger text-sm" v-if="errors.image">
-                                                                        {{ errors.image[0] }}
-                                                                    </p>
-                                                                </div>
-                                                                <div class="form-group col-md-6">
-                                                                    <label>Image Preview</label>
-                                                                    <img :src="form.image" class="form-control" alt="" style="width:100px;height:100px">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <ul class="pager wizard">
-                                                    <li class="previous">
-                                                        <a href="#" class="btn btn-danger btn-xs"
-                                                        @click.prevent="clear" >
-                                                            Clear Content
-                                                        </a>
-                                                    </li>
-                                                    <li class="next">
-                                                        <a href="#" class="btn btn-default btn-success btn-xs text-white"
-                                                        @click.prevent="createAboutHistory" >
-                                                            Submit Content
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- Row -->
-                </div><!-- Main Wrapper -->
 
-                </div><!-- /Page Inner -->
+	<main class="ttr-wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- Your Profile Views Chart -->
+				<div class="col-lg-12 m-b30">
+					<div class="widget-box">
+						<div class="wc-title">
+							<h4>Create About History</h4>
+						</div>
+						<div class="widget-inner">
+							<form class="edit-profile m-b30">
+								<div class="row">
+									<div class="col-12">
+										<div class="ml-auto">
+											<h3>1. Home Page</h3>
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">Heading</label>
+										<div>
+											<input class="form-control" type="text" value="Input header">
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">Occupation</label>
+										<div>
+											<input class="form-control" type="text" value="CTO">
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">Company Name</label>
+										<div>
+											<input class="form-control" type="text" value="EduChamp">
+											<span class="help">If you want your invoices addressed to a company. Leave blank to use your full name.</span>
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">Phone No.</label>
+										<div>
+											<input class="form-control" type="text" value="+120 012345 6789">
+										</div>
+									</div>
+									
+									<div class="seperator"></div>
+									
+									<div class="col-12 m-t20">
+										<div class="ml-auto m-b5">
+											<h3>2. Address</h3>
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">Address</label>
+										<div>
+											<input class="form-control" type="text" value="5-S2-20 Dummy City, UK">
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">City</label>
+										<div>
+											<input class="form-control" type="text" value="US">
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">State</label>
+										<div>
+											<input class="form-control" type="text" value="California">
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">Postcode</label>
+										<div>
+											<input class="form-control" type="text" value="000702">
+										</div>
+									</div>
+
+									<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
+
+									<div class="col-12 m-t20">
+										<div class="ml-auto">
+											<h3 class="m-form__section">3. Social Links</h3>
+										</div>
+									</div>
+
+									<div class="form-group col-6">
+										<label class="col-form-label">Linkedin</label>
+										<div>
+											<input class="form-control" type="text" value="www.linkedin.com">
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">Facebook</label>
+										<div>
+											<input class="form-control" type="text" value="www.facebook.com">
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">Twitter</label>
+										<div>
+											<input class="form-control" type="text" value="www.twitter.com">
+										</div>
+									</div>
+									<div class="form-group col-6">
+										<label class="col-form-label">Instagram</label>
+										<div>
+											<input class="form-control" type="text" value="www.instagram.com">
+										</div>
+									</div>
+									<div class="col-12">
+										<button type="reset" class="btn">Save changes</button>
+										<button type="reset" class="btn-secondry">Cancel</button>
+									</div>
+								</div>
+							</form>
+							<form class="edit-profile">
+								<div class="row">
+									<div class="col-12 m-t20">
+										<div class="ml-auto">
+											<h3 class="m-form__section">4. Add Item</h3>
+										</div>
+									</div>
+									<div class="col-12">
+										<table id="item-add" style="width:100%;">
+											<tr class="list-item">
+												<td>
+													<div class="row">
+														<div class="col-md-4">
+															<label class="col-form-label">Course Name</label>
+															<div>
+																<input class="form-control" type="text" value="">
+															</div>
+														</div>
+														<div class="col-md-3">
+															<label class="col-form-label">Course Category</label>
+															<div>
+																<input class="form-control" type="text" value="">
+															</div>
+														</div>
+														<div class="col-md-3">
+															<label class="col-form-label">Course Category</label>
+															<div>
+																<input class="form-control" type="text" value="">
+															</div>
+														</div>
+														<div class="col-md-2">
+															<label class="col-form-label">Close</label>
+															<div class="form-group">
+																<a class="delete" href="#"><i class="fa fa-close"></i></a>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div class="col-12">
+										<button type="button" class="btn-secondry add-item m-r5"><i class="fa fa-fw fa-plus-circle"></i>Add Item</button>
+										<button type="reset" class="btn">Save changes</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- Your Profile Views Chart END-->
+			</div>
+		</div>
+	</main>
+
     </div>
 </template>
 
@@ -114,52 +177,52 @@ import Api from '../../../../apis/admin/Api'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 export default {
     name: 'CreateAdminAboutHistory',
-    data(){
-        return {
-            form: {
-                heading: '',
-                year: '',
-                headingYear: '',
-                firstDescription: '',
-                lastDescription: '',
-                image: ''
-            },
-            errors: {},
-            editor: ClassicEditor,
-            editorConfig: {
-            }
-        }
-    },
-    methods: {
-        loadImage(e){
-            let file = e.target.files[0]
-            let reader = new FileReader()
+    // data(){
+    //     return {
+    //         form: {
+    //             heading: '',
+    //             year: '',
+    //             headingYear: '',
+    //             firstDescription: '',
+    //             lastDescription: '',
+    //             image: ''
+    //         },
+    //         errors: {},
+    //         editor: ClassicEditor,
+    //         editorConfig: {
+    //         }
+    //     }
+    // },
+    // methods: {
+    //     loadImage(e){
+    //         let file = e.target.files[0]
+    //         let reader = new FileReader()
 
-            reader.onload = e => {
-                this.form.image = e.target.result
-            }
+    //         reader.onload = e => {
+    //             this.form.image = e.target.result
+    //         }
 
-            reader.readAsDataURL(file)
-        },
-        clear(){
-            this.form.heading = '',
-            this.form.year = '',
-            this.form.headingYear = '',
-            this.form.firstDescription = '',
-            this.form.lastDescription = '',
-            this.form.image = ''
-        },
-        createAboutHistory: async function(){
-            Api().post('/admin/create-about-history', this.form)
-                .then(() => {})
-                .catch((error) => {
-                    if (error.response.status === 422) {
-                        this.errors = error.response.data.errors
-                    }
-                })
-        }
-    },
-    computed: {},
-    created(){}
+    //         reader.readAsDataURL(file)
+    //     },
+    //     clear(){
+    //         this.form.heading = '',
+    //         this.form.year = '',
+    //         this.form.headingYear = '',
+    //         this.form.firstDescription = '',
+    //         this.form.lastDescription = '',
+    //         this.form.image = ''
+    //     },
+    //     createAboutHistory: async function(){
+    //         Api().post('/admin/create-about-history', this.form)
+    //             .then(() => {})
+    //             .catch((error) => {
+    //                 if (error.response.status === 422) {
+    //                     this.errors = error.response.data.errors
+    //                 }
+    //             })
+    //     }
+    // },
+    // computed: {},
+    // created(){}
 }
 </script>

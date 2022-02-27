@@ -30,6 +30,10 @@
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^32.0.0",
         "@ckeditor/ckeditor5-vue2": "^1.0.5",
+        "@fullcalendar/core": "^5.10.1",
+        "@fullcalendar/daygrid": "^5.10.1",
+        "@fullcalendar/interaction": "^5.10.1",
+        "@fullcalendar/vue": "^5.10.1",
         "element-ui": "^2.15.6",
         "moment": "^2.29.1",
         "vue-router": "^3.5.3",

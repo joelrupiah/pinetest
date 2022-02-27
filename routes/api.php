@@ -9,6 +9,12 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ResetAdminPasswordController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AboutHistoryController;
+use App\Http\Controllers\GradeController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\AdminFaqController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\CarouselController;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -32,6 +38,9 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
 
     Route::resource('permission', PermissionController::class);
     Route::resource('role', RoleController::class);
+    Route::resource('grade', GradeController::class);
+    Route::resource('gallery', GalleryController::class);
+    // Route::resource('event', EventController::class);
 
     Route::get('all-admins', [AdminController::class, 'getAllAdmins']);
     Route::post('create-admin', [AdminController::class, 'store']);
@@ -39,6 +48,15 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::delete('delete-admin/{id}', [AdminController::class, 'destroy']);
 
     Route::post('/edit-permission/{id}', [PermissionController::class, 'update']);
+
+    Route::post('edit-grade/{id}', [GradeController::class, 'update']);
+
+    Route::get('get-gallery/{id}', [GalleryController::class, 'show']);
+    Route::post('edit-gallery/{id}', [GalleryController::class, 'update']);
+
+    Route::get('get-faqs', [FaqController::class, 'index']);
+    Route::get('get-asked-question/{id}', [FaqController::class, 'getAdminQuestion']);
+    Route::post('reply-asked-question/{id}', [FaqController::class, 'replyQuestion']);
 
     Route::post('create-about', [AboutUsController::class, 'store']);
     Route::get('get-all-admin-about-data', [AboutUsController::class, 'index']);
@@ -50,10 +68,30 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::get('get-about-history/{id}', [AboutHistoryController::class, 'show']);
     Route::post('update-about-history/{id}', [AboutHistoryController::class, 'update']);
 
+    Route::post('create-faq', [AdminFaqController::class, 'store']);
+    Route::get('get-all-admin-faqs', [AdminFaqController::class, 'index']);
+    Route::get('get-admin-faq/{id}', [AdminFaqController::class, 'show']);
+    Route::post('update-admin-faq/{id}', [AdminFaqController::class, 'update']);
+
+    Route::get('get-admin-events', [EventController::class, 'index']);
+    Route::post('create-event', [EventController::class, 'store']);
+
+    Route::post('create-carousel', [CarouselController::class, 'store']);
+    Route::get('get-admin-carousels', [CarouselController::class, 'index']);
+    Route::get('edit-carousel/{id}', [CarouselController::class, 'update']);
+
 });
 
 Route::get('get-user-about', [AboutUsController::class, 'getUserAbout']);
 Route::get('get-about-history', [AboutHistoryController::class, 'getAboutHistory']);
+Route::get('get-galleries', [GalleryController::class, 'getGalleries']);
+Route::get('get-grades', [GradeController::class, 'getGrades']);
+Route::post('send-question', [FaqController::class, 'askQuestion']);
+Route::get('get-admin-faqs', [AdminFaqController::class, 'getAdminFaqs']);
+Route::get('get-user-events', [EventController::class, 'userEvents']);
+Route::get('get-user-faqs', [FaqController::class, 'getUserFaq']);
+Route::get('get-user-carousels', [CarouselController::class, 'getUserCarousel']);
+Route::get('get-event-detail/{eventSlug}', [EventController::class, 'eventDetails']);
 
 Route::prefix('admin')->group(function(){
     Route::post('reset-admin-password', [ResetAdminPasswordController::class, 'resetAdminPassword']);

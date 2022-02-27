@@ -1,76 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Responsive Admin Dashboard Template">
-        <meta name="keywords" content="admin,dashboard">
-        <meta name="author" content="skcats">
-        <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Title -->
-        <title>Pinecrest Admin</title>
+<head>
 
-        <!-- Styles -->
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-        <link href="/backend/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/backend/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/backend/assets/plugins/icomoon/style.css" rel="stylesheet">
-        <link href="/backend/assets/plugins/uniform/css/default.css" rel="stylesheet"/>
-        <link href="/backend/assets/plugins/switchery/switchery.min.css" rel="stylesheet"/>
-        <link href="/backend/assets/plugins/nvd3/nv.d3.min.css" rel="stylesheet">  
-      
-        <!-- Theme Styles -->
-        <link href="/backend/assets/css/ecaps.min.css" rel="stylesheet">
-        <link href="/backend/assets/css/custom.css" rel="stylesheet">
+	<!-- META ============================================= -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	
+	<!-- DESCRIPTION -->
+	<meta name="description" content="PineCrest" />
+	
+	<!-- OG -->
+	<meta property="og:title" content="PineCrest" />
+	<meta property="og:description" content="PineCrest" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- FAVICONS ICON ============================================= -->
+	<link rel="icon" href="/backend/assets/images/pinecrest-favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="/backend/assets/images/pinecrest-logo.png" />
+	
+	<!-- PAGE TITLE HERE ============================================= -->
+	<title>PineCrest </title>
+	
+	<!-- MOBILE SPECIFIC ============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- All PLUGINS CSS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="/backend/assets/css/assets.css">
+	<link rel="stylesheet" type="text/css" href="/backend/assets/vendors/calendar/fullcalendar.css">
+	
+	<!-- TYPOGRAPHY ============================================= -->
+	<link rel="stylesheet" type="text/css" href="/backend/assets/css/typography.css">
+	
+	<!-- SHORTCODES ============================================= -->
+	<link rel="stylesheet" type="text/css" href="/backend/assets/css/shortcodes/shortcodes.css">
+	
+	<!-- STYLESHEETS ============================================= -->
+	<link rel="stylesheet" type="text/css" href="/backend/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/backend/assets/css/dashboard.css">
+	<link class="skin" rel="stylesheet" type="text/css" href="/backend/assets/css/color/color-1.css">
+	
+</head>
+<body class="ttr-opened-sidebar ttr-pinned-sidebar">
+	
+<div id="admin">
+    <admin-master></admin-master>
+</div>
 
-        <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+<script src="{{ asset('js/admin.js') }}"></script>
+<!-- External JavaScripts -->
+<script src="/backend/assets/js/jquery.min.js"></script>
+<script src="/backend/assets/vendors/bootstrap/js/popper.min.js"></script>
+<script src="/backend/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="/backend/assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="/backend/assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+<script src="/backend/assets/vendors/magnific-popup/magnific-popup.js"></script>
+<script src="/backend/assets/vendors/counter/waypoints-min.js"></script>
+<script src="/backend/assets/vendors/counter/counterup.min.js"></script>
+<script src="/backend/assets/vendors/imagesloaded/imagesloaded.js"></script>
+<script src="/backend/assets/vendors/masonry/masonry.js"></script>
+<script src="/backend/assets/vendors/masonry/filter.js"></script>
+<script src="/backend/assets/vendors/owl-carousel/owl.carousel.js"></script>
+<script src='/backend/assets/vendors/scroll/scrollbar.min.js'></script>
+<script src="/backend/assets/js/functions.js"></script>
+<script src="/backend/assets/vendors/chart/chart.min.js"></script>
+<script src="/backend/assets/js/admin.js"></script>
+<script src='/backend/assets/vendors/calendar/moment.min.js'></script>
+<script src='/backend/assets/vendors/calendar/fullcalendar.js'></script>
+<script src='/backend/assets/vendors/switcher/switcher.js'></script>
+<script>
+  $(document).ready(function() {
 
-    </head>
-    <body>
-        
-        <div id="admin">
-            <admin-master></admin-master>
-        </div>
-        
-        <script src="{{ asset('js/admin.js') }}"></script>
-        
-        <!-- Javascripts -->
-        <script src="/backend/assets/plugins/jquery/jquery-3.1.0.min.js"></script>
-        <script src="/backend/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/backend/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-        <script src="/backend/assets/plugins/uniform/js/jquery.uniform.standalone.js"></script>
-        <script src="/backend/assets/plugins/switchery/switchery.min.js"></script>
-        <script src="/backend/assets/plugins/d3/d3.min.js"></script>
-        <script src="/backend/assets/plugins/nvd3/nv.d3.min.js"></script>
-        <script src="/backend/assets/plugins/flot/jquery.flot.min.js"></script>
-        <script src="/backend/assets/plugins/flot/jquery.flot.time.min.js"></script>
-        <script src="/backend/assets/plugins/flot/jquery.flot.symbol.min.js"></script>
-        <script src="/backend/assets/plugins/flot/jquery.flot.resize.min.js"></script>
-        <script src="/backend/assets/plugins/flot/jquery.flot.tooltip.min.js"></script>
-        <script src="/backend/assets/plugins/flot/jquery.flot.pie.min.js"></script>
-        <script src="/backend/assets/plugins/chartjs/chart.min.js"></script>
-        <script src="/backend/assets/js/ecaps.min.js"></script>
-        <script src="/backend/assets/js/pages/dashboard.js"></script>
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay,listWeek'
+      },
+      defaultDate: '2019-03-12',
+      navLinks: true, // can click day/week names to navigate views
 
-        <!-- GetButton.io widget -->
-        {{-- <script type="text/javascript">
-            (function () {
-                var options = {
-                    whatsapp: "+254(715) 733-257", // WhatsApp number
-                    call_to_action: "Message us", // Call to action
-                    position: "right", // Position may be 'right' or 'left'
-                };
-                var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-                s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-                var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-            })();
-        </script> --}}
-        <!-- /GetButton.io widget -->
-        
-    </body>
+      weekNumbers: true,
+      weekNumbersWithinDays: true,
+      weekNumberCalculation: 'ISO',
+
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2019-03-01'
+        },
+        {
+          title: 'Long Event',
+          start: '2019-03-07',
+          end: '2019-03-10'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2019-03-09T16:00:00'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2019-03-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2019-03-11',
+          end: '2019-03-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-03-12T10:30:00',
+          end: '2019-03-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2019-03-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-03-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2019-03-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2019-03-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2019-03-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2019-03-28'
+        }
+      ]
+    });
+
+  });
+
+</script>
+</body>
+
 </html>

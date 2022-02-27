@@ -1,49 +1,62 @@
 <template>
-    <div id="role_list">
-<div class="page-title">
-                        <h3 class="breadcrumb-header">Roles List</h3>
-                    </div>
-                <div id="main-wrapper">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="panel panel-white">
-                                <div class="panel-heading clearfix">
-                                        <el-button type="primary" icon="el-icon-plus" size="mini" @click="createModal">
-                                            Create Role</el-button>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="table-responsive">
-                                        <table class="table" style='table-layout:fixed'>
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Role Name</th>
-                                                    <th>Permissions</th>
-                                                    <th>Date Created</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr v-for="(role, index) in roles" :key="role.id">
-                                                    <th scope="row">{{ index+1 }}</th>
-                                                    <td>{{ role.name }}</td>
-                                                    <td>
-                                                        <span v-for="permission in role.permissions" :key="permission.id">
-                                                            <span class="label label-success">{{ permission.name }}</span>
-                                                        </span>
-                                                    </td>
-                                                    <td>{{ role.created_at | time }}</td>
-                                                    <td>Table cell</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div id="admin_permission">
+        <main class="ttr-wrapper">
+              <div class="content">
+    
+                <div class="container">
+                <h5 class="mb-1">Permissions Table</h5>
+                <el-button type="primary" icon="el-icon-plus" size="mini" class="mb-2" 
+                    @click.prevent="createModal"> Create Permission</el-button>
+
+                <div class="table-responsive">
+
+                    <table class="table table-striped custom-table">
+                    <thead>
+                        <tr>
+                        <th scope="col"><small class="d-block"><strong>#</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Role Name</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Permissions</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Date Created</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Actions</strong></small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" v-for="(role, index) in roles" :key="role.id">
+                                <td>
+                                    <small class="d-block">{{ index+1 }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">{{ role.name }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">
+                                        <el-tag size="mini" v-for="permission in role.permissions" :key="permission.id">
+                                            {{ permission.name }}
+                                        </el-tag>
+                                    </small>
+                                </td>
+                                <td>
+                                    <small class="d-block">{{ role.created_at | time }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">
+                                        <i class="el-icon-edit" style="color:green;cursor:pointer"
+                                        @click.prevent="editModal(permission)"></i>
+                                        <i class="el-icon-delete" style="color:red;cursor:pointer"></i>
+                                    </small>
+                                </td>
                         
-                    </div><!-- Row -->
+                        </tr>
+                        
+                    </tbody>
+                    </table>
                 </div>
+
+                </div>
+
+            </div>
+        </main>
+
 <el-dialog
   :title="form.id ? 'Edit Role' : 'Create Role'"
   :visible.sync="isModalVisible"
@@ -71,6 +84,7 @@
 
   </form>
 </el-dialog>
+
     </div>
 </template>
 
@@ -117,9 +131,11 @@ export default {
             this.loading = true
             Api().post('/admin/role', this.form)
                 .then(() => {
+                    this.getAllRoles()
+                    this.loading = false
                     this.form.name = ''
                     this.form.permissions = []
-                    this.loading = false
+                    this.isModalVisible = false
                 })
         }
     },
@@ -129,5 +145,86 @@ export default {
         this.getAllRoles()
     }
     
+}
+</script>
+import Api from '../../../../apis/admin/Api'
+export default {
+    name: 'PermissionList',
+    data(){
+        return{
+            editMode: false,
+            isModalVisible: false,
+            loading: false,
+            permissions: [],
+            permission: {},
+            form: {
+                id: '',
+                name: ''
+            },
+            errors: []
+        }
+    },
+    methods: {
+        clearData(){
+            this.form.name = ''
+        },
+        createModal(){
+            this.editMode = false,
+            this.form.id = '',
+            this.form.name = '',
+            this.isModalVisible = true
+        },
+        editModal(permission){
+            this.editMode = true,
+            this.form.id = permission.id,
+            this.form.name = permission.name,
+            this.isModalVisible = true
+        },
+        getAllPermissions: async function(){
+            Api().get('/admin/permission')
+                .then(response => {
+                    this.permissions = response.data.permissions
+                })
+        },
+        createPermission: async function(){
+            this.loading = true
+            Api().post('/admin/permission', this.form)
+                .then(() => {
+                    this.getAllPermissions()
+                    this.editMode = false
+                    this.loading = false
+                    this.clearData()
+                    this.isModalVisible = false
+                })
+                .catch(error => {
+                    if (error.response.status === 422) {
+                        this.errors = error.response.data.errors
+                    }
+                    this.loading = false
+                })
+        },
+        updatePermission: async function(){
+            this.loading = true
+            Api().post(`/admin/edit-permission/${this.form.id}`, this.form)
+                .then(() => {
+                    this.getAllPermissions()
+                    this.editMode = false
+                    this.loading = false
+                    this.clearData()
+                    this.isModalVisible = false
+                })
+                .catch(error => {
+                    if (error.response.status === 500) {
+                        this.errors = error.response.data.errors
+                    }
+                    this.loading = false
+                })
+
+        }
+    },
+    computed: {},
+    mounted(){
+        this.getAllPermissions()
+    }
 }
 </script>

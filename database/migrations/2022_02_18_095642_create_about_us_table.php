@@ -16,11 +16,18 @@ class CreateAboutUsTable extends Migration
         Schema::create('about_us', function (Blueprint $table) {
             $table->id();
             $table->string('heading');
-            $table->text('smallText');
-            $table->longText('smallDescription');
-            $table->longText('mainDescription');
-            $table->string('imageOne');
-            $table->string('imageTwo');
+            $table->longText('description');
+            $table->string('headerOne');
+            $table->string('headerTwo');
+            $table->string('headerThree');
+            $table->string('headerFour');
+            $table->longText('descriptionOne');
+            $table->longText('descriptionTwo');
+            $table->longText('descriptionThree');
+            $table->longText('descriptionFour');
+            $table->longText('descriptionFive');
+            $table->string('image');
+            $table->string('video');
             $table->timestamps();
         });
     }

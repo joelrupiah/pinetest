@@ -1,51 +1,54 @@
 <template>
-    <div id="permission_list">
-<div class="page-title">
-                        <h3 class="breadcrumb-header">Permssions List</h3>
-                    </div>
-                <div id="main-wrapper">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="panel panel-white">
-                                <div class="panel-heading clearfix">
-                                    <a href="/api/admin/create-permission">
-                                        <el-button type="primary" icon="el-icon-plus" size="mini" @click.prevent="createModal">
-                                            Create Permission</el-button>
-                                    </a>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Permission Name</th>
-                                                    <th>Date Created</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr v-for="(permission, index) in permissions" :key="permission.id">
-                                                    <th scope="row">{{ index+1 }}</th>
-                                                    <td>{{ permission.name }}</td>
-                                                    <td>{{ permission.created_at | time }}</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-between">
-                                                            <i style="color:green;cursor:pointer" class="el-icon-edit"
-                                                            @click.prevent="editModal(permission)"></i>
-                                                            <i style="color:red" class="el-icon-delete"></i>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div id="admin_permission">
+        <main class="ttr-wrapper">
+              <div class="content">
+    
+                <div class="container">
+                <h5 class="mb-1">Permissions Table</h5>
+                <el-button type="primary" icon="el-icon-plus" size="mini" class="mb-2" 
+                    @click.prevent="createModal"> Create Permission</el-button>
+
+                <div class="table-responsive">
+
+                    <table class="table table-striped custom-table">
+                    <thead>
+                        <tr>
+                        <th scope="col"><small class="d-block"><strong>#</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Permission Name</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Date Created</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Actions</strong></small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" v-for="(permission, index) in permissions" :key="permission.id">
+                                <td>
+                                    <small class="d-block">{{ index+1 }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">{{ permission.name }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">{{ permission.created_at | time }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">
+                                        <i class="el-icon-edit" style="color:green;cursor:pointer"
+                                        @click.prevent="editModal(permission)"></i>
+                                        <i class="el-icon-delete" style="color:red;cursor:pointer"></i>
+                                    </small>
+                                </td>
                         
-                    </div><!-- Row -->
+                        </tr>
+                        
+                    </tbody>
+                    </table>
                 </div>
+
+                </div>
+
+            </div>
+        </main>
+
 <el-dialog
   :title="form.id ? 'Edit Role' : 'Create Role'"
   :visible.sync="isModalVisible"
@@ -63,6 +66,7 @@
     v-show="editMode" @click.prevent="updatePermission()">Update</el-button>
   </span>
 </el-dialog>
+
     </div>
 </template>
 

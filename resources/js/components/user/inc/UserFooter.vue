@@ -1,144 +1,112 @@
 <template>
     <div id="user_footer">
-        <!--Start footer area Style4-->
-        <footer class="footer-area style4">
+	<!-- Footer ==== -->
+    <footer>
+        <div class="footer-top">
+			<div class="pt-exebar">
+				<div class="container">
+					<div class="d-flex align-items-stretch">
+						<div class="pt-logo mr-auto">
+							<a href="/api"><img src="" alt="PineCrest Logo"/></a>
+						</div>
+						<div class="pt-social-link">
+							<ul class="list-inline m-a0">
+								<li><a href="#" class="btn-link"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" class="btn-link"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#" class="btn-link"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+						<div class="pt-btn-join">
+							<a href="#" class="btn ">Join Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
             <div class="container">
                 <div class="row">
-                    <!--Start single footer widget-->
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                        <div class="single-footer-widget marbtm50-s4">
-                            <div class="our-info-box">
-                                <div class="footer-logo">
-                                    <a href="index-2.html">
-                                        <img src="" alt="Pinecrest Logo">
-                                    </a>
-                                </div>
-                                <div class="text">
-                                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the blinded by desiremoment.</p>
-                                </div>
-                                <div class="follow-us-social-links clearfix">
-                                    <span>Follw Us On:</span>
-                                    <ul>
-                                        <li><a href="#">Facebook</a></li>
-                                        <li><a href="#">Twitter</a></li>
-                                        <li><a href="#">Instagram</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+					<div class="col-lg-4 col-md-12 col-sm-12 footer-col-4">
+                        <div class="widget">
+                            <h5 class="footer-title">Sign Up For A Newsletter</h5>
+							<p class="text-capitalize m-b20">Weekly Breaking news analysis and cutting edge advices on job searching.</p>
+                            <div class="subscribe-form m-b20">
+								<form class="subscription-form" action="http://educhamp.themetrades.com/demo/assets/script/mailchamp.php" method="post">
+									<div class="ajax-message"></div>
+									<div class="input-group">
+										<input name="email" required="required"  class="form-control" placeholder="Your Email Address" type="email">
+										<span class="input-group-btn">
+											<button name="submit" value="Submit" type="submit" class="btn"><i class="fa fa-arrow-right"></i></button>
+										</span> 
+									</div>
+								</form>
+							</div>
                         </div>
                     </div>
-                    <!--End single footer widget-->
-                    <!--Start single footer widget-->
-                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
-                        <div class="single-footer-widget s4">
-                            <div class="title-style2">
-                                <h3>Usefull Links</h3>
-                            </div>
-                            <div class="usefull-links">
-                                <ul class="float-left">
-                                    <li><a href="#">Company</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Team</a></li>
-                                    <li><a href="#">Projects</a></li>
-                                    <li><a href="#">Get a Quote</a></li>
-                                </ul>
-                                <ul class="float-left borders-left">
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">Partners</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
+					<div class="col-12 col-lg-5 col-md-7 col-sm-12">
+						<div class="row">
+							<div class="col-4 col-lg-4 col-md-4 col-sm-4">
+								<div class="widget footer_widget">
+									<h5 class="footer-title">Company</h5>
+									<ul>
+										<li><a href="/api">Home</a></li>
+										<li><a href="/api/about-us">About</a></li>
+										<li><a href="/api/about-us/history">History</a></li>
+										<li><a href="/api/faqs">FAQs</a></li>
+										<li><a href="/api/contact-us">Contact</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-4 col-lg-4 col-md-4 col-sm-4">
+								<div class="widget footer_widget">
+									<h5 class="footer-title">Get In Touch</h5>
+									<ul>
+										<li><a href="http://educhamp.themetrades.com/admin/index.html">Dashboard</a></li>
+										<li><a href="blog-classic-grid.html">Blog</a></li>
+										<li><a href="portfolio.html">Portfolio</a></li>
+										<li><a href="event.html">Event</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-4 col-lg-4 col-md-4 col-sm-4">
+								<div class="widget footer_widget">
+									<h5 class="footer-title">Courses</h5>
+									<ul>
+										<li><a href="courses.html">Courses</a></li>
+										<li><a href="courses-details.html">Details</a></li>
+										<li><a href="membership.html">Membership</a></li>
+										<li><a href="profile.html">Profile</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
                     </div>
-                    <!--End single footer widget-->
-                    <!--Start single footer widget-->
-                    <div class="col-xl-4 col-lg-3 col-md-12 col-sm-12">
-                        <div class="single-footer-widget pdtop50-s4">
-                            <div class="title-style2">
-                                <h3>Subscribe To Our Newsletter</h3>
-                            </div>
-                            <div class="subscribe-box">
-                                <form class="subscribe-form" action="#">
-                                    <input type="email" name="email" placeholder="Your Email">
-                                    <button class="btn-one" type="submit">Subscribe<span class="flaticon-next"></span></button>
-                                </form>
-                                <div class="text">
-                                    <p><span>*</span>Subscribe us and get latest news and updates</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single footer widget-->
-                </div>
-            </div>
-        </footer>
-        <!--End footer area style4-->
-
-        <!--Start Footer Contact Info Area-->
-        <section class="footer-contact-info-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <ul class="footer-contact-info clearfix">
-                            <li>
-                                <div class="single-footer-contact-info">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <span class="icon-global"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>Flat 20, Reynolds Neck, North<br> Helenaville, FV77 8WS</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="single-footer-contact-info">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <span class="icon-support1"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>+324 123 45 978 & 01<br> <span>Mon - Friday:</span> 9.00am to 6.00pm</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="single-footer-contact-info">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <span class="icon-shipping-and-delivery"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p>abc@yourdomain.com<br> crystalocareer@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Footer Contact Info Area-->
-
-        <!--Start footer bottom area-->
-        <section class="footer-bottom-area style3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div class="copyright-text text-center">
-                            <p>Copyright @ 2022 Pinecrest Academy</p>
+					<div class="col-12 col-lg-3 col-md-5 col-sm-12 footer-col-4">
+                        <div class="widget widget_gallery gallery-grid-4">
+                            <h5 class="footer-title">Our Gallery</h5>
+                            <ul class="magnific-image">
+								<li><a href="/frontend/assets/images/gallery/pic1.jpg" class="magnific-anchor"><img src="/frontend/assets/images/gallery/pic1.jpg" alt=""></a></li>
+								<li><a href="/frontend/assets/images/gallery/pic2.jpg" class="magnific-anchor"><img src="/frontend/assets/images/gallery/pic2.jpg" alt=""></a></li>
+								<li><a href="/frontend/assets/images/gallery/pic3.jpg" class="magnific-anchor"><img src="/frontend/assets/images/gallery/pic3.jpg" alt=""></a></li>
+								<li><a href="/frontend/assets/images/gallery/pic4.jpg" class="magnific-anchor"><img src="/frontend/assets/images/gallery/pic4.jpg" alt=""></a></li>
+								<li><a href="/frontend/assets/images/gallery/pic5.jpg" class="magnific-anchor"><img src="/frontend/assets/images/gallery/pic5.jpg" alt=""></a></li>
+								<li><a href="/frontend/assets/images/gallery/pic6.jpg" class="magnific-anchor"><img src="/frontend/assets/images/gallery/pic6.jpg" alt=""></a></li>
+								<li><a href="/frontend/assets/images/gallery/pic7.jpg" class="magnific-anchor"><img src="/frontend/assets/images/gallery/pic7.jpg" alt=""></a></li>
+								<li><a href="/frontend/assets/images/gallery/pic8.jpg" class="magnific-anchor"><img src="/frontend/assets/images/gallery/pic8.jpg" alt=""></a></li>
+							</ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--End footer bottom area-->
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 text-center"> <a target="_blank" href="https://www.templateshub.net">Templates Hub</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer END ==== -->
     </div>
 </template>
 

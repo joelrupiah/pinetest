@@ -1,52 +1,59 @@
 <template>
     <div id="admin_list">
-<div class="page-title">
-    <h3 class="breadcrumb-header">Admin List</h3>
-</div>
-                <div id="main-wrapper">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="panel panel-white">
-                                <div class="panel-heading clearfix">
-                                    <el-button type="primary" icon="el-icon-plus" size="mini"
-                                    @click="createModal()">Create Admin</el-button>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Name</th>
-                                                    <th>Role</th>
-                                                    <th>Date Created</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr v-for="(admin, index) in admins" :key="admin.id">
-                                                    <th scope="row">{{ index+1 }}</th>
-                                                    <td>{{ admin.name }}</td>
-                                                    <td>{{ admin.role }}</td>
-                                                    <td>{{ admin.created_at | time }}</td>
-                                                    <td>
-                                                        <div>
-                                                            <button class="btn btn-xs btn-warning"
-                                                            @click="editModal(admin)" >Edit</button>
-                                                            <button class="btn btn-xs btn-danger"
-                                                            @click.prevent="deleteAdmin(admin.id)">Delete</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+        <main class="ttr-wrapper">
+              <div class="content">
+    
+                <div class="container">
+                <h5 class="mb-1">Admins Table</h5>
+                <el-button type="primary" icon="el-icon-plus" size="mini" class="mb-2" 
+                    @click="createModal()"> Create Admin</el-button>
+
+                <div class="table-responsive">
+
+                    <table class="table table-striped custom-table">
+                    <thead>
+                        <tr>
+                        <th scope="col"><small class="d-block"><strong>#</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Admin Name</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Role</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Date Created</strong></small></th>
+                        <th scope="col"><small class="d-block"><strong>Actions</strong></small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" v-for="(admin, index) in admins" :key="admin.id">
+                                <td>
+                                    <small class="d-block">{{ index+1 }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">{{ admin.name }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">{{ admin.role }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">{{ admin.created_at | time }}</small>
+                                </td>
+                                <td>
+                                    <small class="d-block">
+                                        <i class="el-icon-edit" style="color:green;cursor:pointer"
+                                        @click="editModal(admin)"></i>
+                                        <i class="el-icon-delete" style="color:red;cursor:pointer"
+                                        @click.prevent="deleteAdmin(admin.id)"></i>
+                                    </small>
+                                </td>
                         
-                    </div><!-- Row -->
+                        </tr>
+                        
+                    </tbody>
+                    </table>
                 </div>
+
+                </div>
+
+            </div>
+        </main>
 
 <el-dialog
   :title="form.id ? 'Edit Admin' : 'Create Admin'"

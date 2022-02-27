@@ -1,18 +1,12 @@
 <template>
     <div id="user_master">
-    <div class="boxed_wrapper">
-
-        <div class="preloader"></div>
-
-<user-header></user-header>
-
-<user-navbar></user-navbar>
-
-<router-view></router-view>
-
+<div class="page-wraper">
+<div id="loading-icon-bx"></div>
+    <user-header></user-header>
+        <router-view></router-view>
     <user-footer></user-footer>
-
-    </div>
+    <button class="back-to-top fa fa-chevron-up" ></button>
+</div>
     </div>
 </template>
 
