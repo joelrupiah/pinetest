@@ -14,7 +14,7 @@
 		<div class="breadcrumb-row">
 			<div class="container">
 				<ul class="list-inline">
-					<li><a href="#">Home</a></li>
+					<li><a href="/api">Home</a></li>
 					<li>Portfolio</li>
 				</ul>
 			</div>
@@ -34,7 +34,7 @@
 						</ul>
 					</div>
 					<div class="clearfix">
-						<ul id="masonry" class="ttr-gallery-listing magnific-image row">
+						<ul id="masonry" class="ttr-gallery-listing magnific-image row" v-if="galleries.length > 0">
 							<li class="action-card col-lg-3 col-md-4 col-sm-6" v-for="gallery in galleries" :key="gallery.id">
 								<div class="ttr-box portfolio-bx">
 									<div class="ttr-media media-ov2 media-effect">
@@ -43,15 +43,22 @@
 										</a>
 										<div class="ov-box">
 											<div class="overlay-icon align-m"> 
-												<a :href="fileLink(gallery.image)" class="magnific-anchor" title="Pinecrest">
-													<i class="ti-search"></i>
-												</a>
+												<p style="cursor:pointer">
+													<!-- <i class="ti-search">smbbfbfdjfhdfbj</i> -->
+													<small>
+														<p class="text-white" style="word-break:break-all;white-space: pre-wrap;word-wrap: break-word;" 
+														v-html="gallery.description"></p>
+													</small>
+												</p>
 											</div>
 										</div>
+										
 									</div>
 								</div>
 							</li>
 						</ul>
+							<Page size="small" :total="pageInfo.total" :current="pageInfo.current_page" 
+								:page-size="parseInt(pageInfo.per_page)" @on-change="getAllGalleries" v-if="pageInfo" />
 					</div>
 				</div>
 			</div>
@@ -68,17 +75,21 @@ export default {
 	data(){
 		return {
 			galleries: [],
-			grades: []
+			grades: [],
+			total: 4,
+			pageInfo: null
 		}
 	},
 	methods: {
 		fileLink(name){
 			return '/uploads/img/gallery/' + name
 		},
-		getAllGalleries: async function(){
-			axios.get('get-galleries')
+		getAllGalleries: async function(page = 1){
+			// console.log(page)
+			axios.get(`get-galleries?page=${page}&total=${this.total}`)
 				.then((response) => {
-					this.galleries = response.data.galleries
+					this.galleries = response.data.galleries.data
+					this.pageInfo = response.data.galleries
 				})
 		},
 		getAllGrades: async function(){

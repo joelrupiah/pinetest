@@ -11,23 +11,28 @@
 	<meta name="robots" content="" />
 	
 	<!-- DESCRIPTION -->
-	<meta name="description" content="PineCrest" />
+	<meta name="description" content="EduChamp : Education HTML Template" />
 	
 	<!-- OG -->
-	<meta property="og:title" content="PineCrest" />
-	<meta property="og:description" content="PineCrest" />
+	<meta property="og:title" content="EduChamp : Education HTML Template" />
+	<meta property="og:description" content="EduChamp : Education HTML Template" />
 	<meta property="og:image" content="" />
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- FAVICONS ICON ============================================= -->
-	<link rel="icon" href="/frontend/assets/images/pinecrest-favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/images/pinecrest-logo.png" />
+	<link rel="icon" href="/frontend/assets/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/images/favicon.png" />
 	
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>PineCrest </title>
+	<title>EduChamp : Education HTML Template </title>
 	
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.min.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
 	
 	<!-- All PLUGINS CSS ============================================= -->
 	<link rel="stylesheet" type="text/css" href="/frontend/assets/css/assets.css">
@@ -47,13 +52,16 @@
 	<link rel="stylesheet" type="text/css" href="/frontend/assets/vendors/revolution/css/settings.css">
 	<link rel="stylesheet" type="text/css" href="/frontend/assets/vendors/revolution/css/navigation.css">
 	<!-- REVOLUTION SLIDER END -->	
+
 </head>
 <body id="bg">
-<div id="user">
-    <user-master></user-master>
-</div>
 
-<script src="{{ asset('js/user.js') }}"></script>
+	<div id="user">
+		<user-master></user-master>
+	</div>
+
+	<script src="{{ asset('js/user.js') }}"></script>
+
 <!-- External JavaScripts -->
 <script src="/frontend/assets/js/jquery.min.js"></script>
 <script src="/frontend/assets/vendors/bootstrap/js/popper.min.js"></script>
@@ -69,7 +77,7 @@
 <script src="/frontend/assets/vendors/owl-carousel/owl.carousel.js"></script>
 <script src="/frontend/assets/js/functions.js"></script>
 <script src="/frontend/assets/js/contact.js"></script>
-<script src='assets/vendors/switcher/switcher.js'></script>
+<script src='/frontend/assets/vendors/switcher/switcher.js'></script>
 <!-- Revolution JavaScripts Files -->
 <script src="/frontend/assets/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
 <script src="/frontend/assets/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
@@ -92,7 +100,7 @@ jQuery(document).ready(function() {
 	}else{
 		ttrevapi = tpj("#rev_slider_486_1").show().revolution({
 			sliderType:"standard",
-			jsFileLocation:"/frontend/assets/vendors/revolution/js/",
+			jsFileLocation:"assets/vendors/revolution/js/",
 			sliderLayout:"fullwidth",
 			dottedOverlay:"none",
 			delay:9000,
@@ -170,21 +178,6 @@ jQuery(document).ready(function() {
 	}
 });	
 </script>
-<!-- GetButton.io widget -->
-{{-- <script type="text/javascript">
-    (function () {
-        var options = {
-            whatsapp: "+254(157) 332-57", // WhatsApp number
-            call_to_action: "Talk to us", // Call to action
-            position: "left", // Position may be 'right' or 'left'
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script> --}}
-<!-- /GetButton.io widget -->
 </body>
 
 </html>

@@ -18,9 +18,9 @@ class GalleryController extends Controller
         ], 200);
     }
 
-    public function getGalleries()
+    public function getGalleries(Request $request)
     {
-        $galleries = Gallery::with('grade')->get();
+        $galleries = Gallery::with('grade')->paginate($request->total);
 
         return response()->json([
             'galleries' => $galleries
@@ -37,7 +37,8 @@ class GalleryController extends Controller
         // return $request;
         $request->validate([
             'grade_id' => 'nullable',
-            'image' => 'required'
+            'image' => 'required',
+            'description' => 'required'
         ]);
 
         $file = explode(';', $request->image);
@@ -49,6 +50,7 @@ class GalleryController extends Controller
         Gallery::create([
             'grade_id' => $request->grade_id,
             'image' => $file_name,
+            'description' => $request->description
         ]);
 
         Image::make($request->image)->resize(800, 650)->save(public_path('/uploads/img/gallery/').$file_name);
@@ -79,6 +81,7 @@ class GalleryController extends Controller
         $gallery = Gallery::find($request->id);
         
         $gallery->grade_id = $request->grade_id;
+        $gallery->description = $request->description;
 
         if ($request->image != $gallery->image) {
             $file = explode(';', $request->image);

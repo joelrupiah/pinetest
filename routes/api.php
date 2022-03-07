@@ -15,6 +15,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\AdminFaqController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\CarouselController;
+use App\Http\Controllers\SubscriptionController;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -41,6 +42,8 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::resource('grade', GradeController::class);
     Route::resource('gallery', GalleryController::class);
     // Route::resource('event', EventController::class);
+
+    Route::get('search-about', [AboutUsController::class, 'searchAbouts']);
 
     Route::get('all-admins', [AdminController::class, 'getAllAdmins']);
     Route::post('create-admin', [AdminController::class, 'store']);
@@ -92,6 +95,8 @@ Route::get('get-user-events', [EventController::class, 'userEvents']);
 Route::get('get-user-faqs', [FaqController::class, 'getUserFaq']);
 Route::get('get-user-carousels', [CarouselController::class, 'getUserCarousel']);
 Route::get('get-event-detail/{eventSlug}', [EventController::class, 'eventDetails']);
+
+Route::post('subscribe-newsletter', [SubscriptionController::class, 'store']);
 
 Route::prefix('admin')->group(function(){
     Route::post('reset-admin-password', [ResetAdminPasswordController::class, 'resetAdminPassword']);

@@ -33,11 +33,17 @@
 								<form class="subscription-form" action="http://educhamp.themetrades.com/demo/assets/script/mailchamp.php" method="post">
 									<div class="ajax-message"></div>
 									<div class="input-group">
-										<input name="email" required="required"  class="form-control" placeholder="Your Email Address" type="email">
+										<input name="email" required="required"  class="form-control" 
+										v-model="form.email" placeholder="Your Email Address" type="email">
 										<span class="input-group-btn">
-											<button name="submit" value="Submit" type="submit" class="btn"><i class="fa fa-arrow-right"></i></button>
+											<button name="submit" value="Submit" type="submit" @click.prevent="subscribe" class="btn">
+												<i class="fa fa-arrow-right"></i></button>
 										</span> 
+										
 									</div>
+									<span class="text-danger text-sm" v-if="errors.email">
+											{{ errors.email[0] }}
+										</span>
 								</form>
 							</div>
                         </div>
@@ -112,6 +118,27 @@
 
 <script>
 export default {
-    name: 'UserFooter'
+    name: 'UserFooter',
+	data(){
+		return {
+			form: {
+				email: ''
+			},
+			errors: {}
+		}
+	},
+	methods: {
+		subscribe: async function(){
+			axios.post('/api/subscribe-newsletter', this.form)
+				.then(() => {})
+				.catch((error) => {
+					if (error.response.status === 422) {
+						this.errors = error.response.data.errors
+					}
+				})
+		}
+	},
+	computed: {},
+	created() {}
 }
 </script>

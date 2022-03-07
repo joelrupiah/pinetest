@@ -11,7 +11,8 @@ class Gallery extends Model
 
     protected $fillable = [
         'grade_id',
-        'image'
+        'image',
+        'description'
     ];
 
     public function grade()

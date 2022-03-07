@@ -14,10 +14,13 @@ Vue.component('admin-master', require('./components/admin/AdminMaster.vue').defa
 
 //Start VueJS component frameworks
 
+import ViewUI from 'view-design'
+import 'view-design/dist/styles/iview.css'
+
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-
+Vue.use(ViewUI)
 Vue.use( CKEditor )
 Vue.use(ElementUI);
 // End VueJs frontend frameworks

@@ -5,11 +5,18 @@
     
                 <div class="container">
                 <h5 class="mb-1">Admins Table</h5>
-                <router-link :to="{name: 'CreateAdminAboutUs'}">
+                <div class="d-flex justify-content-between">
+                    <router-link :to="{name: 'CreateAdminAboutUs'}">
                     <el-button type="primary" icon="el-icon-plus" size="mini" class="mb-2"> 
                         Create About Content</el-button>
-                </router-link>
-
+                    </router-link>
+                     <el-input placeholder="Please input" v-model="search" 
+                     class="input-with-select" style="width:300px">
+                        <el-input placeholder="Please input"></el-input>
+                        <el-button slot="append" icon="el-icon-search"
+                        @click.prevent="searchAbout" ></el-button>
+                    </el-input>
+                </div>
                 <div class="table-responsive">
 
                     <table class="table table-striped custom-table">
@@ -43,6 +50,8 @@
                                 </td>
                         
                         </tr>
+                        <Page size="small" :total="pageInfo.total" :current="pageInfo.current_page" 
+								:page-size="parseInt(pageInfo.per_page)" @on-change="getAllAboutData" v-if="pageInfo" />
                         
                     </tbody>
                     </table>
@@ -63,14 +72,24 @@ export default {
     name: 'AdminAboutUsList',
     data(){
         return {
-            abouts: []
+            abouts: [],
+			total: 10,
+			pageInfo: null,
+            search: ''
         }
     },
     methods: {
-        getAllAboutData: async function(){
-            Api().get('/admin/get-all-admin-about-data')
-                .then((response) => {
+        searchAbout: async function(page = 1){
+            Api().get(`/admin/search-about?page=${page}&total=${this.total}`, { params: {search: this.search} })
+                .then(response => {
                     this.abouts = response.data.abouts
+                })
+        },
+        getAllAboutData: async function(page = 1){
+            Api().get(`/admin/get-all-admin-about-data?page=${page}&total=${this.total}`)
+                .then((response) => {
+                    this.abouts = response.data.abouts.data
+					this.pageInfo = response.data.abouts
                 })
         }
     },

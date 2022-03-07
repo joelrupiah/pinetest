@@ -3,7 +3,7 @@
     <!-- Content -->
     <div class="page-content bg-white">
         <!-- inner page banner -->
-        <div class="page-banner ovbl-dark" style="background-image:url(/frontend/assets/images/banner/banner3.jpg);">
+        <div class="page-banner ovbl-dark" style="background-image:url(assets/images/banner/banner2.jpg);">
             <div class="container">
                 <div class="page-banner-entry">
                     <h1 class="text-white">Contact Us</h1>
@@ -15,17 +15,26 @@
 			<div class="container">
 				<ul class="list-inline">
 					<li><a href="/api">Home</a></li>
-					<li>Contact Us 1</li>
+					<li>Contact Us</li>
 				</ul>
 			</div>
 		</div>
 		<!-- Breadcrumb row END -->
 	
         <!-- inner page banner -->
-        <div class="page-banner contact-page section-sp2">
-            <div class="container">
-                <div class="row">
-					<div class="col-lg-5 col-md-5 m-b30">
+        <div class="page-banner contact-page">
+            <div class="container-fuild">
+                <div class="row m-lr0">
+					<div class="col-lg-12 col-md-12 p-lr0 d-flex p-4">
+						<GmapMap
+							:center="{lat:10, lng:10}"
+							:zoom="7"
+							map-type-id="terrain"
+							style="width: 100%; height: 400px"
+						>
+						</GmapMap>
+					</div>
+					<div class="col-lg-5 col-md-5 section-sp2 p-lr30">
 						<div class="bg-primary text-white contact-info-bx">
 							<h2 class="m-b10 title-head">Contact <span>Information</span></h2>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -45,15 +54,15 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-lg-7 col-md-7">
+					<div class="col-lg-6 col-md-6 section-sp2 p-lr30">
 						<form class="contact-bx ajax-form" action="http://educhamp.themetrades.com/demo/assets/script/contact.php">
 						<div class="ajax-message"></div>
-							<div class="heading-bx left">
+							<div class="heading-bx left p-r15">
 								<h2 class="title-head">Get In <span>Touch</span></h2>
 								<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
 							</div>
 							<div class="row placeani">
-								<div class="col-lg-6">
+								<div class="col-lg-6 ">
 									<div class="form-group">
 										<div class="input-group">
 											<label>Your Name</label>

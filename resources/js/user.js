@@ -8,14 +8,26 @@ import {store} from './common/store/store'
 
 import filter from './common/filter'
 
+import * as VueGoogleMaps from 'vue2-google-maps'
+
 Vue.component('user-master', require('./components/user/UserMaster.vue').default);
 
 //Start VueJS component frameworks
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import ViewUI from 'view-design'
+import 'view-design/dist/styles/iview.css'
 
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyA2QkTkJ6WGUlGQnhjI46VvmyGWLfALy64',
+    libraries: 'places',
+  },
+})
+
+Vue.use(ViewUI)
 Vue.use(ElementUI);
 // End VueJs frontend frameworks
 

@@ -17,6 +17,7 @@ class CreateGalleriesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('grade_id');
             $table->string('image');
+            $table->longText('description');
             $table->timestamps();
         });
     }

@@ -9,9 +9,9 @@ use Image;
 class AboutUsController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $abouts = AboutUs::get();
+        $abouts = AboutUs::paginate($request->total);
 
         return response()->json([
             'abouts' => $abouts
@@ -21,6 +21,16 @@ class AboutUsController extends Controller
     public function getUserAbout()
     {
         $abouts = AboutUs::get();
+
+        return response()->json([
+            'abouts' => $abouts
+        ], 200);
+    }
+
+    public function searchAbouts(Request $request)
+    {
+        $abouts = AboutUs::where('heading', 'LIKE','%'.$request->search.'%')
+                    ->paginate($request->total);
 
         return response()->json([
             'abouts' => $abouts

@@ -45,6 +45,14 @@
 										</div>
 									</div>
 
+                                    <div class="form-group col-12">
+                                        <label class="col-form-label">Image Description</label>
+                                        <div>
+											<ckeditor :editor="editor" v-model="form.description" :config="editorConfig">
+                                            </ckeditor>
+                                        </div>
+                                    </div>
+
 									<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
 									
 									<div class="col-12">
@@ -67,6 +75,7 @@
 
 <script>
 import Api from '../../../../apis/admin/Api'
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 export default {
     name: 'EditGallery',
     data(){
@@ -77,9 +86,13 @@ export default {
             form: {
                 id: '',
                 grade_id: '',
-                image: ''
+                image: '',
+                description: ''
             },
             errors: {},
+            editor: ClassicEditor,
+            editorConfig: {
+            }
         }
     },
     methods:{
@@ -115,6 +128,7 @@ export default {
                     this.form.id = response.data.gallery.id
                     this.form.grade_id = response.data.gallery.grade_id
                     this.form.image = response.data.gallery.image
+                    this.form.description = response.data.gallery.description
                 })
         },
         update: async function(){
