@@ -11,27 +11,27 @@
 	<meta name="robots" content="" />
 	
 	<!-- DESCRIPTION -->
-	<meta name="description" content="EduChamp : Education HTML Template" />
+	<meta name="description" content="Pinecrest" />
 	
 	<!-- OG -->
-	<meta property="og:title" content="EduChamp : Education HTML Template" />
-	<meta property="og:description" content="EduChamp : Education HTML Template" />
+	<meta property="og:title" content="Pinecrest" />
+	<meta property="og:description" content="Pinecrest" />
 	<meta property="og:image" content="" />
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- FAVICONS ICON ============================================= -->
-	<link rel="icon" href="/frontend/assets/images/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/images/favicon.png" />
+	<link rel="icon" href="/frontend/assets/images/pinecrest-favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/images/pinecrest-logo.png" />
 	
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>EduChamp : Education HTML Template </title>
+	<title>Pinecrest </title>
 	
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.min.js"></script>
-	<script src="assets/js/respond.min.js"></script>
+	<script src="/frontend/assets/js/html5shiv.min.js"></script>
+	<script src="/frontend/assets/js/respond.min.js"></script>
 	<![endif]-->
 	
 	<!-- All PLUGINS CSS ============================================= -->
@@ -52,7 +52,6 @@
 	<link rel="stylesheet" type="text/css" href="/frontend/assets/vendors/revolution/css/settings.css">
 	<link rel="stylesheet" type="text/css" href="/frontend/assets/vendors/revolution/css/navigation.css">
 	<!-- REVOLUTION SLIDER END -->	
-
 </head>
 <body id="bg">
 
@@ -100,7 +99,7 @@ jQuery(document).ready(function() {
 	}else{
 		ttrevapi = tpj("#rev_slider_486_1").show().revolution({
 			sliderType:"standard",
-			jsFileLocation:"assets/vendors/revolution/js/",
+			jsFileLocation:"/frontend/assets/vendors/revolution/js/",
 			sliderLayout:"fullwidth",
 			dottedOverlay:"none",
 			delay:9000,
