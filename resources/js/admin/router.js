@@ -44,6 +44,7 @@ import ReplyQuestion from '../components/admin/pages/faq/ReplyQuestion'
 
 import EventList from '../components/admin/pages/event/EventList'
 import CreateEvent from '../components/admin/pages/event/CreateEvent'
+import EditEvent from '../components/admin/pages/event/EditEvent'
 
 import CarouselList from '../components/admin/pages/carousel/CarouselList'
 import CreateCarousel from '../components/admin/pages/carousel/CreateCarousel'
@@ -96,6 +97,7 @@ const router = new VueRouter({
 
         {path:'/api/admin/event-list', component: EventList, name: 'EventList', meta: { requiresAuth: true } },
         {path:'/api/admin/create-event', component: CreateEvent, name: 'CreateEvent', meta: { requiresAuth: true } },
+        {path:'/api/admin/edit-event/:id', component: EditEvent, name: 'EditEvent', meta: { requiresAuth: true } },
 
         {path:'/api/admin/carousel-list', component: CarouselList, name: 'CarouselList', meta: { requiresAuth: true } },
         {path:'/api/admin/create-carousel', component: CreateCarousel, name: 'CreateCarousel', meta: { requiresAuth: true } },

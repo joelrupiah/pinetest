@@ -93,10 +93,9 @@ class EventController extends Controller
         return response()->json('success', 200);
     }
 
-    public function show(Event $event)
+    public function show(Event $event, $id)
     {
-        // return response($event, Response::HTTP_OK);
-        $event = Event::find($request->id);
+        $event = Event::where('id', $id)->first();
 
         return response()->json([[
             'event' => $event

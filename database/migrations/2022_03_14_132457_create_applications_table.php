@@ -21,6 +21,7 @@ class CreateApplicationsTable extends Migration
             $table->string('parent_email')->nullable();
             $table->string('student_name');
             $table->string('student_age');
+            $table->string('status')->default('new');
             $table->timestamps();
         });
     }
