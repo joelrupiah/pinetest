@@ -168,18 +168,33 @@
 								<h4 class="text-white pb-20 text-center mb-30">Request for admission</h4>
 								<div class="mb-1">
 									<el-input placeholder="Parent's Name (required)" size="mini" v-model="form.parent_name"></el-input>	
+									<small class="text-danger text-sm" v-if="errors.parent_name">
+										{{ errors.parent_name[0] }}
+									</small>
 								</div>	
 								<div class="mb-1">
 									<el-input placeholder="Parent's Phone (required)" size="mini" v-model="form.parent_phone"></el-input>	
+									<small class="text-danger text-sm" v-if="errors.parent_phone">
+										{{ errors.parent_phone[0] }}
+									</small>
 								</div>	
 								<div class="mb-1">
 									<el-input placeholder="Parent's Email (optional)" size="mini" v-model="form.parent_email"></el-input>	
+									<small class="text-danger text-sm" v-if="errors.parent_email">
+										{{ errors.parent_email[0] }}
+									</small>
 								</div>
 								<div class="mb-1">
 									<el-input placeholder="Student's Name (required)" size="mini" v-model="form.student_name"></el-input>	
+									<small class="text-danger text-sm" v-if="errors.student_name">
+										{{ errors.student_name[0] }}
+									</small>
 								</div>
 								<div class="mb-1">
 									<el-input placeholder="Student's Age (required)" size="mini" v-model="form.student_age"></el-input>	
+									<small class="text-danger text-sm" v-if="errors.student_age">
+										{{ errors.student_age[0] }}
+									</small>
 								</div>
 								<div class="form-select mb-1" id="service-select">
 									<el-select v-model="form.grade_id" placeholder="Choose Grade (required)"
@@ -192,6 +207,9 @@
 											{{ grade.name }}
 										</el-option>
 									</el-select>
+									<small class="text-danger text-sm" v-if="errors.grade_id">
+										{{ errors.grade_id[0] }}
+									</small>
 								</div>									
 								<el-button type="success" :loading="loading" size="mini" 
 									@click.prevent="submitApplication()">{{ loading ? 'Submitting Application.....' : 'Submit Application' }}
@@ -413,8 +431,14 @@ export default {
 			carousels: [],
 			grades: [],
 			form:{
-				grade_id: ''
-			}
+				grade_id: '',
+				parent_name: '',
+				parent_phone: '',
+				parent_email: '',
+				student_name: '',
+				student_age: ''
+			},
+			errors: {}
         }
     },
     methods: {
@@ -467,7 +491,24 @@ export default {
 				})
 		},
 		submitApplication: async function(){
-			console.log(this.form)
+			this.loading = true
+			axios.post('/api/submit-application', this.form)
+				.then(() => {
+					this.form.grade_id = '',
+					this.form.parent_name = '',
+					this.form.parent_phone = '',
+					this.form.parent_email = '',
+					this.form.student_name = '',
+					this.form.student_age = '',
+					this.loading = false
+				})
+				.catch((error) => {
+					if (error.response.status === 422) {
+						this.errors = error.response.data.errors
+					}
+					this.loading = false
+					this.errors = {}
+				})
 		}
     },
     computed:{},

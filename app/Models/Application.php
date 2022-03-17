@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Application extends Model
 {
@@ -17,4 +18,9 @@ class Application extends Model
         'student_name',
         'student_age'
     ];
+
+    public function grade(): BelongsTo
+    {
+        return $this->belongsTo(Grade::class);
+    }
 }

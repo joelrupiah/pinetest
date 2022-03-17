@@ -17,6 +17,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\InboxController;
+use App\Http\Controllers\ApplicationController;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -103,6 +104,8 @@ Route::get('get-user-grades', [GradeController::class, 'getGrades']);
 
 Route::post('subscribe-newsletter', [SubscriptionController::class, 'store']);
 Route::post('send-message', [InboxController::class, 'store']);
+
+Route::post('submit-application', [ApplicationController::class, 'store']);
 
 Route::prefix('admin')->group(function(){
     Route::post('reset-admin-password', [ResetAdminPasswordController::class, 'resetAdminPassword']);

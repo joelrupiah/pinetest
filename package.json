@@ -36,6 +36,7 @@
         "@fullcalendar/vue": "^5.10.1",
         "@vue/composition-api": "^1.4.9",
         "element-ui": "^2.15.6",
+        "laravel-vue-pagination": "^3.0.0",
         "masonry-layout": "^4.2.2",
         "moment": "^2.29.1",
         "view-design": "^4.7.0",
