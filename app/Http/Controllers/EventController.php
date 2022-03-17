@@ -49,6 +49,21 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'description' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'eventDescription' => 'required',
+            'host' => 'required',
+            'location' => 'required',
+            'street' => 'required',
+            'city' => 'required',
+        ]);
+        
         $file = explode(';', $request->image);
         $file = explode('/', $file[0]);
         $file_ex = end($file);
@@ -67,12 +82,10 @@ class EventController extends Controller
             'start_time' => $request->start_time,
             'end_time' => $request->end_time,
             'eventDescription' => $request->eventDescription,
-            'eventContent' => $request->eventContent,
-            'topics' => $request->topics,
             'host' => $request->host,
             'location' => $request->location,
-            'students' => $request->students,
-            'assessments' => $request->assessments
+            'street' => $request->street,
+            'city' => $request->city
         ]);
 
         Image::make($request->image)->resize(700, 300)->save(public_path('/uploads/img/event/').$file_name);
@@ -96,7 +109,7 @@ class EventController extends Controller
 
     }
 
-    public function update(Request $request, Event $event)
+    public function update(Request $request, Event $event, $id)
     {
         $event = Event::find($request->id);
         
@@ -108,12 +121,10 @@ class EventController extends Controller
         $event->start_time = $request->start_time;
         $event->end_time = $request->end_time;
         $event->eventDescription = $request->eventDescription;
-        $event->eventContent = $request->eventContent;
-        $event->topics = $request->topics;
         $event->host = $request->host;
         $event->location = $request->location;
-        $event->students = $request->students;
-        $event->assessments = $request->assessments;
+        $event->street = $request->street;
+        $event->city = $request->city;
 
         if ($request->image != $event->image) {
             $file = explode(';', $request->image);

@@ -19,12 +19,10 @@ class Event extends Model
         'start_time',
         'end_time',
         'eventDescription',
-        'eventContent',
-        'topics',
         'host',
         'location',
-        'students',
-        'assessments'
+        'street',
+        'city'
     ];
 
     protected $casts = [

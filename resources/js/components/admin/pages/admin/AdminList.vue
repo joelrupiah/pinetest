@@ -1,59 +1,58 @@
 <template>
     <div id="admin_list">
 
-        <main class="ttr-wrapper">
-              <div class="content">
-    
-                <div class="container">
-                <h5 class="mb-1">Admins Table</h5>
-                <el-button type="primary" icon="el-icon-plus" size="mini" class="mb-2" 
-                    @click="createModal()"> Create Admin</el-button>
-
-                <div class="table-responsive">
-
-                    <table class="table table-striped custom-table">
-                    <thead>
-                        <tr>
-                        <th scope="col"><small class="d-block"><strong>#</strong></small></th>
-                        <th scope="col"><small class="d-block"><strong>Admin Name</strong></small></th>
-                        <th scope="col"><small class="d-block"><strong>Role</strong></small></th>
-                        <th scope="col"><small class="d-block"><strong>Date Created</strong></small></th>
-                        <th scope="col"><small class="d-block"><strong>Actions</strong></small></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr scope="row" v-for="(admin, index) in admins" :key="admin.id">
-                                <td>
-                                    <small class="d-block">{{ index+1 }}</small>
-                                </td>
-                                <td>
-                                    <small class="d-block">{{ admin.name }}</small>
-                                </td>
-                                <td>
-                                    <small class="d-block">{{ admin.role }}</small>
-                                </td>
-                                <td>
-                                    <small class="d-block">{{ admin.created_at | time }}</small>
-                                </td>
-                                <td>
-                                    <small class="d-block">
-                                        <i class="el-icon-edit" style="color:green;cursor:pointer"
-                                        @click="editModal(admin)"></i>
-                                        <i class="el-icon-delete" style="color:red;cursor:pointer"
+      <main role="main" class="main-content">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <h2 class="page-title">Admins Table</h2>
+              <p> All the listed admins in school </p>
+              <div class="row">
+                <!-- Small table -->
+                <!-- simple table -->
+                <div class="col-md-12 my-4">
+                  <div class="card shadow">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <el-button type="primary" icon="el-icon-plus" size="mini" class="mb-2" 
+                                @click.prevent="createModal"> Create Admin</el-button>
+                            <p class="card-text d-flex justify-content-end">Search Input.</p>
+                        </div>
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Admin Name</th>
+                            <th>Role</th>
+                            <th>Date Created</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr v-for="(admin, index) in admins" :key="admin.id">
+                            <td><small>{{ index+1 }}</small></td>
+                            <td><small>{{ admin.name }}</small></td>
+                            <td><small>{{ admin.role }}</small></td>
+                            <td><small>{{ admin.created_at | time }}</small></td>
+                            <td>
+                                <small>
+                                    <i class="fe fe-edit-2 fe-16" style="color:green;cursor:pointer"
+                                        @click.prevent="editModal(admin)"></i>
+                                    <i class="fe fe-trash-2 fe-16" style="color:red;cursor:pointer"
                                         @click.prevent="deleteAdmin(admin.id)"></i>
-                                    </small>
-                                </td>
-                        
-                        </tr>
-                        
-                    </tbody>
-                    </table>
-                </div>
-
-                </div>
-
-            </div>
-        </main>
+                                </small>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div> <!-- simple table -->
+              </div> <!-- end section -->
+            </div> <!-- .col-12 -->
+          </div> <!-- .row -->
+        </div> <!-- .container-fluid -->
+      </main> <!-- main -->
 
 <el-dialog
   :title="form.id ? 'Edit Admin' : 'Create Admin'"
@@ -64,14 +63,17 @@
   <div class="form-group">
     <label for="name">Admin Name</label>
     <input type="text" class="form-control" id="name" v-model="form.name" placeholder="Input Admin Name">
+    <small class="text-danger text-sm" v-if="errors.name">{{ errors.name[0] }}</small>
   </div>
   <div class="form-group">
     <label for="email">Admin Email</label>
     <input type="email" class="form-control" id="email" v-model="form.email" placeholder="Input Admin Email">
+    <small class="text-danger text-sm" v-if="errors.email">{{ errors.email[0] }}</small>
   </div>
   <div class="form-group">
       <label for="password">Password</label>
       <el-input v-model="form.password" size="mini" id="password" autocomplete="off" show-password></el-input>
+      <small class="text-danger text-sm" v-if="errors.password">{{ errors.password[0] }}</small>
   </div>
   <div class="form-group">
       <el-select v-model="form.role" placeholder="Select Role" size="mini">
@@ -82,6 +84,7 @@
         :value="role.id">
         </el-option>
     </el-select>
+    <small class="text-danger text-sm" v-if="errors.role">{{ errors.role[0] }}</small>
   </div>
   <div class="row" style="margin-left:20px">
       <div class="col-md-12">
@@ -97,9 +100,9 @@
     <el-button type="danger" size="mini" @click.prevent="clearData()">Clear</el-button>
     <el-button type="primary" size="mini" @click.prevent="closeModal()">Close</el-button>
     <el-button type="success" :loading="loading" size="mini" 
-    v-show="!editMode" @click.prevent="createAdmin()">{{ loading ? 'Creating.....' : 'Create' }}</el-button>
+    v-show="!editMode" @click.prevent="createAdmin()">{{ loading ? 'Creating Admin.....' : 'Create Admin' }}</el-button>
     <el-button type="success" :loading="loading" size="mini" 
-    v-show="editMode" @click.prevent="updateAdmin()">{{ loading ? 'Updating....' : 'Update' }}</el-button>
+    v-show="editMode" @click.prevent="updateAdmin()">{{ loading ? 'Updating Admin....' : 'Update Admin' }}</el-button>
   </span>
 
   </form>
@@ -129,7 +132,7 @@ export default {
                 permissions: [],
                 role: 1
             },
-            errors: []
+            errors: {}
         }
     },
     methods:{
@@ -239,21 +242,6 @@ export default {
     },
     computed:{},
     mounted(){
-
-        Echo.join(`chat`)
-            .here((admins) => {
-                //
-            })
-            .joining((admin) => {
-                console.log(admin.name);
-            })
-            .leaving((admin) => {
-                console.log(admin.name);
-            })
-            .error((error) => {
-                console.error(error);
-            });
-
         this.getAllRoles()
         this.getAllPermissions()
         this.getAllAdmins()

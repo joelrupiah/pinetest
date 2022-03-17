@@ -1,200 +1,144 @@
 <template>
     <div id="about_us">
-    <!-- Inner Content Box ==== -->
-    <div class="page-content bg-white">
-        <!-- Page Heading Box ==== -->
-        <div class="page-banner ovbl-dark" style="background-image:url(/frontend/assets/images/banner/banner3.jpg);">
-            <div class="container">
-                <div class="page-banner-entry">
-                    <h1 class="text-white">About Us</h1>
-				 </div>
-            </div>
-        </div>
-		<div class="breadcrumb-row">
-			<div class="container">
-				<ul class="list-inline">
-					<li><a href="/api">Home</a></li>
-					<li>About Us</li>
-				</ul>
-			</div>
-		</div>
-		<!-- Page Heading Box END ==== -->
-        <!-- Page Content Box ==== -->
-		<div class="content-block">
-            <!-- About Us ==== -->
-			<div class="section-area section-sp1">
-                <div class="container">
-					 <div class="row" v-for="about in abouts" :key="about.id">
-						 <div class="col-lg-6 m-b30">
-							<h2 class="title-head "><br/> <span class="text-primary" v-html="about.heading"></span></h2>
-							<p v-html="about.description"></p>
-						 </div>
-						 <div class="col-lg-6">
-							 <div class="row">
-								<div class="col-lg-6 col-md-6 col-sm-6 m-b30">
-									<div class="feature-container">
-										<div class="feature-md text-white m-b20">
-											<a href="#" class="icon-cell"><img src="/frontend/assets/images/icon/icon1.png" alt=""/></a> 
-										</div>
-										<div class="icon-content">
-											<h5 class="ttr-tilte">{{ about.headerOne }}</h5>
-											<p v-html="about.descriptionOne"></p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 m-b30">
-									<div class="feature-container">
-										<div class="feature-md text-white m-b20">
-											<a href="#" class="icon-cell"><img src="/frontend/assets/images/icon/icon2.png" alt=""/></a> 
-										</div>
-										<div class="icon-content">
-											<h5 class="ttr-tilte">{{ about.headerTwo }}</h5>
-											<p v-html="about.descriptionTwo"></p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 m-b30">
-									<div class="feature-container">
-										<div class="feature-md text-white m-b20">
-											<a href="#" class="icon-cell"><img src="/frontend/assets/images/icon/icon3.png" alt=""/></a> 
-										</div>
-										<div class="icon-content">
-											<h5 class="ttr-tilte">{{ about.headerThree }}</h5>
-											<p v-html="about.descriptionThree"></p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-sm-6 m-b30">
-									<div class="feature-container">
-										<div class="feature-md text-white m-b20">
-											<a href="#" class="icon-cell"><img src="/frontend/assets/images/icon/icon4.png" alt=""/></a> 
-										</div>
-										<div class="icon-content">
-											<h5 class="ttr-tilte">{{ about.headerFour }}</h5>
-											<p v-html="about.descriptionFour"></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+			<!-- start banner Area -->
+			<section class="banner-area relative about-banner" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								About Us				
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="about.html"> About Us</a></p>
+						</div>	
 					</div>
 				</div>
-            </div>
-			<!-- About Us END ==== -->
-			<!-- Why Choose ==== -->
-			<div class="section-area bg-gray section-sp2 choose-bx">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 heading-bx text-center">
-							<h2 class="title-head text-uppercase m-b0">Why Choose <span> Our Institution</span></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-						</div>
-					</div>
-					<div class="row choose-bx-in">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="service-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/our-services/pic1.jpg" alt="">
-								</div>
-								<div class="info-bx text-center">
-									<div class="feature-box-sm radius bg-white">
-										<i class="fa fa-bank text-primary"></i>
-									</div>
-									<h4><a href="#">Best Industry Leaders</a></h4>
-									<a href="#" class="btn radius-xl">View More</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="service-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/our-services/pic2.jpg" alt="">
-								</div>
-								<div class="info-bx text-center">
-									<div class="feature-box-sm radius bg-white">
-										<i class="fa fa-book text-primary"></i>
-									</div>
-									<h4><a href="#">Learn Courses Online</a></h4>
-									<a href="#" class="btn radius-xl">View More</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12">
-							<div class="service-bx m-b0">
-								<div class="action-box">
-									<img src="/frontend/assets/images/our-services/pic3.jpg" alt="">
-								</div>
-								<div class="info-bx text-center">
-									<div class="feature-box-sm radius bg-white">
-										<i class="fa fa-file-text-o text-primary"></i>
-									</div>
-									<h4><a href="#">Book Library & Store</a></h4>
-									<a href="#" class="btn radius-xl">View More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Why Choose END ==== -->
+			</section>
+			<!-- End banner Area -->	
 
-			<!-- Our Story ==== -->
-			<div class="section-area bg-gray section-sp1 our-story">
-				<div class="container">
-					<div class="row align-items-center d-flex" v-for="about in abouts" :key="about.id">
-						<div class="col-lg-5 col-md-12 heading-bx">
-							<h2 class="m-b10">Our Story</h2>
-							<h5 class="fw4">It is a long established fact that a reade.</h5>
-							<p v-html="about.descriptionFive"></p>
-						</div>
-						<div class="col-lg-7 col-md-12 heading-bx p-lr">
-							<!-- <div class="video-box">
-								<video width="700" height="400" controls>
-									<source src="/frontend/assets/videos/movie-2.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-							</div> -->
-							<div class="video-bx">
-								<img src="/frontend/assets/images/about/pic1.jpg" alt=""/>
-								<a :href="about.video" class="popup-youtube video" target="_blank"><i class="fa fa-play"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Our Story END ==== -->
-			<!-- Testimonials ==== -->
-			<div class="section-area section-sp2">
+			<!-- Start feature Area -->
+			<section class="feature-area pb-120">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-12 heading-bx left">
-							<h2 class="title-head text-uppercase">what people <span>say</span></h2>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
-						</div>
-					</div>
-					<div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-						<div class="item" v-for="faq in faqs" :key="faq.id">
-							<div class="testimonial-bx">
-								<div class="testimonial-thumb">
-									<img src="/frontend/assets/images/testimonials/pic1.jpg" alt="">
+						<div class="col-lg-4">
+							<div class="single-feature">
+								<div class="title">
+									<h4>Learn Online Courses</h4>
 								</div>
-								<div class="testimonial-info">
-									<h5 class="name">{{ faq.name }}</h5>
-									<p>-Art Director</p>
-								</div>
-								<div class="testimonial-content">
-									<p v-html="faq.message"></p>
+								<div class="desc-wrap">
+									<p>
+										Usage of the Internet is becoming more common due to rapid advancement
+										of technology.
+									</p>
+									<a href="#">Join Now</a>									
 								</div>
 							</div>
 						</div>
+						<div class="col-lg-4">
+							<div class="single-feature">
+								<div class="title">
+									<h4>No.1 of universities</h4>
+								</div>
+								<div class="desc-wrap">
+									<p>
+										For many of us, our very first experience of learning about the celestial bodies begins when we saw our first.
+									</p>
+									<a href="#">Join Now</a>									
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-feature">
+								<div class="title">
+									<h4>Huge Library</h4>
+								</div>
+								<div class="desc-wrap">
+									<p>
+										If you are a serious astronomy fanatic like a lot of us are, you can probably remember that one event.
+									</p>
+									<a href="#">Join Now</a>									
+								</div>
+							</div>
+						</div>												
 					</div>
-				</div>
-			</div>
-			<!-- Testimonials END ==== -->
-        </div>
-		<!-- Page Content Box END ==== -->
-    </div>
-	<!-- Page Content Box END ==== -->
+				</div>	
+			</section>
+			<!-- End feature Area -->		
+
+			<!-- Start info Area -->
+			<section class="info-area pb-120">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-lg-6 no-padding info-area-left">
+							<img class="img-fluid" src="/frontend/img/about-img.jpg" alt="">
+						</div>
+						<div class="col-lg-6 info-area-right">
+							<h1>Who we are
+							to Serave the nation</h1>
+							<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.</p>
+							<br>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+							</p>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End info Area -->	
+
+			<!-- Start course-mission Area -->
+			<section class="course-mission-area pb-120">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Goals to Achieve for the leadership</h1>
+								<p>Who are in extremely love with eco friendly system.</p>
+							</div>
+						</div>
+					</div>							
+                    <div class="row">
+                        <div class="col-md-6 accordion-left">
+
+                            <!-- accordion 2 start-->
+                            <dl class="accordion">
+                                <dt>
+                                    <a href="">Success</a>
+                                </dt>
+                                <dd>
+                                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam.
+                                </dd>
+                                <dt>
+                                    <a href="">Info</a>
+                                </dt>
+                                <dd>
+                                    Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. leo quam aliquet diam, congue laoreet elit metus eget diam.
+                                </dd>
+                                <dt>
+                                    <a href="">Danger</a>
+                                </dt>
+                                <dd>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. Proin ac metus diam.
+                                </dd>
+                                <dt>
+                                    <a href="">Warning</a>
+                                </dt>
+                                <dd>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. Proin ac metus diam.
+                                </dd>                                    
+                            </dl>
+                            <!-- accordion 2 end-->
+                        </div>
+                        <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative"
+						v-for="about in abouts" :key="about.id">
+                        	<div class="overlay overlay-bg"></div>
+							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="/frontend/img/play.png" alt=""></a>
+                        </div>
+                    </div>
+				</div>	
+			</section>
+			<!-- End course-mission Area -->
+					
     </div>
 </template>
 

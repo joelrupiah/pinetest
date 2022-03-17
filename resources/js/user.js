@@ -20,6 +20,8 @@ import 'view-design/dist/styles/iview.css'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+import VueCompositionAPI from '@vue/composition-api'
+
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyA2QkTkJ6WGUlGQnhjI46VvmyGWLfALy64',
@@ -27,6 +29,7 @@ Vue.use(VueGoogleMaps, {
   },
 })
 
+Vue.use(VueCompositionAPI)
 Vue.use(ViewUI)
 Vue.use(ElementUI);
 // End VueJs frontend frameworks

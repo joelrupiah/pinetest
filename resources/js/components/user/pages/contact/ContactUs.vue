@@ -1,132 +1,139 @@
 <template>
     <div id="contact_us">
-    <!-- Content -->
-    <div class="page-content bg-white">
-        <!-- inner page banner -->
-        <div class="page-banner ovbl-dark" style="background-image:url(assets/images/banner/banner2.jpg);">
-            <div class="container">
-                <div class="page-banner-entry">
-                    <h1 class="text-white">Contact Us</h1>
-				 </div>
-            </div>
-        </div>
-		<!-- Breadcrumb row -->
-		<div class="breadcrumb-row">
-			<div class="container">
-				<ul class="list-inline">
-					<li><a href="/api">Home</a></li>
-					<li>Contact Us</li>
-				</ul>
-			</div>
-		</div>
-		<!-- Breadcrumb row END -->
-	
-        <!-- inner page banner -->
-        <div class="page-banner contact-page">
-            <div class="container-fuild">
-                <div class="row m-lr0">
-					<div class="col-lg-12 col-md-12 p-lr0 d-flex p-4">
-						<GmapMap
-							:center="{lat:10, lng:10}"
-							:zoom="7"
-							map-type-id="terrain"
-							style="width: 100%; height: 400px"
-						>
-						</GmapMap>
-					</div>
-					<div class="col-lg-5 col-md-5 section-sp2 p-lr30">
-						<div class="bg-primary text-white contact-info-bx">
-							<h2 class="m-b10 title-head">Contact <span>Information</span></h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<div class="widget widget_getintuch">	
-								<ul>
-									<li><i class="ti-location-pin"></i>75k Newcastle St. Ponte Vedra Beach, FL 309382 New York</li>
-									<li><i class="ti-mobile"></i>0800-123456 (24/7 Support Line)</li>
-									<li><i class="ti-email"></i>info@example.com</li>
-								</ul>
-							</div>
-							<h5 class="m-t0 m-b20">Follow Us</h5>
-							<ul class="list-inline contact-social-bx">
-								<li><a href="#" class="btn outline radius-xl"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" class="btn outline radius-xl"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#" class="btn outline radius-xl"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#" class="btn outline radius-xl"><i class="fa fa-google-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 section-sp2 p-lr30">
-						<form class="contact-bx ajax-form" action="http://educhamp.themetrades.com/demo/assets/script/contact.php">
-						<div class="ajax-message"></div>
-							<div class="heading-bx left p-r15">
-								<h2 class="title-head">Get In <span>Touch</span></h2>
-								<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
-							</div>
-							<div class="row placeani">
-								<div class="col-lg-6 ">
-									<div class="form-group">
-										<div class="input-group">
-											<label>Your Name</label>
-											<input name="name" type="text" required class="form-control valid-character">
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="form-group">
-										<div class="input-group"> 
-											<label>Your Email Address</label>
-											<input name="email" type="email" class="form-control" required >
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="form-group">
-										<div class="input-group">
-											<label>Your Phone</label>
-											<input name="phone" type="text" required class="form-control int-value">
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="form-group">
-										<div class="input-group">
-											<label>Subject</label>
-											<input name="subject" type="text" required class="form-control">
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="form-group">
-										<div class="input-group">
-											<label>Type Message</label>
-											<textarea name="message" rows="4" class="form-control" required ></textarea>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="form-group">
-										<div class="input-group">
-											<div class="g-recaptcha" data-sitekey="6Lf2gYwUAAAAAJLxwnZTvpJqbYFWqVyzE-8BWhVe" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-											<input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<button name="submit" type="submit" value="Submit" class="btn button-md"> Send Message</button>
-								</div>
-							</div>
-						</form>
+			<!-- start banner Area -->
+			<section class="banner-area relative about-banner" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Contact Us				
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
+						</div>	
 					</div>
 				</div>
-            </div>
-		</div>
-        <!-- inner page banner END -->
-    </div>
-    <!-- Content END-->
+			</section>
+			<!-- End banner Area -->				  
+
+			<!-- Start contact-page Area -->
+			<section class="contact-page-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+						<div class="col-lg-4 d-flex flex-column address-wrap">
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-home"></span>
+								</div>
+								<div class="contact-details">
+									<h5>Binghamton, New York</h5>
+									<p>
+										4343 Hinkle Deegan Lake Road
+									</p>
+								</div>
+							</div>
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-phone-handset"></span>
+								</div>
+								<div class="contact-details">
+									<h5>00 (958) 9865 562</h5>
+									<p>Mon to Fri 9am to 6 pm</p>
+								</div>
+							</div>
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-envelope"></span>
+								</div>
+								<div class="contact-details">
+									<h5>support@colorlib.com</h5>
+									<p>Send us your query anytime!</p>
+								</div>
+							</div>														
+						</div>
+						<div class="col-lg-8">
+							<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
+								<div class="row">	
+									<div class="col-lg-6 form-group">
+										<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" 
+											onblur="this.placeholder = 'Enter your name'" 
+											class="common-input mb-2 form-control" required="" 
+											v-model="form.name" type="text">
+										<p class="text-danger text-sm mb-2" v-if="errors.name">
+											{{ errors.name[0] }}
+										</p>
+										<input name="email" placeholder="Enter email address" 
+											pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" 
+											onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" 
+											class="common-input mb-2 form-control" required="" 
+											v-model="form.email" type="email">
+										<p class="text-danger text-sm mb-2" v-if="errors.email">
+											{{ errors.email[0] }}
+										</p>
+										<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" 
+											onblur="this.placeholder = 'Enter subject'" class="common-input mb-2 form-control" 
+											required="" v-model="form.subject" type="text">
+										<p class="text-danger text-sm mb-2" v-if="errors.subject">
+											{{ errors.subject[0] }}
+										</p>
+									</div>
+									<div class="col-lg-6 form-group">
+										<textarea class="common-textarea form-control" name="message" 
+											placeholder="Enter Messege" onfocus="this.placeholder = ''" 
+											onblur="this.placeholder = 'Enter Messege'" required=""
+											v-model="form.message" ></textarea>				
+										<p class="text-danger text-sm" v-if="errors.message">
+											{{ errors.message[0] }}
+										</p>
+									</div>
+									<div class="col-lg-12">
+										<div class="alert-msg" style="text-align: left;"></div>
+										<button class="genric-btn primary" style="float: right;"
+										@click.prevent="sendMessage">Send Message</button>											
+									</div>
+								</div>
+							</form>	
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End contact-page Area -->
     </div>
 </template>
 
 <script>
 export default {
-    name: 'ContactUs'
+    name: 'ContactUs',
+	data(){
+		return {
+			form: {
+				name: '',
+				email: '',
+				subject: '',
+				message: ''
+			},
+			errors: {}
+		}
+	},
+	methods: {
+		sendMessage: async function(){
+			axios.post('/api/send-message', this.form)
+				.then(() => {
+					this.form.name = '',
+					this.form.email = '',
+					this.form.subject = '',
+					this.form.message = '',
+					this.errors = ''
+				})
+				.catch((error) => {
+					if (error.response.status === 422) {
+						this.errors = error.response.data.errors
+					}
+				})
+		}
+	},
+	computed: {},
+	mounted() {}
 }
 </script>

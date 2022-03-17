@@ -6,6 +6,7 @@ Vue.use(VueRouter)
 import Home from '../components/user/Home'
 import AboutUs from '../components/user/pages/about/AboutUs'
 import Event from '../components/user/pages/event/Event'
+import Career from '../components/user/pages/career/Career'
 import EventDetail from '../components/user/pages/event/EventDetail'
 import AboutHistory from '../components/user/pages/about/AboutHistory'
 import ContactUs from '../components/user/pages/contact/ContactUs'
@@ -24,6 +25,7 @@ const router = new VueRouter({
         {path:'/api/faqs', component: UserFaq, name: 'UserFaq'},
         {path:'/api/gallery', component: UserGallery, name: 'UserGallery'},
         {path:'/api/events', component: Event, name: 'Event'},
+        {path:'/api/careers', component: Career, name: 'Career'},
         {path:'/api/event-details/:eventSlug', component: EventDetail, name: 'EventDetail'},
 
     ]

@@ -1,14 +1,11 @@
 <template>
-    <div id="admin_master">
-
-<admin-header v-if="!['AdminLogin'].includes($route.name)"></admin-header>
-
-<admin-sidebar v-if="!['AdminLogin'].includes($route.name)"></admin-sidebar>
-
-<router-view></router-view>
-    
-	<div class="ttr-overlay"></div>
-    </div>
+  <div id="admin_master">
+    <div class="wrapper">
+      <admin-header v-if="!['AdminLogin'].includes($route.name)"></admin-header>
+      <admin-sidebar v-if="!['AdminLogin'].includes($route.name)"></admin-sidebar>
+      <router-view></router-view>
+    </div> <!-- .wrapper -->
+  </div>
 </template>
 
 <script>

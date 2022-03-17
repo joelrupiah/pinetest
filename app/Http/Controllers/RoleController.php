@@ -63,7 +63,11 @@ class RoleController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        // return $request;
+        // $request->validate([
+        //     'name' => 'required|string',
+        // ]);
+        
     }
 
     public function destroy($id)

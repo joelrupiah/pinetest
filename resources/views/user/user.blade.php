@@ -1,182 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="/frontend/img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="pinecrest">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Pinecrest</title>
 
-<head>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="/frontend/css/linearicons.css">
+			<link rel="stylesheet" href="/frontend/css/font-awesome.min.css">
+			<link rel="stylesheet" href="/frontend/css/bootstrap.css">
+			<link rel="stylesheet" href="/frontend/css/magnific-popup.css">
+			<link rel="stylesheet" href="/frontend/css/nice-select.css">							
+			<link rel="stylesheet" href="/frontend/css/animate.min.css">
+			<link rel="stylesheet" href="/frontend/css/owl.carousel.css">			
+			<link rel="stylesheet" href="/frontend/css/jquery-ui.css">			
+			<link rel="stylesheet" href="/frontend/css/main.css">
+		</head>
+		<body>	
 
-	<!-- META ============================================= -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	<meta name="robots" content="" />
-	
-	<!-- DESCRIPTION -->
-	<meta name="description" content="Pinecrest" />
-	
-	<!-- OG -->
-	<meta property="og:title" content="Pinecrest" />
-	<meta property="og:description" content="Pinecrest" />
-	<meta property="og:image" content="" />
-	<meta name="format-detection" content="telephone=no">
-	
-	<!-- FAVICONS ICON ============================================= -->
-	<link rel="icon" href="/frontend/assets/images/pinecrest-favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/images/pinecrest-logo.png" />
-	
-	<!-- PAGE TITLE HERE ============================================= -->
-	<title>Pinecrest </title>
-	
-	<!-- MOBILE SPECIFIC ============================================= -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!--[if lt IE 9]>
-	<script src="/frontend/assets/js/html5shiv.min.js"></script>
-	<script src="/frontend/assets/js/respond.min.js"></script>
-	<![endif]-->
-	
-	<!-- All PLUGINS CSS ============================================= -->
-	<link rel="stylesheet" type="text/css" href="/frontend/assets/css/assets.css">
-	
-	<!-- TYPOGRAPHY ============================================= -->
-	<link rel="stylesheet" type="text/css" href="/frontend/assets/css/typography.css">
-	
-	<!-- SHORTCODES ============================================= -->
-	<link rel="stylesheet" type="text/css" href="/frontend/assets/css/shortcodes/shortcodes.css">
-	
-	<!-- STYLESHEETS ============================================= -->
-	<link rel="stylesheet" type="text/css" href="/frontend/assets/css/style.css">
-	<link class="skin" rel="stylesheet" type="text/css" href="/frontend/assets/css/color/color-1.css">
-	
-	<!-- REVOLUTION SLIDER CSS ============================================= -->
-	<link rel="stylesheet" type="text/css" href="/frontend/assets/vendors/revolution/css/layers.css">
-	<link rel="stylesheet" type="text/css" href="/frontend/assets/vendors/revolution/css/settings.css">
-	<link rel="stylesheet" type="text/css" href="/frontend/assets/vendors/revolution/css/navigation.css">
-	<!-- REVOLUTION SLIDER END -->	
-</head>
-<body id="bg">
+			<div id="user">
+				<user-master></user-master>
+			</div>
 
-	<div id="user">
-		<user-master></user-master>
-	</div>
+			<script src="{{ asset('js/user.js') }}"></script>
 
-	<script src="{{ asset('js/user.js') }}"></script>
-
-<!-- External JavaScripts -->
-<script src="/frontend/assets/js/jquery.min.js"></script>
-<script src="/frontend/assets/vendors/bootstrap/js/popper.min.js"></script>
-<script src="/frontend/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-<script src="/frontend/assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="/frontend/assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-<script src="/frontend/assets/vendors/magnific-popup/magnific-popup.js"></script>
-<script src="/frontend/assets/vendors/counter/waypoints-min.js"></script>
-<script src="/frontend/assets/vendors/counter/counterup.min.js"></script>
-<script src="/frontend/assets/vendors/imagesloaded/imagesloaded.js"></script>
-<script src="/frontend/assets/vendors/masonry/masonry.js"></script>
-<script src="/frontend/assets/vendors/masonry/filter.js"></script>
-<script src="/frontend/assets/vendors/owl-carousel/owl.carousel.js"></script>
-<script src="/frontend/assets/js/functions.js"></script>
-<script src="/frontend/assets/js/contact.js"></script>
-<script src='/frontend/assets/vendors/switcher/switcher.js'></script>
-<!-- Revolution JavaScripts Files -->
-<script src="/frontend/assets/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="/frontend/assets/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-<script src="/frontend/assets/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="/frontend/assets/vendors/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="/frontend/assets/vendors/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="/frontend/assets/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="/frontend/assets/vendors/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="/frontend/assets/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="/frontend/assets/vendors/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="/frontend/assets/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="/frontend/assets/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script>
-jQuery(document).ready(function() {
-	var ttrevapi;
-	var tpj =jQuery;
-	if(tpj("#rev_slider_486_1").revolution == undefined){
-		revslider_showDoubleJqueryError("#rev_slider_486_1");
-	}else{
-		ttrevapi = tpj("#rev_slider_486_1").show().revolution({
-			sliderType:"standard",
-			jsFileLocation:"/frontend/assets/vendors/revolution/js/",
-			sliderLayout:"fullwidth",
-			dottedOverlay:"none",
-			delay:9000,
-			navigation: {
-				keyboardNavigation:"on",
-				keyboard_direction: "horizontal",
-				mouseScrollNavigation:"off",
-				mouseScrollReverse:"default",
-				onHoverStop:"on",
-				touch:{
-					touchenabled:"on",
-					swipe_threshold: 75,
-					swipe_min_touches: 1,
-					swipe_direction: "horizontal",
-					drag_block_vertical: false
-				}
-				,
-				arrows: {
-					style: "uranus",
-					enable: true,
-					hide_onmobile: false,
-					hide_onleave: false,
-					tmp: '',
-					left: {
-						h_align: "left",
-						v_align: "center",
-						h_offset: 10,
-						v_offset: 0
-					},
-					right: {
-						h_align: "right",
-						v_align: "center",
-						h_offset: 10,
-						v_offset: 0
-					}
-				},
-				
-			},
-			viewPort: {
-				enable:true,
-				outof:"pause",
-				visible_area:"80%",
-				presize:false
-			},
-			responsiveLevels:[1240,1024,778,480],
-			visibilityLevels:[1240,1024,778,480],
-			gridwidth:[1240,1024,778,480],
-			gridheight:[768,600,600,600],
-			lazyType:"none",
-			parallax: {
-				type:"scroll",
-				origo:"enterpoint",
-				speed:400,
-				levels:[5,10,15,20,25,30,35,40,45,50,46,47,48,49,50,55],
-				type:"scroll",
-			},
-			shadow:0,
-			spinner:"off",
-			stopLoop:"off",
-			stopAfterLoops:-1,
-			stopAtSlide:-1,
-			shuffle:"off",
-			autoHeight:"off",
-			hideThumbsOnMobile:"off",
-			hideSliderAtLimit:0,
-			hideCaptionAtLimit:0,
-			hideAllCaptionAtLilmit:0,
-			debugMode:false,
-			fallbacks: {
-				simplifyAll:"off",
-				nextSlideOnWindowFocus:"off",
-				disableFocusListener:false,
-			}
-		});
-	}
-});	
-</script>
-</body>
-
-</html>
+			<script src="/frontend/js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="/frontend/js/vendor/bootstrap.min.js"></script>			
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="/frontend/js/easing.min.js"></script>			
+			<script src="/frontend/js/hoverIntent.js"></script>
+			<script src="/frontend/js/superfish.min.js"></script>	
+			<script src="/frontend/js/jquery.ajaxchimp.min.js"></script>
+			<script src="/frontend/js/jquery.magnific-popup.min.js"></script>	
+    		<script src="/frontend/js/jquery.tabs.min.js"></script>						
+			<script src="/frontend/js/jquery.nice-select.min.js"></script>	
+			<script src="/frontend/js/owl.carousel.min.js"></script>									
+			<script src="/frontend/js/mail-script.js"></script>	
+			<script src="/frontend/js/main.js"></script>
+		</body>
+	</html>

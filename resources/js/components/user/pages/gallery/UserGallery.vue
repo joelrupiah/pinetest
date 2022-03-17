@@ -1,71 +1,51 @@
 <template>
     <div id="user_gallery">
-    <!-- Content -->
-    <div class="page-content bg-white">
-        <!-- inner page banner -->
-        <div class="page-banner ovbl-dark" style="background-image:url(/frontend/assets/images/banner/banner1.jpg);">
-            <div class="container">
-                <div class="page-banner-entry">
-                    <h1 class="text-white">Gallery</h1>
-				 </div>
-            </div>
-        </div>
-		<!-- Breadcrumb row -->
-		<div class="breadcrumb-row">
-			<div class="container">
-				<ul class="list-inline">
-					<li><a href="/api">Home</a></li>
-					<li>Portfolio</li>
-				</ul>
-			</div>
-		</div>
-		<!-- Breadcrumb row END -->
-        <!-- contact area -->
-        <div class="content-block">
-			<!-- Portfolio  -->
-			<div class="section-area section-sp1 gallery-bx">
-				<div class="container">
-					<div class="feature-filters clearfix center m-b40">
-						<ul class="filters" data-toggle="buttons">
-							<li class="btn active" v-for="grade in grades" :key="grade.id">
-								<input type="radio">
-								<a href="#"><span>{{ grade.name }}</span></a> 
-							</li>
-						</ul>
-					</div>
-					<div class="clearfix">
-						<ul id="masonry" class="ttr-gallery-listing magnific-image row" v-if="galleries.length > 0">
-							<li class="action-card col-lg-3 col-md-4 col-sm-6" v-for="gallery in galleries" :key="gallery.id">
-								<div class="ttr-box portfolio-bx">
-									<div class="ttr-media media-ov2 media-effect">
-										<a href="javascript:void(0);">
-											<img :src="fileLink(gallery.image)" alt="Photo"> 
-										</a>
-										<div class="ov-box">
-											<div class="overlay-icon align-m"> 
-												<p style="cursor:pointer">
-													<!-- <i class="ti-search">smbbfbfdjfhdfbj</i> -->
-													<small>
-														<p class="text-white" style="word-break:break-all;white-space: pre-wrap;word-wrap: break-word;" 
-														v-html="gallery.description"></p>
-													</small>
-												</p>
-											</div>
-										</div>
-										
-									</div>
-								</div>
-							</li>
-						</ul>
-							<Page size="small" :total="pageInfo.total" :current="pageInfo.current_page" 
-								:page-size="parseInt(pageInfo.per_page)" @on-change="getAllGalleries" v-if="pageInfo" />
+			<!-- start banner Area -->
+			<section class="banner-area relative about-banner" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Gallery				
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="gallery.html"> Gallery</a></p>
+						</div>	
 					</div>
 				</div>
-			</div>
-        </div>
-		<!-- contact area END -->
-    </div>
-    <!-- Content END-->
+			</section>
+			<!-- End banner Area -->	
+				
+			<!-- Start gallery Area -->
+			<section class="gallery-area section-gap">
+				<div class="container">
+					<h1 class="text-center text-muted mb-5" style="margin-top:-90px">School Gallery</h1>
+					<!-- <div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">School Gallery</h1>
+								<p>If you are a serious astronomy fanatic like a lot of us</p>
+							</div>
+						</div>
+					</div> -->
+					<div class="row">
+						<div class="col-lg-3" v-for="gallery in galleries" :key="gallery.id">
+							<a :href="fileLink(gallery.image)" class="img-gal">
+								<div class="single-imgs relative">		
+									<div class="overlay overlay-bg">
+										<p class="text-white text-sm text-center" v-html="gallery.description">
+											</p>
+									</div>
+									<div class="relative">					
+										<img class="img-fluid" :src="fileLink(gallery.image)" alt="">				
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End gallery Area -->
     </div>
 </template>
 
@@ -76,7 +56,7 @@ export default {
 		return {
 			galleries: [],
 			grades: [],
-			total: 4,
+			total: 10,
 			pageInfo: null
 		}
 	},

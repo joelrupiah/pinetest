@@ -1,63 +1,150 @@
 <template>
     <div id="user_event">
-    <div class="page-content bg-white">
-        <!-- inner page banner -->
-        <div class="page-banner ovbl-dark" style="background-image:url(/frontend/assets/images/banner/banner2.jpg);">
-            <div class="container">
-                <div class="page-banner-entry">
-                    <h1 class="text-white">Events</h1>
-				 </div>
-            </div>
-        </div>
-		<!-- Breadcrumb row -->
-		<div class="breadcrumb-row">
-			<div class="container">
-				<ul class="list-inline">
-					<li><a href="#">Home</a></li>
-					<li>Events</li>
-				</ul>
-			</div>
-		</div>
-		<!-- Breadcrumb row END -->
-        <!-- contact area -->
-        <div class="content-block">
-			<!-- Portfolio  -->
-			<div class="section-area section-sp1 gallery-bx">
-				<div class="container">
-					<div class="feature-filters clearfix center m-b40">
-						<h1>Events</h1>
-					</div>
-					<div class="clearfix">
-						<ul id="masonry" class="ttr-gallery-listing magnific-image row">
-							<li class="action-card col-lg-4 col-md-4 col-sm-12 happening"
-                            v-for="event in events" :key="event.id" >
-								<div class="event-bx m-b30">
-									<div class="action-box">
-										<img :src="fileLinkEvent(event.image)" alt="">
-									</div>
-									<div class="info-bx d-flex">
-										<div class="event-info">
-											<h4 class="event-title">
-                                                <a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
-                                                    {{ event.title }}</a></h4>
-											<ul class="media-post">
-												<li><a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
-                                                    <i class="fa fa-clock-o"></i> {{ event.start_time }} -  {{ event.end_time }}</a></li>
-												<li><a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
-                                                    <i class="fa fa-map-marker"></i> {{ event.location }}</a></li>
-											</ul>
-											<p v-html="event.description"></p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+			<!-- start banner Area -->
+			<section class="banner-area relative about-banner" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Events				
+							</h1>	
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="events.html"> Events</a></p>
+						</div>	
 					</div>
 				</div>
-			</div>
-        </div>
-		<!-- contact area END -->
-    </div>
+			</section>
+			<!-- End banner Area -->	
+				
+			<!-- Start events-list Area -->
+			<section class="events-list-area section-gap event-page-lists">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 pb-30">
+							<div class="single-carusel row align-items-center">
+								<div class="col-12 col-md-6 thumb">
+									<img class="img-fluid" src="/frontend/img/e1.jpg" alt="">
+								</div>
+								<div class="detials col-12 col-md-6">
+									<p>25th February, 2018</p>
+									<a href="event-details.html"><h4>The Universe Through
+									A Child S Eyes</h4></a>
+									<p>
+										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 pb-30">
+							<div class="single-carusel row align-items-center">
+								<div class="col-12 col-md-6 thumb">
+									<img class="img-fluid" src="/frontend/img/e2.jpg" alt="">
+								</div>
+								<div class="detials col-12 col-md-6">
+									<p>25th February, 2018</p>
+									<a href="event-details.html"><h4>The Universe Through
+									A Child S Eyes</h4></a>
+									<p>
+										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 pb-30">
+							<div class="single-carusel row align-items-center">
+								<div class="col-12 col-md-6 thumb">
+									<img class="img-fluid" src="/frontend/img/e1.jpg" alt="">
+								</div>
+								<div class="detials col-12 col-md-6">
+									<p>25th February, 2018</p>
+									<a href="event-details.html"><h4>The Universe Through
+									A Child S Eyes</h4></a>
+									<p>
+										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 pb-30">
+							<div class="single-carusel row align-items-center">
+								<div class="col-12 col-md-6 thumb">
+									<img class="img-fluid" src="/frontend/img/e2.jpg" alt="">
+								</div>
+								<div class="detials col-12 col-md-6">
+									<p>25th February, 2018</p>
+									<a href="event-details.html"><h4>The Universe Through
+									A Child S Eyes</h4></a>
+									<p>
+										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 pb-30">
+							<div class="single-carusel row align-items-center">
+								<div class="col-12 col-md-6 thumb">
+									<img class="img-fluid" src="/frontend/img/e1.jpg" alt="">
+								</div>
+								<div class="detials col-12 col-md-6">
+									<p>25th February, 2018</p>
+									<a href="event-details.html"><h4>The Universe Through
+									A Child S Eyes</h4></a>
+									<p>
+										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6" pb-30>
+							<div class="single-carusel row align-items-center">
+								<div class="col-12 col-md-6 thumb">
+									<img class="img-fluid" src="/frontend/img/e2.jpg" alt="">
+								</div>
+								<div class="detials col-12 col-md-6">
+									<p>25th February, 2018</p>
+									<a href="event-details.html"><h4>The Universe Through
+									A Child S Eyes</h4></a>
+									<p>
+										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 pb-30">
+							<div class="single-carusel row align-items-center">
+								<div class="col-12 col-md-6 thumb">
+									<img class="img-fluid" src="/frontend/img/e1.jpg" alt="">
+								</div>
+								<div class="detials col-12 col-md-6">
+									<p>25th February, 2018</p>
+									<a href="event-details.html"><h4>The Universe Through
+									A Child S Eyes</h4></a>
+									<p>
+										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="single-carusel row align-items-center">
+								<div class="col-12 col-md-6 thumb">
+									<img class="img-fluid" src="/frontend/img/e2.jpg" alt="">
+								</div>
+								<div class="detials col-12 col-md-6">
+									<p>25th February, 2018</p>
+									<a href="#"><h4>The Universe Through
+									A Child S Eyes</h4></a>
+									<p>
+										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
+									</p>
+								</div>
+							</div>
+						</div>																		
+						<a href="#" class="text-uppercase primary-btn mx-auto mt-40">Load more courses</a>		
+					</div>
+				</div>	
+			</section>
+			<!-- End events-list Area -->
     </div>
 </template>
 
@@ -71,7 +158,7 @@ export default {
     },
     methods: {
         fileLinkEvent(name){
-        	return '/uploads/img/event/' + name
+        	return '/uploads//frontend/img/event/' + name
       	},
         getUserEvents: async function(){
             axios.get('/api/get-user-events')

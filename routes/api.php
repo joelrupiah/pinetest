@@ -16,6 +16,7 @@ use App\Http\Controllers\AdminFaqController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\InboxController;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -50,6 +51,8 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::post('edit-admin/{id}', [AdminController::class, 'update']);
     Route::delete('delete-admin/{id}', [AdminController::class, 'destroy']);
 
+    Route::post('edit-role/{id}', [RoleController::class, 'update']);
+
     Route::post('/edit-permission/{id}', [PermissionController::class, 'update']);
 
     Route::post('edit-grade/{id}', [GradeController::class, 'update']);
@@ -81,7 +84,8 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
 
     Route::post('create-carousel', [CarouselController::class, 'store']);
     Route::get('get-admin-carousels', [CarouselController::class, 'index']);
-    Route::get('edit-carousel/{id}', [CarouselController::class, 'update']);
+    Route::post('edit-carousel/{id}', [CarouselController::class, 'update']);
+    Route::get('get-carousel/{id}', [CarouselController::class, 'show']);
 
 });
 
@@ -95,8 +99,10 @@ Route::get('get-user-events', [EventController::class, 'userEvents']);
 Route::get('get-user-faqs', [FaqController::class, 'getUserFaq']);
 Route::get('get-user-carousels', [CarouselController::class, 'getUserCarousel']);
 Route::get('get-event-detail/{eventSlug}', [EventController::class, 'eventDetails']);
+Route::get('get-user-grades', [GradeController::class, 'getGrades']);
 
 Route::post('subscribe-newsletter', [SubscriptionController::class, 'store']);
+Route::post('send-message', [InboxController::class, 'store']);
 
 Route::prefix('admin')->group(function(){
     Route::post('reset-admin-password', [ResetAdminPasswordController::class, 'resetAdminPassword']);

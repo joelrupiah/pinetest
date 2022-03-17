@@ -1,17 +1,44 @@
 <template>
     <div id="user_header">
-	<div class="top-bar">
-			<div class="container">
-				<div class="row d-flex justify-content-between">
-					<div class="topbar-left">
-						<ul>
-							<li><a href="/api/faq"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
-							<li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@website.com</a></li>
-						</ul>
-					</div>
-				</div>
+		  <header id="header">
+	  		<div class="header-top">
+	  			<div class="container">
+			  		<div class="row">
+			  			<div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
+			  				<ul>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-behance"></i></a></li>
+			  				</ul>			
+			  			</div>
+			  			<div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
+			  				<a href="tel:+953 012 3654 896"><span class="lnr lnr-phone-handset"></span> <span class="text">+953 012 3654 896</span></a>
+			  				<a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text">support@colorlib.com</span></a>			
+			  			</div>
+			  		</div>			  					
+	  			</div>
 			</div>
-		</div>
+		    <div class="container main-menu">
+		    	<div class="row align-items-center justify-content-between d-flex">
+			      <div id="logo">
+			        <!-- <a href="index.html"><img src="/frontend/img/logo.png" alt="Pinecrest Logo" title="" /></a> -->
+			        <a href="index.html"><img src="" alt="Pinecrest Logo" title="" /></a>
+			      </div>
+			      <nav id="nav-menu-container">
+			        <ul class="nav-menu">
+			          <li><a href="/api">Home</a></li>
+			          <li><a href="/api/about-us">About</a></li>
+			          <li><a href="/api/gallery">Gallery</a></li>
+			          <li><a href="/api/events">Events</a></li>
+			          <li><a href="/api/careers">Careers</a></li>
+			          <li><a href="/api/faqs">Faqs</a></li>
+			          <li><a href="/api/contact-us">Contact</a></li>
+			        </ul>
+			      </nav><!-- #nav-menu-container -->		    		
+		    	</div>
+		    </div>
+		  </header><!-- #header -->
     </div>
 </template>
 

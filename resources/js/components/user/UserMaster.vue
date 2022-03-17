@@ -1,21 +1,11 @@
 <template>
     <div id="user_master">
-<div class="page-wraper">
-<div id="loading-icon-bx"></div>
-	<!-- Header Top ==== -->
-    <header class="header rs-nav header-transparent">
 		<user-header></user-header>
-		<user-navbar></user-navbar>
-    </header>
-    <!-- Header Top END ==== -->
-    <!-- Content -->
-    <router-view></router-view>
-    <!-- Content END-->
-	<!-- Footer ==== -->
-    <user-footer></user-footer>
-    <!-- Footer END ==== -->
-    <button class="back-to-top fa fa-chevron-up" ></button>
-</div>
+
+		<router-view></router-view>
+						
+		<user-footer></user-footer>
+
     </div>
 </template>
 
@@ -27,7 +17,6 @@ export default {
     name: 'UserMaster',
     components: {
         UserHeader,
-        UserNavbar,
         UserFooter
     }
 }

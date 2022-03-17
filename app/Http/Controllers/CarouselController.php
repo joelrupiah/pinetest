@@ -34,13 +34,19 @@ class CarouselController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'required'
+        ]);
+
         $file = explode(';', $request->image);
         $file = explode('/', $file[0]);
         $file_ex = end($file);
 
         $file_name = \Str::random(10) . '.' . $file_ex;
 
-        $event = Carousel::create([
+        Carousel::create([
             'title' => $request->title,
             'description' => $request->description,
             'image' => $file_name
@@ -51,9 +57,13 @@ class CarouselController extends Controller
         return response()->json('success', 200);
     }
 
-    public function show(Carousel $carousel)
+    public function show(Carousel $carousel, $id)
     {
-        //
+        $carousel = Carousel::where('id', $id)->first();
+
+        return response()->json([
+            'carousel' => $carousel
+        ], 200);
     }
 
     public function edit(Carousel $carousel)
@@ -61,23 +71,29 @@ class CarouselController extends Controller
         //
     }
 
-    public function update(Request $request, Carousel $carousel)
+    public function update(Request $request, Carousel $carousel, $id)
     {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'required'
+        ]);
+
         $carousel = Carousel::find($request->id);
         
-        $event->title = $request->title;
-        $event->description = $request->description;
+        $carousel->title = $request->title;
+        $carousel->description = $request->description;
 
-        if ($request->image != $event->image) {
+        if ($request->image != $carousel->image) {
             $file = explode(';', $request->image);
             $file = explode('/', $file[0]);
             $file_ex = end($file);
             $file_name = \Str::random(10) . '.' . $file_ex;
-            $event->image = $file_name;
+            $carousel->image = $file_name;
             Image::make($request->image)->resize(2000, 1125)->save(public_path('/uploads/img/carousel/').$file_name);
         }
 
-        $event->save();
+        $carousel->save();
 
         return response()->json('success', 200);
     }

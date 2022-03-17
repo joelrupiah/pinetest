@@ -1,769 +1,401 @@
 <template>
     <div id="home">
-    <!-- Content -->
-    <div class="page-content bg-white">
-        <!-- Main Slider -->
-        <div class="rev-slider">
-			<div id="rev_slider_486_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery36" data-source="gallery" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
-				<!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
-				<div id="rev_slider_486_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
-					<ul>	<!-- SLIDE  -->
-						<li data-index="rs-100" 
-						data-transition="parallaxvertical" 
-						data-slotamount="default" 
-						data-hideafterloop="0" 
-						data-hideslideonmobile="off" 
-						data-easein="default" 
-						data-easeout="default" 
-						data-masterspeed="default" 
-						data-thumb="error-404.html" 
-						data-rotate="0" 
-						data-fstransition="fade" 
-						data-fsmasterspeed="1500" 
-						data-fsslotamount="7" 
-						data-saveperformance="off" 
-						data-title="A STUDY ON HAPPINESS" 
-						data-param1="" data-param2="" 
-						data-param3="" data-param4="" 
-						data-param5="" data-param6="" 
-						data-param7="" data-param8="" 
-						data-param9="" data-param10="" 
-						data-description="Science says that Women are generally happier">
-							<!-- MAIN IMAGE -->
-							<img src="/frontend/assets/images/slider/slide1.jpg" alt="" 
-								data-bgposition="center center" 
-								data-bgfit="cover" 
-								data-bgrepeat="no-repeat" 
-								data-bgparallax="10" 
-								class="rev-slidebg" 
-								data-no-retina />
-								
-							<!-- LAYER NR. 1 -->
-							<div class="tp-caption tp-shape tp-shapewrapper " 
-								id="slide-100-layer-1" 
-								data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-								data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-								data-width="full"
-								data-height="full"
-								data-whitespace="nowrap"
-								data-type="shape" 
-								data-basealign="slide" 
-								data-responsive_offset="off" 
-								data-responsive="off"
-								data-frames='[{"from":"opacity:0;","speed":1,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":1,"to":"opacity:0;","ease":"Power4.easeOut"}]'
-								data-textAlign="['left','left','left','left']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 5;background-color:rgba(2, 0, 11, 0.80);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>	
-							<!-- LAYER NR. 2 -->
-							<div class="tp-caption Newspaper-Title   tp-resizeme" 
-								id="slide-100-layer-2" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['0','0','0','0']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['250','250','250','240']" 
-								data-fontsize="['50','50','50','30']"
-								data-lineheight="['55','55','55','35']"
-								data-width="full"
-								data-height="none"
-								data-whitespace="normal"
-								data-type="text" 
-								data-responsive_offset="on" 
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['center','center','center','center']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[10,10,10,10]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;">
-									Welcome To University
-							</div>
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+				<div class="overlay overlay-bg"></div>	
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-between">
+						<div class="banner-content col-lg-9 col-md-12">
+							<h1 class="text-uppercase">
+								We Ensure better education
+								for a better future			
+							</h1>
+							<p class="pt-10 pb-10">
+								In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.
+							</p>
+							<a href="#" class="primary-btn text-uppercase">Learn More</a>
+						</div>										
+					</div>
+				</div>					
+			</section>
+			<!-- End banner Area -->
 
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
-								id="slide-100-layer-3" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['0','0','0','0']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['210','210','210','210']" 
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
-								data-type="text" 
-								data-responsive_offset="on"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['left','left','left','left']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 7; white-space: nowrap; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
-									Batter Education For A Better 
-							</div>
-							
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
-								id="slide-100-layer-4" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['0','0','0','0']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['320','320','320','290']" 
-								data-width="['800','800','700','420']"
-								data-height="['100','100','100','120']"
-								data-whitespace="unset"
-								data-type="text" 
-								data-responsive_offset="on"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['center','center','center','center']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-							</div>
-							<!-- LAYER NR. 4 -->
-							<div class="tp-caption Newspaper-Button rev-btn " 
-								id="slide-100-layer-5" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['90','80','75','90']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['400','400','400','420']" 
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
-								data-type="button" 
-								data-responsive_offset="on" 
-								data-responsive="off"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-								data-textAlign="['center','center','center','center']"
-								data-paddingtop="[12,12,12,12]"
-								data-paddingright="[30,35,35,15]"
-								data-paddingbottom="[12,12,12,12]"
-								data-paddingleft="[30,35,35,15]"
-								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;">READ MORE </div>
-							<div class="tp-caption Newspaper-Button rev-btn" 
-								id="slide-100-layer-6" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['-90','-80','-75','-90']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['400','400','400','420']" 
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
-								data-type="button" 
-								data-responsive_offset="on" 
-								data-responsive="off"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-								data-textAlign="['center','center','center','center']"
-								data-paddingtop="[12,12,12,12]"
-								data-paddingright="[30,35,35,15]"
-								data-paddingbottom="[12,12,12,12]"
-								data-paddingleft="[30,35,35,15]"
-								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>
-						</li>
-						<li data-index="rs-200" 
-						data-transition="parallaxvertical" 
-						data-slotamount="default" 
-						data-hideafterloop="0" 
-						data-hideslideonmobile="off" 
-						data-easein="default" 
-						data-easeout="default" 
-						data-masterspeed="default" 
-						data-thumb="/frontend/assets/images/slider/slide1.jpg" 
-						data-rotate="0" 
-						data-fstransition="fade" 
-						data-fsmasterspeed="1500" 
-						data-fsslotamount="7" 
-						data-saveperformance="off" 
-						data-title="A STUDY ON HAPPINESS" 
-						data-param1="" data-param2="" 
-						data-param3="" data-param4="" 
-						data-param5="" data-param6="" 
-						data-param7="" data-param8="" 
-						data-param9="" data-param10="" 
-						data-description="Science says that Women are generally happier">
-							<!-- MAIN IMAGE -->
-							<img src="/frontend/assets/images/slider/slide2.jpg" alt="" 
-								data-bgposition="center center" 
-								data-bgfit="cover" 
-								data-bgrepeat="no-repeat" 
-								data-bgparallax="10" 
-								class="rev-slidebg" 
-								data-no-retina />
-								
-							<!-- LAYER NR. 1 -->
-							<div class="tp-caption tp-shape tp-shapewrapper " 
-								id="slide-200-layer-1" 
-								data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-								data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-								data-width="full"
-								data-height="full"
-								data-whitespace="nowrap"
-								data-type="shape" 
-								data-basealign="slide" 
-								data-responsive_offset="off" 
-								data-responsive="off"
-								data-frames='[{"from":"opacity:0;","speed":1,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:1;","ease":"Power4.easeOut"}]'
-								data-textAlign="['left','left','left','left']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 5;background-color:rgba(2, 0, 11, 0.80);border-color:rgba(0, 0, 0, 0);border-width:0px;"> 
-							</div>
-
-							<!-- LAYER NR. 2 -->
-							<div class="tp-caption Newspaper-Title   tp-resizeme" 
-								id="slide-200-layer-2" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['0','0','0','0']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['250','250','250','240']" 
-								data-fontsize="['50','50','50','30']"
-								data-lineheight="['55','55','55','35']"
-								data-width="full"
-								data-height="none"
-								data-whitespace="normal"
-								data-type="text" 
-								data-responsive_offset="on" 
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['center','center','center','center']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[10,10,10,10]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;text-transform:uppercase;">
-									Welcome To University
-							</div>
-
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
-								id="slide-200-layer-3" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['0','0','0','0']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['210','210','210','210']" 
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
-								data-type="text" 
-								data-responsive_offset="on"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['left','left','left','left']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 7; white-space: nowrap;text-transform:uppercase; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
-									Batter Education For A Better 
-							</div>
-							
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
-								id="slide-200-layer-4" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['0','0','0','0']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['320','320','320','290']" 
-								data-width="['800','800','700','420']"
-								data-height="['100','100','100','120']"
-								data-whitespace="unset"
-								data-type="text" 
-								data-responsive_offset="on"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-								data-textAlign="['center','center','center','center']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
-								style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
-									 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-							</div>
-							<!-- LAYER NR. 4 -->
-							<div class="tp-caption Newspaper-Button rev-btn " 
-								id="slide-200-layer-5" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['90','80','75','90']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['400','400','400','420']" 
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
-								data-type="button" 
-								data-responsive_offset="on" 
-								data-responsive="off"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-								data-textAlign="['center','center','center','center']"
-								data-paddingtop="[12,12,12,12]"
-								data-paddingright="[30,35,35,15]"
-								data-paddingbottom="[12,12,12,12]"
-								data-paddingleft="[30,35,35,15]"
-								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;">READ MORE </div>
-							<div class="tp-caption Newspaper-Button rev-btn" 
-								id="slide-200-layer-6" 
-								data-x="['center','center','center','center']" 
-								data-hoffset="['-90','-80','-75','-90']" 
-								data-y="['top','top','top','top']" 
-								data-voffset="['400','400','400','420']" 
-								data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
-								data-type="button" 
-								data-responsive_offset="on" 
-								data-responsive="off"
-								data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-								data-textAlign="['center','center','center','center']"
-								data-paddingtop="[12,12,12,12]"
-								data-paddingright="[30,35,35,15]"
-								data-paddingbottom="[12,12,12,12]"
-								data-paddingleft="[30,35,35,15]"
-								style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">CONTACT US</div>
-						</li>
-						<!-- SLIDE  -->
-					</ul>
-				</div><!-- END REVOLUTION SLIDER -->  
-			</div>  
-		</div>  
-        <!-- Main Slider -->
-		<div class="content-block">
-            
-			<!-- Our Services -->
-			<div class="section-area content-inner service-info-bx">
-                <div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="service-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/our-services/pic1.jpg" alt="">
-								</div>
-								<div class="info-bx text-center">
-									<div class="feature-box-sm radius bg-white">
-										<i class="fa fa-bank text-primary"></i>
-									</div>
-									<h4><a href="#">Best Industry Leaders</a></h4>
-									<a href="#" class="btn radius-xl">View More</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="service-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/our-services/pic2.jpg" alt="">
-								</div>
-								<div class="info-bx text-center">
-									<div class="feature-box-sm radius bg-white">
-										<i class="fa fa-book text-primary"></i>
-									</div>
-									<h4><a href="#">Learn Courses Online</a></h4>
-									<a href="#" class="btn radius-xl">View More</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12">
-							<div class="service-bx m-b0">
-								<div class="action-box">
-									<img src="/frontend/assets/images/our-services/pic3.jpg" alt="">
-								</div>
-								<div class="info-bx text-center">
-									<div class="feature-box-sm radius bg-white">
-										<i class="fa fa-file-text-o text-primary"></i>
-									</div>
-									<h4><a href="#">Book Library & Store</a></h4>
-									<a href="#" class="btn radius-xl">View More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-            </div>
-            <!-- Our Services END -->
-			
-			<!-- Popular Courses -->
-			<div class="section-area section-sp2 popular-courses-bx">
-                <div class="container">
-					<div class="row">
-						<div class="col-md-12 heading-bx left">
-							<h2 class="title-head">Popular <span>Courses</span></h2>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
-						</div>
-					</div>
-					<div class="row">
-					<div class="courses-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/courses/pic1.jpg" alt="">
-									<a href="#" class="btn">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>$190</del>
-										<h5>$120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/courses/pic2.jpg" alt="">
-									<a href="#" class="btn">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>$190</del>
-										<h5>$120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/courses/pic3.jpg" alt="">
-									<a href="#" class="btn">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>$190</del>
-										<h5>$120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="cours-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/courses/pic4.jpg" alt="">
-									<a href="#" class="btn">Read More</a>
-								</div>
-								<div class="info-bx text-center">
-									<h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-									<span>Programming</span>
-								</div>
-								<div class="cours-more-info">
-									<div class="review">
-										<span>3 Review</span>
-										<ul class="cours-star">
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li class="active"><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star"></i></li>
-										</ul>
-									</div>
-									<div class="price">
-										<del>$190</del>
-										<h5>$120</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					</div>
-				</div>
-			</div>
-			<!-- Popular Courses END -->
-			
-			<!-- Form -->
-			<div class="section-area section-sp1 ovpr-dark bg-fix online-cours" style="background-image:url(/frontend/assets/images/background/bg1.jpg);">
+			<!-- Start feature Area -->
+			<section class="feature-area">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-12 text-center text-white">
-							<h2>Online Courses To Learn</h2>
-							<h5>Own Your Feature Learning New Skills Online</h5>
-							<form class="cours-search">
-								<div class="input-group">
-									<input type="text" class="form-control" placeholder="What do you want to learn today?	">
-									<div class="input-group-append">
-										<button class="btn" type="submit">Search</button> 
-									</div>
+						<div class="col-lg-4">
+							<div class="single-feature">
+								<div class="title">
+									<h4>Motto</h4>
 								</div>
+								<div class="desc-wrap">
+									<p>
+										Usage of the Internet is becoming more common due to rapid advancement
+										of technology.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-feature">
+								<div class="title">
+									<h4>Mission</h4>
+								</div>
+								<div class="desc-wrap">
+									<p>
+										For many of us, our very first experience of learning about the celestial bodies begins when we saw our first.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-feature">
+								<div class="title">
+									<h4>Vission</h4>
+								</div>
+								<div class="desc-wrap">
+									<p>
+										If you are a serious astronomy fanatic like a lot of us are, you can probably remember that one event.
+									</p>
+								</div>
+							</div>
+						</div>												
+					</div>
+				</div>	
+			</section>
+			<!-- End feature Area -->
+					
+			<!-- Start popular-course Area -->
+			<section class="top-category-widget-area pt-90 pb-90">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Why Choose Us</h1>
+								<p>There is a moment in the life of any aspiring.</p>
+							</div>
+						</div>
+					</div>						
+					<div class="row">		
+						<div class="col-lg-4">
+							<div class="single-cat-widget">
+								<div class="content relative">
+									<div class="overlay overlay-bg"></div>
+								    <a href="#" target="_blank">
+								      <div class="thumb">
+								  		 <img class="content-image img-fluid d-block mx-auto" src="/frontend/img/blog/cat-widget1.jpg" alt="">
+								  	  </div>
+								      <div class="content-details">
+								        <h4 class="content-title mx-auto text-uppercase">Social life</h4>
+								        <span></span>								        
+								        <p>Enjoy your social life together</p>
+								      </div>
+								    </a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-cat-widget">
+								<div class="content relative">
+									<div class="overlay overlay-bg"></div>
+								    <a href="#" target="_blank">
+								      <div class="thumb">
+								  		 <img class="content-image img-fluid d-block mx-auto" src="/frontend/img/blog/cat-widget2.jpg" alt="">
+								  	  </div>
+								      <div class="content-details">
+								        <h4 class="content-title mx-auto text-uppercase">Politics</h4>
+								        <span></span>								        
+								        <p>Be a part of politics</p>
+								      </div>
+								    </a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-cat-widget">
+								<div class="content relative">
+									<div class="overlay overlay-bg"></div>
+								    <a href="#" target="_blank">
+								      <div class="thumb">
+								  		 <img class="content-image img-fluid d-block mx-auto" src="/frontend/img/blog/cat-widget3.jpg" alt="">
+								  	  </div>
+								      <div class="content-details">
+								        <h4 class="content-title mx-auto text-uppercase">Food</h4>
+								        <span></span>
+								        <p>Let the food be finished</p>
+								      </div>
+								    </a>
+								</div>
+							</div>
+						</div>												
+					</div>
+				</div>	
+			</section>
+			<!-- End popular-course Area -->
+			
+			<!-- Start search-course Area -->
+			<section class="search-course-area relative">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-6 col-md-6 search-course-left">
+							<h1 class="text-white">
+								Get quality education
+							</h1>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+							</p>
+							<div class="row details-content">
+								<div class="col single-detials">
+									<span class="lnr lnr-graduation-hat"></span>
+									<a href="#"><h4>Expert Teachers</h4></a>		
+									<p>
+										Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+									</p>						
+								</div>
+								<div class="col single-detials">
+									<span class="lnr lnr-license"></span>
+									<a href="#"><h4>Resources</h4></a>		
+									<p>
+										Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+									</p>						
+								</div>								
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 search-course-right section-gap">
+							<form class="form-wrap" action="#">
+								<h4 class="text-white pb-20 text-center mb-30">Request for admission</h4>
+								<div class="mb-1">
+									<el-input placeholder="Parent's Name (required)" size="mini" v-model="form.parent_name"></el-input>	
+								</div>	
+								<div class="mb-1">
+									<el-input placeholder="Parent's Phone (required)" size="mini" v-model="form.parent_phone"></el-input>	
+								</div>	
+								<div class="mb-1">
+									<el-input placeholder="Parent's Email (optional)" size="mini" v-model="form.parent_email"></el-input>	
+								</div>
+								<div class="mb-1">
+									<el-input placeholder="Student's Name (required)" size="mini" v-model="form.student_name"></el-input>	
+								</div>
+								<div class="mb-1">
+									<el-input placeholder="Student's Age (required)" size="mini" v-model="form.student_age"></el-input>	
+								</div>
+								<div class="form-select mb-1" id="service-select">
+									<el-select v-model="form.grade_id" placeholder="Choose Grade (required)"
+										size="mini" style="width:100%" >
+										<el-option 
+											v-for="grade in grades"
+											:value="grade.id" 
+											:label="grade.name"
+											:key="grade.id">
+											{{ grade.name }}
+										</el-option>
+									</el-select>
+								</div>									
+								<el-button type="success" :loading="loading" size="mini" 
+									@click.prevent="submitApplication()">{{ loading ? 'Submitting Application.....' : 'Submit Application' }}
+								</el-button>
 							</form>
 						</div>
 					</div>
-					<div class="mw800 m-auto">
-						<div class="row">
-							<div class="col-md-4 col-sm-6">
-								<div class="cours-search-bx m-b30">
-									<div class="icon-box">
-										<h3><i class="ti-user"></i><span class="counter">5</span>M</h3>
-									</div>
-									<span class="cours-search-text">Over 5 million student</span>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6">
-								<div class="cours-search-bx m-b30">
-									<div class="icon-box">
-										<h3><i class="ti-book"></i><span class="counter">30</span>K</h3>
-									</div>
-									<span class="cours-search-text">30,000 Courses.</span>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-12">
-								<div class="cours-search-bx m-b30">
-									<div class="icon-box">
-										<h3><i class="ti-layout-list-post"></i><span class="counter">20</span>K</h3>
-									</div>
-									<span class="cours-search-text">Learn Anythink Online.</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Form END -->
-			<div class="section-area section-sp2">
+				</div>	
+			</section>
+			<!-- End search-course Area -->
+						
+			<!-- Start events Area -->
+			<section class="blog-area section-gap" id="blog">
 				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Upcoming Events of our School</h1>
+								<p>In the history of modern astronomy there is.</p>
+							</div>
+						</div>
+					</div>					
 					<div class="row">
-						<div class="col-md-12 text-center heading-bx">
-							<h2 class="title-head m-b0">Upcoming <span>Events</span></h2>
-							<p class="m-b0">Upcoming Education Events To Feed Brain. </p>
+						<div class="col-lg-3 col-md-6 single-blog" v-if="events.length < 0">
+							<h2 class="text-muted text-danger text-md">
+								No Events found
+							</h2>
 						</div>
-					</div>
-					<div class="row">
-					<div class="upcoming-event-carousel owl-carousel owl-btn-center-lr owl-btn-1 col-12 p-lr0  m-b30">
-						<div class="item">
-							<div class="event-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/event/pic4.jpg" alt="">
-								</div>
-								<div class="info-bx d-flex">
-									<div>
-										<div class="event-time">
-											<div class="event-date">29</div>
-											<div class="event-month">October</div>
-										</div>
-									</div>
-									<div class="event-info">
-										<h4 class="event-title"><a href="#">Education Autumn Tour 2019</a></h4>
-										<ul class="media-post">
-											<li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
-											<li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
-										</ul>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p>
-									</div>
-								</div>
+						<div class="col-lg-3 col-md-6 single-blog mb-2" v-else v-for="event in events" :key="event.id">
+							<div class="thumb">
+								<img class="img-fluid" :src="fileLinkEvent(event.image)" alt="Event Image">								
 							</div>
-						</div>
-						<div class="item">
-							<div class="event-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/event/pic3.jpg" alt="">
-								</div>
-								<div class="info-bx d-flex">
-									<div>
-										<div class="event-time">
-											<div class="event-date">29</div>
-											<div class="event-month">October</div>
-										</div>
-									</div>
-									<div class="event-info">
-										<h4 class="event-title"><a href="#">Education Autumn Tour 2019</a></h4>
-										<ul class="media-post">
-											<li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
-											<li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
-										</ul>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="event-bx">
-								<div class="action-box">
-									<img src="/frontend/assets/images/event/pic2.jpg" alt="">
-								</div>
-								<div class="info-bx d-flex">
-									<div>
-										<div class="event-time">
-											<div class="event-date">29</div>
-											<div class="event-month">October</div>
-										</div>
-									</div>
-									<div class="event-info">
-										<h4 class="event-title"><a href="#">Education Autumn Tour 2019</a></h4>
-										<ul class="media-post">
-											<li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
-											<li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
-										</ul>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p>
-									</div>
-								</div>
-							</div>
-						</div>
+							<p class="meta">{{ event.startdate | time }} -- {{ event.endate | time }}</p>
+							<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
+								<h5 v-html="event.title"></h5>
+							</a>
+							<p v-html="event.description"></p>
+							<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href" 
+							class="details-btn d-flex justify-content-center align-items-center">
+								<span class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>		
+						</div>					
 					</div>
-					</div>
-					<div class="text-center">
-						<a href="#" class="btn">View All Event</a>
-					</div>
-				</div>
-			</div>
+				</div>	
+			</section>
+			<!-- End blog Area -->	
 			
-			<!-- Testimonials -->
-			<div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(/frontend/assets/images/background/bg1.jpg);">
-                <div class="container">
+			<!-- Start cta-one Area -->
+			<section class="cta-one-area relative section-gap">
+				<div class="container">
+					<div class="overlay overlay-bg"></div>
+					<div class="row justify-content-center">
+						<div class="wrap">
+							<h1 class="text-white">Become part of our team</h1>
+							<p>
+								There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck.
+							</p>
+							<a class="primary-btn wh" href="#">Apply for an opening</a>								
+						</div>					
+					</div>
+				</div>	
+			</section>
+			<!-- End cta-one Area -->
+		
+			<!-- Start review Area -->
+			<section class="review-area section-gap relative">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">	
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Reviews</h1>
+								<p>If you are a serious astronomy fanatic like a lot of us</p>
+							</div>
+						</div>
+					</div>				
 					<div class="row">
-						<div class="col-md-12 text-white heading-bx left">
-							<h2 class="title-head text-uppercase">what people <span>say</span></h2>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+						<div class="active-review-carusel">
+							<div class="single-review item">
+								<div class="title justify-content-start d-flex">
+									<a href="#"><h4>Fannie Rowe</h4></a>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+							</div>
+							<div class="single-review item">
+								<div class="title justify-content-start d-flex">
+									<a href="#"><h4>Hulda Sutton</h4></a>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+							</div>
+							<div class="single-review item">
+								<div class="title justify-content-start d-flex">
+									<a href="#"><h4>Fannie Rowe</h4></a>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+							</div>
+							<div class="single-review item">
+								<div class="title justify-content-start d-flex">
+									<a href="#"><h4>Hulda Sutton</h4></a>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+							</div>	
+							<div class="single-review item">
+								<div class="title justify-content-start d-flex">
+									<a href="#"><h4>Fannie Rowe</h4></a>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+							</div>
+							<div class="single-review item">
+								<div class="title justify-content-start d-flex">
+									<a href="#"><h4>Hulda Sutton</h4></a>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+							</div>
+							<div class="single-review item">
+								<img src="/frontend/img/r1.png" alt="">
+								<div class="title justify-content-start d-flex">
+									<a href="#"><h4>Fannie Rowe</h4></a>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+							</div>
+							<div class="single-review item">
+								<div class="title justify-content-start d-flex">
+									<a href="#"><h4>Hulda Sutton</h4></a>
+									<div class="star">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+							</div>																												
 						</div>
 					</div>
-					<div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-						<div class="item">
-							<div class="testimonial-bx">
-								<div class="testimonial-thumb">
-									<img src="/frontend/assets/images/testimonials/pic1.jpg" alt="">
-								</div>
-								<div class="testimonial-info">
-									<h5 class="name">Peter Packer</h5>
-									<p>-Art Director</p>
-								</div>
-								<div class="testimonial-content">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimonial-bx">
-								<div class="testimonial-thumb">
-									<img src="/frontend/assets/images/testimonials/pic2.jpg" alt="">
-								</div>
-								<div class="testimonial-info">
-									<h5 class="name">Peter Packer</h5>
-									<p>-Art Director</p>
-								</div>
-								<div class="testimonial-content">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Testimonials END -->
+				</div>	
+			</section>
+			<!-- End review Area -->
 			
-			<!-- Recent News -->
-			<div class="section-area section-sp2">
-                <div class="container">
-					<div class="row">
-						<div class="col-md-12 heading-bx left">
-							<h2 class="title-head">Recent <span>News</span></h2>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
-						</div>
-					</div>
-					<div class="recent-news-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-						<div class="item">
-							<div class="recent-news">
-								<div class="action-box">
-									<img src="/frontend/assets/images/blog/latest-blog/pic1.jpg" alt="">
-								</div>
-								<div class="info-bx">
-									<ul class="media-post">
-										<li><a href="#"><i class="fa fa-calendar"></i>Jan 02 2019</a></li>
-										<li><a href="#"><i class="fa fa-user"></i>By William</a></li>
-									</ul>
-									<h5 class="post-title"><a href="blog-details.html">This Story Behind Education Will Haunt You Forever.</a></h5>
-									<p>Knowing that, you’ve optimised your pages countless amount of times, written tons.</p>
-									<div class="post-extra">
-										<a href="#" class="btn-link">READ MORE</a>
-										<a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>20 Comment</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="recent-news">
-								<div class="action-box">
-									<img src="/frontend/assets/images/blog/latest-blog/pic2.jpg" alt="">
-								</div>
-								<div class="info-bx">
-									<ul class="media-post">
-										<li><a href="#"><i class="fa fa-calendar"></i>Feb 05 2019</a></li>
-										<li><a href="#"><i class="fa fa-user"></i>By John</a></li>
-									</ul>
-									<h5 class="post-title"><a href="blog-details.html">What Will Education Be Like In The Next 50 Years?</a></h5>
-									<p>As desperate as you are right now, you have done everything you can on your.</p>
-									<div class="post-extra">
-										<a href="#" class="btn-link">READ MORE</a>
-										<a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>14 Comment</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="recent-news">
-								<div class="action-box">
-									<img src="/frontend/assets/images/blog/latest-blog/pic3.jpg" alt="">
-								</div>
-								<div class="info-bx">
-									<ul class="media-post">
-										<li><a href="#"><i class="fa fa-calendar"></i>April 14 2019</a></li>
-										<li><a href="#"><i class="fa fa-user"></i>By George</a></li>
-									</ul>
-									<h5 class="post-title"><a href="blog-details.html">Master The Skills Of Education And Be.</a></h5>
-									<p>You will see in the guide all my years of valuable experience together with.</p>
-									<div class="post-extra">
-										<a href="#" class="btn-link">READ MORE</a>
-										<a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>23 Comment</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Recent News End -->
-			
-        </div>
-		<!-- contact area END -->
-    </div>
-    <!-- Content END-->
     </div>
 </template>
 
@@ -773,11 +405,16 @@ export default {
     name: 'Home',
     data(){
         return {
+			loading: false,
             abouts: [],
             abouthistories: [],
 			events: [],
 			faqs: [],
-			carousels: []
+			carousels: [],
+			grades: [],
+			form:{
+				grade_id: ''
+			}
         }
     },
     methods: {
@@ -822,7 +459,16 @@ export default {
                 .then((response) => {
                     this.abouthistories = response.data.abouthistories
                 })
-        }
+        },
+		getUserGrades: async function(){
+			axios.get('/api/get-user-grades')
+				.then((response) => {
+					this.grades = response.data.grades
+				})
+		},
+		submitApplication: async function(){
+			console.log(this.form)
+		}
     },
     computed:{},
     created(){
@@ -831,6 +477,7 @@ export default {
 		this.getUserEvents()
 		this.getUserFaqs()
 		this.getUserCarousel()
+		this.getUserGrades()
     }
 }
 </script>

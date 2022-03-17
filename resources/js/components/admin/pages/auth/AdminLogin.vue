@@ -46,7 +46,7 @@ export default {
             localStorage.setItem("token", response.data)
                     setTimeout(function(){
                       window.location.href = '/api/admin'
-                    }, 3000)
+                    }, 1000)
           })
           .catch(error =>{
             if (error.response.status === 422) {
