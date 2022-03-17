@@ -97,10 +97,9 @@ class EventController extends Controller
     {
         $event = Event::where('id', $id)->first();
 
-        return response()->json([[
+        return response()->json([
             'event' => $event
-        ]], 200);
-
+        ], 200);
     }
 
     public function edit(Event $event)

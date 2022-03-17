@@ -19,128 +19,22 @@
 			<!-- Start events-list Area -->
 			<section class="events-list-area section-gap event-page-lists">
 				<div class="container">
+					<h1 class="text-center text-muted mb-5" style="margin-top:-90px">School Events</h1>
 					<div class="row align-items-center">
-						<div class="col-lg-6 pb-30">
+						<div class="col-lg-6 pb-30" v-for="event in events" :key="event.id">
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="/frontend/img/e1.jpg" alt="">
+									<img class="img-fluid" :src="fileLinkEvent(event.image)" alt="">
 								</div>
 								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="event-details.html"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 pb-30">
-							<div class="single-carusel row align-items-center">
-								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="/frontend/img/e2.jpg" alt="">
-								</div>
-								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="event-details.html"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 pb-30">
-							<div class="single-carusel row align-items-center">
-								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="/frontend/img/e1.jpg" alt="">
-								</div>
-								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="event-details.html"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 pb-30">
-							<div class="single-carusel row align-items-center">
-								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="/frontend/img/e2.jpg" alt="">
-								</div>
-								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="event-details.html"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 pb-30">
-							<div class="single-carusel row align-items-center">
-								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="/frontend/img/e1.jpg" alt="">
-								</div>
-								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="event-details.html"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6" pb-30>
-							<div class="single-carusel row align-items-center">
-								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="/frontend/img/e2.jpg" alt="">
-								</div>
-								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="event-details.html"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 pb-30">
-							<div class="single-carusel row align-items-center">
-								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="/frontend/img/e1.jpg" alt="">
-								</div>
-								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="event-details.html"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="single-carusel row align-items-center">
-								<div class="col-12 col-md-6 thumb">
-									<img class="img-fluid" src="/frontend/img/e2.jpg" alt="">
-								</div>
-								<div class="detials col-12 col-md-6">
-									<p>25th February, 2018</p>
-									<a href="#"><h4>The Universe Through
-									A Child S Eyes</h4></a>
-									<p>
-										For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.
-									</p>
+									<p>{{ event.startdate | time }} -- {{ event.endate | time }}</p>
+									<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
+										<h4 v-html="event.title"></h4>
+									</a>
+									<p v-html="event.description"></p>
 								</div>
 							</div>
 						</div>																		
-						<a href="#" class="text-uppercase primary-btn mx-auto mt-40">Load more courses</a>		
 					</div>
 				</div>	
 			</section>
@@ -158,7 +52,7 @@ export default {
     },
     methods: {
         fileLinkEvent(name){
-        	return '/uploads//frontend/img/event/' + name
+        	return '/uploads/img/event/' + name
       	},
         getUserEvents: async function(){
             axios.get('/api/get-user-events')

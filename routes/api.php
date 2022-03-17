@@ -83,6 +83,7 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::get('get-admin-events', [EventController::class, 'index']);
     Route::post('create-event', [EventController::class, 'store']);
     Route::get('get-event/{id}', [EventController::class, 'show']);
+    Route::post('edit-event/{id}', [EventController::class, 'update']);
 
     Route::post('create-carousel', [CarouselController::class, 'store']);
     Route::get('get-admin-carousels', [CarouselController::class, 'index']);
