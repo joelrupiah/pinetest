@@ -20,14 +20,6 @@
 			<section class="gallery-area section-gap">
 				<div class="container">
 					<h1 class="text-center text-muted mb-5" style="margin-top:-90px">School Gallery</h1>
-					<!-- <div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">School Gallery</h1>
-								<p>If you are a serious astronomy fanatic like a lot of us</p>
-							</div>
-						</div>
-					</div> -->
 					<div class="row">
 						<div class="col-lg-3" v-for="gallery in galleries" :key="gallery.id">
 							<a :href="fileLink(gallery.image)" class="img-gal">

@@ -21,7 +21,10 @@
 				<div class="container">
 					<h1 class="text-center text-muted mb-5" style="margin-top:-90px">School Events</h1>
 					<div class="row align-items-center">
-						<div class="col-lg-6 pb-30" v-for="event in events" :key="event.id">
+						<div class="col-lg-6 pb-30 text-center" v-if="events.length < 20">
+							<h4 class="text-muted text-danger text-md">No Events for now</h4>
+						</div>
+						<div class="col-lg-6 pb-30" v-else v-for="event in events" :key="event.id">
 							<div class="single-carusel row align-items-center">
 								<div class="col-12 col-md-6 thumb">
 									<img class="img-fluid" :src="fileLinkEvent(event.image)" alt="">
