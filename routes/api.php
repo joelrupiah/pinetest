@@ -58,6 +58,9 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
 
     Route::post('edit-grade/{id}', [GradeController::class, 'update']);
 
+    Route::get('get-all-applications', [ApplicationController::class, 'index']);
+    Route::get('get-application/{id}', [ApplicationController::class, 'getSingleApplication']);
+
     Route::get('get-gallery/{id}', [GalleryController::class, 'show']);
     Route::post('edit-gallery/{id}', [GalleryController::class, 'update']);
 

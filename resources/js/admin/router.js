@@ -18,6 +18,10 @@ import AdminTrash from '../components/admin/pages/admin/AdminTrash'
 
 import GradeList from '../components/admin/pages/grade/GradeList'
 
+import ApplicationList from '../components/admin/pages/application/ApplicationList'
+import ReplyEmailApplication from '../components/admin/pages/application/ReplyEmailApplication'
+import ApplicationDetails from '../components/admin/pages/application/ApplicationDetails'
+
 import GalleryList from '../components/admin/pages/gallery/GalleryList'
 import CreateGallery from '../components/admin/pages/gallery/CreateGallery'
 import EditGallery from '../components/admin/pages/gallery/EditGallery'
@@ -71,6 +75,10 @@ const router = new VueRouter({
 
         {path:'/api/admin/grade-list', component: GradeList, name: 'GradeList', meta: { requiresAuth: true } },
         
+        {path:'/api/admin/application-list', component: ApplicationList, name: 'ApplicationList', meta: { requiresAuth: true } },
+        {path:'/api/admin/reply-email-application/:id', component: ReplyEmailApplication, name: 'ReplyEmailApplication', meta: { requiresAuth: true } },
+        {path:'/api/admin/show-application-details/:id', component: ApplicationDetails, name: 'ApplicationDetails', meta: { requiresAuth: true } },
+
         {path:'/api/admin/gallery-list', component: GalleryList, name: 'GalleryList', meta: { requiresAuth: true } },
         {path:'/api/admin/create-gallery', component: CreateGallery, name: 'CreateGallery', meta: { requiresAuth: true } },
         {path:'/api/admin/edit-gallery/:id', component: EditGallery, name: 'EditGallery', meta: { requiresAuth: true } },

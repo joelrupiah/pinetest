@@ -9,12 +9,25 @@ class ApplicationController extends Controller
 {
     public function index()
     {
-        //
+        $applications = Application::with('grade')->get();
+
+        return response()->json([
+            'applications' => $applications
+        ], 200);
     }
 
     public function create()
     {
         //
+    }
+
+    public function getSingleApplication(Application $application, $id)
+    {
+        $application = Application::with('grade')->where('id', $id)->first();
+
+        return response()->json([
+            'application' => $application
+        ], 200);
     }
 
     public function store(Request $request)
