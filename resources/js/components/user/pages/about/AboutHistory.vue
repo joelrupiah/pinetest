@@ -12,7 +12,7 @@
                             </div>
                             <div class="breadcrumb-menu float-left">
                                 <ul class="clearfix">
-                                    <li><a href="/api">Home</a></li>
+                                    <li><a href="">Home</a></li>
                                     <li class="active">History</li>
                                 </ul>
                             </div>
@@ -90,7 +90,7 @@ export default {
         	return '/uploads/img/about-history/' + name
       	},
         getAboutHistory(){
-            axios.get('/api/get-about-history')
+            axios.get('/get-about-history')
                 .then((response) => {
                     this.abouthistories = response.data.abouthistories
                 })

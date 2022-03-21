@@ -18,15 +18,16 @@ const router = new VueRouter({
     linkActiveClass: 'active',
     routes: [
 
-        {path:'/api', component: Home, name: 'Home'},
-        {path:'/api/about-us', component: AboutUs, name: 'AboutUs'},
-        {path:'/api/about-us/history', component: AboutHistory, name: 'AboutHistory'},
-        {path:'/api/contact-us', component: ContactUs, name: 'ContactUs'},
-        {path:'/api/faqs', component: UserFaq, name: 'UserFaq'},
-        {path:'/api/gallery', component: UserGallery, name: 'UserGallery'},
-        {path:'/api/events', component: Event, name: 'Event'},
-        {path:'/api/careers', component: Career, name: 'Career'},
-        {path:'/api/event-details/:eventSlug', component: EventDetail, name: 'EventDetail'},
+        {path:'/', component: Home, name: 'Home'},
+        // {path:'', component: Home, name: 'Home'},
+        {path:'/about-us', component: AboutUs, name: 'AboutUs'},
+        {path:'/about-us/history', component: AboutHistory, name: 'AboutHistory'},
+        {path:'/contact-us', component: ContactUs, name: 'ContactUs'},
+        {path:'/faqs', component: UserFaq, name: 'UserFaq'},
+        {path:'/gallery', component: UserGallery, name: 'UserGallery'},
+        {path:'/events', component: Event, name: 'Event'},
+        {path:'/careers', component: Career, name: 'Career'},
+        {path:'/event-details/:eventSlug', component: EventDetail, name: 'EventDetail'},
 
     ]
 })

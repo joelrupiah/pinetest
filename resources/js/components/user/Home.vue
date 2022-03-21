@@ -455,44 +455,44 @@ export default {
         	return '/uploads/img/carousel/' + name
       	},
         getUserAbout: async function(){
-            axios.get('/api/get-user-about')
+            axios.get('/get-user-about')
                 .then((response) => {
                     this.abouts = response.data.abouts
                 })
         },
 		getUserCarousel: async function(){
-            axios.get('/api/get-user-carousels')
+            axios.get('/get-user-carousels')
                 .then((response) => {
                     this.carousels = response.data.carousels
                 })
 		},
 		getUserFaqs: async function(){
-            axios.get('/api/get-user-faqs')
+            axios.get('/get-user-faqs')
                 .then((response) => {
                     this.faqs = response.data.faqs
                 })
         },
 		getUserEvents: async function(){
-            axios.get('/api/get-user-events')
+            axios.get('/get-user-events')
                 .then((response) => {
                     this.events = response.data.events
                 })
         },
         getAboutHistory: async function(){
-            axios.get('/api/get-about-history')
+            axios.get('/get-about-history')
                 .then((response) => {
                     this.abouthistories = response.data.abouthistories
                 })
         },
 		getUserGrades: async function(){
-			axios.get('/api/get-user-grades')
+			axios.get('/get-user-grades')
 				.then((response) => {
 					this.grades = response.data.grades
 				})
 		},
 		submitApplication: async function(){
 			this.loading = true
-			axios.post('/api/submit-application', this.form)
+			axios.post('/submit-application', this.form)
 				.then(() => {
 					this.form.grade_id = '',
 					this.form.parent_name = '',

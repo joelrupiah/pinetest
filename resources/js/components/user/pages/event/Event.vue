@@ -58,7 +58,7 @@ export default {
         	return '/uploads/img/event/' + name
       	},
         getUserEvents: async function(){
-            axios.get('/api/get-user-events')
+            axios.get('/get-user-events')
                 .then((response) => {
                     this.events = response.data.events
                 })

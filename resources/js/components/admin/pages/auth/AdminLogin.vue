@@ -45,7 +45,7 @@ export default {
             this.$store.commit('admin/LOGIN', true)
             localStorage.setItem("token", response.data)
                     setTimeout(function(){
-                      window.location.href = '/api/admin'
+                      window.location.href = '/admin'
                     }, 1000)
           })
           .catch(error =>{

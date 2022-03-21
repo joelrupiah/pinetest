@@ -8,21 +8,21 @@
 							<div class="single-footer-widget">
 								<h4>Quick links</h4>
 								<ul>
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Brand Assets</a></li>
-									<li><a href="#">Investor Relations</a></li>
-									<li><a href="#">Terms of Service</a></li>
+									<li><a href="/">Home</a></li>
+									<li><a href="/about-us">About Us</a></li>
+									<li><a href="/events">Events</a></li>
+									<li><a href="/contact-us">Contact Us</a></li>
 								</ul>								
 							</div>
 						</div>																	
 						<div class="col-lg-6  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h4>Newsletter</h4>
-								<p>Stay update with our latest</p>
+								<h4>Subscribe to Our Newsletter</h4>
+								<p>Stay updated with our latest updates</p>
 								<div class="" id="mc_embed_signup">
-									 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
+									 <form>
 									  <div class="input-group">
-									    <input type="text" class="form-control" name="EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="">
+									    <input type="text" class="form-control" name="email" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="">
 											
 										<div class="input-group-btn">
 									      <button class="btn btn-default" type="submit"
@@ -72,7 +72,7 @@ export default {
 	},
 	methods: {
 		subscribe: async function(){
-			axios.post('/api/subscribe-newsletter', this.form)
+			axios.post('/subscribe-newsletter', this.form)
 				.then(() => {})
 				.catch((error) => {
 					if (error.response.status === 422) {

@@ -156,13 +156,13 @@ export default {
         	return '/uploads/img/about/' + name
       	},
         getUserAbout: async function(){
-            axios.get('/api/get-user-about')
+            axios.get('/get-user-about')
                 .then((response) => {
                     this.abouts = response.data.abouts
                 })
         },
 		getUserFaqs: async function(){
-            axios.get('/api/get-user-faqs')
+            axios.get('/get-user-faqs')
                 .then((response) => {
                     this.faqs = response.data.faqs
                 })

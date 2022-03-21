@@ -19,9 +19,9 @@ use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\InboxController;
 use App\Http\Controllers\ApplicationController;
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 Route::prefix('admin')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);

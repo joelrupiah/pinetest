@@ -79,18 +79,22 @@
 										</p>
 									</div>
 									<div class="col-lg-6 form-group">
-										<textarea class="common-textarea form-control" name="message" 
+										<!-- <textarea class="common-textarea form-control" name="message" 
 											placeholder="Enter Messege" onfocus="this.placeholder = ''" 
 											onblur="this.placeholder = 'Enter Messege'" required=""
-											v-model="form.message" ></textarea>				
+											v-model="form.message" ></textarea>			 -->
+											<ckeditor :editor="editor" v-model="form.message" :config="editorConfig"></ckeditor>	
 										<p class="text-danger text-sm" v-if="errors.message">
 											{{ errors.message[0] }}
 										</p>
 									</div>
 									<div class="col-lg-12">
 										<div class="alert-msg" style="text-align: left;"></div>
-										<button class="genric-btn primary" style="float: right;"
-										@click.prevent="sendMessage">Send Message</button>											
+										<el-button type="success" :loading="loading" size="mini" 
+											@click.prevent="sendMessage()">{{ loading ? 'Sending message.....' : 'Send message' }}
+										</el-button>
+										<!-- <button class="genric-btn primary" style="float: right;"
+										@click.prevent="sendMessage">Send Message</button>											 -->
 									</div>
 								</div>
 							</form>	
@@ -103,33 +107,41 @@
 </template>
 
 <script>
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 export default {
     name: 'ContactUs',
 	data(){
 		return {
+			loading: false,
 			form: {
 				name: '',
 				email: '',
 				subject: '',
 				message: ''
 			},
-			errors: {}
+			errors: {},
+            editor: ClassicEditor,
+            editorConfig: {
+            }
 		}
 	},
 	methods: {
 		sendMessage: async function(){
-			axios.post('/api/send-message', this.form)
+			this.loading = true
+			axios.post('/send-message', this.form)
 				.then(() => {
 					this.form.name = '',
 					this.form.email = '',
 					this.form.subject = '',
 					this.form.message = '',
-					this.errors = ''
+					this.errors = '',
+					this.loading = false
 				})
 				.catch((error) => {
 					if (error.response.status === 422) {
 						this.errors = error.response.data.errors
 					}
+					this.loading = false
 				})
 		}
 	},

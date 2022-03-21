@@ -28,13 +28,13 @@
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li><a href="/api">Home</a></li>
-			          <li><a href="/api/about-us">About</a></li>
-			          <li><a href="/api/gallery">Gallery</a></li>
-			          <li><a href="/api/events">Events</a></li>
-			          <li><a href="/api/careers">Careers</a></li>
-			          <li><a href="/api/faqs">Faqs</a></li>
-			          <li><a href="/api/contact-us">Contact</a></li>
+			          <li><a href="/">Home</a></li>
+			          <li><a href="/about-us">About</a></li>
+			          <li><a href="/gallery">Gallery</a></li>
+			          <li><a href="/events">Events</a></li>
+			          <li><a href="/careers">Careers</a></li>
+			          <li><a href="/faqs">Faqs</a></li>
+			          <li><a href="/contact-us">Contact</a></li>
 			        </ul>
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>

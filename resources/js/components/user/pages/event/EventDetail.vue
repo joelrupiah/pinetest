@@ -9,7 +9,7 @@
 							<h1 class="text-white">
 								{{ eventdetail.title }} Details			
 							</h1>	
-							<p class="text-white link-nav"><a href="/api">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="event-details.html"> Event Details</a></p>
+							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="event-details.html"> Event Details</a></p>
 						</div>	
 					</div>
 				</div>

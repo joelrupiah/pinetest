@@ -59,57 +59,57 @@ const router = new VueRouter({
     linkActiveClass: 'active',
     routes: [
 
-        {path:'/api/admin', component: AdminDashboard, name: 'AdminDashboard', meta: { requiresAuth: true } },
+        {path:'/admin', component: AdminDashboard, name: 'AdminDashboard', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/admin-login', component: AdminLogin, name: 'AdminLogin', meta: { requiresVisitor: true } },
-        {path:'/api/admin/admin-reset-password', component: ResetPassword, name: 'ResetPassword', meta: { requiresVisitor: true } },
+        {path:'/admin/admin-login', component: AdminLogin, name: 'AdminLogin', meta: { requiresVisitor: true } },
+        {path:'/admin/admin-reset-password', component: ResetPassword, name: 'ResetPassword', meta: { requiresVisitor: true } },
 
-        {path: '/api/admin/admin-profile', component: AdminProfile, name: 'AdminProfile', meta: { requiresAuth: true } },
+        {path: '/admin/admin-profile', component: AdminProfile, name: 'AdminProfile', meta: { requiresAuth: true } },
 
-        {path: '/api/admin/roles', component: RoleList, name: 'RoleList', meta: { requiresAuth: true } },
+        {path: '/admin/roles', component: RoleList, name: 'RoleList', meta: { requiresAuth: true } },
 
-        {path: '/api/admin/permissions', component: PermissionList, name: 'PermissionList', meta: { requiresAuth: true } },
+        {path: '/admin/permissions', component: PermissionList, name: 'PermissionList', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/admins', component: AdminList, name: 'AdminList', meta: { requiresAuth: true } },
-        {path:'/api/admin/admin-trash', component: AdminTrash, name: 'AdminTrash', meta: { requiresAuth: true } },
+        {path:'/admin/admins', component: AdminList, name: 'AdminList', meta: { requiresAuth: true } },
+        {path:'/admin/admin-trash', component: AdminTrash, name: 'AdminTrash', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/grade-list', component: GradeList, name: 'GradeList', meta: { requiresAuth: true } },
+        {path:'/admin/grade-list', component: GradeList, name: 'GradeList', meta: { requiresAuth: true } },
         
-        {path:'/api/admin/application-list', component: ApplicationList, name: 'ApplicationList', meta: { requiresAuth: true } },
-        {path:'/api/admin/reply-email-application/:id', component: ReplyEmailApplication, name: 'ReplyEmailApplication', meta: { requiresAuth: true } },
-        {path:'/api/admin/show-application-details/:id', component: ApplicationDetails, name: 'ApplicationDetails', meta: { requiresAuth: true } },
+        {path:'/admin/application-list', component: ApplicationList, name: 'ApplicationList', meta: { requiresAuth: true } },
+        {path:'/admin/reply-email-application/:id', component: ReplyEmailApplication, name: 'ReplyEmailApplication', meta: { requiresAuth: true } },
+        {path:'/admin/show-application-details/:id', component: ApplicationDetails, name: 'ApplicationDetails', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/gallery-list', component: GalleryList, name: 'GalleryList', meta: { requiresAuth: true } },
-        {path:'/api/admin/create-gallery', component: CreateGallery, name: 'CreateGallery', meta: { requiresAuth: true } },
-        {path:'/api/admin/edit-gallery/:id', component: EditGallery, name: 'EditGallery', meta: { requiresAuth: true } },
+        {path:'/admin/gallery-list', component: GalleryList, name: 'GalleryList', meta: { requiresAuth: true } },
+        {path:'/admin/create-gallery', component: CreateGallery, name: 'CreateGallery', meta: { requiresAuth: true } },
+        {path:'/admin/edit-gallery/:id', component: EditGallery, name: 'EditGallery', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/parents-bulk-email', component: ParentsBulkEmail, name: 'ParentsBulkEmail', meta: { requiresAuth: true } },
-        {path:'/api/admin/teachers-bulk-email', component: TeachersBulkEmail, name: 'TeachersBulkEmail', meta: { requiresAuth: true } },
+        {path:'/admin/parents-bulk-email', component: ParentsBulkEmail, name: 'ParentsBulkEmail', meta: { requiresAuth: true } },
+        {path:'/admin/teachers-bulk-email', component: TeachersBulkEmail, name: 'TeachersBulkEmail', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/admin-about-us-list', component: AdminAboutUsList, name: 'AdminAboutUsList', meta: { requiresAuth: true } },
-        {path:'/api/admin/create-admin-about-us', component: CreateAdminAboutUs, name: 'CreateAdminAboutUs', meta: { requiresAuth: true } },
-        {path:'/api/admin/edit-admin-about-us/:id', component: EditAdminAboutUs, name: 'EditAdminAboutUs', meta: { requiresAuth: true } },
+        {path:'/admin/admin-about-us-list', component: AdminAboutUsList, name: 'AdminAboutUsList', meta: { requiresAuth: true } },
+        {path:'/admin/create-admin-about-us', component: CreateAdminAboutUs, name: 'CreateAdminAboutUs', meta: { requiresAuth: true } },
+        {path:'/admin/edit-admin-about-us/:id', component: EditAdminAboutUs, name: 'EditAdminAboutUs', meta: { requiresAuth: true } },
        
-        {path:'/api/admin/admin-about-history-list', component: AdminAboutHistoryList, name: 'AdminAboutHistoryList', meta: { requiresAuth: true } },
-        {path:'/api/admin/create-about-history', component: CreateAboutHistory, name: 'CreateAboutHistory', meta: { requiresAuth: true } },
-        {path:'/api/admin/edit-about-history/:id', component: EditAboutHistory, name: 'EditAboutHistory', meta: { requiresAuth: true } },
+        {path:'/admin/admin-about-history-list', component: AdminAboutHistoryList, name: 'AdminAboutHistoryList', meta: { requiresAuth: true } },
+        {path:'/admin/create-about-history', component: CreateAboutHistory, name: 'CreateAboutHistory', meta: { requiresAuth: true } },
+        {path:'/admin/edit-about-history/:id', component: EditAboutHistory, name: 'EditAboutHistory', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/admin-faq-list', component: FaqList, name: 'FaqList', meta: { requiresAuth: true } },
-        {path:'/api/admin/edit-faq/:id', component: EditFaq, name: 'EditFaq', meta: { requiresAuth: true } },
+        {path:'/admin/admin-faq-list', component: FaqList, name: 'FaqList', meta: { requiresAuth: true } },
+        {path:'/admin/edit-faq/:id', component: EditFaq, name: 'EditFaq', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/created-faq-list', component: CreatedFaqList, name: 'CreatedFaqList', meta: { requiresAuth: true } },
-        {path:'/api/admin/create-faq', component: CreateFaq, name: 'CreateFaq', meta: { requiresAuth: true } },
-        {path:'/api/admin/edit-created-faq/:id', component: EditCreatedFaq, name: 'EditCreatedFaq', meta: { requiresAuth: true } },
+        {path:'/admin/created-faq-list', component: CreatedFaqList, name: 'CreatedFaqList', meta: { requiresAuth: true } },
+        {path:'/admin/create-faq', component: CreateFaq, name: 'CreateFaq', meta: { requiresAuth: true } },
+        {path:'/admin/edit-created-faq/:id', component: EditCreatedFaq, name: 'EditCreatedFaq', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/reply-question/:id', component: ReplyQuestion, name: 'ReplyQuestion', meta: { requiresAuth: true } },
+        {path:'/admin/reply-question/:id', component: ReplyQuestion, name: 'ReplyQuestion', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/event-list', component: EventList, name: 'EventList', meta: { requiresAuth: true } },
-        {path:'/api/admin/create-event', component: CreateEvent, name: 'CreateEvent', meta: { requiresAuth: true } },
-        {path:'/api/admin/edit-event/:id', component: EditEvent, name: 'EditEvent', meta: { requiresAuth: true } },
+        {path:'/admin/event-list', component: EventList, name: 'EventList', meta: { requiresAuth: true } },
+        {path:'/admin/create-event', component: CreateEvent, name: 'CreateEvent', meta: { requiresAuth: true } },
+        {path:'/admin/edit-event/:id', component: EditEvent, name: 'EditEvent', meta: { requiresAuth: true } },
 
-        {path:'/api/admin/carousel-list', component: CarouselList, name: 'CarouselList', meta: { requiresAuth: true } },
-        {path:'/api/admin/create-carousel', component: CreateCarousel, name: 'CreateCarousel', meta: { requiresAuth: true } },
-        {path:'/api/admin/edit-carousel/:id', component: EditCarousel, name: 'EditCarousel', meta: { requiresAuth: true } },
+        {path:'/admin/carousel-list', component: CarouselList, name: 'CarouselList', meta: { requiresAuth: true } },
+        {path:'/admin/create-carousel', component: CreateCarousel, name: 'CreateCarousel', meta: { requiresAuth: true } },
+        {path:'/admin/edit-carousel/:id', component: EditCarousel, name: 'EditCarousel', meta: { requiresAuth: true } },
 
     ]
 })

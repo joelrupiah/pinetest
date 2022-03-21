@@ -22,6 +22,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 import VueCompositionAPI from '@vue/composition-api'
 
+import CKEditor from '@ckeditor/ckeditor5-vue2'
+
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyA2QkTkJ6WGUlGQnhjI46VvmyGWLfALy64',
@@ -30,6 +32,7 @@ Vue.use(VueGoogleMaps, {
 })
 
 Vue.use(VueCompositionAPI)
+Vue.use( CKEditor )
 Vue.use(ViewUI)
 Vue.use(ElementUI);
 // End VueJs frontend frameworks
