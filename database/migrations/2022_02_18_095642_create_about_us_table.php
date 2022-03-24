@@ -21,12 +21,16 @@ class CreateAboutUsTable extends Migration
             $table->string('headerTwo');
             $table->string('headerThree');
             $table->string('headerFour');
+            $table->string('headerFive');
+            $table->string('headerSix');
             $table->longText('descriptionOne');
             $table->longText('descriptionTwo');
             $table->longText('descriptionThree');
             $table->longText('descriptionFour');
             $table->longText('descriptionFive');
-            $table->string('image');
+            $table->longText('descriptionSix');
+            $table->string('imageOne');
+            $table->string('imageTwo');
             $table->string('video');
             $table->timestamps();
         });

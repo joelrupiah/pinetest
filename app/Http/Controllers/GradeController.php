@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class GradeController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $grades = Grade::get();
+        $grades = Grade::paginate($request->total);
 
         return response()->json([
             'grades' => $grades
@@ -71,6 +71,6 @@ class GradeController extends Controller
 
     public function destroy(Grade $grade)
     {
-        //
+        $grade->delete();
     }
 }

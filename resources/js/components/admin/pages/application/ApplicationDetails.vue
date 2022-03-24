@@ -1,6 +1,7 @@
 <template>
     <div id="application_details">
       <main role="main" class="main-content">
+        <notifications group="application" class="mt-3" />
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-12">
@@ -14,7 +15,13 @@
                   <div class="card shadow mb-4">
                     <div class="card-header">
                       <strong class="card-title">{{ applicationData.student_name }}.</strong>
-                      <span class="float-right"><i class="fe fe-flag mr-2"></i><span class="badge badge-pill badge-success text-white">{{ applicationData.status }}</span></span>
+                      <span class="float-right"><i class="fe fe-flag mr-2"></i>
+                        <span :class="statusColor(applicationData.status)">
+                          <span class="status">
+                            {{ statusName(applicationData.status) }}
+                          </span>
+                        </span>
+                      </span>
                     </div>
                     <div class="card-body">
                       <dl class="row align-items-center mb-0">
@@ -38,8 +45,28 @@
                         <dd class="col-sm-4 mb-3">{{ applicationData.parent_phone }}</dd>
                         <dt class="col-sm-2 mb-3 text-muted">Parent's Email:</dt>
                         <dd class="col-sm-4 mb-3">{{ applicationData.parent_email }}</dd>
-                        <dt class="col-sm-2 mb-3 text-muted">Update Status:</dt>
-                        <dd class="col-sm-4 mb-3"></dd>
+                        <dt class="col-sm-12 mb-3 text-muted">Update Status:</dt>
+                        <dd class="col-sm-12 ml-2 mb-3">
+                          <input class="form-check-input" type="checkbox" value="0" 
+                          v-model="form.status" id="newCheck">
+                          <label class="form-check-label mr-5" for="newCheck"> New </label>
+                          <input class="form-check-input" type="checkbox" value="1" 
+                          v-model="form.status" id="reviewingCheck">
+                          <label class="form-check-label mr-5" for="reviewingCheck"> Reviewing </label>
+                          <input class="form-check-input" type="checkbox" value="2" 
+                          v-model="form.status" id="processingCheck">
+                          <label class="form-check-label mr-5" for="processingCheck"> Processing </label>
+                          <input class="form-check-input" type="checkbox" value="3" 
+                          v-model="form.status" id="comleteCheck">
+                          <label class="form-check-label mr-5" for="comleteCheck"> Complete </label>
+                          <input class="form-check-input" type="checkbox" value="4" 
+                          v-model="form.status" id="rejectedCheck">
+                          <label class="form-check-label mr-5" for="rejectedCheck"> Rejected </label>
+                          <el-button type="success" size="mini" :loading="loading" 
+                          @click.prevent="updateApplication()">
+                          {{ loading ? 'Updating application.....' : 'Update Application' }}
+                          </el-button>
+                        </dd>
                       </dl>
                     </div> <!-- .card-body -->
                   </div> <!-- .card -->
@@ -58,6 +85,7 @@ export default {
     name: 'ApplicationDetails',
     data(){
         return {
+            loading: false,
             application:{},
             applicationData:{
               id: '',
@@ -69,10 +97,23 @@ export default {
               grade: '',
               status: '',
               date_applied: ''
+            },
+            form: {
+              status: []
             }
         }
     },
     methods:{
+        statusName: function(status){
+          let data = { 0: "New", 1: "Reviewing", 2: "Processing", 3: "Complete", 4: "Rejected" }
+          return data[status]
+        },
+        statusColor: function(status){
+          let data = { 0: "badge badge-pill badge-dark text-white", 1: "badge badge-pill badge-warning text-white", 
+          2: "badge badge-pill badge-info text-white", 3: "badge badge-pill badge-success text-white", 
+          4: "badge badge-pill badge-danger text-white" }
+          return data[status]
+        },
         getApplication: async function(){
             Api().get('/admin/get-application/'+this.$route.params.id)
               .then((response) => {
@@ -89,6 +130,21 @@ export default {
                 this.applicationData.date_applied = response.data.application.created_at
               })
               .catch((error) => {})
+        },
+        updateApplication: async function(){
+          this.loading = true
+          Api().post('/admin/update-application/'+this.$route.params.id, this.form)
+            .then(() => {
+                this.getApplication()
+                this.$notify({
+                  group: 'application',
+                  type: 'success',
+                  title: 'Request complete',
+                  text: 'Application updated successfully'
+                });
+                this.loading = false
+                this.form.status = []
+            })
         }
     },
     computed:{},

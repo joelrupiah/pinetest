@@ -10,6 +10,8 @@ import filter from './common/filter'
 
 import CKEditor from '@ckeditor/ckeditor5-vue2'
 
+import Notifications from 'vue-notification'
+
 Vue.component('admin-master', require('./components/admin/AdminMaster.vue').default)
 
 //Start VueJS component frameworks
@@ -23,6 +25,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ViewUI)
 Vue.use( CKEditor )
 Vue.use(ElementUI);
+Vue.use(Notifications)
 // End VueJs frontend frameworks
 
 router.beforeEach((to, from, next)=>{

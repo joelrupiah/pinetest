@@ -16,11 +16,14 @@ class AboutUs extends Model
         'headerTwo',
         'headerThree',
         'headerFour',
+        'headerFive',
+        'headerSix',
         'descriptionOne',
         'descriptionTwo',
         'descriptionThree',
         'descriptionFour',
         'descriptionFive',
+        'descriptionSix',
         'image',
         'video'
     ];

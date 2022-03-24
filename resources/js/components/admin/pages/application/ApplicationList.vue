@@ -50,17 +50,16 @@
                         <td class="small">{{ application.student_name }}</td>
                         <td class="small">{{ application.grade.name }}</td>
                         <td>
-                          <span class="small text-muted">Completed</span>
-                          <div class="progress mt-2" style="height: 3px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
+                          <span :class="statusColor(application.status)">
+                            <span class="status">{{ statusName(application.status) }}</span>
+                          </span>
                         </td>
                         <td class="text-muted small">{{ application.created_at | time }}</td>
                         <td>
-                            <router-link :to="`/api/admin/reply-email-application/${application.id}`">
+                            <router-link :to="`/admin/reply-email-application/${application.id}`">
                                 <i class="fe fe-mail fe-16" style="color:green;cursor:pointer"></i>
                             </router-link>
-                            <router-link :to="`/api/admin/show-application-details/${application.id}`">
+                            <router-link :to="`/admin/show-application-details/${application.id}`">
                                 <i class="fe fe-eye fe-16" style="color:black;cursor:pointer"></i>
                             </router-link>
                             <a>
@@ -98,6 +97,16 @@ export default {
         }
     },
     methods:{
+        statusName: function(status){
+          let data = { 0: "New", 1: "Reviewing", 2: "Processing", 3: "Complete", 4: "Rejected" }
+          return data[status]
+        },
+        statusColor: function(status){
+          let data = { 0: "badge badge-pill badge-dark", 1: "badge badge-pill bg-warning", 
+          2: "badge badge-pill bg-info", 3: "badge badge-pill bg-success", 
+          4: "badge badge-pill bg-danger" }
+          return data[status]
+        },
         getAllApplications: async function(){
             Api().get('/admin/get-all-applications')
                 .then((response) => {

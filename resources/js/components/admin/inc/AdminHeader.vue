@@ -56,7 +56,7 @@ export default {
             this.$store.commit('admin/LOGIN', false)
                     let self = this
                     setTimeout(function(){
-                      window.location.href = '/api/admin/admin-login'
+                      window.location.href = '/admin/admin-login'
                     }, 1000)
           })
       },

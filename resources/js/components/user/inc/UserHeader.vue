@@ -32,8 +32,8 @@
 			          <li><a href="/about-us">About</a></li>
 			          <li><a href="/gallery">Gallery</a></li>
 			          <li><a href="/events">Events</a></li>
-			          <li><a href="/careers">Careers</a></li>
-			          <li><a href="/faqs">Faqs</a></li>
+			          <!-- <li><a href="/careers">Careers</a></li>
+			          <li><a href="/faqs">Faqs</a></li> -->
 			          <li><a href="/contact-us">Contact</a></li>
 			        </ul>
 			      </nav><!-- #nav-menu-container -->		    		

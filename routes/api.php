@@ -60,6 +60,7 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
 
     Route::get('get-all-applications', [ApplicationController::class, 'index']);
     Route::get('get-application/{id}', [ApplicationController::class, 'getSingleApplication']);
+    Route::post('update-application/{id}', [ApplicationController::class, 'update']);
 
     Route::get('get-gallery/{id}', [GalleryController::class, 'show']);
     Route::post('edit-gallery/{id}', [GalleryController::class, 'update']);

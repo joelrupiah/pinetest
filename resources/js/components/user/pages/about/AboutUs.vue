@@ -30,7 +30,6 @@
 										Usage of the Internet is becoming more common due to rapid advancement
 										of technology.
 									</p>
-									<a href="#">Join Now</a>									
 								</div>
 							</div>
 						</div>
@@ -43,7 +42,6 @@
 									<p>
 										For many of us, our very first experience of learning about the celestial bodies begins when we saw our first.
 									</p>
-									<a href="#">Join Now</a>									
 								</div>
 							</div>
 						</div>
@@ -56,7 +54,6 @@
 									<p>
 										If you are a serious astronomy fanatic like a lot of us are, you can probably remember that one event.
 									</p>
-									<a href="#">Join Now</a>									
 								</div>
 							</div>
 						</div>												
@@ -132,7 +129,7 @@
                         <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative"
 						v-for="about in abouts" :key="about.id">
                         	<div class="overlay overlay-bg"></div>
-							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid mx-auto" src="/frontend/img/play.png" alt=""></a>
+							<a class="play-btn" target="_blank" :href="about.video"><img class="img-fluid mx-auto" src="/frontend/img/play.png" alt=""></a>
                         </div>
                     </div>
 				</div>	

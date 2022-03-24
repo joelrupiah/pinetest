@@ -24,6 +24,8 @@ import VueCompositionAPI from '@vue/composition-api'
 
 import CKEditor from '@ckeditor/ckeditor5-vue2'
 
+import Notifications from 'vue-notification'
+
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyA2QkTkJ6WGUlGQnhjI46VvmyGWLfALy64',
@@ -35,6 +37,7 @@ Vue.use(VueCompositionAPI)
 Vue.use( CKEditor )
 Vue.use(ViewUI)
 Vue.use(ElementUI);
+Vue.use(Notifications)
 // End VueJs frontend frameworks
 
 const admin = new Vue({

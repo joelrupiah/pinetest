@@ -43,7 +43,7 @@
 							<li><a href="/api/about-us">About Us </a></li>
 							<li><a href="/api/gallery">Galllery </a></li>
 							<li><a href="/api/events">Events </a></li>
-							<li><a href="/api/faqs">Faqs </a></li>
+							<!-- <li><a href="/api/faqs">Faqs </a></li> -->
                             <li><a href="/api/contact-us">Contact </a></li>
 						</ul>
 						<div class="nav-social-link">

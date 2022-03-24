@@ -66,7 +66,11 @@ class ApplicationController extends Controller
 
     public function update(Request $request, Application $application)
     {
-        //
+        $application = Application::find($request->id);
+        $application->status = implode(",",  $request['status']);
+        $application->update();
+
+        return response()->json('success', 200);
     }
 
     public function destroy(Application $application)
