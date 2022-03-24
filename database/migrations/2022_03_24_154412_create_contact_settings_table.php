@@ -15,12 +15,12 @@ class CreateContactSettingsTable extends Migration
     {
         Schema::create('contact_settings', function (Blueprint $table) {
             $table->id();
-            $table=>string('email');
-            $table=>string('phone');
-            $table=>string('town');
-            $table=>string('address');
-            $table=>string('opening_time');
-            $table=>string('closing_time');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('town');
+            $table->string('address');
+            $table->string('opening_time');
+            $table->string('closing_time');
             $table->timestamps();
         });
     }
