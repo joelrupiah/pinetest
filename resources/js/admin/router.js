@@ -54,6 +54,10 @@ import CarouselList from '../components/admin/pages/carousel/CarouselList'
 import CreateCarousel from '../components/admin/pages/carousel/CreateCarousel'
 import EditCarousel from '../components/admin/pages/carousel/EditCarousel'
 
+import SiteSettingsList  from '../components/admin/pages/site-settings/SiteSettingsList.vue'
+import CreateSiteSetting  from '../components/admin/pages/site-settings/CreateSiteSetting.vue'
+import EditSiteSetting  from '../components/admin/pages/site-settings/EditSiteSetting.vue'
+
 const router = new VueRouter({
     mode: 'history',
     linkActiveClass: 'active',
@@ -110,6 +114,10 @@ const router = new VueRouter({
         {path:'/admin/carousel-list', component: CarouselList, name: 'CarouselList', meta: { requiresAuth: true } },
         {path:'/admin/create-carousel', component: CreateCarousel, name: 'CreateCarousel', meta: { requiresAuth: true } },
         {path:'/admin/edit-carousel/:id', component: EditCarousel, name: 'EditCarousel', meta: { requiresAuth: true } },
+
+        {path:'/admin/site-settings-list', component: SiteSettingsList, name: 'SiteSettingsList', meta: { requiresAuth: true }},
+        {path:'/admin/create-site-setting', component: CreateSiteSetting, name: 'CreateSiteSetting', meta: { requiresAuth: true }},
+        {path:'/admin/edit-site-setting/:id', component: EditSiteSetting, name: 'EditSiteSetting', meta: { requiresAuth: true }}
 
     ]
 })

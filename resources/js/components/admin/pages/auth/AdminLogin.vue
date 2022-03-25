@@ -1,6 +1,7 @@
 <template>
     <div id="admin_login">
     <div class="wrapper vh-100" style="overflow:hidden">
+      <notifications group="login" class="mt-3" />
       <div class="row align-items-center h-100">
         <form class="col-lg-3 col-md-4 col-10 mx-auto text-center">
           <el-card style="width:400px" :body-style="{ padding: '0px' }">
@@ -61,6 +62,12 @@ export default {
           .then(response => {
             this.$store.commit('admin/LOGIN', true)
             localStorage.setItem("token", response.data)
+            this.$notify({
+              group: 'login',
+              type: 'success',
+              title: 'Request complete',
+              text: 'Login successfull. Redirecting........'
+            });
             this.errors = {}
             this.loading = false
                     setTimeout(function(){
@@ -70,6 +77,14 @@ export default {
           .catch(error =>{
             if (error.response.status === 422) {
               this.errors = error.response.data.errors
+            }
+            else if (error.response.status === 500) {
+              this.$notify({
+                group: 'grade',
+                type: 'error',
+                title: 'Request failed',
+                text: 'Please contact IT Admin'
+              });
             }
             this.loading = false
           })

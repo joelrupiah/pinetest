@@ -166,6 +166,27 @@
           </li>
           <li class="nav-item dropdown">
             <a
+              href="#sitesettings"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle nav-link"
+            >
+              <i class="fe fe-settings fe-16"></i>
+              <span class="ml-3 item-text">Site Settings</span>
+            </a>
+            <ul class="collapse list-unstyled pl-4 w-100" id="sitesettings">
+              <li class="nav-item">
+                <router-link
+                  class="nav-link pl-3"
+                  :to="{ name: 'SiteSettingsList' }"
+                >
+                  <span class="ml-1 item-text">Site Settings List</span>
+                </router-link>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
               href="#emailings"
               data-toggle="collapse"
               aria-expanded="false"

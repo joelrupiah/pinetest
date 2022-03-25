@@ -18,6 +18,7 @@ use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\InboxController;
 use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\ContactSettingController;
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
@@ -93,6 +94,11 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::get('get-admin-carousels', [CarouselController::class, 'index']);
     Route::post('edit-carousel/{id}', [CarouselController::class, 'update']);
     Route::get('get-carousel/{id}', [CarouselController::class, 'show']);
+
+    Route::get('get-site-settings', [ContactSettingController::class, 'index']);
+    Route::post('create-site-setting', [ContactSettingController::class, 'store']);
+    Route::get('get-site-setting/{id}', [ContactSettingController::class, 'show']);
+    Route::post('update-site-settings/{id}', [ContactSettingController::class, 'update']);
 
 });
 

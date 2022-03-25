@@ -12031,6 +12031,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-semibold {
   font-weight: 600;
 }
+.font-bold {
+  font-weight: 700;
+}
 .capitalize {
   text-transform: capitalize;
 }

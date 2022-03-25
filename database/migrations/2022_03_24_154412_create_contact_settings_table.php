@@ -19,8 +19,8 @@ class CreateContactSettingsTable extends Migration
             $table->string('phone');
             $table->string('town');
             $table->string('address');
-            $table->string('opening_time');
-            $table->string('closing_time');
+            $table->datetime('opening_time');
+            $table->datetime('closing_time');
             $table->timestamps();
         });
     }

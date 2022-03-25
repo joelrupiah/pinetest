@@ -24,7 +24,8 @@ class AboutUs extends Model
         'descriptionFour',
         'descriptionFive',
         'descriptionSix',
-        'image',
+        'imageOne',
+        'imageTwo',
         'video'
     ];
 }

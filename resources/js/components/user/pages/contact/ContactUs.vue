@@ -2,6 +2,7 @@
     <div id="contact_us">
 			<!-- start banner Area -->
 			<section class="banner-area relative about-banner" id="home">	
+          	<notifications group="contactus" class="mt-3" />
 				<div class="overlay overlay-bg"></div>
 				<div class="container">				
 					<div class="row d-flex align-items-center justify-content-center">
@@ -79,11 +80,10 @@
 										</p>
 									</div>
 									<div class="col-lg-6 form-group">
-										<!-- <textarea class="common-textarea form-control" name="message" 
+										<textarea class="common-textarea form-control" name="message" 
 											placeholder="Enter Messege" onfocus="this.placeholder = ''" 
 											onblur="this.placeholder = 'Enter Messege'" required=""
-											v-model="form.message" ></textarea>			 -->
-											<ckeditor :editor="editor" v-model="form.message" :config="editorConfig"></ckeditor>	
+											v-model="form.message" ></textarea>			
 										<p class="text-danger text-sm" v-if="errors.message">
 											{{ errors.message[0] }}
 										</p>
@@ -107,7 +107,6 @@
 </template>
 
 <script>
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 export default {
     name: 'ContactUs',
 	data(){
@@ -120,9 +119,6 @@ export default {
 				message: ''
 			},
 			errors: {},
-            editor: ClassicEditor,
-            editorConfig: {
-            }
 		}
 	},
 	methods: {
@@ -135,11 +131,30 @@ export default {
 					this.form.subject = '',
 					this.form.message = '',
 					this.errors = '',
-					this.loading = false
+					this.loading = false,
+					this.$notify({
+                        group: 'contactus',
+                        type: 'success',
+                        text: 'Message Sent. We will get back to you'
+                    });
 				})
 				.catch((error) => {
 					if (error.response.status === 422) {
 						this.errors = error.response.data.errors
+					}
+					else if (error.response.status === 500) {
+						this.$notify({
+							group: 'contactus',
+							type: 'error',
+							text: 'Error occured please wait while we take a look'
+                    	});
+					}
+					else if(error.response.status === 405) {
+						this.$notify({
+							group: 'contactus',
+							type: 'error',
+							text: 'Error occured please wait while we take a look'
+                    	});
 					}
 					this.loading = false
 				})
