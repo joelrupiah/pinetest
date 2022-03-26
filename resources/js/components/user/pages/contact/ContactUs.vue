@@ -10,7 +10,7 @@
 							<h1 class="text-white">
 								Contact Us				
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
+							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href=""> Contact Us</a></p>
 						</div>	
 					</div>
 				</div>
@@ -22,6 +22,12 @@
 				<div class="container">
 					<div class="row">
 						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+						<!-- <GmapMap
+							:center="{lat:10, lng:10}"
+							:zoom="7"
+							style="width:100%; height: 445px;"
+							>
+						</GmapMap> -->
 						<div class="col-lg-4 d-flex flex-column address-wrap">
 							<div class="single-contact-address d-flex flex-row">
 								<div class="icon">
