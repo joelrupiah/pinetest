@@ -1,5 +1,7 @@
 <template>
     <div id="home">
+
+		<notifications group="home" class="mt-3" />
 			<!-- start banner Area -->
 			<section class="banner-area relative" id="home">
 				<div class="overlay overlay-bg"></div>	
@@ -13,7 +15,7 @@
 							<p class="pt-10 pb-10">
 								In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.
 							</p>
-							<a href="#" class="primary-btn text-uppercase">Learn More</a>
+							<a href="/about-us" class="primary-btn text-uppercase">Learn More</a>
 						</div>										
 					</div>
 				</div>					
@@ -196,7 +198,7 @@
 										{{ errors.student_age[0] }}
 									</small>
 								</div>
-								<div class="form-select mb-1" id="service-select">
+								<div class="form-select mb-3" id="service-select">
 									<el-select v-model="form.grade_id" placeholder="Choose Grade (required)"
 										size="mini" style="width:100%" >
 										<el-option 
@@ -211,7 +213,7 @@
 										{{ errors.grade_id[0] }}
 									</small>
 								</div>									
-								<el-button type="success" :loading="loading" size="mini" 
+								<el-button :loading="loading" size="mini" style="background-color:royalblue;color:white"
 									@click.prevent="submitApplication()">{{ loading ? 'Submitting Application.....' : 'Submit Application' }}
 								</el-button>
 							</form>
@@ -266,7 +268,7 @@
 							<p>
 								There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck.
 							</p>
-							<a class="primary-btn wh" href="#">Apply for an opening</a>								
+							<a class="primary-btn wh" href="" @click.prevent="applyForAJob">Apply for an opening</a>								
 						</div>					
 					</div>
 				</div>	
@@ -289,14 +291,8 @@
 						<div class="active-review-carusel">
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
+									<h4>Fannie Rowe</h4>
+										<p class="ml-3">Parent</p>
 								</div>
 								<p>
 									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
@@ -304,14 +300,8 @@
 							</div>
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
+									<h4>Hulda Sutton</h4>
+										<p class="ml-3">Parent</p>
 								</div>
 								<p>
 									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
@@ -319,14 +309,8 @@
 							</div>
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
+									<h4>Fannie Rowe</h4>
+										<p class="ml-3">Parent</p>
 								</div>
 								<p>
 									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
@@ -334,14 +318,8 @@
 							</div>
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
+									<h4>Hulda Sutton</h4>
+										<p class="ml-3">Parent</p>
 								</div>
 								<p>
 									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
@@ -349,14 +327,8 @@
 							</div>	
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
+									<h4>Fannie Rowe</h4>
+										<p class="ml-3">Parent</p>
 								</div>
 								<p>
 									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
@@ -364,14 +336,8 @@
 							</div>
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
+									<h4>Hulda Sutton</h4>
+										<p class="ml-3">Parent</p>
 								</div>
 								<p>
 									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
@@ -380,14 +346,8 @@
 							<div class="single-review item">
 								<img src="/frontend/img/r1.png" alt="">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
+									<h4>Fannie Rowe</h4>
+										<p class="ml-3">Parent</p>
 								</div>
 								<p>
 									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
@@ -395,14 +355,8 @@
 							</div>
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
+									<h4>Hulda Sutton</h4>
+										<p class="ml-3">Parent</p>
 								</div>
 								<p>
 									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
@@ -490,10 +444,24 @@ export default {
 					this.grades = response.data.grades
 				})
 		},
+		applyForAJob: async function(){
+			this.$notify({
+            	group: 'home',
+                type: 'info',
+                title: 'No positions for now',
+                text: 'Please keep checking for any job posting'
+            });
+		},
 		submitApplication: async function(){
 			this.loading = true
 			axios.post('/submit-application', this.form)
 				.then(() => {
+					this.$notify({
+						group: 'home',
+						type: 'success',
+						title: 'Application submited',
+						text: "We'll get back to you"
+					});
 					this.form.grade_id = '',
 					this.form.parent_name = '',
 					this.form.parent_phone = '',
@@ -501,13 +469,29 @@ export default {
 					this.form.student_name = '',
 					this.form.student_age = '',
 					this.loading = false
+					this.errors = {}
 				})
-				.catch((error) => {
+				.catch(error => {
 					if (error.response.status === 422) {
 						this.errors = error.response.data.errors
 					}
+					else if(error.response.status === 500) {
+						this.$notify({
+							group: 'home',
+							type: 'danger',
+							title: 'Application failed',
+							text: "Please contact support for advice. Thank you"
+						});
+					}
+					else if(error.response.status === 405) {
+						this.$notify({
+							group: 'home',
+							type: 'danger',
+							title: 'Application failed',
+							text: "Please contact  support for advice. Thank you"
+						});
+					}
 					this.loading = false
-					this.errors = {}
 				})
 		}
     },

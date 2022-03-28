@@ -48,11 +48,11 @@
     <script src="/backend/js/datamaps-zoomto.js"></script>
     <script src="/backend/js/datamaps.custom.js"></script>
     <script src="/backend/js/Chart.min.js"></script>
-    <script>
+    {{-- <script>
       /* defind global options */
       Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
       Chart.defaults.global.defaultFontColor = colors.mutedColor;
-    </script>
+    </script> --}}
     <script src="/backend/js/gauge.min.js"></script>
     <script src="/backend/js/jquery.sparkline.min.js"></script>
     <script src="/backend/js/apexcharts.min.js"></script>
