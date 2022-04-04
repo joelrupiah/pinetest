@@ -33,8 +33,19 @@
 								</div>
 								<div class="desc-wrap">
 									<p>
-										Usage of the Internet is becoming more common due to rapid advancement
-										of technology.
+										Learn, Adapt and Excel
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-feature">
+								<div class="title">
+									<h4>Vision</h4>
+								</div>
+								<div class="desc-wrap">
+									<p>
+										To create and provide an atmosphere for learners to excel.
 									</p>
 								</div>
 							</div>
@@ -46,19 +57,7 @@
 								</div>
 								<div class="desc-wrap">
 									<p>
-										For many of us, our very first experience of learning about the celestial bodies begins when we saw our first.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-feature">
-								<div class="title">
-									<h4>Vission</h4>
-								</div>
-								<div class="desc-wrap">
-									<p>
-										If you are a serious astronomy fanatic like a lot of us are, you can probably remember that one event.
+										To provide every learner with an opportunity to achieve their full potential academically, emotionally, physically and socially within a healthy, safe and enjoyable school environment.
 									</p>
 								</div>
 							</div>
