@@ -17,6 +17,15 @@ class GradeController extends Controller
         ], 200);
     }
 
+    public function getAdminGrades()
+    {
+        $grades = Grade::get();
+
+        return response()->json([
+            'grades' => $grades
+        ], 200);
+    }
+
     public function getGrades()
     {
         $grades = Grade::get();

@@ -104,7 +104,7 @@ export default {
             reader.readAsDataURL(file)
         },
         getAllGrades: async function(){
-            Api().get('/admin/grade')
+            Api().get('/admin/get-admin-grade')
                 .then(response => {
                     this.grades = response.data.grades
                 })

@@ -45,6 +45,7 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::resource('grade', GradeController::class);
     Route::resource('gallery', GalleryController::class);
     // Route::resource('event', EventController::class);
+    Route::get('get-admin-grade', [GradeController::class, 'getAdminGrades']);
 
     Route::get('search-about', [AboutUsController::class, 'searchAbouts']);
 
