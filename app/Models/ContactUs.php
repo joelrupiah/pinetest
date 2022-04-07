@@ -10,14 +10,10 @@ class ContactUs extends Model
     use HasFactory;
 
     protected $fillable =[
-        'description',
-        'street',
-        'phone',
-        'email',
         'facebook',
         'youtube',
         'linkedin',
-        'latitude',
-        'longitude'
+        'twitter',
+        'instagram'
     ];
 }

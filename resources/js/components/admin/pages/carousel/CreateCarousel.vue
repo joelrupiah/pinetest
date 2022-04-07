@@ -72,7 +72,7 @@ export default {
                 description: '',
                 image: ''
             },
-			errors: {},
+			      errors: {},
             editor: ClassicEditor,
             editorConfig: {
             }
@@ -95,15 +95,15 @@ export default {
             Api().post('/admin/create-carousel', this.form)
                 .then(() => {
                     this.loading = false
-					this.form.title = '',
-					this.form.description = '',
-					this.form.image = ''
+                    this.form.title = '',
+                    this.form.description = '',
+                    this.form.image = ''
                 })
                 .catch((error) => {
-					if (error.response.status === 422) {
-                        this.errors = error.response.data.errors
-                    }
-                    this.loading = false
+                  if (error.response.status === 422) {
+                    this.errors = error.response.data.errors
+                  }
+                  this.loading = false
                 })
         }
     },

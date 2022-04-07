@@ -71,6 +71,11 @@
                   <span class="ml-1 item-text">Carousel</span>
                 </router-link>
               </li>
+              <li class="nav-item">
+                <router-link class="nav-link pl-3" :to="{ name: 'ChooseList' }">
+                  <span class="ml-1 item-text">Choose Us</span>
+                </router-link>
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">

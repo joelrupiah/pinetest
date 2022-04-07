@@ -110,6 +110,20 @@
                         <span class="help-block text-danger" v-if="errors.descriptionSix"><small>{{ errors.descriptionSix[0] }}</small></span>
                       </div>
                     </div>
+          <div class="col-md-4">
+                      <div class="form-group mb-3">
+                        <label for="select-grade">Heading Seven</label>
+                        <el-input placeholder="Input Heading Seven" v-model="form.headingSeven"></el-input>
+                        <span class="help-block text-danger" v-if="errors.headingSeven"><small>{{ errors.headingSeven[0] }}</small></span>
+                      </div>
+                    </div>
+					<div class="col-md-8">
+                      <div class="form-group mb-3">
+                        <label for="select-grade">Description Seven</label>
+						<ckeditor :editor="editor" v-model="form.descriptionSeven" :config="editorConfig"></ckeditor>
+                        <span class="help-block text-danger" v-if="errors.descriptionSeven"><small>{{ errors.descriptionSeven[0] }}</small></span>
+                      </div>
+                    </div>
                     <div class="col-md-3">
                       <div class="form-group mb-3">
                         <label>Select Image One</label>
@@ -150,7 +164,7 @@
                     <div class="col-md-12">
                       <div class="form-group mb-3">
                         <el-button type="warning" :loading="loading" size="mini" 
-                            @click.prevent="createCarousel()">{{ loading ? 'Creating carousel.....' : 'Create Carousel' }}
+                            @click.prevent="createAbout()">{{ loading ? 'Creating about data.....' : 'Create About Data' }}
                         </el-button>
                         <el-button type="danger" size="mini" @click.prevent="clearData()">Clear</el-button>
                       </div>
@@ -172,24 +186,27 @@ export default {
     name: 'CreateAdminAboutUs',
     data(){
         return {
+          loading: false,
             form: {
                 heading: '',
                 description: '',
                 headingOne: '',
-				headingTwo: '',
-				headingThree: '',
-				headingFour: '',
-				headingFive: '',
-				headingSix: '',
-				descriptionOne: '',
-				descriptionTwo: '',
-				descriptionThree: '',
-				descriptionFour: '',
-				descriptionFive: '',
-				descriptionSix: '',
+                headingTwo: '',
+                headingThree: '',
+                headingFour: '',
+                headingFive: '',
+                headingSix: '',
+                headingSeven: '',
+                descriptionOne: '',
+                descriptionTwo: '',
+                descriptionThree: '',
+                descriptionFour: '',
+                descriptionFive: '',
+                descriptionSix: '',
+                descriptionSeven: '',
                 imageOne: '',
                 imageTwo: '',
-				video: ''
+				        video: ''
             },
             errors: {},
             editor: ClassicEditor,
@@ -199,10 +216,25 @@ export default {
     },
     methods: {
         clear(){
-            this.form.heading = '',
-            this.form.description = '',
-            this.form.imageOne = '',
-            this.form.imageTwo = ''
+            this.heading = '',
+            this.description = '',
+            this.headingOne = '',
+            this.headingTwo = '',
+            this.headingThree = '',
+            this.headingFour = '',
+            this.headingFive = '',
+            this.headingSix = '',
+            this.headingSeven = '',
+            this.descriptionOne = '',
+            this.descriptionTwo = '',
+            this.descriptionThree = '',
+            this.descriptionFour = '',
+            this.descriptionFive = '',
+            this.descriptionSix = '',
+            this.descriptionSeven = '',
+            this.imageOne = '',
+            this.imageTwo = '',
+				    this.video = ''
         },
         loadImageOne(e){
             let file = e.target.files[0]
@@ -214,7 +246,7 @@ export default {
 
             reader.readAsDataURL(file)
         },
-		loadImageTwo(e){
+		    loadImageTwo(e){
             let file = e.target.files[0]
             let reader = new FileReader()
 
@@ -224,9 +256,12 @@ export default {
 
             reader.readAsDataURL(file)
         },
-        submit: async function(){
+        createAbout: async function(){
+          this.loading = true
             Api().post('/admin/create-about', this.form)
                 .then(() => {
+                  this.loading = false
+                  this.clear()
                 })
                 .catch((error) => {
                     if(error.response.status === 422){

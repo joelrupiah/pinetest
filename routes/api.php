@@ -19,6 +19,7 @@ use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\InboxController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ContactSettingController;
+use App\Http\Controllers\ChooseController;
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
@@ -101,6 +102,9 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::get('get-site-setting/{id}', [ContactSettingController::class, 'show']);
     Route::post('update-site-settings/{id}', [ContactSettingController::class, 'update']);
 
+    Route::get('get-admin-chooses', [ChooseController::class, 'index']);
+    Route::post('create-choose-data', [ChooseController::class, 'store']);
+
 });
 
 Route::get('get-user-about', [AboutUsController::class, 'getUserAbout']);
@@ -114,6 +118,7 @@ Route::get('get-user-faqs', [FaqController::class, 'getUserFaq']);
 Route::get('get-user-carousels', [CarouselController::class, 'getUserCarousel']);
 Route::get('get-event-detail/{eventSlug}', [EventController::class, 'eventDetails']);
 Route::get('get-user-grades', [GradeController::class, 'getGrades']);
+Route::get('get-user-chooses', [ChooseController::class, 'getUserChooses']);
 
 Route::post('subscribe-newsletter', [SubscriptionController::class, 'store']);
 Route::post('send-message', [InboxController::class, 'store']);

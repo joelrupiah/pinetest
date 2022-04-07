@@ -9,7 +9,7 @@
 							<h1 class="text-white">
 								Gallery				
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="gallery.html"> Gallery</a></p>
+							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="gallery.html"> Gallery</a></p>
 						</div>	
 					</div>
 				</div>
@@ -19,13 +19,13 @@
 			<!-- Start gallery Area -->
 			<section class="gallery-area section-gap">
 				<div class="container">
-					<h1 class="text-center text-muted mb-5" style="margin-top:-90px">School Gallery</h1>
+					<h1 class="text-center text-muted mb-5" style="margin-top:-80px">School Gallery</h1>
 					<div class="row">
 						<div class="col-lg-3" v-for="gallery in galleries" :key="gallery.id">
 							<a :href="fileLink(gallery.image)" class="img-gal">
 								<div class="single-imgs relative">		
 									<div class="overlay overlay-bg">
-										<p class="text-white text-sm text-center" v-html="gallery.description">
+										<p class="text-white text-sm text-center font-weight-bold" v-html="gallery.description">
 											</p>
 									</div>
 									<div class="relative">					

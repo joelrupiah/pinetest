@@ -79,52 +79,18 @@
 						</div>
 					</div>						
 					<div class="row">		
-						<div class="col-lg-4">
+						<div class="col-lg-4 mb-1" v-for="choose in chooses" :key="choose.id">
 							<div class="single-cat-widget">
 								<div class="content relative">
 									<div class="overlay overlay-bg"></div>
 								    <a href="#" target="_blank">
 								      <div class="thumb">
-								  		 <img class="content-image img-fluid d-block mx-auto" src="/frontend/img/blog/cat-widget1.jpg" alt="">
+								  		 <img class="content-image img-fluid d-block mx-auto" :src="fileLinkChoose(choose.image)" alt="">
 								  	  </div>
 								      <div class="content-details">
-								        <h4 class="content-title mx-auto text-uppercase">Social life</h4>
-								        <span></span>								        
-								        <p>Enjoy your social life together</p>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-cat-widget">
-								<div class="content relative">
-									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
-								      <div class="thumb">
-								  		 <img class="content-image img-fluid d-block mx-auto" src="/frontend/img/blog/cat-widget2.jpg" alt="">
-								  	  </div>
-								      <div class="content-details">
-								        <h4 class="content-title mx-auto text-uppercase">Politics</h4>
-								        <span></span>								        
-								        <p>Be a part of politics</p>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-cat-widget">
-								<div class="content relative">
-									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
-								      <div class="thumb">
-								  		 <img class="content-image img-fluid d-block mx-auto" src="/frontend/img/blog/cat-widget3.jpg" alt="">
-								  	  </div>
-								      <div class="content-details">
-								        <h4 class="content-title mx-auto text-uppercase">Food</h4>
+								        <h4 class="content-title mx-auto text-uppercase">{{ choose.title }}</h4>
 								        <span></span>
-								        <p>Let the food be finished</p>
+								        <p v-html="choose.description"></p>
 								      </div>
 								    </a>
 								</div>
@@ -383,6 +349,7 @@ export default {
 			faqs: [],
 			carousels: [],
 			grades: [],
+			chooses: [],
 			form:{
 				grade_id: '',
 				parent_name: '',
@@ -407,6 +374,9 @@ export default {
 		fileLinkCarousel(name){
         	return '/uploads/img/carousel/' + name
       	},
+		fileLinkChoose(name){
+			return '/uploads/img/choose/' + name
+		},
         getUserAbout: async function(){
             axios.get('/get-user-about')
                 .then((response) => {
@@ -441,6 +411,12 @@ export default {
 			axios.get('/get-user-grades')
 				.then((response) => {
 					this.grades = response.data.grades
+				})
+		},
+		getUserChooses: async function(){
+			axios.get('/get-user-chooses')
+				.then((response) => {
+					this.chooses = response.data.chooses
 				})
 		},
 		applyForAJob: async function(){
@@ -502,6 +478,7 @@ export default {
 		this.getUserFaqs()
 		this.getUserCarousel()
 		this.getUserGrades()
+		this.getUserChooses()
     }
 }
 </script>

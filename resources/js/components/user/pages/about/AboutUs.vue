@@ -20,39 +20,35 @@
 			<section class="feature-area pb-120">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-4" v-for="(about, index) in abouts" :key="index">
 							<div class="single-feature">
 								<div class="title">
-									<h4>Learn Online Courses</h4>
+									<h4 v-html="about.headingOne"></h4>
 								</div>
 								<div class="desc-wrap">
-									<p>
-										Usage of the Internet is becoming more common due to rapid advancement
-										of technology.
+									<p v-html="about.descriptionOne">
 									</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-4" v-for="(about, i) in abouts" :key="i">
 							<div class="single-feature">
 								<div class="title">
-									<h4>No.1 of universities</h4>
+									<h4 v-html="about.headingTwo"></h4>
 								</div>
 								<div class="desc-wrap">
-									<p>
-										For many of us, our very first experience of learning about the celestial bodies begins when we saw our first.
+									<p v-html="about.descriptionTwo">
 									</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-4" v-for="abot in abouts" :key="abot.id">
 							<div class="single-feature">
 								<div class="title">
-									<h4>Huge Library</h4>
+									<h4 v-html="abot.headingThree"></h4>
 								</div>
 								<div class="desc-wrap">
-									<p>
-										If you are a serious astronomy fanatic like a lot of us are, you can probably remember that one event.
+									<p v-html="abot.descriptionThree">
 									</p>
 								</div>
 							</div>
@@ -65,18 +61,13 @@
 			<!-- Start info Area -->
 			<section class="info-area pb-120">
 				<div class="container-fluid">
-					<div class="row align-items-center">
+					<div class="row align-items-center" v-for="abt in abouts" :key="abt.id">
 						<div class="col-lg-6 no-padding info-area-left">
-							<img class="img-fluid" src="/frontend/img/about-img.jpg" alt="">
+							<img class="img-fluid" :src="fileLinkOne(abt.imageOne)" alt="">
 						</div>
 						<div class="col-lg-6 info-area-right">
-							<h1>Who we are
-							to Serave the nation</h1>
-							<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.</p>
-							<br>
-							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
-							</p>
+							<h1 v-html="abt.heading"></h1>
+							<p v-html="abt.description"></p>
 						</div>
 					</div>
 				</div>	
@@ -89,53 +80,59 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Goals to Achieve for the leadership</h1>
+								<h1 class="mb-10">Goals to Achieve for success</h1>
 								<p>Who are in extremely love with eco friendly system.</p>
 							</div>
 						</div>
 					</div>							
                     <div class="row">
                         <div class="col-md-6 accordion-left">
-
+							<div v-for="ab in abouts" :key="ab.id">
+								<el-collapse v-model="activeNames">
+									<el-collapse-item :title="ab.headingFour" name="1">
+										<div v-html="ab.descriptionFour"></div>
+									</el-collapse-item>
+								</el-collapse>
+								<el-collapse v-model="activeNames">
+									<el-collapse-item :title="ab.headingFive" name="2">
+										<div v-html="ab.descriptionFive"></div>
+									</el-collapse-item>
+								</el-collapse>
+								<el-collapse v-model="activeNames">
+									<el-collapse-item :title="ab.headingSix" name="3">
+										<div v-html="ab.descriptionSix"></div>
+									</el-collapse-item>
+								</el-collapse>
+								<el-collapse v-model="activeNames">
+									<el-collapse-item :title="ab.headingSeven" name="4">
+										<div v-html="ab.descriptionSeven"></div>
+									</el-collapse-item>
+								</el-collapse>
+							</div>
+							
                             <!-- accordion 2 start-->
-                            <dl class="accordion">
+                            <!-- <dl class="accordion" v-for="(about, index) in abouts" :key="index">
                                 <dt>
-                                    <a href="">Success</a>
+                                    <a href="" v-html="about.headingFour" @click="toggleAccordion(index)"></a>
                                 </dt>
-                                <dd>
-                                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam.
-                                </dd>
-                                <dt>
-                                    <a href="">Info</a>
-                                </dt>
-                                <dd>
-                                    Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. leo quam aliquet diam, congue laoreet elit metus eget diam.
-                                </dd>
-                                <dt>
-                                    <a href="">Danger</a>
-                                </dt>
-                                <dd>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. Proin ac metus diam.
-                                </dd>
-                                <dt>
-                                    <a href="">Warning</a>
-                                </dt>
-                                <dd>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. Proin ac metus diam.
-                                </dd>                                    
+                                <dd v-html="about.descriptionFour" v-if="isOpen && index === selected"></dd>                                   
                             </dl>
+							<dl class="accordion" v-for="(about, i) in abouts" :key="i">
+                                <dt>
+                                    <a href="" v-html="about.headingFive" @click="toggleAccordionOne(i)"></a>
+                                </dt>
+                                <dd v-html="about.descriptionFive" v-if="isOpen && i === selected"></dd>                                   
+                            </dl> -->
                             <!-- accordion 2 end-->
                         </div>
-                        <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative"
-						v-for="about in abouts" :key="about.id">
-                        	<div class="overlay overlay-bg"></div>
-							<a class="play-btn" target="_blank" :href="about.video"><img class="img-fluid mx-auto" src="/frontend/img/play.png" alt=""></a>
+                        <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative">
+                        	<div class="overlay overlay-bg" style="background:url('/frontend/img/video-bg.jpg')"></div>
+							<a class="play-btn" target="_blank" ><img class="img-fluid mx-auto" src="/frontend/img/play.png" alt=""></a>
                         </div>
                     </div>
 				</div>	
 			</section>
 			<!-- End course-mission Area -->
-					
     </div>
 </template>
 
@@ -144,11 +141,15 @@ export default {
     name: 'AboutUs',
     data(){
         return {
+			activeNames: ['1'],
             abouts: [],
 			faqs: []
         }
     },
     methods: {
+		fileLinkOne(name){
+        	return '/uploads/img/about/' + name
+      	},
         fileLinkTwo(name){
         	return '/uploads/img/about/' + name
       	},
