@@ -18,6 +18,8 @@ import AdminTrash from '../components/admin/pages/admin/AdminTrash'
 
 import GradeList from '../components/admin/pages/grade/GradeList'
 
+import CategoryList from '../components/admin/pages/category/CategoryList'
+
 import ApplicationList from '../components/admin/pages/application/ApplicationList'
 import ReplyEmailApplication from '../components/admin/pages/application/ReplyEmailApplication'
 import ApplicationDetails from '../components/admin/pages/application/ApplicationDetails'
@@ -80,6 +82,8 @@ const router = new VueRouter({
 
         {path:'/admin/admins', component: AdminList, name: 'AdminList', meta: { requiresAuth: true } },
         {path:'/admin/admin-trash', component: AdminTrash, name: 'AdminTrash', meta: { requiresAuth: true } },
+
+        {path:'/admin/category-list', component: CategoryList, name: 'CategoryList', meta: { requiresAuth: true } },
 
         {path:'/admin/grade-list', component: GradeList, name: 'GradeList', meta: { requiresAuth: true } },
         

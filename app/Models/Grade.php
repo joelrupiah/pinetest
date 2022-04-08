@@ -15,11 +15,6 @@ class Grade extends Model
         'slug'
     ];
 
-    public function galleries()
-    {
-        return $this->hasMany(Gallery::class);
-    }
-
     public function applications(): HasMany
     {
         return $this->hasMany(Application::class);

@@ -10,13 +10,13 @@ class Gallery extends Model
     use HasFactory;
 
     protected $fillable = [
-        'grade_id',
+        'category_id',
         'image',
         'description'
     ];
 
-    public function grade()
+    public function category()
     {
-        return $this->belongsTo(Grade::class);
+        return $this->belongsTo(Category::class);
     }
 }

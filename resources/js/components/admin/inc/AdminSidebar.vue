@@ -46,6 +46,11 @@
             </a>
             <ul class="collapse list-unstyled pl-4 w-100" id="content">
               <li class="nav-item">
+                <router-link class="nav-link pl-3" :to="{ name: 'CategoryList' }">
+                  <span class="ml-1 item-text">Categories</span>
+                </router-link>
+              </li>
+              <li class="nav-item">
                 <router-link class="nav-link pl-3" :to="{ name: 'ApplicationList' }">
                   <span class="ml-1 item-text">Applications</span>
                 </router-link>

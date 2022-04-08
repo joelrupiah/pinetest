@@ -20,6 +20,7 @@ use App\Http\Controllers\InboxController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ContactSettingController;
 use App\Http\Controllers\ChooseController;
+use App\Http\Controllers\CategoryController;
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
@@ -45,6 +46,7 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::resource('role', RoleController::class);
     Route::resource('grade', GradeController::class);
     Route::resource('gallery', GalleryController::class);
+    Route::resource('category', CategoryController::class);
     // Route::resource('event', EventController::class);
     Route::get('get-admin-grade', [GradeController::class, 'getAdminGrades']);
 
@@ -60,6 +62,11 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::post('/edit-permission/{id}', [PermissionController::class, 'update']);
 
     Route::post('edit-grade/{id}', [GradeController::class, 'update']);
+
+    Route::get('get-admin-categories', [CategoryController::class, 'getAdminCategories']);
+    Route::post('create-category', [CategoryController::class, 'store']);
+    Route::post('update-category/{id}', [CategoryController::class, 'update']);
+    Route::get('get-single-category/{id}', [CategoryController::class, 'show']);
 
     Route::get('get-all-applications', [ApplicationController::class, 'index']);
     Route::get('get-application/{id}', [ApplicationController::class, 'getSingleApplication']);
@@ -119,6 +126,7 @@ Route::get('get-user-carousels', [CarouselController::class, 'getUserCarousel'])
 Route::get('get-event-detail/{eventSlug}', [EventController::class, 'eventDetails']);
 Route::get('get-user-grades', [GradeController::class, 'getGrades']);
 Route::get('get-user-chooses', [ChooseController::class, 'getUserChooses']);
+Route::get('get-user-categories', [CategoryController::class, 'getUserCategories']);
 
 Route::post('subscribe-newsletter', [SubscriptionController::class, 'store']);
 Route::post('send-message', [InboxController::class, 'store']);

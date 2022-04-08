@@ -48,9 +48,11 @@ class GradeController extends Controller
             'name' => 'required'
         ]);
 
+        $slug = slugify($request->name);
+
         Grade::create([
             'name' => $request->name,
-            'slug' => $request->name
+            'slug' => $slug
         ]);
 
         return response()->json('success', 200);

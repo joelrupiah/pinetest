@@ -29,18 +29,6 @@
 						<div class="col-lg-4">
 							<div class="single-feature">
 								<div class="title">
-									<h4>Motto</h4>
-								</div>
-								<div class="desc-wrap">
-									<p>
-										Learn, Adapt and Excel
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-feature">
-								<div class="title">
 									<h4>Vision</h4>
 								</div>
 								<div class="desc-wrap">
@@ -61,7 +49,19 @@
 									</p>
 								</div>
 							</div>
-						</div>												
+						</div>
+						<div class="col-lg-4">
+							<div class="single-feature">
+								<div class="title bg-dark">
+									<h4>Motto</h4>
+								</div>
+								<div class="desc-wrap">
+									<p>
+										Learn, Adapt and Excel
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>	
 			</section>

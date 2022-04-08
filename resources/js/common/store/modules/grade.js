@@ -10,7 +10,7 @@ export const grade = {
     },
     actions: {
         deleteGrade(payload){
-            Api().delete(`/admin/grade/${payload}`)
+            Api().delete(`/admin/delete-category/${payload}`)
                 .then(() => {
                 })
         }

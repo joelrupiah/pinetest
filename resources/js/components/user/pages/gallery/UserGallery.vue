@@ -21,6 +21,7 @@
 				<div class="container">
 					<h1 class="text-center text-muted mb-5" style="margin-top:-80px">School Gallery</h1>
 					<div class="row">
+						<h4 class="font-weight-bold">Category One</h4>
 						<div class="col-lg-3" v-for="gallery in galleries" :key="gallery.id">
 							<a :href="fileLink(gallery.image)" class="img-gal">
 								<div class="single-imgs relative">		
@@ -47,7 +48,7 @@ export default {
 	data(){
 		return {
 			galleries: [],
-			grades: [],
+			categories: [],
 			total: 10,
 			pageInfo: null
 		}
@@ -64,17 +65,17 @@ export default {
 					this.pageInfo = response.data.galleries
 				})
 		},
-		getAllGrades: async function(){
-			axios.get('get-grades')
+		getAllCategories: async function(){
+			axios.get('get-user-categories')
 				.then((response) => {
-					this.grades = response.data.grades
+					this.categories = response.data.categories
 				})
 		}
 	},
 	computed: {},
 	created() {
 		this.getAllGalleries()
-		this.getAllGrades()
+		this.getAllCategories()
 	}
 }
 </script>

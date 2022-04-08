@@ -14,18 +14,18 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group mb-3">
-                        <label for="select-grade">Select Grade</label>
-                            <el-select v-model="form.grade_id" placeholder="Select Grade"
+                        <label for="select-category">Select Category</label>
+                            <el-select v-model="form.category_id" placeholder="Select Category"
                                 size="mini" style="width:100%" >
                                 <el-option 
-                                    v-for="grade in grades"
-                                    :value="grade.id" 
-                                    :label="grade.name"
-                                    :key="grade.id">
-                                    {{ grade.name }}
+                                    v-for="category in categories"
+                                    :value="category.id" 
+                                    :label="category.name"
+                                    :key="category.id">
+                                    {{ category.name }}
                                 </el-option>
                             </el-select>
-                        <span class="help-block text-danger" v-if="errors.grade_id"><small>{{ errors.grade_id[0] }}</small></span>
+                        <span class="help-block text-danger" v-if="errors.category_id"><small>{{ errors.category_id[0] }}</small></span>
                       </div>
                     </div> <!-- /.col -->
                     <div class="col-md-3">
@@ -76,11 +76,11 @@ export default {
     data(){
         return{
             loading: false,
-            grades: [],
+            categories: [],
             galleries: [],
             gallery: {},
             form: {
-                grade_id: '',
+                category_id: '',
                 image: '',
                 description: ''
             },
@@ -92,7 +92,7 @@ export default {
     },
     methods: {
         clearData(){
-            this.form.grade_id = ''
+            this.form.category_id = ''
             this.form.image = ''
         },
         loadImage(e){
@@ -103,10 +103,10 @@ export default {
             }
             reader.readAsDataURL(file)
         },
-        getAllGrades: async function(){
-            Api().get('/admin/get-admin-grade')
+        getAllCategories: async function(){
+            Api().get('/admin/get-admin-categories')
                 .then(response => {
-                    this.grades = response.data.grades
+                    this.categories = response.data.categories
                 })
         },
         createGallery: async function(){
@@ -126,7 +126,7 @@ export default {
     },
     computed: {},
     created(){
-        this.getAllGrades()
+        this.getAllCategories()
     }
 }
 </script>

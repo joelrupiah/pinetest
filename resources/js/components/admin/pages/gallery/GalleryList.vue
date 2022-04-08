@@ -1,5 +1,5 @@
 <template>
-    <div id="grade_list">
+    <div id="gallery_list">
       <main role="main" class="main-content">
         <div class="container-fluid">
           <div class="row justify-content-center">
@@ -23,7 +23,7 @@
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>Grade Name</th>
+                            <th>Category Name</th>
                             <th>Image</th>
                             <th>Date Created</th>
                             <th>Actions</th>
@@ -32,7 +32,7 @@
                         <tbody>
                           <tr v-for="(gallery, index) in galleries" :key="gallery.id">
                             <td><small>{{ index+1 }}</small></td>
-                            <td><small>{{ gallery.grade.name }}</small></td>
+                            <td><small>{{ gallery.category.name }}</small></td>
                             <td>
                                 <small>
                                     <img :src="fileLink(gallery.image)" alt="" style="width:40px;height:40px">

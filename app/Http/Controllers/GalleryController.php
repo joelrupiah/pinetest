@@ -11,7 +11,7 @@ class GalleryController extends Controller
 
     public function index()
     {
-        $galleries = Gallery::with('grade')->get();
+        $galleries = Gallery::with('category')->get();
 
         return response()->json([
             'galleries' => $galleries
@@ -20,7 +20,7 @@ class GalleryController extends Controller
 
     public function getGalleries(Request $request)
     {
-        $galleries = Gallery::with('grade')->paginate($request->total);
+        $galleries = Gallery::with('category')->paginate($request->total);
 
         return response()->json([
             'galleries' => $galleries
@@ -36,7 +36,7 @@ class GalleryController extends Controller
     {
         // return $request;
         $request->validate([
-            'grade_id' => 'nullable',
+            'category_id' => 'nullable',
             'image' => 'required',
             'description' => 'required'
         ]);
@@ -48,7 +48,7 @@ class GalleryController extends Controller
         $file_name = \Str::random(10) . '.' . $file_ex;
 
         Gallery::create([
-            'grade_id' => $request->grade_id,
+            'category_id' => $request->category_id,
             'image' => $file_name,
             'description' => $request->description
         ]);
@@ -62,7 +62,7 @@ class GalleryController extends Controller
     {
         // return $id;
         $gallery = Gallery::where('id', $id)
-                ->with('grade')
+                ->with('category')
                 ->first();
 
         return response()->json([
@@ -80,7 +80,7 @@ class GalleryController extends Controller
         // return $request;
         $gallery = Gallery::find($request->id);
         
-        $gallery->grade_id = $request->grade_id;
+        $gallery->category_id = $request->category_id;
         $gallery->description = $request->description;
 
         if ($request->image != $gallery->image) {
