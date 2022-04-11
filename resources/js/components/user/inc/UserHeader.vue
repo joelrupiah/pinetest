@@ -6,11 +6,11 @@
 			  		<div class="row">
 			  			<div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
 			  				<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://www.facebook.com/pinecrestjujasouth/?ref=page_internal" target="_blank"><i class="fa fa-facebook"></i></a></li>
 			  				</ul>			
 			  			</div>
 			  			<div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding" v-for="sitesetting in sitesettings" :key="sitesetting.id">
-			  				<a href="tel:+254 715 7332 57"><span class="lnr lnr-phone-handset"></span> <span class="text">{{ sitesetting.phone }}</span></a>
+			  				<a href="tel:+254 794 6697 92"><span class="lnr lnr-phone-handset"></span> <span class="text">{{ sitesetting.phone }}</span></a>
 			  				<a href="mailto:info@pinecrestacademy.co.ke"><span class="lnr lnr-envelope"></span> <span class="text">
 								{{ sitesetting.email }}</span></a>			
 			  			</div>
@@ -43,6 +43,23 @@
 
 <script>
 export default {
-    name: 'UserHeader'
+    name: 'UserHeader',
+	data(){
+		return {
+			sitesettings: []
+		}
+	},
+	methods: {
+		getSiteSettings: async function(){
+			axios.get('/get-site-settings')
+				.then((response) => {
+					this.sitesettings = response.data.sitesettings
+				})
+		},
+	},
+	computed: {},
+	created(){
+		this.getSiteSettings()
+	}
 }
 </script>

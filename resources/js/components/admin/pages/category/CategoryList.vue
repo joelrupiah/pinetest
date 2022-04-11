@@ -28,8 +28,8 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr v-for="(category, index) in categories" :key="category.id">
-                            <td><small>{{ index+1 }}</small></td>
+                          <tr v-for="category in categories" :key="category.id">
+                            <td><small>{{ category.id }}</small></td>
                             <td><small>{{ category.name }}</small></td>
                             <td><small>{{ category.created_at | time }}</small></td>
                             <td>
