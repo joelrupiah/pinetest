@@ -127,6 +127,11 @@ Route::get('get-event-detail/{eventSlug}', [EventController::class, 'eventDetail
 Route::get('get-user-grades', [GradeController::class, 'getGrades']);
 Route::get('get-user-chooses', [ChooseController::class, 'getUserChooses']);
 Route::get('get-user-categories', [CategoryController::class, 'getUserCategories']);
+Route::get('get-site-settings', [ContactSettingController::class, 'getSiteSettings']);
+
+Route::get('get-sport-gallery', [GalleryController::class, 'getSportGallery']);
+Route::get('get-agriculture-gallery', [GalleryController::class, 'getAgricultureGallery']);
+Route::get('get-education-gallery', [GalleryController::class, 'educationGalleries']);
 
 Route::post('subscribe-newsletter', [SubscriptionController::class, 'store']);
 Route::post('send-message', [InboxController::class, 'store']);

@@ -9,7 +9,7 @@
 							<h1 class="text-white">
 								About Us				
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="about.html"> About Us</a></p>
+							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span> About Us</p>
 						</div>	
 					</div>
 				</div>
@@ -62,7 +62,7 @@
 			<section class="info-area pb-120">
 				<div class="container-fluid">
 					<div class="row align-items-center" v-for="abt in abouts" :key="abt.id">
-						<div class="col-lg-6 no-padding info-area-left">
+						<div class="col-lg-6 info-area-left">
 							<img class="img-fluid" :src="fileLinkOne(abt.imageOne)" alt="">
 						</div>
 						<div class="col-lg-6 info-area-right">
@@ -125,9 +125,10 @@
                             </dl> -->
                             <!-- accordion 2 end-->
                         </div>
-                        <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative">
+                        <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative"
+						v-for="abu in abouts" :key="abu">
                         	<div class="overlay overlay-bg" style="background:url('/frontend/img/video-bg.jpg')"></div>
-							<a class="play-btn" target="_blank" ><img class="img-fluid mx-auto" src="/frontend/img/play.png" alt=""></a>
+							<a class="play-btn" :href="abu.video" target="_blank" ><img class="img-fluid mx-auto" src="/frontend/img/play.png" alt=""></a>
                         </div>
                     </div>
 				</div>	

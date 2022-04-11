@@ -17,6 +17,15 @@ class ContactSettingController extends Controller
         ], 200);
     }
 
+    public function getSiteSettings()
+    {
+        $sitesettings = ContactSetting::get();
+
+        return response()->json([
+            'sitesettings' => $sitesettings
+        ], 200);
+    }
+
     public function create()
     {
         //

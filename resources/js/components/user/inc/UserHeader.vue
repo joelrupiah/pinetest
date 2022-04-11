@@ -7,14 +7,12 @@
 			  			<div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
 			  				<ul>
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 			  				</ul>			
 			  			</div>
-			  			<div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-			  				<a href="tel:+254 715 7332 57"><span class="lnr lnr-phone-handset"></span> <span class="text">+254715733257</span></a>
+			  			<div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding" v-for="sitesetting in sitesettings" :key="sitesetting.id">
+			  				<a href="tel:+254 715 7332 57"><span class="lnr lnr-phone-handset"></span> <span class="text">{{ sitesetting.phone }}</span></a>
 			  				<a href="mailto:info@pinecrestacademy.co.ke"><span class="lnr lnr-envelope"></span> <span class="text">
-								info@pinecrestacademy.co.ke</span></a>			
+								{{ sitesetting.email }}</span></a>			
 			  			</div>
 			  		</div>			  					
 	  			</div>

@@ -155,6 +155,40 @@
 			</section>
 			<!-- End curriculum Area -->
 
+			<!-- Start events Area -->
+			<section class="blog-area section-gap" id="blog">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">School Events</h1>
+							</div>
+						</div>
+					</div>					
+					<div class="row">
+						<div class="col-lg-3 col-md-6 single-blog" v-if="events.length < 0">
+							<h2 class="text-muted text-danger text-md">
+								No Events found
+							</h2>
+						</div>
+						<div class="col-lg-3 col-md-6 single-blog mb-2" v-else v-for="event in events" :key="event.id">
+							<div class="thumb">
+								<img class="img-fluid" :src="fileLinkEvent(event.image)" alt="Event Image">								
+							</div>
+							<p class="meta">{{ event.startdate | time }} -- {{ event.endate | time }}</p>
+							<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
+								<h5 v-html="event.title"></h5>
+							</a>
+							<p v-html="event.description"></p>
+							<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href" 
+							class="details-btn d-flex justify-content-center align-items-center">
+								<span class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>		
+						</div>					
+					</div>
+				</div>	
+			</section>
+			<!-- End events Area -->
+
 			<!-- Start search-course Area -->
 			<section class="search-course-area relative mt-5" style="background:url(/frontend/img/children.jpg) center;background-size:cover">
 				<div class="overlay overlay-bg"></div>
@@ -242,42 +276,8 @@
 			</section>
 			<!-- End search-course Area -->
 
-			<!-- Start events Area -->
-			<section class="blog-area section-gap" id="blog">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">School Events</h1>
-							</div>
-						</div>
-					</div>					
-					<div class="row">
-						<div class="col-lg-3 col-md-6 single-blog" v-if="events.length < 0">
-							<h2 class="text-muted text-danger text-md">
-								No Events found
-							</h2>
-						</div>
-						<div class="col-lg-3 col-md-6 single-blog mb-2" v-else v-for="event in events" :key="event.id">
-							<div class="thumb">
-								<img class="img-fluid" :src="fileLinkEvent(event.image)" alt="Event Image">								
-							</div>
-							<p class="meta">{{ event.startdate | time }} -- {{ event.endate | time }}</p>
-							<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
-								<h5 v-html="event.title"></h5>
-							</a>
-							<p v-html="event.description"></p>
-							<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href" 
-							class="details-btn d-flex justify-content-center align-items-center">
-								<span class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>		
-						</div>					
-					</div>
-				</div>	
-			</section>
-			<!-- End blog Area -->	
-			
 			<!-- Start cta-one Area -->
-			<section class="cta-one-area relative section-gap">
+			<!-- <section class="cta-one-area relative section-gap">
 				<div class="container">
 					<div class="overlay overlay-bg"></div>
 					<div class="row justify-content-center">
@@ -290,7 +290,7 @@
 						</div>					
 					</div>
 				</div>	
-			</section>
+			</section> -->
 			<!-- End cta-one Area -->
 		
 			<!-- Start review Area -->
@@ -393,17 +393,18 @@
 								<h1 class="mb-10">Contact Us</h1>
 								<p>Send us a message</p>
 							</div>
-						</div>
+					</div>
 					<div class="row">
-						<div class="col-lg-4 d-flex flex-column address-wrap">
+						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+						<div class="col-lg-4 d-flex flex-column address-wrap" v-for="sitesetting in sitesettings" :key="sitesetting.id">
 							<div class="single-contact-address d-flex flex-row">
 								<div class="icon">
 									<span class="lnr lnr-home"></span>
 								</div>
 								<div class="contact-details">
-									<h5>Binghamton, New York</h5>
+									<h5>{{ sitesetting.town }}</h5>
 									<p>
-										4343 Hinkle Deegan Lake Road
+										{{ sitesetting.address }}
 									</p>
 								</div>
 							</div>
@@ -412,7 +413,7 @@
 									<span class="lnr lnr-phone-handset"></span>
 								</div>
 								<div class="contact-details">
-									<h5>00 (958) 9865 562</h5>
+									<h5>{{ sitesetting.phone }}</h5>
 									<p>Mon to Fri 9am to 6 pm</p>
 								</div>
 							</div>
@@ -421,8 +422,8 @@
 									<span class="lnr lnr-envelope"></span>
 								</div>
 								<div class="contact-details">
-									<h5>support@colorlib.com</h5>
-									<p>Send us your query anytime!</p>
+									<h5>{{ sitesetting.email }}</h5>
+									<p>Send us a message</p>
 								</div>
 							</div>														
 						</div>
@@ -493,6 +494,7 @@ export default {
 			carousels: [],
 			grades: [],
 			chooses: [],
+			sitesettings: [],
 			form:{
 				grade_id: '',
 				parent_name: '',
@@ -566,6 +568,12 @@ export default {
 			axios.get('/get-user-chooses')
 				.then((response) => {
 					this.chooses = response.data.chooses
+				})
+		},
+		getSiteSettings: async function(){
+			axios.get('/get-site-settings')
+				.then((response) => {
+					this.sitesettings = response.data.sitesettings
 				})
 		},
 		applyForAJob: async function(){
@@ -665,6 +673,7 @@ export default {
 		this.getUserCarousel()
 		this.getUserGrades()
 		this.getUserChooses()
+		this.getSiteSettings()
     }
 }
 </script>

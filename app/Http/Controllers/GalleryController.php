@@ -27,6 +27,34 @@ class GalleryController extends Controller
         ], 200);
     }
 
+
+    public function getSportGallery(Request $request)
+    {
+        $sportGalleries = Gallery::with('category')->where('category_id', 4)->paginate($request->total);
+
+        return response()->json([
+            'sportGalleries' => $sportGalleries
+        ], 200);
+    }
+
+    public function getAgricultureGallery(Request $request)
+    {
+        $agricultureGalleries = Gallery::with('category')->where('category_id', 5)->paginate($request->total);
+
+        return response()->json([
+            'agricultureGalleries' => $agricultureGalleries
+        ], 200);
+    }
+
+    public function educationGalleries(Request $request)
+    {
+        $educationGalleries = Gallery::with('category')->where('category_id', 6)->paginate($request->total);
+
+        return response()->json([
+            'educationGalleries' => $educationGalleries
+        ], 200);
+    }
+
     public function create()
     {
         //
