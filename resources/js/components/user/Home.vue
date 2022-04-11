@@ -28,7 +28,7 @@
 					<div class="row">
 						<div class="col-lg-4">
 							<div class="single-feature">
-								<div class="title">
+								<div class="title" style="background-color:#D4AF37">
 									<h4>Vision</h4>
 								</div>
 								<div class="desc-wrap">
@@ -40,7 +40,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-feature">
-								<div class="title">
+								<div class="title" style="background-color:#D4AF37">
 									<h4>Mission</h4>
 								</div>
 								<div class="desc-wrap">
@@ -52,7 +52,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-feature">
-								<div class="title bg-dark">
+								<div class="title" style="background-color:#D4AF37">
 									<h4>Motto</h4>
 								</div>
 								<div class="desc-wrap">
@@ -101,8 +101,62 @@
 			</section>
 			<!-- End popular-course Area -->
 			
+			<!-- Start curriculum Area -->
+			<section class="search-course-area relative mb-5">
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-6 col-md-6 search-course-left section-gap">
+							<h1 class="text-white">
+								Curriculum
+							</h1>
+							<p class="text-white font-weight-bold">
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+							</p>
+						</div>
+						<div class="col-lg-4 col-md-6 search-course-right section-gap">
+							<form class="form-wrap" action="#">
+								<div class="row details-content">
+									<div class="col single-detials">
+										<a href="#"><h4>Expert Teachers</h4></a>		
+										<p class="text-white">
+											Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+										</p>						
+									</div>
+									<div class="col single-detials">
+										<a href="#"><h4>Resources</h4></a>		
+										<p class="text-white">
+											Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+										</p>						
+									</div>	
+									<div class="col single-detials">
+										<a href="#"><h4>Expert Teachers</h4></a>		
+										<p class="text-white">
+											Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+										</p>						
+									</div>
+									<div class="col single-detials">
+										<a href="#"><h4>Resources</h4></a>		
+										<p class="text-white">
+											Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+										</p>						
+									</div>							
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End curriculum Area -->
+
 			<!-- Start search-course Area -->
-			<section class="search-course-area relative">
+			<section class="search-course-area relative mt-5" style="background:url(/frontend/img/children.jpg) center;background-size:cover">
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
@@ -187,15 +241,14 @@
 				</div>	
 			</section>
 			<!-- End search-course Area -->
-						
+
 			<!-- Start events Area -->
 			<section class="blog-area section-gap" id="blog">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Upcoming Events of our School</h1>
-								<p>In the history of modern astronomy there is.</p>
+								<h1 class="mb-10">School Events</h1>
 							</div>
 						</div>
 					</div>					
@@ -241,7 +294,7 @@
 			<!-- End cta-one Area -->
 		
 			<!-- Start review Area -->
-			<section class="review-area section-gap relative">
+			<!-- <section class="review-area section-gap relative">
 				<div class="overlay overlay-bg"></div>
 				<div class="container">	
 					<div class="row d-flex justify-content-center">
@@ -330,8 +383,98 @@
 						</div>
 					</div>
 				</div>	
-			</section>
+			</section> -->
 			<!-- End review Area -->
+
+			<section class="contact-page-area section-gap">
+				<div class="container">
+					<div class="menu-content pb-70">
+							<div class="title text-center">
+								<h1 class="mb-10">Contact Us</h1>
+								<p>Send us a message</p>
+							</div>
+						</div>
+					<div class="row">
+						<div class="col-lg-4 d-flex flex-column address-wrap">
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-home"></span>
+								</div>
+								<div class="contact-details">
+									<h5>Binghamton, New York</h5>
+									<p>
+										4343 Hinkle Deegan Lake Road
+									</p>
+								</div>
+							</div>
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-phone-handset"></span>
+								</div>
+								<div class="contact-details">
+									<h5>00 (958) 9865 562</h5>
+									<p>Mon to Fri 9am to 6 pm</p>
+								</div>
+							</div>
+							<div class="single-contact-address d-flex flex-row">
+								<div class="icon">
+									<span class="lnr lnr-envelope"></span>
+								</div>
+								<div class="contact-details">
+									<h5>support@colorlib.com</h5>
+									<p>Send us your query anytime!</p>
+								</div>
+							</div>														
+						</div>
+						<div class="col-lg-8">
+							<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
+								<div class="row">	
+									<div class="col-lg-6 form-group">
+										<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" 
+											onblur="this.placeholder = 'Enter your name'" 
+											class="common-input mb-2 form-control" required="" 
+											v-model="form.name" type="text">
+										<p class="text-danger text-sm mb-2" v-if="errors.name">
+											{{ errors.name[0] }}
+										</p>
+										<input name="email" placeholder="Enter email address" 
+											pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" 
+											onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" 
+											class="common-input mb-2 form-control" required="" 
+											v-model="form.email" type="email">
+										<p class="text-danger text-sm mb-2" v-if="errors.email">
+											{{ errors.email[0] }}
+										</p>
+										<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" 
+											onblur="this.placeholder = 'Enter subject'" class="common-input mb-2 form-control" 
+											required="" v-model="form.subject" type="text">
+										<p class="text-danger text-sm mb-2" v-if="errors.subject">
+											{{ errors.subject[0] }}
+										</p>
+									</div>
+									<div class="col-lg-6 form-group">
+										<textarea class="common-textarea form-control" name="message" 
+											placeholder="Enter Messege" onfocus="this.placeholder = ''" 
+											onblur="this.placeholder = 'Enter Messege'" required=""
+											v-model="form.message" ></textarea>			
+										<p class="text-danger text-sm" v-if="errors.message">
+											{{ errors.message[0] }}
+										</p>
+									</div>
+									<div class="col-lg-12">
+										<div class="alert-msg" style="text-align: left;"></div>
+										<el-button type="success" :loading="loading" size="mini" 
+											@click.prevent="sendMessage()">{{ loading ? 'Sending message.....' : 'Send message' }}
+										</el-button>
+										<!-- <button class="genric-btn primary" style="float: right;"
+										@click.prevent="sendMessage">Send Message</button>											 -->
+									</div>
+								</div>
+							</form>	
+						</div>
+					</div>
+				</div>	
+			</section>
 			
     </div>
 </template>
@@ -357,6 +500,12 @@ export default {
 				parent_email: '',
 				student_name: '',
 				student_age: ''
+			},
+			contactForm: {
+				name: '',
+				email: '',
+				subject: '',
+				message: ''
 			},
 			errors: {}
         }
@@ -465,6 +614,43 @@ export default {
 							title: 'Application failed',
 							text: "Please contact  support for advice. Thank you"
 						});
+					}
+					this.loading = false
+				})
+		},
+		sendMessage: async function(){
+			this.loading = true
+			axios.post('/send-message', this.form)
+				.then(() => {
+					this.form.name = '',
+					this.form.email = '',
+					this.form.subject = '',
+					this.form.message = '',
+					this.errors = '',
+					this.loading = false,
+					this.$notify({
+                        group: 'contactus',
+                        type: 'success',
+                        text: 'Message Sent. We will get back to you'
+                    });
+				})
+				.catch((error) => {
+					if (error.response.status === 422) {
+						this.errors = error.response.data.errors
+					}
+					else if (error.response.status === 500) {
+						this.$notify({
+							group: 'contactus',
+							type: 'error',
+							text: 'Error occured please wait while we take a look'
+                    	});
+					}
+					else if(error.response.status === 405) {
+						this.$notify({
+							group: 'contactus',
+							type: 'error',
+							text: 'Error occured please wait while we take a look'
+                    	});
 					}
 					this.loading = false
 				})

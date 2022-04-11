@@ -25,6 +25,15 @@ class CategoryController extends Controller
         ], 200);
     }
 
+    public function getUserCategories()
+    {
+        $categories = Category::with('galleries')->get();
+
+        return response()->json([
+            'categories' => $categories
+        ], 200);
+    }
+
     public function create()
     {
         //

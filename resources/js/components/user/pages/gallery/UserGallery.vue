@@ -21,19 +21,22 @@
 				<div class="container">
 					<h1 class="text-center text-muted mb-5" style="margin-top:-80px">School Gallery</h1>
 					<div class="row">
-						<h4 class="font-weight-bold">Category One</h4>
-						<div class="col-lg-3" v-for="gallery in galleries" :key="gallery.id">
-							<a :href="fileLink(gallery.image)" class="img-gal">
-								<div class="single-imgs relative">		
-									<div class="overlay overlay-bg">
-										<p class="text-white text-sm text-center font-weight-bold" v-html="gallery.description">
-											</p>
+						
+						<div v-for="category in categories" :key="category.id">
+							<h4 class="font-weight-bold">{{ category.name }}</h4>
+							<div class="col-lg-3" v-for="gallery in categories.galleries" :key="gallery.id">
+								<a :href="fileLink(gallery.image)" class="img-gal">
+									<div class="single-imgs relative">		
+										<div class="overlay overlay-bg">
+											<p class="text-white text-sm text-center font-weight-bold" v-html="gallery.description">
+												</p>
+										</div>
+										<div class="relative">					
+											<img class="img-fluid" :src="fileLink(gallery.image)" alt="">				
+										</div>
 									</div>
-									<div class="relative">					
-										<img class="img-fluid" :src="fileLink(gallery.image)" alt="">				
-									</div>
-								</div>
-							</a>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>	
