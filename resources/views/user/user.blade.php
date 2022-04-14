@@ -55,7 +55,7 @@
 			<script type="text/javascript">
 				(function () {
 					var options = {
-						whatsapp: "+254(721) 890-969", // WhatsApp number
+						whatsapp: "+254(794) 669-792", // WhatsApp number
 						call_to_action: "Message us", // Call to action
 						button_color: "#FF6550", // Color of button
 						position: "right", // Position may be 'right' or 'left'
