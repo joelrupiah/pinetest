@@ -53,6 +53,8 @@
 			<script src="/frontend/js/mail-script.js"></script>	
 			<script src="/frontend/js/main.js"></script>
 			<script type="text/javascript">
+
+			// Whatsapp button
 				(function () {
 					var options = {
 						whatsapp: "+254(794) 669-792", // WhatsApp number
@@ -65,6 +67,34 @@
 					s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
 					var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
 				})();
+
+				// Whatsapp button end
+
+				// Scroll to top button
+				const showOnPx = 100;
+				const backToTopButton = document.querySelector(".back-to-top")
+
+				const scrollContainer = () => {
+					return document.documentElement || document.body;
+				};
+
+				const goToTop = () => {
+					document.body.scrollIntoView({
+						behavior: "smooth",
+					});
+				};
+
+				document.addEventListener("scroll", () => {
+					if (scrollContainer().scrollTop > showOnPx) {
+						backToTopButton.classList.remove("hidden")
+					} else {
+						backToTopButton.classList.add("hidden")
+					}
+				})
+
+				backToTopButton.addEventListener("click", goToTop)
+
+				//Scroll to top end
 			</script>
 		</body>
 	</html>

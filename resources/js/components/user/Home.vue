@@ -12,9 +12,6 @@
 								We Ensure better education
 								for a better future			
 							</h1>
-							<p class="pt-10 pb-10">
-								In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.
-							</p>
 							<a href="/about-us" class="primary-btn text-uppercase">Learn More</a>
 						</div>										
 					</div>
@@ -28,7 +25,7 @@
 					<div class="row">
 						<div class="col-lg-4">
 							<div class="single-feature">
-								<div class="title" style="background-color:#D4AF37">
+								<div class="title">
 									<h4>Vision</h4>
 								</div>
 								<div class="desc-wrap">
@@ -40,7 +37,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-feature">
-								<div class="title" style="background-color:#D4AF37">
+								<div class="title">
 									<h4>Mission</h4>
 								</div>
 								<div class="desc-wrap">
@@ -52,7 +49,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-feature">
-								<div class="title" style="background-color:#D4AF37">
+								<div class="title">
 									<h4>Motto</h4>
 								</div>
 								<div class="desc-wrap">
@@ -74,7 +71,7 @@
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
 								<h1 class="mb-10">Why Choose Us</h1>
-								<p>There is a moment in the life of any aspiring.</p>
+								<p>We are enthusiastic and passionate about young learners, Our values are dear to us.</p>
 							</div>
 						</div>
 					</div>						
@@ -106,49 +103,15 @@
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
-						<div class="col-lg-6 col-md-6 search-course-left section-gap">
+						<div class="col-lg-12 col-md-12 search-course-left section-gap ml-5 mr-5">
 							<h1 class="text-white">
 								Curriculum
 							</h1>
 							<p class="text-white font-weight-bold">
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								For Kindergarten,  we use the highly effective and internationally acclaimed
+								Montessori method of teaching before ushering in the CBC (Competency Based Curriculum)
+								Kenyan Curriculum. We have highly qualified teachers for both programmes.
 							</p>
-						</div>
-						<div class="col-lg-4 col-md-6 search-course-right section-gap">
-							<form class="form-wrap" action="#">
-								<div class="row details-content">
-									<div class="col single-detials">
-										<a href="#"><h4>Expert Teachers</h4></a>		
-										<p class="text-white">
-											Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-										</p>						
-									</div>
-									<div class="col single-detials">
-										<a href="#"><h4>Resources</h4></a>		
-										<p class="text-white">
-											Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-										</p>						
-									</div>	
-									<div class="col single-detials">
-										<a href="#"><h4>Expert Teachers</h4></a>		
-										<p class="text-white">
-											Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-										</p>						
-									</div>
-									<div class="col single-detials">
-										<a href="#"><h4>Resources</h4></a>		
-										<p class="text-white">
-											Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-										</p>						
-									</div>							
-								</div>
-							</form>
 						</div>
 					</div>
 				</div>	
@@ -199,21 +162,21 @@
 								Get quality education
 							</h1>
 							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
+								The teaching methods that we deploy are time tested for effective learning
 							</p>
 							<div class="row details-content">
 								<div class="col single-detials">
 									<span class="lnr lnr-graduation-hat"></span>
 									<a href="#"><h4>Expert Teachers</h4></a>		
 									<p>
-										Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+										We employ teachers who are TSC recognised and have Diploma and Degree qualifications
 									</p>						
 								</div>
 								<div class="col single-detials">
 									<span class="lnr lnr-license"></span>
-									<a href="#"><h4>Resources</h4></a>		
+									<a href="#"><h4>Resources and Equipments</h4></a>		
 									<p>
-										Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+										We use Technology to enhance our ability to deliver on the curriculum
 									</p>						
 								</div>								
 							</div>
@@ -476,6 +439,8 @@
 					</div>
 				</div>	
 			</section>
+
+			
 			
     </div>
 </template>

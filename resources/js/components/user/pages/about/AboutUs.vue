@@ -109,26 +109,13 @@
 									</el-collapse-item>
 								</el-collapse>
 							</div>
-							
-                            <!-- accordion 2 start-->
-                            <!-- <dl class="accordion" v-for="(about, index) in abouts" :key="index">
-                                <dt>
-                                    <a href="" v-html="about.headingFour" @click="toggleAccordion(index)"></a>
-                                </dt>
-                                <dd v-html="about.descriptionFour" v-if="isOpen && index === selected"></dd>                                   
-                            </dl>
-							<dl class="accordion" v-for="(about, i) in abouts" :key="i">
-                                <dt>
-                                    <a href="" v-html="about.headingFive" @click="toggleAccordionOne(i)"></a>
-                                </dt>
-                                <dd v-html="about.descriptionFive" v-if="isOpen && i === selected"></dd>                                   
-                            </dl> -->
-                            <!-- accordion 2 end-->
                         </div>
                         <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative"
 						v-for="abu in abouts" :key="abu">
                         	<div class="overlay overlay-bg" style="background:url('/frontend/img/video-bg.jpg')"></div>
-							<a class="play-btn" :href="abu.video" target="_blank" ><img class="img-fluid mx-auto" src="/frontend/img/play.png" alt=""></a>
+							<a class="play-btn" :href="abu.video" target="_blank" >
+								<img class="img-fluid mx-auto" src="/frontend/img/play.png" alt="">
+							</a>
                         </div>
                     </div>
 				</div>	
