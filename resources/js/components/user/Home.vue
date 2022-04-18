@@ -9,9 +9,14 @@
 					<div class="row fullscreen d-flex align-items-center justify-content-between">
 						<div class="banner-content col-lg-9 col-md-12">
 							<h1 class="text-uppercase">
-								We Ensure better education
-								for a better future			
+								Welcome to Pinecrest Academy		
 							</h1>
+							<p class="text-white">
+								We consider it a privilege to share in your child’s 
+								educational journey and we look forward to working together with 
+								you to provide an environment that is positive, stimulating and focussed 
+								on academic excellence accompanied with high moral characteristics.
+							</p>
 							<a href="/about-us" class="primary-btn text-uppercase">Learn More</a>
 						</div>										
 					</div>
@@ -397,7 +402,7 @@
 										<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" 
 											onblur="this.placeholder = 'Enter your name'" 
 											class="common-input mb-2 form-control" required="" 
-											v-model="form.name" type="text">
+											v-model="contactForm.name" type="text">
 										<p class="text-danger text-sm mb-2" v-if="errors.name">
 											{{ errors.name[0] }}
 										</p>
@@ -405,13 +410,13 @@
 											pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" 
 											onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" 
 											class="common-input mb-2 form-control" required="" 
-											v-model="form.email" type="email">
+											v-model="contactForm.email" type="email">
 										<p class="text-danger text-sm mb-2" v-if="errors.email">
 											{{ errors.email[0] }}
 										</p>
 										<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" 
 											onblur="this.placeholder = 'Enter subject'" class="common-input mb-2 form-control" 
-											required="" v-model="form.subject" type="text">
+											required="" v-model="contactForm.subject" type="text">
 										<p class="text-danger text-sm mb-2" v-if="errors.subject">
 											{{ errors.subject[0] }}
 										</p>
@@ -420,7 +425,7 @@
 										<textarea class="common-textarea form-control" name="message" 
 											placeholder="Enter Messege" onfocus="this.placeholder = ''" 
 											onblur="this.placeholder = 'Enter Messege'" required=""
-											v-model="form.message" ></textarea>			
+											v-model="contactForm.message" ></textarea>			
 										<p class="text-danger text-sm" v-if="errors.message">
 											{{ errors.message[0] }}
 										</p>
@@ -593,12 +598,12 @@ export default {
 		},
 		sendMessage: async function(){
 			this.loading = true
-			axios.post('/send-message', this.form)
+			axios.post('/send-message', this.contactForm)
 				.then(() => {
-					this.form.name = '',
-					this.form.email = '',
-					this.form.subject = '',
-					this.form.message = '',
+					this.contactForm.name = '',
+					this.contactForm.email = '',
+					this.contactForm.subject = '',
+					this.contactForm.message = '',
 					this.errors = '',
 					this.loading = false,
 					this.$notify({
