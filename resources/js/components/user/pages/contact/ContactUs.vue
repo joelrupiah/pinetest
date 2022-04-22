@@ -40,7 +40,7 @@
 								</div>
 								<div class="contact-details">
 									<h5>{{ sitesetting.phone }}</h5>
-									<p>Mon to Fri 9am to 6 pm</p>
+									<p>Mon to Fri 8am to 5pm</p>
 								</div>
 							</div>
 							<div class="single-contact-address d-flex flex-row">
