@@ -38,7 +38,7 @@ class GalleryController extends Controller
 
     public function getSportGallery(Request $request)
     {
-        $sportGalleries = Gallery::with('category')->where('category_id', 2)->paginate($request->total);
+        $sportGalleries = Gallery::with('category')->where('category_id', 4)->paginate($request->total);
 
         return response()->json([
             'sportGalleries' => $sportGalleries
@@ -82,7 +82,8 @@ class GalleryController extends Controller
             'description' => $request->description
         ]);
 
-        Image::make($request->image)->resize(800, 650)->save(public_path('/uploads/img/gallery/').$file_name);
+        Image::make($request->image)->save(public_path('/uploads/img/gallery/').$file_name);
+        // Image::make($request->image)->resize(800, 650)->save(public_path('/uploads/img/gallery/').$file_name);
 
         return response()->json('success', 200);
     }
@@ -118,7 +119,8 @@ class GalleryController extends Controller
             $file_ex = end($file);
             $file_name = \Str::random(10) . '.' . $file_ex;
             $gallery->image = $file_name;
-            Image::make($request->image)->resize(800, 650)->save(public_path('/uploads/img/gallery/').$file_name);
+            Image::make($request->image)->save(public_path('/uploads/img/gallery/').$file_name);
+            // Image::make($request->image)->resize(800, 650)->save(public_path('/uploads/img/gallery/').$file_name);
         }
 
         $gallery->save();

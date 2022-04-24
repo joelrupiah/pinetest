@@ -73,7 +73,8 @@
 									<a :href="fileLink(agricultureGallery.image)" target="_blank" class="img-gal">
 										<div class="single-imgs relative">		
 											<div class="relative">					
-												<img class="img-fluid" :src="fileLink(agricultureGallery.image)" alt="">				
+												<img class="img-fluid" :src="fileLink(agricultureGallery.image)" alt=""
+												style="object-fit:cover">				
 											</div>
 										</div>
 									</a>
