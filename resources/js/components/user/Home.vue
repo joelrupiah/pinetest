@@ -85,7 +85,7 @@
 							<div class="single-cat-widget">
 								<div class="content relative">
 									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
+								    <a>
 								      <div class="thumb">
 								  		 <img class="content-image img-fluid d-block mx-auto" :src="fileLinkChoose(choose.image)" alt="">
 								  	  </div>
