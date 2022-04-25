@@ -63,7 +63,7 @@
 				<div class="container-fluid">
 					<div class="row align-items-center" v-for="abt in abouts" :key="abt.id">
 						<div class="col-lg-6 info-area-left">
-							<img class="img-fluid" :src="fileLinkOne(abt.imageOne)" alt="">
+							<img class="img-fluid" id="about-image" :src="fileLinkOne(abt.imageOne)" alt="">
 						</div>
 						<div class="col-lg-6 info-area-right">
 							<h1 v-html="abt.heading"></h1>

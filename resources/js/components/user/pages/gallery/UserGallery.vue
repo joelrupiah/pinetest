@@ -48,6 +48,9 @@
 
 					<div class="mb-5">
 						<h4 class="font-weight-bold text-center mb-3"><u>Sports</u></h4>
+						<div class="row" v-if="sportGalleries < 1">
+							<h1 class="text-center">No data</h1>
+						</div>
 						<div class="row">
 							<div class="col-lg-3" v-for="sportGallery in sportGalleries" :key="sportGallery.id">
 								<div v-if="sportGallery.category.name === 'Sports'">
@@ -67,6 +70,9 @@
 
 					<div class="mb-5">
 						<h4 class="font-weight-bold text-center">Agriculture</h4>
+							<div class="row" v-if="agricultureGalleries < 1">
+								<h1 class="text-center">No data</h1>
+							</div>
 						<div class="row">
 							<div class="col-lg-3" v-for="agricultureGallery in agricultureGalleries" :key="agricultureGallery.id">
 								<div v-if="agricultureGallery.category.name === 'Agriculture'">
@@ -84,6 +90,26 @@
 						<Page class="text-center" :total="agriculturePage.total" size="small" :current="agriculturePage.current_page" 
 								:page-size="parseInt(agriculturePage.per_page)" v-if="agriculturePage" @on-change="getAgricultureCategories" />
 					</div>
+
+					<!-- <div class="mb-5">
+						<h4 class="font-weight-bold text-center">Social Events</h4>
+						<div class="row">
+							<div class="col-lg-3" v-for="agricultureGallery in agricultureGalleries" :key="agricultureGallery.id">
+								<div v-if="agricultureGallery.category.name === 'Agriculture'">
+									<a :href="fileLink(agricultureGallery.image)" target="_blank" class="img-gal">
+										<div class="single-imgs relative">		
+											<div class="relative">					
+												<img class="img-fluid" :src="fileLink(agricultureGallery.image)" alt=""
+												style="object-fit:cover">				
+											</div>
+										</div>
+									</a>
+									</div>
+							</div>
+						</div>
+						<Page class="text-center" :total="agriculturePage.total" size="small" :current="agriculturePage.current_page" 
+								:page-size="parseInt(agriculturePage.per_page)" v-if="agriculturePage" @on-change="getAgricultureCategories" />
+					</div> -->
 				</div>	
 			</section>
 			<!-- End gallery Area -->

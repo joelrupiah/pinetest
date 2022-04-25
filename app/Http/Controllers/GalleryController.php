@@ -38,7 +38,7 @@ class GalleryController extends Controller
 
     public function getSportGallery(Request $request)
     {
-        $sportGalleries = Gallery::with('category')->where('category_id', 4)->paginate($request->total);
+        $sportGalleries = Gallery::with('category')->where('category_id', 2)->paginate($request->total);
 
         return response()->json([
             'sportGalleries' => $sportGalleries
@@ -54,7 +54,23 @@ class GalleryController extends Controller
         ], 200);
     }
 
-    
+    public function getSocialEventsGallery(Request $request)
+    {
+        $socialeventsGalleries = Gallery::with('category')->where('category_id', 4)->paginate($request->total);
+
+        return response()->json([
+            'socialeventsGalleries' => $socialeventsGalleries
+        ], 200);
+    }
+
+    public function getGraduationGallery(Request $request)
+    {
+        $graduationGalleries = Gallery::with('category')->where('category_id', 5)->paginate($request->total);
+
+        return response()->json([
+            'graduationGalleries' => $graduationGalleries
+        ], 200);
+    }
 
     public function create()
     {
