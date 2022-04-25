@@ -26,13 +26,13 @@
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li><a href="/">Home</a></li>
-			          <li><a href="/about-us">About</a></li>
-			          <li><a href="/gallery">Gallery</a></li>
-			          <li><a href="/events">Events</a></li>
+			          <li><a href="/" style="color:green;font-weight:900">Home</a></li>
+			          <li><a href="/about-us" style="color:green;font-weight:900">About</a></li>
+			          <li><a href="/gallery" style="color:green;font-weight:900">Gallery</a></li>
+			          <li><a href="/events" style="color:green;font-weight:900">Events</a></li>
 			          <!-- <li><a href="/careers">Careers</a></li>
 			          <li><a href="/faqs">Faqs</a></li> -->
-			          <li><a href="/contact-us">Contact</a></li>
+			          <li><a href="/contact-us" style="color:green;font-weight:900">Contact</a></li>
 			        </ul>
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>
