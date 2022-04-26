@@ -5,7 +5,7 @@
                 <div class="container clearfix">
 					<!-- Header Logo ==== -->
 					<div class="menu-logo">
-						<a href="/api"><img src="/frontend/assets/images/logo-white.png" alt=""></a>
+						<!-- <a href="/api"><img src="/frontend/assets/images/logo-white.png" alt=""></a> -->
 					</div>
 					<!-- Mobile Nav Button ==== -->
                     <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-toggle="collapse" data-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">

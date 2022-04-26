@@ -63,7 +63,9 @@
 				<div class="container-fluid">
 					<div class="row align-items-center" v-for="abt in abouts" :key="abt.id">
 						<div class="col-lg-6 info-area-left">
-							<img class="img-fluid" id="about-image" :src="fileLinkOne(abt.imageOne)" alt="">
+							<!-- <img class="about-img-fluid" id="about-image" :src="fileLinkOne(abt.imageOne)" alt=""> -->
+							<img class="img-fluid" id="about-image" src="/frontend/img/play.png" alt="" 
+								style="max-width:100%;height:auto">
 						</div>
 						<div class="col-lg-6 info-area-right">
 							<h1 v-html="abt.heading"></h1>
@@ -112,7 +114,7 @@
                         </div>
                         <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative"
 						v-for="abu in abouts" :key="abu">
-                        	<div class="overlay overlay-bg" style="background:url('/frontend/img/video-bg.jpg')"></div>
+                        	<div class="overlay overlay-bg" style="background:url('/frontend/img/grad-about.jpg');background-size:cover;background-repeat: no-repeat;"></div>
 							<a class="play-btn" :href="abu.video" target="_blank" >
 								<img class="img-fluid mx-auto" src="/frontend/img/play.png" alt="">
 							</a>

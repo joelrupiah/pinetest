@@ -35,7 +35,8 @@
 									<a :href="fileLink(educationGallery.image)" target="_blank" class="img-gal">
 										<div class="single-imgs relative">		
 											<div class="relative">					
-												<img class="img-fluid" :src="fileLink(educationGallery.image)" alt="">				
+												<img class="img-fluid" :src="fileLink(educationGallery.image)" alt=""
+													style="width: 200px;height: 197px;object-fit:cover">				
 											</div>
 										</div>
 									</a>
