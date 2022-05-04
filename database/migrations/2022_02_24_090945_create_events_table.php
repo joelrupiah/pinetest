@@ -21,15 +21,13 @@ class CreateEventsTable extends Migration
             $table->datetime('start_date');
             $table->datetime('end_date')->nullable();
             $table->longText('description');
-            $table->datetime('start_time');
-            $table->datetime('end_time');
-            $table->longText('eventDescription');
-            $table->longText('eventContent');
-            $table->string('topics');
-            $table->string('host');
-            $table->string('location');
-            $table->string('students');
-            $table->string('assessments');
+            $table->datetime('start_time')->nullable();
+            $table->datetime('end_time')->nullable();
+            $table->longText('eventDescription')->nullable();
+            $table->string('host')->nullable();
+            $table->string('location')->nullable();
+            $table->string('street')->nullable();
+            $table->string('city')->nullable();
             $table->timestamps();
         });
     }

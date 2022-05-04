@@ -141,9 +141,10 @@
 						</div>
 						<div class="col-lg-3 col-md-6 single-blog mb-2" v-else v-for="event in events" :key="event.id">
 							<div class="thumb">
-								<img class="img-fluid" :src="fileLinkEvent(event.image)" alt="Event Image">								
+								<img class="img-fluid" :src="fileLinkEvent(event.image)" alt="Event Image"
+								style="width: 263px;height: 220px;object-fit:cover">								
 							</div>
-							<p class="meta">{{ event.startdate | time }} -- {{ event.endate | time }}</p>
+							<p class="meta">{{ event.start_date | time }} to {{ event.end_date | time }}</p>
 							<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
 								<h5 v-html="event.title"></h5>
 							</a>

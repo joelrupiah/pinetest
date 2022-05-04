@@ -55,13 +55,13 @@ class EventController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'description' => 'required',
-            'start_time' => 'required',
-            'end_time' => 'required',
-            'eventDescription' => 'required',
-            'host' => 'required',
-            'location' => 'required',
-            'street' => 'required',
-            'city' => 'required',
+            'start_time' => 'nullable',
+            'end_time' => 'nullable',
+            'eventDescription' => 'nullable',
+            'host' => 'nullable',
+            'location' => 'nullable',
+            'street' => 'nullable',
+            'city' => 'nullable',
         ]);
         
         $file = explode(';', $request->image);
@@ -88,7 +88,7 @@ class EventController extends Controller
             'city' => $request->city
         ]);
 
-        Image::make($request->image)->resize(700, 300)->save(public_path('/uploads/img/event/').$file_name);
+        Image::make($request->image)->save(public_path('/uploads/img/event/').$file_name);
 
         return response()->json('success', 200);
     }
@@ -130,7 +130,7 @@ class EventController extends Controller
             $file_ex = end($file);
             $file_name = \Str::random(10) . '.' . $file_ex;
             $event->image = $file_name;
-            Image::make($request->image)->resize(700, 300)->save(public_path('/uploads/img/event/').$file_name);
+            Image::make($request->image)->save(public_path('/uploads/img/event/').$file_name);
         }
 
         $event->save();
