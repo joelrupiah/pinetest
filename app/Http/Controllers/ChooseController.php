@@ -49,12 +49,30 @@ class ChooseController extends Controller
         return response()->json('success', 200);
 
     }
+
+    public function show(Choose $choose, $id)
+    {
+        // return $choose;
+        $choose = Choose::where('id', $id)->first();
+
+        return response()->json([
+            'choose' => $choose
+        ], 200);
+    }
+
     public function update(Request $request, Choose $choose)
     {
         $choose = Choose::find($request->id);
 
+        $mainImage = $choose->image;
+
         $choose->title = $request->title;
         $choose->description = $request->description;
+
+        $imagePath = public_path('/uploads/img/choose/').$mainImage;
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
 
         if ($request->image != $choose->image) {
             $file = explode(';', $request->image);
@@ -72,7 +90,13 @@ class ChooseController extends Controller
     }
     public function destroy(Request $request, $id)
     {
-
+        $choose = Choose::find($id);
+        // return $choose->image;
+        $image = $choose->image;
+        $imagePath = public_path('/uploads/img/choose/').$image;
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+        $choose->delete();
     }
-    
 }

@@ -43,10 +43,11 @@
                             <td><small>{{ choose.created_at | time }}</small></td>
                             <td>
                                 <small>
-                                    <router-link :to="`/api/admin/edit-choose/${choose.id}`">
+                                    <router-link :to="`/admin/edit-choose/${choose.id}`">
                                         <i class="fe fe-edit-2 fe-16" style="color:green;cursor:pointer"></i>
                                     </router-link>
-                                    <i class="fe fe-trash-2 fe-16" style="color:red;cursor:pointer"></i>
+                                    <i class="fe fe-trash-2 fe-16" style="color:red;cursor:pointer"
+                                    @click.prevent="deleteChoose(choose.id)" ></i>
                                 </small>
                             </td>
                           </tr>
@@ -81,6 +82,13 @@ export default {
               .then((response) => {
                   this.chooses = response.data.chooses
               })
+      },
+      deleteChoose(id){
+        // console.log(id)
+        Api().delete('/admin/delete-admin-choose/'+id)
+          .then(() => {
+            this.getChooses()
+          })
       }
     },
     computed: {},

@@ -29,7 +29,7 @@ class GalleryController extends Controller
 
     public function educationGalleries(Request $request)
     {
-        $educationGalleries = Gallery::with('category')->where('category_id', 1)->paginate($request->total);
+        $educationGalleries = Gallery::with('category')->where('category_id', 3)->paginate($request->total);
 
         return response()->json([
             'educationGalleries' => $educationGalleries
@@ -38,7 +38,7 @@ class GalleryController extends Controller
 
     public function getSportGallery(Request $request)
     {
-        $sportGalleries = Gallery::with('category')->where('category_id', 2)->paginate($request->total);
+        $sportGalleries = Gallery::with('category')->where('category_id', 1)->paginate($request->total);
 
         return response()->json([
             'sportGalleries' => $sportGalleries
@@ -47,7 +47,7 @@ class GalleryController extends Controller
 
     public function getAgricultureGallery(Request $request)
     {
-        $agricultureGalleries = Gallery::with('category')->where('category_id', 3)->paginate($request->total);
+        $agricultureGalleries = Gallery::with('category')->where('category_id', 2)->paginate($request->total);
 
         return response()->json([
             'agricultureGalleries' => $agricultureGalleries
@@ -125,9 +125,16 @@ class GalleryController extends Controller
     {
         // return $request;
         $gallery = Gallery::find($request->id);
+
+        $mainImage = $gallery->image;
         
         $gallery->category_id = $request->category_id;
         $gallery->description = $request->description;
+
+        $imagePath = public_path('/uploads/img/gallery/').$mainImage;
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
 
         if ($request->image != $gallery->image) {
             $file = explode(';', $request->image);
@@ -144,8 +151,15 @@ class GalleryController extends Controller
         return response()->json('success', 200);
     }
 
-    public function destroy(Gallery $gallery)
+    public function destroy(Request $request, $id)
     {
-        //
+        $gallery = Gallery::find($id);
+        // return $gallery->image;
+        $image = $gallery->image;
+        $imagePath = public_path('/uploads/img/gallery/').$image;
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+        $gallery->delete();
     }
 }

@@ -41,10 +41,11 @@
                             <td><small>{{ gallery.created_at | time }}</small></td>
                             <td>
                                 <small>
-                                    <router-link :to="`/api/admin/edit-gallery/${gallery.id}`">
+                                    <router-link :to="`/admin/edit-gallery/${gallery.id}`">
                                         <i class="fe fe-edit-2 fe-16" style="color:green;cursor:pointer"></i>
                                     </router-link>
-                                    <i class="fe fe-trash-2 fe-16" style="color:red;cursor:pointer"></i>
+                                    <i class="fe fe-trash-2 fe-16" style="color:red;cursor:pointer"
+                                    @click.prevent="deleteGallery(gallery.id)" ></i>
                                 </small>
                             </td>
                           </tr>
@@ -81,6 +82,12 @@ export default {
                     this.galleries = response.data.galleries
                 })
         },
+        deleteGallery(id){
+          Api().delete('/admin/delete-gallery/'+id)
+            .then(() => {
+              this.getAllGalleries()
+            })
+        }
     },
     computed: {},
     created(){

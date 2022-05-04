@@ -74,6 +74,7 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
 
     Route::get('get-gallery/{id}', [GalleryController::class, 'show']);
     Route::post('edit-gallery/{id}', [GalleryController::class, 'update']);
+    Route::delete('delete-gallery/{id}', [GalleryController::class, 'destroy']);
 
     Route::get('get-faqs', [FaqController::class, 'index']);
     Route::get('get-asked-question/{id}', [FaqController::class, 'getAdminQuestion']);
@@ -111,6 +112,9 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
 
     Route::get('get-admin-chooses', [ChooseController::class, 'index']);
     Route::post('create-choose-data', [ChooseController::class, 'store']);
+    Route::get('get-choose/{id}', [ChooseController::class, 'show']);
+    Route::post('edit-choose/{id}', [ChooseController::class, 'update']);
+    Route::delete('delete-admin-choose/{id}', [ChooseController::class, 'destroy']);
 
 });
 
@@ -132,6 +136,8 @@ Route::get('get-site-settings', [ContactSettingController::class, 'getSiteSettin
 Route::get('get-sport-gallery', [GalleryController::class, 'getSportGallery']);
 Route::get('get-agriculture-gallery', [GalleryController::class, 'getAgricultureGallery']);
 Route::get('get-education-gallery', [GalleryController::class, 'educationGalleries']);
+Route::get('get-socialevents-gallery', [GalleryController::class, 'getSocialEventsGallery']);
+Route::get('get-graduation-gallery', [GalleryController::class, 'getGraduationGallery']);
 
 Route::post('subscribe-newsletter', [SubscriptionController::class, 'store']);
 Route::post('send-message', [InboxController::class, 'store']);

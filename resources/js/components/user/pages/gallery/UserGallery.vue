@@ -22,14 +22,12 @@
 					<h1 class="text-center text-muted mb-5" style="margin-top:-80px">School Gallery</h1>
 					<!-- <h4 class="font-weight-bold" v-for="category in categories" :key="category.id">{{ category.name }}</h4> -->
 					
-					<div v-if="educationGalleries < 1"></div>
-
-					<div class="mb-5" v-else>
+					<div class="mb-5">
 						<h4 class="font-weight-bold text-center mb-3"><u>Education</u></h4>
 						<div class="row" v-if="educationGalleries < 1">
-							<h1 class="text-center">No data</h1>
+							<h5 class="text-center mb-4">No data</h5>
 						</div>
-						<div class="row" v-else>
+						<div class="row">
 							<div class="col-lg-3" v-for="educationGallery in educationGalleries" :key="educationGallery.id">
 								<div v-if="educationGallery.category.name === 'Education'">
 									<a :href="fileLink(educationGallery.image)" target="_blank" class="img-gal">
@@ -50,7 +48,7 @@
 					<div class="mb-5">
 						<h4 class="font-weight-bold text-center mb-3"><u>Sports</u></h4>
 						<div class="row" v-if="sportGalleries < 1">
-							<h1 class="text-center">No data</h1>
+							<h5 class="text-center mb-4">No data</h5>
 						</div>
 						<div class="row">
 							<div class="col-lg-3" v-for="sportGallery in sportGalleries" :key="sportGallery.id">
@@ -58,7 +56,8 @@
 									<a :href="fileLink(sportGallery.image)" target="_blank" class="img-gal">
 										<div class="single-imgs relative">		
 											<div class="relative">					
-												<img class="img-fluid" :src="fileLink(sportGallery.image)" alt="">				
+												<img class="img-fluid" :src="fileLink(sportGallery.image)" alt=""
+												style="width: 200px;height: 197px;object-fit:cover">				
 											</div>
 										</div>
 									</a>
@@ -70,9 +69,9 @@
 					</div>
 
 					<div class="mb-5">
-						<h4 class="font-weight-bold text-center">Agriculture</h4>
+						<h4 class="font-weight-bold text-center"><u>Agriculture</u></h4>
 							<div class="row" v-if="agricultureGalleries < 1">
-								<h1 class="text-center">No data</h1>
+								<h5 class="text-center mb-4">No data</h5>
 							</div>
 						<div class="row">
 							<div class="col-lg-3" v-for="agricultureGallery in agricultureGalleries" :key="agricultureGallery.id">
@@ -81,7 +80,7 @@
 										<div class="single-imgs relative">		
 											<div class="relative">					
 												<img class="img-fluid" :src="fileLink(agricultureGallery.image)" alt=""
-												style="object-fit:cover">				
+												style="width: 200px;height: 197px;object-fit:cover">				
 											</div>
 										</div>
 									</a>
@@ -92,25 +91,52 @@
 								:page-size="parseInt(agriculturePage.per_page)" v-if="agriculturePage" @on-change="getAgricultureCategories" />
 					</div>
 
-					<!-- <div class="mb-5">
-						<h4 class="font-weight-bold text-center">Social Events</h4>
+					<div class="mb-5">
+						<h4 class="font-weight-bold text-center"><u>Social Events</u></h4>
+							<div class="row" v-if="socialEventGalleries < 1">
+								<h5 class="text-center mb-4">No data</h5>
+							</div>
 						<div class="row">
-							<div class="col-lg-3" v-for="agricultureGallery in agricultureGalleries" :key="agricultureGallery.id">
-								<div v-if="agricultureGallery.category.name === 'Agriculture'">
-									<a :href="fileLink(agricultureGallery.image)" target="_blank" class="img-gal">
+							<div class="col-lg-3" v-for="socialEventGallery in socialEventGalleries" :key="socialEventGallery.id">
+								<div v-if="socialEventGallery.category.name === 'Social Events'">
+									<a :href="fileLink(socialEventGallery.image)" target="_blank" class="img-gal">
 										<div class="single-imgs relative">		
 											<div class="relative">					
-												<img class="img-fluid" :src="fileLink(agricultureGallery.image)" alt=""
-												style="object-fit:cover">				
+												<img class="img-fluid" :src="fileLink(socialEventGallery.image)" alt=""
+												style="width: 200px;height: 197px;object-fit:cover">				
 											</div>
 										</div>
 									</a>
 									</div>
 							</div>
 						</div>
-						<Page class="text-center" :total="agriculturePage.total" size="small" :current="agriculturePage.current_page" 
-								:page-size="parseInt(agriculturePage.per_page)" v-if="agriculturePage" @on-change="getAgricultureCategories" />
-					</div> -->
+						<Page class="text-center" :total="socialEventPage.total" size="small" :current="socialEventPage.current_page" 
+								:page-size="parseInt(socialEventPage.per_page)" v-if="socialEventPage" @on-change="getSocialEventCategories" />
+					</div>
+
+					<div class="mb-5">
+						<h4 class="font-weight-bold text-center"><u>Graduation</u></h4>
+							<div class="row" v-if="graduationGalleries < 1">
+								<h5 class="text-center mb-4">No data</h5>
+							</div>
+						<div class="row">
+							<div class="col-lg-3" v-for="graduationGallery in graduationGalleries" :key="graduationGallery.id">
+								<div v-if="graduationGallery.category.name === 'Graduation'">
+									<a :href="fileLink(graduationGallery.image)" target="_blank" class="img-gal">
+										<div class="single-imgs relative">		
+											<div class="relative">					
+												<img class="img-fluid" :src="fileLink(graduationGallery.image)" alt=""
+												style="width: 200px;height: 197px;object-fit:cover">				
+											</div>
+										</div>
+									</a>
+									</div>
+							</div>
+						</div>
+						<Page class="text-center" :total="graduationPage.total" size="small" :current="graduationPage.current_page" 
+								:page-size="parseInt(graduationPage.per_page)" v-if="graduationPage" @on-change="graduationCategories" />
+					</div>
+
 				</div>	
 			</section>
 			<!-- End gallery Area -->
@@ -127,11 +153,15 @@ export default {
 			educationGalleries: [],
 			sportGalleries: [],
 			agricultureGalleries: [],
+			socialEventGalleries: [],
+			graduationGalleries: [],
 			total: 8,
 			pageInfo: null,
 			educationPage: null,
 			sportPage: null,
-			agriculturePage: null
+			agriculturePage: null,
+			socialEventPage: null,
+			graduationPage: null,
 		}
 	},
 	methods: {
@@ -167,6 +197,20 @@ export default {
 					this.agriculturePage = response.data.agricultureGalleries
 				})
 		},
+		getSocialEventCategories: async function(page = 1){
+			axios.get(`get-socialevents-gallery?page=${page}&total=${this.total}`)
+				.then((response) => {
+					this.socialEventGalleries = response.data.socialeventsGalleries.data
+					this.socialEventPage = response.data.socialeventsGalleries
+				})
+		},
+		getGraduationCategories: async function(page = 1){
+			axios.get(`get-graduation-gallery?page=${page}&total=${this.total}`)
+				.then((response) => {
+					this.graduationGalleries = response.data.graduationGalleries.data
+					this.graduationPage = response.data.graduationGalleries
+				})
+		},
 		getAllCategories: async function(){
 			axios.get('get-user-categories')
 				.then((response) => {
@@ -181,6 +225,8 @@ export default {
 		this.getSportCategories()
 		this.getAgricultureCategories()
 		this.getEducationCategories()
+		this.getSocialEventCategories()
+		this.getGraduationCategories()
 	}
 }
 </script>
