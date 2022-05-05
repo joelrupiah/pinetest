@@ -63,12 +63,12 @@ class GalleryController extends Controller
         ], 200);
     }
 
-    public function getGraduationGallery(Request $request)
+    public function getInfrastructureGallery(Request $request)
     {
-        $graduationGalleries = Gallery::with('category')->where('category_id', 5)->paginate($request->total);
+        $infrastructureGalleries = Gallery::with('category')->where('category_id', 5)->paginate($request->total);
 
         return response()->json([
-            'graduationGalleries' => $graduationGalleries
+            'infrastructureGalleries' => $infrastructureGalleries
         ], 200);
     }
 

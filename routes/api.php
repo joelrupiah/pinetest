@@ -137,7 +137,7 @@ Route::get('get-sport-gallery', [GalleryController::class, 'getSportGallery']);
 Route::get('get-agriculture-gallery', [GalleryController::class, 'getAgricultureGallery']);
 Route::get('get-education-gallery', [GalleryController::class, 'educationGalleries']);
 Route::get('get-socialevents-gallery', [GalleryController::class, 'getSocialEventsGallery']);
-Route::get('get-graduation-gallery', [GalleryController::class, 'getGraduationGallery']);
+Route::get('get-infrastructure-gallery', [GalleryController::class, 'getInfrastructureGallery']);
 
 Route::post('subscribe-newsletter', [SubscriptionController::class, 'store']);
 Route::post('send-message', [InboxController::class, 'store']);
