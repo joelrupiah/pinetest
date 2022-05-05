@@ -17,7 +17,8 @@
 								you to provide an environment that is positive, stimulating and focussed 
 								on academic excellence accompanied with high moral characteristics.
 							</p>
-							<a href="/about-us" class="primary-btn text-uppercase">Learn More</a>
+							<a href="/about-us" class="primary-btn text-uppercase"
+							style="background-color:#023020;color:white">Learn More</a>
 						</div>										
 					</div>
 				</div>					
