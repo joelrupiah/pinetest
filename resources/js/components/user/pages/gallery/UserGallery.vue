@@ -28,7 +28,7 @@
 							<h5 class="text-center mb-4">No data</h5>
 						</div>
 						<div class="row">
-							<div class="col-lg-3" v-for="educationGallery in educationGalleries" :key="educationGallery.id">
+							<div class="col-6 col-md-3 col-lg-3" v-for="educationGallery in educationGalleries" :key="educationGallery.id">
 								<div v-if="educationGallery.category.name === 'Education'">
 									<a :href="fileLink(educationGallery.image)" target="_blank" class="img-gal">
 										<div class="single-imgs relative">		
@@ -51,7 +51,7 @@
 							<h5 class="text-center mb-4">No data</h5>
 						</div>
 						<div class="row">
-							<div class="col-lg-3" v-for="sportGallery in sportGalleries" :key="sportGallery.id">
+							<div class="col-6 col-md-3 col-lg-3" v-for="sportGallery in sportGalleries" :key="sportGallery.id">
 								<div v-if="sportGallery.category.name === 'Sports'">
 									<a :href="fileLink(sportGallery.image)" target="_blank" class="img-gal">
 										<div class="single-imgs relative">		
@@ -69,12 +69,12 @@
 					</div>
 
 					<div class="mb-5">
-						<h4 class="font-weight-bold text-center"><u>Agriculture</u></h4>
+						<h4 class="font-weight-bold text-center mb-3"><u>Agriculture</u></h4>
 							<div class="row" v-if="agricultureGalleries < 1">
 								<h5 class="text-center mb-4">No data</h5>
 							</div>
 						<div class="row">
-							<div class="col-lg-3" v-for="agricultureGallery in agricultureGalleries" :key="agricultureGallery.id">
+							<div class="col-6 col-md-3 col-lg-3" v-for="agricultureGallery in agricultureGalleries" :key="agricultureGallery.id">
 								<div v-if="agricultureGallery.category.name === 'Agriculture'">
 									<a :href="fileLink(agricultureGallery.image)" target="_blank" class="img-gal">
 										<div class="single-imgs relative">		
@@ -92,12 +92,13 @@
 					</div>
 
 					<div class="mb-5">
-						<h4 class="font-weight-bold text-center"><u>Social Events</u></h4>
+						<h4 class="font-weight-bold text-center mb-3"><u>Social Events</u></h4>
 							<div class="row" v-if="socialEventGalleries < 1">
 								<h5 class="text-center mb-4">No data</h5>
 							</div>
 						<div class="row">
-							<div class="col-lg-3" v-for="socialEventGallery in socialEventGalleries" :key="socialEventGallery.id">
+							<div class="col-6 col-md-3 col-lg-3" v-for="socialEventGallery in socialEventGalleries" :key="socialEventGallery.id"
+							style="padding-right:0px;padding-left:0px" >
 								<div v-if="socialEventGallery.category.name === 'Social Events'">
 									<a :href="fileLink(socialEventGallery.image)" target="_blank" class="img-gal">
 										<div class="single-imgs relative">		
@@ -115,17 +116,17 @@
 					</div>
 
 					<div class="mb-5">
-						<h4 class="font-weight-bold text-center"><u>Graduation</u></h4>
-							<div class="row" v-if="graduationGalleries < 1">
+						<h4 class="font-weight-bold text-center mb-3"><u>Infrastructure</u></h4>
+							<div class="row" v-if="infrastructureGalleries < 1">
 								<h5 class="text-center mb-4">No data</h5>
 							</div>
 						<div class="row">
-							<div class="col-lg-3" v-for="graduationGallery in graduationGalleries" :key="graduationGallery.id">
-								<div v-if="graduationGallery.category.name === 'Graduation'">
-									<a :href="fileLink(graduationGallery.image)" target="_blank" class="img-gal">
+							<div class="col-6 col-md-3 col-lg-3" v-for="infrastructureGallery in infrastructureGalleries" :key="infrastructureGallery.id">
+								<div v-if="infrastructureGallery.category.name === 'Infrastructure'">
+									<a :href="fileLink(infrastructureGallery.image)" target="_blank" class="img-gal">
 										<div class="single-imgs relative">		
 											<div class="relative">					
-												<img class="img-fluid" :src="fileLink(graduationGallery.image)" alt=""
+												<img class="img-fluid" :src="fileLink(infrastructureGallery.image)" alt=""
 												style="width: 200px;height: 197px;object-fit:cover">				
 											</div>
 										</div>
@@ -133,8 +134,8 @@
 									</div>
 							</div>
 						</div>
-						<Page class="text-center" :total="graduationPage.total" size="small" :current="graduationPage.current_page" 
-								:page-size="parseInt(graduationPage.per_page)" v-if="graduationPage" @on-change="graduationCategories" />
+						<Page class="text-center" :total="infrastructurePage.total" size="small" :current="infrastructurePage.current_page" 
+								:page-size="parseInt(infrastructurePage.per_page)" v-if="infrastructurePage" @on-change="getInfrastructureCategories" />
 					</div>
 
 				</div>	
@@ -154,14 +155,14 @@ export default {
 			sportGalleries: [],
 			agricultureGalleries: [],
 			socialEventGalleries: [],
-			graduationGalleries: [],
+			infrastructureGalleries: [],
 			total: 8,
 			pageInfo: null,
 			educationPage: null,
 			sportPage: null,
 			agriculturePage: null,
 			socialEventPage: null,
-			graduationPage: null,
+			infrastructurePage: null,
 		}
 	},
 	methods: {
@@ -204,11 +205,11 @@ export default {
 					this.socialEventPage = response.data.socialeventsGalleries
 				})
 		},
-		getGraduationCategories: async function(page = 1){
-			axios.get(`get-graduation-gallery?page=${page}&total=${this.total}`)
+		getInfrastructureCategories: async function(page = 1){
+			axios.get(`get-infrastructure-gallery?page=${page}&total=${this.total}`)
 				.then((response) => {
-					this.graduationGalleries = response.data.graduationGalleries.data
-					this.graduationPage = response.data.graduationGalleries
+					this.infrastructureGalleries = response.data.infrastructureGalleries.data
+					this.infrastructurePage = response.data.infrastructureGalleries
 				})
 		},
 		getAllCategories: async function(){
@@ -226,7 +227,7 @@ export default {
 		this.getAgricultureCategories()
 		this.getEducationCategories()
 		this.getSocialEventCategories()
-		this.getGraduationCategories()
+		this.getInfrastructureCategories()
 	}
 }
 </script>

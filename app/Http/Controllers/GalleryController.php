@@ -74,7 +74,7 @@ class GalleryController extends Controller
 
     public function create()
     {
-        //
+        //creating data
     }
 
     public function store(Request $request)
