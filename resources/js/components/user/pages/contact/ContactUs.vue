@@ -1,108 +1,250 @@
 <template>
     <div id="contact_us">
-			<!-- start banner Area -->
-			<section class="banner-area relative about-banner" id="home">	
-          	<notifications group="contactus" class="mt-3" />
-				<div class="overlay overlay-bg"></div>
-				<div class="container">				
-					<div class="row d-flex align-items-center justify-content-center">
-						<div class="about-content col-lg-12">
-							<h1 class="text-white">
-								Contact Us				
-							</h1>	
-							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href=""> Contact Us</a></p>
-						</div>	
-					</div>
-				</div>
-			</section>
-			<!-- End banner Area -->				  
+    <notifications group="contactus" class="mt-3" />
+    <!--Start breadcrumb area-->
+    <section
+      class="breadcrumb-area style2"
+      style="
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(/frontend/images/about-page.jpg);
+        height: 380px;
+        width: 100%;
+        object-fit: cover;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="inner-content-box clearfix">
+              <div class="title-s2 text-center">
+                <span>Pinecrest Academy</span>
+                <h1>About Us Page</h1>
+              </div>
+              <div class="breadcrumb-menu float-left">
+                <ul class="clearfix">
+                  <li><a href="/">Home</a></li>
+                  <li class="active">About Us</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End breadcrumb area-->	
+	    <!--Start home google map area-->
+    <section class="home-google-map-area mt-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="google-map-box">
+              <div
+                class="map-wrap"
+                style="width: 100%; height: 445px"
+                id="map"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End home google map area-->
 
-			<!-- Start contact-page Area -->
-			<section class="contact-page-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
-						<div class="col-lg-4 d-flex flex-column address-wrap" v-for="sitesetting in sitesettings" :key="sitesetting.id">
-							<div class="single-contact-address d-flex flex-row">
-								<div class="icon">
-									<span class="lnr lnr-home"></span>
-								</div>
-								<div class="contact-details">
-									<h5>{{ sitesetting.town }}</h5>
-									<p>
-										{{ sitesetting.address }}
-									</p>
-								</div>
-							</div>
-							<div class="single-contact-address d-flex flex-row">
-								<div class="icon">
-									<span class="lnr lnr-phone-handset"></span>
-								</div>
-								<div class="contact-details">
-									<h5>{{ sitesetting.phone }}</h5>
-									<p>Mon to Fri 8am to 5pm</p>
-								</div>
-							</div>
-							<div class="single-contact-address d-flex flex-row">
-								<div class="icon">
-									<span class="lnr lnr-envelope"></span>
-								</div>
-								<div class="contact-details">
-									<h5>{{ sitesetting.email }}</h5>
-									<p>Send us a message</p>
-								</div>
-							</div>														
-						</div>
-						<div class="col-lg-8">
-							<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
-								<div class="row">	
-									<div class="col-lg-6 form-group">
-										<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" 
-											onblur="this.placeholder = 'Enter your name'" 
-											class="common-input mb-2 form-control" required="" 
-											v-model="form.name" type="text">
-										<p class="text-danger text-sm mb-2" v-if="errors.name">
-											{{ errors.name[0] }}
-										</p>
-										<input name="email" placeholder="Enter email address" 
-											pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" 
-											onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" 
-											class="common-input mb-2 form-control" required="" 
-											v-model="form.email" type="email">
-										<p class="text-danger text-sm mb-2" v-if="errors.email">
-											{{ errors.email[0] }}
-										</p>
-										<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" 
-											onblur="this.placeholder = 'Enter subject'" class="common-input mb-2 form-control" 
-											required="" v-model="form.subject" type="text">
-										<p class="text-danger text-sm mb-2" v-if="errors.subject">
-											{{ errors.subject[0] }}
-										</p>
-									</div>
-									<div class="col-lg-6 form-group">
-										<textarea class="common-textarea form-control" name="message" 
-											placeholder="Enter Messege" onfocus="this.placeholder = ''" 
-											onblur="this.placeholder = 'Enter Messege'" required=""
-											v-model="form.message" ></textarea>			
-										<p class="text-danger text-sm" v-if="errors.message">
-											{{ errors.message[0] }}
-										</p>
-									</div>
-									<div class="col-lg-12">
-										<div class="alert-msg" style="text-align: left;"></div>
-										<el-button type="success" :loading="loading" size="mini" 
-											@click.prevent="sendMessage()">{{ loading ? 'Sending message.....' : 'Send message' }}
-										</el-button>
-										<!-- <button class="genric-btn primary" style="float: right;"
-										@click.prevent="sendMessage">Send Message</button>											 -->
-									</div>
-								</div>
-							</form>	
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End contact-page Area -->
+    <!--Start Contact details Area-->
+    <section class="contact-details-area">
+      <div class="sec-title text-center">
+        <p>Contact Details</p>
+        <div class="title text-muted">How Can We <span>Help You?</span></div>
+      </div>
+      <div
+        class="parallax-background"
+        style="
+          background-image: url(frontend/images/parallax-background/contact-details-bg.html);
+        "
+      ></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="contact-details-content">
+              <div class="row">
+                <div
+                  class="col-xl-6 col-lg-6"
+                  v-for="sitesetting in sitesettings"
+                  :key="sitesetting.id"
+                >
+                  <div
+                    class="content-info-box"
+                    style="
+                      background-image: url(frontend/images/parallax-background/contact-info-box-bg.jpg);
+                    "
+                  >
+                    <div class="inner-content">
+                      <div class="inner">
+                        <div
+                          class="single-info-box wow fadeInDown"
+                          data-wow-delay="100ms"
+                          data-wow-duration="1200ms"
+                        >
+                          <div class="icon">
+                            <span class="fa fa-map-marker"></span>
+                          </div>
+                          <div class="text">
+                            <h3>Visit Our Office</h3>
+                            <p>
+                              {{ sitesetting.town }}, {{ sitesetting.address }}
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="single-info-box white-bg wow fadeInUp"
+                          data-wow-delay="100ms"
+                          data-wow-duration="1200ms"
+                        >
+                          <div class="icon">
+                            <span class="fa fa-phone"></span>
+                          </div>
+                          <div class="text">
+                            <h3>Call us on</h3>
+                            <p>
+                              {{ sitesetting.phone }}
+                            </p>
+                            <p>Mon to Fri 8am to 5pm</p>
+                          </div>
+                        </div>
+                        <div
+                          class="single-info-box wow fadeInUp"
+                          data-wow-delay="100ms"
+                          data-wow-duration="1200ms"
+                          style="background-color: #27282c"
+                        >
+                          <div class="icon">
+                            <span class="fa fa-envelope"></span>
+                          </div>
+                          <div class="text">
+                            <h3>Email us at</h3>
+                            <p>
+                              {{ sitesetting.email }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                  <div class="contact-details-form-box">
+                    <div class="title-box">
+                      <h2>
+                        Send Us a<br />
+                        Message
+                      </h2>
+                    </div>
+                    <div class="contact-details-box">
+                      <form class="contact-details-form">
+                        <div class="row">
+                          <div class="col-xl-6">
+                            <div class="single-box">
+								<p
+                                class="text-danger text-sm mb-2"
+                                v-if="errors.name"
+                              >
+                                {{ errors.name[0] }}
+                              </p>
+                              <input
+                                type="text"
+                                name="form_name"
+                                value=""
+                                placeholder="Enter Your Name"
+                                required=""
+                                v-model="form.name"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-xl-6">
+                            <div class="single-box">
+								<p
+                                class="text-danger text-sm mb-2"
+                                v-if="errors.email"
+                              >
+                                {{ errors.email[0] }}
+                              </p>
+                              <input
+                                type="email"
+                                name="form_email"
+                                value=""
+                                placeholder="Enter Your Email"
+                                required=""
+                                v-model="form.email"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <div class="single-box">
+								<p
+                                class="text-danger text-sm mb-2"
+                                v-if="errors.subject"
+                              >
+                                {{ errors.subject[0] }}
+                              </p>
+                              <input
+                                type="text"
+                                name="form_subject"
+                                value=""
+                                placeholder="Enter Subject"
+                                required=""
+                                data-width="100%"
+                                v-model="form.subject"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <div class="single-box">
+								<p
+                                class="text-danger text-sm"
+                                v-if="errors.message"
+                              >
+                                {{ errors.message[0] }}
+                              </p>
+                              <textarea
+                                name="form_request"
+                                placeholder="Enter Message"
+                                required=""
+                                v-model="form.message"
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <div class="single-box">
+                              <el-button
+                                type="success"
+                                :loading="loading"
+                                style="padding: 5px 30px"
+                                @click.prevent="sendMessage()"
+                                >{{
+                                  loading
+                                    ? "Sending message....."
+                                    : "Send message"
+                                }}
+                              </el-button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Contact details Area-->		  
     </div>
 </template>
 

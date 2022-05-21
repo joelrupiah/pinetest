@@ -133,6 +133,7 @@ Route::get('get-user-chooses', [ChooseController::class, 'getUserChooses']);
 Route::get('get-user-categories', [CategoryController::class, 'getUserCategories']);
 Route::get('get-site-settings', [ContactSettingController::class, 'getSiteSettings']);
 
+Route::get('get-all-galleries', [GalleryController::class, 'getAllGalleries']);
 Route::get('get-sport-gallery', [GalleryController::class, 'getSportGallery']);
 Route::get('get-agriculture-gallery', [GalleryController::class, 'getAgricultureGallery']);
 Route::get('get-education-gallery', [GalleryController::class, 'educationGalleries']);

@@ -38,9 +38,9 @@ Vue.use(VueGoogleMaps, {
 Vue.use(VueCompositionAPI)
 Vue.use( CKEditor )
 Vue.use(ViewUI)
-Vue.use(ElementUI);
+Vue.use(ElementUI)
 Vue.use(Notifications)
-Vue.use(VueGeolocation);
+Vue.use(VueGeolocation)
 // End VueJs frontend frameworks
 
 const admin = new Vue({

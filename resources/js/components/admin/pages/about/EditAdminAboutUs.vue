@@ -30,60 +30,6 @@
                                             </ckeditor>
 										</div>
 									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Header One</label>
-										<div>
-											<input class="form-control" v-model="form.headerOne" type="text" value="Input Header One">
-										</div>
-									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Header Two.</label>
-										<div>
-											<input class="form-control" v-model="form.headerTwo" type="text" value="Input Header Two">
-										</div>
-									</div>
-                                    <div class="form-group col-6">
-										<label class="col-form-label">Header Three.</label>
-										<div>
-											<input class="form-control" v-model="form.headerThree" type="text" value="Input Header Three">
-										</div>
-									</div>
-                                    <div class="form-group col-6">
-										<label class="col-form-label">Header Four.</label>
-										<div>
-											<input class="form-control" v-model="form.headerFour" type="text" value="Input Header Four">
-										</div>
-									</div>
-
-                                    <div class="form-group col-6">
-										<label class="col-form-label">First Description.</label>
-										<div>
-                                            <ckeditor :editor="editor" v-model="form.descriptionOne" :config="editorConfig">
-                                            </ckeditor>
-										</div>
-									</div>
-                                    <div class="form-group col-6">
-										<label class="col-form-label">Second Description.</label>
-										<div>
-                                            <ckeditor :editor="editor" v-model="form.descriptionTwo" :config="editorConfig">
-                                            </ckeditor>
-										</div>
-									</div>
-                                    <div class="form-group col-6">
-										<label class="col-form-label">Third Description.</label>
-										<div>
-                                            <ckeditor :editor="editor" v-model="form.descriptionThree" :config="editorConfig">
-                                            </ckeditor>
-										</div>
-									</div>
-                                    <div class="form-group col-6">
-										<label class="col-form-label">Fourth Description.</label>
-										<div>
-                                            <ckeditor :editor="editor" v-model="form.descriptionFour" :config="editorConfig">
-                                            </ckeditor>
-										</div>
-									</div>
-
                                     <div class="col-12">
 										<div class="ml-auto">
 											<h3>2. Our Story</h3>

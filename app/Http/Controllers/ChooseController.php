@@ -44,7 +44,8 @@ class ChooseController extends Controller
             'image' => $file_name
         ]);
 
-        Image::make($request->image)->resize(360, 220)->save(public_path('/uploads/img/choose/').$file_name);
+        Image::make($request->image)->save(public_path('/uploads/img/choose/').$file_name);
+        // Image::make($request->image)->resize(360, 220)->save(public_path('/uploads/img/choose/').$file_name);
 
         return response()->json('success', 200);
 
@@ -81,7 +82,8 @@ class ChooseController extends Controller
             $file_name = \Str::random(10) . '.' . $file_ex;
             $choose->image = $file_name;
 
-            Image::make($request->image)->resize(360, 220)->save(public_path('/uploads/img/choose/').$file_name);
+            Image::make($request->image)->save(public_path('/uploads/img/choose/').$file_name);
+            // Image::make($request->image)->resize(360, 220)->save(public_path('/uploads/img/choose/').$file_name);
         }
 
         $choose->save();

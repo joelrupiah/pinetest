@@ -18,6 +18,15 @@ class GalleryController extends Controller
         ], 200);
     }
 
+    public function getAllGalleries()
+    {
+        $allgalleries = Gallery::get()->take(6);
+
+        return response()->json([
+            'allgalleries' => $allgalleries
+        ], 200);
+    }
+
     public function getGalleries(Request $request)
     {
         $galleries = Gallery::with('category')->paginate($request->total);

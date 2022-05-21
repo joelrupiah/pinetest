@@ -1,651 +1,1274 @@
 <template>
-    <div id="home">
+  <div id="home">
+    <notifications group="home" class="mt-3" />
+    <!--Main Slider-->
+    <section class="main-slider style2 mb-5">
+      <div
+        class="rev_slider_wrapper fullwidthbanner-container"
+        id="rev_slider_one_wrapper"
+        data-source="gallery"
+      >
+        <div
+          class="rev_slider fullwidthabanner"
+          id="rev_slider_two"
+          data-version="5.4.1"
+        >
+          <ul>
+            <li
+              data-description="Slide Description"
+              data-easein="default"
+              data-easeout="default"
+              data-fsmasterspeed="1500"
+              data-fsslotamount="7"
+              data-fstransition="fade"
+              data-hideafterloop="0"
+              data-hideslideonmobile="off"
+              data-index="rs-1689"
+              data-masterspeed="default"
+              data-param1=""
+              data-param10=""
+              data-param2=""
+              data-param3=""
+              data-param4=""
+              data-param5=""
+              data-param6=""
+              data-param7=""
+              data-param8=""
+              data-param9=""
+              data-rotate="0"
+              data-saveperformance="off"
+              data-slotamount="default"
+              data-thumb="frontend/images/slides/v2-1.jpg"
+              data-title="Slide Title"
+              data-transition="parallaxvertical"
+            >
+              <img
+                alt=""
+                class="rev-slidebg"
+                data-bgfit="cover"
+                data-bgparallax="10"
+                data-bgposition="center center"
+                data-bgrepeat="no-repeat"
+                data-no-retina=""
+                src="frontend/images/slides/slide-one.jpg"
+              />
 
-		<notifications group="home" class="mt-3" />
-			<!-- start banner Area -->
-			<section class="banner-area relative" id="home">
-				<div class="overlay overlay-bg"></div>	
-				<div class="container">
-					<div class="row fullscreen d-flex align-items-center justify-content-between">
-						<div class="banner-content col-lg-9 col-md-12">
-							<h1 class="text-uppercase">
-								Welcome to Pinecrest Academy		
-							</h1>
-							<p class="text-white">
-								We consider it a privilege to share in your child’s 
-								educational journey and we look forward to working together with 
-								you to provide an environment that is positive, stimulating and focussed 
-								on academic excellence accompanied with high moral characteristics.
-							</p>
-							<a href="/about-us" class="primary-btn text-uppercase"
-							style="background-color:#023020;color:white">Learn More</a>
-						</div>										
-					</div>
-				</div>					
-			</section>
-			<!-- End banner Area -->
+              <div
+                class="tp-caption"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on"
+                data-type="text"
+                data-height="none"
+                data-width="['800','800','700','400']"
+                data-whitespace="normal"
+                data-hoffset="['15','15','15','15']"
+                data-voffset="['-80','-95','-80','-90']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                style="z-index: 7; white-space: nowrap"
+              >
+                <div class="slide-content left-slide">
+                  <div class="big-title">
+                    Welcome to<br />
+                    pinecrest academy.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tp-caption"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on"
+                data-type="text"
+                data-height="none"
+                data-width="['800','800','700','400']"
+                data-whitespace="normal"
+                data-hoffset="['15','15','15','15']"
+                data-voffset="['25','0','-5','-20']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
+                        {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                style="z-index: 7; white-space: nowrap"
+              >
+                <div class="slide-content left-slide">
+                  <div class="text">
+                    We consider it a privilege to share in your child’s
+                    educational journey.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tp-caption"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on"
+                data-type="text"
+                data-height="none"
+                data-width="['800','800','700','400']"
+                data-whitespace="normal"
+                data-hoffset="['15','15','15','15']"
+                data-voffset="['105','90','75','65']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                style="z-index: 7; white-space: nowrap"
+              >
+                <div class="slide-content left-slide">
+                  <div class="btn-box">
+                    <a
+                      class="html5lightbox play-button"
+                      title="crystalo Video Gallery"
+                      href="https://www.youtube.com/watch?v=p25gICT63ek"
+                    >
+                      <span class="flaticon-play-button"></span>
+                    </a>
+                    <a class="slide-style2-button" href="#">More About Us</a>
+                  </div>
+                </div>
+              </div>
+            </li>
 
-			<!-- Start feature Area -->
-			<section class="feature-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="single-feature">
-								<div class="title">
-									<h4>Vision</h4>
-								</div>
-								<div class="desc-wrap">
-									<p>
-										To create and provide an atmosphere for learners to excel.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-feature">
-								<div class="title">
-									<h4>Mission</h4>
-								</div>
-								<div class="desc-wrap">
-									<p>
-										To provide every learner with an opportunity to achieve their full potential academically, emotionally, physically and socially within a healthy, safe and enjoyable school environment.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-feature">
-								<div class="title">
-									<h4>Motto</h4>
-								</div>
-								<div class="desc-wrap">
-									<p>
-										Learn, Adapt and Excel
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End feature Area -->
-					
-			<!-- Start popular-course Area -->
-			<section class="top-category-widget-area pt-90 pb-90">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Why Choose Us</h1>
-								<p>We are enthusiastic and passionate about young learners, Our values are dear to us.</p>
-							</div>
-						</div>
-					</div>						
-					<div class="row">		
-						<div class="col-lg-4 mb-1" v-for="choose in chooses" :key="choose.id">
-							<div class="single-cat-widget">
-								<div class="content relative">
-									<div class="overlay overlay-bg"></div>
-								    <a>
-								      <div class="thumb">
-								  		 <img class="content-image img-fluid d-block mx-auto" :src="fileLinkChoose(choose.image)" alt="">
-								  	  </div>
-								      <div class="content-details">
-								        <h4 class="content-title mx-auto text-uppercase">{{ choose.title }}</h4>
-								        <span></span>
-								        <p v-html="choose.description"></p>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>												
-					</div>
-				</div>	
-			</section>
-			<!-- End popular-course Area -->
-			
-			<!-- Start curriculum Area -->
-			<section class="search-course-area relative mb-5">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row justify-content-between align-items-center">
-						<div class="col-lg-12 col-md-12 search-course-left section-gap ml-5 mr-5">
-							<h1 class="text-white">
-								Curriculum
-							</h1>
-							<p class="text-white font-weight-bold">
-								For Kindergarten,  we use the highly effective and internationally acclaimed
-								Montessori method of teaching before ushering in the CBC (Competency Based Curriculum)
-								Kenyan Curriculum. We have highly qualified teachers for both programmes.
-							</p>
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End curriculum Area -->
+            <li
+              data-description="Slide Description"
+              data-easein="default"
+              data-easeout="default"
+              data-fsmasterspeed="1500"
+              data-fsslotamount="7"
+              data-fstransition="fade"
+              data-hideafterloop="0"
+              data-hideslideonmobile="off"
+              data-index="rs-1687"
+              data-masterspeed="default"
+              data-param1=""
+              data-param10=""
+              data-param2=""
+              data-param3=""
+              data-param4=""
+              data-param5=""
+              data-param6=""
+              data-param7=""
+              data-param8=""
+              data-param9=""
+              data-rotate="0"
+              data-saveperformance="off"
+              data-slotamount="default"
+              data-thumb="frontend/images/slides/v2-2.jpg"
+              data-title="Slide Title"
+              data-transition="parallaxvertical"
+            >
+              <img
+                alt=""
+                class="rev-slidebg"
+                data-bgfit="cover"
+                data-bgparallax="10"
+                data-bgposition="center center"
+                data-bgrepeat="no-repeat"
+                data-no-retina=""
+                src="frontend/images/slides/slide-two.jpg"
+              />
 
-			<!-- Start events Area -->
-			<section class="blog-area section-gap" id="blog">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">School Events</h1>
-							</div>
-						</div>
-					</div>					
-					<div class="row">
-						<div class="col-lg-3 col-md-6 single-blog" v-if="events.length < 0">
-							<h2 class="text-muted text-danger text-md">
-								No Events found
-							</h2>
-						</div>
-						<div class="col-lg-3 col-md-6 single-blog mb-2" v-else v-for="event in events" :key="event.id">
-							<div class="thumb">
-								<img class="img-fluid" :src="fileLinkEvent(event.image)" alt="Event Image"
-								style="width: 263px;height: 220px;object-fit:cover">								
-							</div>
-							<p class="meta">{{ event.start_date | time }} to {{ event.end_date | time }}</p>
-							<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href">
-								<h5 v-html="event.title"></h5>
-							</a>
-							<p v-html="event.description"></p>
-							<a :href="$router.resolve({name:'EventDetail', params: {eventSlug: event.slug}}).href" 
-							class="details-btn d-flex justify-content-center align-items-center">
-								<span class="details">Details</span><span class="lnr lnr-arrow-right"></span></a>		
-						</div>					
-					</div>
-				</div>	
-			</section>
-			<!-- End events Area -->
+              <div
+                class="tp-caption"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on"
+                data-type="text"
+                data-height="none"
+                data-width="['800','800','700','400']"
+                data-whitespace="normal"
+                data-hoffset="['15','15','15','15']"
+                data-voffset="['-80','-95','-80','-90']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                style="z-index: 7; white-space: nowrap"
+              >
+                <div class="slide-content left-slide">
+                  <div class="big-title">
+                    Welcome to<br />
+                    pinecrest academy.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tp-caption"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on"
+                data-type="text"
+                data-height="none"
+                data-width="['800','800','700','400']"
+                data-whitespace="normal"
+                data-hoffset="['15','15','15','15']"
+                data-voffset="['25','0','-5','-20']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
+                        {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                style="z-index: 7; white-space: nowrap"
+              >
+                <div class="slide-content left-slide">
+                  <div class="text">
+                    We look forward to working together with you to provide an
+                    environment that is positive.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tp-caption"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on"
+                data-type="text"
+                data-height="none"
+                data-width="['800','800','700','400']"
+                data-whitespace="normal"
+                data-hoffset="['15','15','15','15']"
+                data-voffset="['105','90','75','65']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                style="z-index: 7; white-space: nowrap"
+              >
+                <div class="slide-content left-slide">
+                  <div class="btn-box">
+                    <a
+                      class="html5lightbox play-button"
+                      title="crystalo Video Gallery"
+                      href="https://www.youtube.com/watch?v=p25gICT63ek"
+                    >
+                      <span class="flaticon-play-button"></span>
+                    </a>
+                    <a class="slide-style2-button" href="#">More About Us</a>
+                  </div>
+                </div>
+              </div>
+            </li>
 
-			<!-- Start search-course Area -->
-			<section class="search-course-area relative mt-5" style="background:url(/frontend/img/children.jpg) center;background-size:cover">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row justify-content-between align-items-center">
-						<div class="col-lg-6 col-md-6 search-course-left">
-							<h1 class="text-white">
-								Get quality education
-							</h1>
-							<p>
-								The teaching methods that we deploy are time tested for effective learning
-							</p>
-							<div class="row details-content">
-								<div class="col single-detials">
-									<span class="lnr lnr-graduation-hat"></span>
-									<a href="#"><h4>Expert Teachers</h4></a>		
-									<p>
-										We employ teachers who are TSC recognised and have Diploma and Degree qualifications
-									</p>						
-								</div>
-								<div class="col single-detials">
-									<span class="lnr lnr-license"></span>
-									<a href="#"><h4>Resources and Equipments</h4></a>		
-									<p>
-										We use Technology to enhance our ability to deliver on the curriculum
-									</p>						
-								</div>								
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 search-course-right section-gap">
-							<form class="form-wrap" action="#">
-								<h4 class="text-white pb-20 text-center mb-30">Request for admission</h4>
-								<div class="mb-1">
-									<el-input placeholder="Parent's Name (required)" size="mini" v-model="form.parent_name"></el-input>	
-									<small class="text-danger text-sm" v-if="errors.parent_name">
-										{{ errors.parent_name[0] }}
-									</small>
-								</div>	
-								<div class="mb-1">
-									<el-input placeholder="Parent's Phone (required)" size="mini" v-model="form.parent_phone"></el-input>	
-									<small class="text-danger text-sm" v-if="errors.parent_phone">
-										{{ errors.parent_phone[0] }}
-									</small>
-								</div>	
-								<div class="mb-1">
-									<el-input placeholder="Parent's Email (optional)" size="mini" v-model="form.parent_email"></el-input>	
-									<small class="text-danger text-sm" v-if="errors.parent_email">
-										{{ errors.parent_email[0] }}
-									</small>
-								</div>
-								<div class="mb-1">
-									<el-input placeholder="Student's Name (required)" size="mini" v-model="form.student_name"></el-input>	
-									<small class="text-danger text-sm" v-if="errors.student_name">
-										{{ errors.student_name[0] }}
-									</small>
-								</div>
-								<div class="mb-1">
-									<el-input placeholder="Student's Age (required)" size="mini" v-model="form.student_age"></el-input>	
-									<small class="text-danger text-sm" v-if="errors.student_age">
-										{{ errors.student_age[0] }}
-									</small>
-								</div>
-								<div class="form-select mb-3" id="service-select">
-									<el-select v-model="form.grade_id" placeholder="Choose Grade (required)"
-										size="mini" style="width:100%" >
-										<el-option 
-											v-for="grade in grades"
-											:value="grade.id" 
-											:label="grade.name"
-											:key="grade.id">
-											{{ grade.name }}
-										</el-option>
-									</el-select>
-									<small class="text-danger text-sm" v-if="errors.grade_id">
-										{{ errors.grade_id[0] }}
-									</small>
-								</div>									
-								<el-button :loading="loading" size="mini" style="background-color:royalblue;color:white"
-									@click.prevent="submitApplication()">{{ loading ? 'Submitting Application.....' : 'Submit Application' }}
-								</el-button>
-							</form>
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End search-course Area -->
+            <li
+              data-description="Slide Description"
+              data-easein="default"
+              data-easeout="default"
+              data-fsmasterspeed="1500"
+              data-fsslotamount="7"
+              data-fstransition="fade"
+              data-hideafterloop="0"
+              data-hideslideonmobile="off"
+              data-index="rs-1688"
+              data-masterspeed="default"
+              data-param1=""
+              data-param10=""
+              data-param2=""
+              data-param3=""
+              data-param4=""
+              data-param5=""
+              data-param6=""
+              data-param7=""
+              data-param8=""
+              data-param9=""
+              data-rotate="0"
+              data-saveperformance="off"
+              data-slotamount="default"
+              data-thumb="frontend/images/slides/v2-3.jpg"
+              data-title="Slide Title"
+              data-transition="parallaxvertical"
+            >
+              <img
+                alt=""
+                class="rev-slidebg"
+                data-bgfit="cover"
+                data-bgparallax="10"
+                data-bgposition="center center"
+                data-bgrepeat="no-repeat"
+                data-no-retina=""
+                src="frontend/images/slides/slide-three.jpg"
+              />
 
-			<!-- Start cta-one Area -->
-			<!-- <section class="cta-one-area relative section-gap">
-				<div class="container">
-					<div class="overlay overlay-bg"></div>
-					<div class="row justify-content-center">
-						<div class="wrap">
-							<h1 class="text-white">Become part of our team</h1>
-							<p>
-								There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck.
-							</p>
-							<a class="primary-btn wh" href="" @click.prevent="applyForAJob">Apply for an opening</a>								
-						</div>					
-					</div>
-				</div>	
-			</section> -->
-			<!-- End cta-one Area -->
-		
-			<!-- Start review Area -->
-			<!-- <section class="review-area section-gap relative">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">	
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Reviews</h1>
-								<p>If you are a serious astronomy fanatic like a lot of us</p>
-							</div>
-						</div>
-					</div>				
-					<div class="row">
-						<div class="active-review-carusel">
-							<div class="single-review item">
-								<div class="title justify-content-start d-flex">
-									<h4>Fannie Rowe</h4>
-										<p class="ml-3">Parent</p>
-								</div>
-								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-								</p>
-							</div>
-							<div class="single-review item">
-								<div class="title justify-content-start d-flex">
-									<h4>Hulda Sutton</h4>
-										<p class="ml-3">Parent</p>
-								</div>
-								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-								</p>
-							</div>
-							<div class="single-review item">
-								<div class="title justify-content-start d-flex">
-									<h4>Fannie Rowe</h4>
-										<p class="ml-3">Parent</p>
-								</div>
-								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-								</p>
-							</div>
-							<div class="single-review item">
-								<div class="title justify-content-start d-flex">
-									<h4>Hulda Sutton</h4>
-										<p class="ml-3">Parent</p>
-								</div>
-								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-								</p>
-							</div>	
-							<div class="single-review item">
-								<div class="title justify-content-start d-flex">
-									<h4>Fannie Rowe</h4>
-										<p class="ml-3">Parent</p>
-								</div>
-								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-								</p>
-							</div>
-							<div class="single-review item">
-								<div class="title justify-content-start d-flex">
-									<h4>Hulda Sutton</h4>
-										<p class="ml-3">Parent</p>
-								</div>
-								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-								</p>
-							</div>
-							<div class="single-review item">
-								<img src="/frontend/img/r1.png" alt="">
-								<div class="title justify-content-start d-flex">
-									<h4>Fannie Rowe</h4>
-										<p class="ml-3">Parent</p>
-								</div>
-								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-								</p>
-							</div>
-							<div class="single-review item">
-								<div class="title justify-content-start d-flex">
-									<h4>Hulda Sutton</h4>
-										<p class="ml-3">Parent</p>
-								</div>
-								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-								</p>
-							</div>																												
-						</div>
-					</div>
-				</div>	
-			</section> -->
-			<!-- End review Area -->
+              <div
+                class="tp-caption"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on"
+                data-type="text"
+                data-height="none"
+                data-width="['800','800','700','400']"
+                data-whitespace="normal"
+                data-hoffset="['15','15','15','15']"
+                data-voffset="['-80','-95','-80','-90']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                style="z-index: 7; white-space: nowrap"
+              >
+                <div class="slide-content left-slide">
+                  <div class="big-title">
+                    Welcome to<br />
+                    pinecrest academy.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tp-caption"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on"
+                data-type="text"
+                data-height="none"
+                data-width="['800','800','700','400']"
+                data-whitespace="normal"
+                data-hoffset="['15','15','15','15']"
+                data-voffset="['25','0','-5','-20']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},
+                        {"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                style="z-index: 7; white-space: nowrap"
+              >
+                <div class="slide-content left-slide">
+                  <div class="text">
+                    We are enthusiastic and passionate about young learners, our
+                    values are dear to us.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tp-caption"
+                data-paddingbottom="[0,0,0,0]"
+                data-paddingleft="[0,0,0,0]"
+                data-paddingright="[0,0,0,0]"
+                data-paddingtop="[0,0,0,0]"
+                data-responsive_offset="on"
+                data-type="text"
+                data-height="none"
+                data-width="['800','800','700','400']"
+                data-whitespace="normal"
+                data-hoffset="['15','15','15','15']"
+                data-voffset="['105','90','75','65']"
+                data-x="['left','left','left','left']"
+                data-y="['middle','middle','middle','middle']"
+                data-textalign="['top','top','top','top']"
+                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                style="z-index: 7; white-space: nowrap"
+              >
+                <div class="slide-content left-slide">
+                  <div class="btn-box">
+                    <a
+                      class="html5lightbox play-button"
+                      title="crystalo Video Gallery"
+                      href="https://www.youtube.com/watch?v=p25gICT63ek"
+                    >
+                      <span class="flaticon-play-button"></span>
+                    </a>
+                    <a class="slide-style2-button" href="#">More About Us</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--End Main Slider-->
 
-			<section class="contact-page-area section-gap">
-				<div class="container">
-					<div class="menu-content pb-70">
-							<div class="title text-center">
-								<h1 class="mb-10">Contact Us</h1>
-								<p>Send us a message</p>
-							</div>
-					</div>
-					<div class="row">
-						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
-						<div class="col-lg-4 d-flex flex-column address-wrap" v-for="sitesetting in sitesettings" :key="sitesetting.id">
-							<div class="single-contact-address d-flex flex-row">
-								<div class="icon">
-									<span class="lnr lnr-home"></span>
-								</div>
-								<div class="contact-details">
-									<h5>{{ sitesetting.town }}</h5>
-									<p>
-										{{ sitesetting.address }}
-									</p>
-								</div>
-							</div>
-							<div class="single-contact-address d-flex flex-row">
-								<div class="icon">
-									<span class="lnr lnr-phone-handset"></span>
-								</div>
-								<div class="contact-details">
-									<h5>{{ sitesetting.phone }}</h5>
-									<p>Mon to Fri 8am to 5pm</p>
-								</div>
-							</div>
-							<div class="single-contact-address d-flex flex-row">
-								<div class="icon">
-									<span class="lnr lnr-envelope"></span>
-								</div>
-								<div class="contact-details">
-									<h5>{{ sitesetting.email }}</h5>
-									<p>Send us a message</p>
-								</div>
-							</div>														
-						</div>
-						<div class="col-lg-8">
-							<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
-								<div class="row">	
-									<div class="col-lg-6 form-group">
-										<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" 
-											onblur="this.placeholder = 'Enter your name'" 
-											class="common-input mb-2 form-control" required="" 
-											v-model="contactForm.name" type="text">
-										<p class="text-danger text-sm mb-2" v-if="errors.name">
-											{{ errors.name[0] }}
-										</p>
-										<input name="email" placeholder="Enter email address" 
-											pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" 
-											onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" 
-											class="common-input mb-2 form-control" required="" 
-											v-model="contactForm.email" type="email">
-										<p class="text-danger text-sm mb-2" v-if="errors.email">
-											{{ errors.email[0] }}
-										</p>
-										<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" 
-											onblur="this.placeholder = 'Enter subject'" class="common-input mb-2 form-control" 
-											required="" v-model="contactForm.subject" type="text">
-										<p class="text-danger text-sm mb-2" v-if="errors.subject">
-											{{ errors.subject[0] }}
-										</p>
-									</div>
-									<div class="col-lg-6 form-group">
-										<textarea class="common-textarea form-control" name="message" 
-											placeholder="Enter Messege" onfocus="this.placeholder = ''" 
-											onblur="this.placeholder = 'Enter Messege'" required=""
-											v-model="contactForm.message" ></textarea>			
-										<p class="text-danger text-sm" v-if="errors.message">
-											{{ errors.message[0] }}
-										</p>
-									</div>
-									<div class="col-lg-12">
-										<div class="alert-msg" style="text-align: left;"></div>
-										<el-button type="success" :loading="loading" size="mini" 
-											@click.prevent="sendMessage()">{{ loading ? 'Sending message.....' : 'Send message' }}
-										</el-button>
-										<!-- <button class="genric-btn primary" style="float: right;"
-										@click.prevent="sendMessage">Send Message</button>											 -->
-									</div>
-								</div>
-							</form>	
-						</div>
-					</div>
-				</div>	
-			</section>
+    <!--Start about area-->
+    <section class="about-area mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5 col-lg-5">
+            <div class="about-image-box">
+              <div class="inner-box">
+                <img
+                  src="frontend/images/resources/pine-about.jpg"
+                  alt="School Image"
+                />
+                <div class="overlay">
+                  <div class="box">
+                    <div
+                      class="icon wow zoomIn"
+                      data-wow-delay="300ms"
+                      data-wow-duration="1500ms"
+                    >
+                      <img
+                        src="frontend/images/icon/school-icon.png"
+                        alt="School Icon"
+                        style="width: 100px; height: 100px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-box">
+                <p>
+                  Education is not preparation for life; education is life
+                  itself.
+                </p>
+                <span style="color: green">John Dewey</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-7 col-lg-7">
+            <div class="about-text">
+              <div class="sec-title">
+                <p class="title" style="color: green">
+                  About Pinecrest Academy
+                </p>
+              </div>
+              <div class="inner-content">
+                <div class="text">
+                  <p>
+                    Pinecrest Academy is a private school located within Juja
+                    South Estate in Juja. The school aims to set a standard of
+                    educational excellence and is an institution whose ethos and
+                    practice is based upon Christian teachings. We aim to
+                    provide a private school education that will be acknowledged
+                    for effective teaching and encouragement of personal growth
+                    and excellence in learning. We consider it a privilege to
+                    share in your child’s educational journey and we look
+                    forward to working together with you to provide an
+                    environment that is positive, stimulating and focused on
+                    academic achievements accompanied with high moral
+                    characteristics.
+                  </p>
+                  <strong>CURRICULUM</strong>
+                  <p>
+                    For Kindergaten (Little Pines & Playgroup), we use the
+                    highly effective and internationally acclaimed Montessori
+                    method of teaching before ushering in the CBC (Competency
+                    Based Curriculum) Kenyan curriculum for PP1 classes and
+                    beyond. We have highly qualified teachers for both
+                    programmes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End about Area-->
 
-			
-			
-    </div>
+    <!--Start Choice Area-->
+    <section
+      class="working-area"
+      style="background-image: url(frontend/images/children.jpg)"
+    >
+      <div class="container">
+        <div
+          class="sec-title with-text max-width text-center wow fadeInDown"
+          data-wow-delay="100ms"
+          data-wow-duration="1200ms"
+        >
+          <div class="title clr-white" style="color: green">Why Choose Us</div>
+          <p class="bottom-text">
+            We are enthusiastic and passionate about young learners, our values
+            are dear to us.
+          </p>
+        </div>
+        <div class="row">
+          <!--Start Single Working Box-->
+          <div
+            class="col-xl-4 col-lg-4"
+            v-for="choose in chooses"
+            :key="choose.id"
+          >
+            <div class="single-working-box wow fadeInDown" data-wow-delay="0ms">
+              <div class="img-holder">
+                <div class="inner">
+                  <img
+                    :src="fileLinkChoose(choose.image)"
+                    alt=""
+                    style="width: 100%; height: 250px; object-fit: cover"
+                  />
+                  <div class="overlay-style-one"></div>
+                </div>
+              </div>
+              <div class="text-holder">
+                <div class="plus-icon-box"><span class="icon-plus"></span></div>
+                <div class="outer-box">
+                  <div class="icon">
+                    <div class="inner">
+                      <div class="box">
+                        <span class="icon-architecture-and-city1"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h3>{{ choose.title }}</h3>
+                    <p v-html="choose.description"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Box-->
+        </div>
+      </div>
+    </section>
+    <!--End Choice Area-->
+
+    <!--Start Events area-->
+    <section class="latest-blog-area style2">
+      <div class="container inner-content">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="sec-title float-left">
+              <p>Events</p>
+              <div class="title">Upcoming <span>Events</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!--Start single blog post-->
+          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div
+              class="single-blog-post wow fadeInLeft"
+              data-wow-delay="0ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="img-holder">
+                <img
+                  src="frontend/images/event-one.jpg"
+                  alt="Awesome Image"
+                  style="width: 100%; height: 240px; object-fit: cover"
+                />
+              </div>
+              <div class="text-holder">
+                <div class="post-date">
+                  <h3>02 <span>Mar 2022</span></h3>
+                </div>
+                <div class="meta-box">
+                  <ul class="meta-info">
+                    <li>By <a href="#">Pinecrest Management</a></li>
+                  </ul>
+                </div>
+                <h3 class="blog-title">
+                  <a href="blog-single.html">First Event Header</a>
+                </h3>
+                <div class="text">
+                  <p>
+                    First event descriptionirst event descriptionirst event
+                    descriptionirst event description.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End single blog post-->
+          <!--Start single blog post-->
+          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div
+              class="single-blog-post wow fadeInLeft"
+              data-wow-delay="200ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="img-holder">
+                <img
+                  src="frontend/images/event-two.jpg"
+                  alt="Awesome Image"
+                  style="width: 100%; height: 240px; object-fit: cover"
+                />
+              </div>
+              <div class="text-holder">
+                <div class="post-date">
+                  <h3>24 <span>Feb 2022</span></h3>
+                </div>
+                <div class="meta-box">
+                  <ul class="meta-info">
+                    <li>By <a href="#">Pinecrest Management</a></li>
+                  </ul>
+                </div>
+                <h3 class="blog-title">
+                  <a href="blog-single.html">Second Event Header</a>
+                </h3>
+                <div class="text">
+                  <p>
+                    Second event descriptionSecond event descriptionSecond event
+                    description.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End single blog post-->
+          <!--Start single blog post-->
+          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div
+              class="single-blog-post wow fadeInLeft"
+              data-wow-delay="400ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="img-holder">
+                <img
+                  src="frontend/images/event-three.jpg"
+                  alt="Awesome Image"
+                  style="width: 100%; height: 240px; object-fit: cover"
+                />
+              </div>
+              <div class="text-holder">
+                <div class="post-date">
+                  <h3>18 <span>Jan 2022</span></h3>
+                </div>
+                <div class="meta-box">
+                  <ul class="meta-info">
+                    <li>By <a href="">Pinecrest Management</a></li>
+                  </ul>
+                </div>
+                <h3 class="blog-title">
+                  <a href="blog-single.html">Third Event Header</a>
+                </h3>
+                <div class="text">
+                  <p>
+                    Third event descriptionThird event descriptionThird event
+                    description.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End single blog post-->
+        </div>
+      </div>
+    </section>
+    <!--End Events area-->
+
+    <!--Start Application Area-->
+    <section class="appointment-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6">
+            <div class="map-content-box">
+              <div class="sec-title">
+                <div class="title" style="color: green">
+                  Get quality education
+                </div>
+                <h2 class="text-white">Curriculum</h2>
+                <p class="text-white text-muted">
+                  For Kindergarten, we use the highly effective and
+                  internationally acclaimed Montessori method of teaching before
+                  ushering in the CBC (Competency Based Curriculum) Kenyan
+                  Curriculum. We have highly qualified teachers for both
+                  programmes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <div
+              class="appointment-box wow slideInRight"
+              data-wow-delay="300ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="title-box">
+                <h2>Request for admission</h2>
+                <!-- <span>Leave your information here and get reply from our expert in 24 hours, don’t hesitate to ask.</span> -->
+              </div>
+              <div class="appointment">
+                <form class="appointment-form">
+                  <div class="row">
+                    <div class="col-xl-6">
+                      <div class="single-box">
+                        <small
+                          class="text-danger text-sm"
+                          v-if="errors.parent_name"
+                        >
+                          {{ errors.parent_name[0] }}
+                        </small>
+                        <el-input
+                          placeholder="Parent's Name (required)"
+                          size="mini"
+                          v-model="form.parent_name"
+                        ></el-input>
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="single-box">
+                        <small
+                          class="text-danger text-sm"
+                          v-if="errors.parent_phone"
+                        >
+                          {{ errors.parent_phone[0] }}
+                        </small>
+                        <el-input
+                          placeholder="Parent's Phone (required)"
+                          size="mini"
+                          v-model="form.parent_phone"
+                        ></el-input>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-6">
+                      <div class="single-box">
+                        <small
+                          class="text-danger text-sm"
+                          v-if="errors.parent_email"
+                        >
+                          {{ errors.parent_email[0] }}
+                        </small>
+                        <el-input
+                          placeholder="Parent's Email (optional)"
+                          size="mini"
+                          v-model="form.parent_email"
+                        ></el-input>
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="single-box">
+                        <small
+                          class="text-danger text-sm"
+                          v-if="errors.student_name"
+                        >
+                          {{ errors.student_name[0] }}
+                        </small>
+                        <el-input
+                          placeholder="Student's Name (required)"
+                          size="mini"
+                          v-model="form.student_name"
+                        ></el-input>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-6">
+                      <div class="single-box">
+                        <small
+                          class="text-danger text-sm"
+                          v-if="errors.student_age"
+                        >
+                          {{ errors.student_age[0] }}
+                        </small>
+                        <el-input
+                          placeholder="Student's Age (required)"
+                          size="mini"
+                          v-model="form.student_age"
+                        ></el-input>
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="single-box">
+                        <small
+                          class="text-danger text-sm"
+                          v-if="errors.grade_id"
+                        >
+                          {{ errors.grade_id[0] }}
+                        </small>
+                        <el-select
+                          v-model="form.grade_id"
+                          placeholder="Choose Grade (required)"
+                          size="mini"
+                          style="width: 100%"
+                        >
+                          <el-option
+                            v-for="grade in grades"
+                            :value="grade.id"
+                            :label="grade.name"
+                            :key="grade.id"
+                          >
+                            {{ grade.name }}
+                          </el-option>
+                        </el-select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <div class="single-box">
+                        <el-button
+                          :loading="loading"
+                          size="mini"
+                          style="background-color: royalblue; color: white"
+                          @click.prevent="submitApplication()"
+                          >{{
+                            loading
+                              ? "Submitting Application....."
+                              : "Submit Application"
+                          }}
+                        </el-button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Application Area-->
+
+    <!--Start home google map area-->
+    <section class="home-google-map-area mt-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="google-map-box">
+              <div
+                class="map-wrap"
+                style="width: 100%; height: 445px"
+                id="map"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End home google map area-->
+
+    <!--Start Contact details Area-->
+    <section class="contact-details-area">
+      <div class="sec-title text-center">
+        <p>Contact Details</p>
+        <div class="title text-muted">How Can We <span>Help You?</span></div>
+      </div>
+      <div
+        class="parallax-background"
+        style="
+          background-image: url(frontend/images/parallax-background/contact-details-bg.html);
+        "
+      ></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="contact-details-content">
+              <div class="row">
+                <div
+                  class="col-xl-6 col-lg-6"
+                  v-for="sitesetting in sitesettings"
+                  :key="sitesetting.id"
+                >
+                  <div
+                    class="content-info-box"
+                    style="
+                      background-image: url(frontend/images/parallax-background/contact-info-box-bg.jpg);
+                    "
+                  >
+                    <div class="inner-content">
+                      <div class="inner">
+                        <div
+                          class="single-info-box wow fadeInDown"
+                          data-wow-delay="100ms"
+                          data-wow-duration="1200ms"
+                        >
+                          <div class="icon">
+                            <span class="fa fa-map-marker"></span>
+                          </div>
+                          <div class="text">
+                            <h3>Visit Our Office</h3>
+                            <p>
+                              {{ sitesetting.town }}, {{ sitesetting.address }}
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="single-info-box white-bg wow fadeInUp"
+                          data-wow-delay="100ms"
+                          data-wow-duration="1200ms"
+                        >
+                          <div class="icon">
+                            <span class="fa fa-phone"></span>
+                          </div>
+                          <div class="text">
+                            <h3>Call us on</h3>
+                            <p>
+                              {{ sitesetting.phone }}
+                            </p>
+                            <p>Mon to Fri 8am to 5pm</p>
+                          </div>
+                        </div>
+                        <div
+                          class="single-info-box wow fadeInUp"
+                          data-wow-delay="100ms"
+                          data-wow-duration="1200ms"
+                          style="background-color: #27282c"
+                        >
+                          <div class="icon">
+                            <span class="fa fa-envelope"></span>
+                          </div>
+                          <div class="text">
+                            <h3>Email us at</h3>
+                            <p>
+                              {{ sitesetting.email }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                  <div class="contact-details-form-box">
+                    <div class="title-box">
+                      <h2>
+                        Send Us a<br />
+                        Message
+                      </h2>
+                    </div>
+                    <div class="contact-details-box">
+                      <form class="contact-details-form">
+                        <div class="row">
+                          <div class="col-xl-6">
+                            <div class="single-box">
+								<p
+                                class="text-danger text-sm mb-2"
+                                v-if="errors.name"
+                              >
+                                {{ errors.name[0] }}
+                              </p>
+                              <input
+                                type="text"
+                                name="form_name"
+                                value=""
+                                placeholder="Enter Your Name"
+                                required=""
+                                v-model="contactForm.name"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-xl-6">
+                            <div class="single-box">
+								<p
+                                class="text-danger text-sm mb-2"
+                                v-if="errors.email"
+                              >
+                                {{ errors.email[0] }}
+                              </p>
+                              <input
+                                type="email"
+                                name="form_email"
+                                value=""
+                                placeholder="Enter Your Email"
+                                required=""
+                                v-model="contactForm.email"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <div class="single-box">
+								<p
+                                class="text-danger text-sm mb-2"
+                                v-if="errors.subject"
+                              >
+                                {{ errors.subject[0] }}
+                              </p>
+                              <input
+                                type="text"
+                                name="form_subject"
+                                value=""
+                                placeholder="Enter Subject"
+                                required=""
+                                data-width="100%"
+                                v-model="contactForm.subject"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <div class="single-box">
+								<p
+                                class="text-danger text-sm"
+                                v-if="errors.message"
+                              >
+                                {{ errors.message[0] }}
+                              </p>
+                              <textarea
+                                name="form_request"
+                                placeholder="Enter Message"
+                                required=""
+                                v-model="contactForm.message"
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xl-12">
+                            <div class="single-box">
+                              <el-button
+                                type="success"
+                                :loading="loading"
+                                style="padding: 5px 30px"
+                                @click.prevent="sendMessage()"
+                                >{{
+                                  loading
+                                    ? "Sending message....."
+                                    : "Send message"
+                                }}
+                              </el-button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Contact details Area-->
+
+    <!--Start Gallery Area-->
+    <section class="instagram-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4">
+            <div class="instagram-title">
+              <div
+                class="pattern-bg wow slideInLeft"
+                data-wow-delay="100ms"
+                data-wow-duration="1500ms"
+              ></div>
+              <h3>School Activities.</h3>
+              <a class="btn-two" href="/gallery"
+                >View Gallery<span class="flaticon-next"></span
+              ></a>
+            </div>
+          </div>
+          <div class="col-xl-8">
+            <ul class="instagram-items clearfix">
+              <li v-for="gallery in allgalleries" :key="gallery.id">
+                <div class="img-holder">
+                  <img
+                    :src="fileLink(gallery.image)"
+                    alt="Gallery Images"
+                    style="width:100%;height:230px;object-fit:cover"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Gallery Area-->
+  </div>
 </template>
 
 <script>
-
 export default {
-    name: 'Home',
-    data(){
-        return {
-			loading: false,
-            abouts: [],
-            abouthistories: [],
-			events: [],
-			faqs: [],
-			carousels: [],
-			grades: [],
-			chooses: [],
-			sitesettings: [],
-			form:{
-				grade_id: '',
-				parent_name: '',
-				parent_phone: '',
-				parent_email: '',
-				student_name: '',
-				student_age: ''
-			},
-			contactForm: {
-				name: '',
-				email: '',
-				subject: '',
-				message: ''
-			},
-			errors: {}
-        }
+  name: "Home",
+  data() {
+    return {
+      loading: false,
+      abouts: [],
+      abouthistories: [],
+      events: [],
+      faqs: [],
+      carousels: [],
+      grades: [],
+      chooses: [],
+      sitesettings: [],
+      allgalleries: [],
+      form: {
+        grade_id: "",
+        parent_name: "",
+        parent_phone: "",
+        parent_email: "",
+        student_name: "",
+        student_age: "",
+      },
+      contactForm: {
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      },
+      errors: {},
+    };
+  },
+  methods: {
+    fileLink(name){
+			return '/uploads/img/gallery/' + name
+		},
+    fileLinkOne(name) {
+      return "/uploads/img/about/" + name;
     },
-    methods: {
-        fileLinkOne(name){
-        	return '/uploads/img/about/' + name
-      	},
-		fileLinkEvent(name){
-        	return '/uploads/img/event/' + name
-      	},
-		fileLinkFaq(name){
-        	return '/uploads/img/faq/' + name
-      	},
-		fileLinkCarousel(name){
-        	return '/uploads/img/carousel/' + name
-      	},
-		fileLinkChoose(name){
-			return '/uploads/img/choose/' + name
-		},
-        getUserAbout: async function(){
-            axios.get('/get-user-about')
-                .then((response) => {
-                    this.abouts = response.data.abouts
-                })
-        },
-		getUserCarousel: async function(){
-            axios.get('/get-user-carousels')
-                .then((response) => {
-                    this.carousels = response.data.carousels
-                })
-		},
-		getUserFaqs: async function(){
-            axios.get('/get-user-faqs')
-                .then((response) => {
-                    this.faqs = response.data.faqs
-                })
-        },
-		getUserEvents: async function(){
-            axios.get('/get-user-events')
-                .then((response) => {
-                    this.events = response.data.events
-                })
-        },
-        getAboutHistory: async function(){
-            axios.get('/get-about-history')
-                .then((response) => {
-                    this.abouthistories = response.data.abouthistories
-                })
-        },
-		getUserGrades: async function(){
-			axios.get('/get-user-grades')
-				.then((response) => {
-					this.grades = response.data.grades
-				})
-		},
-		getUserChooses: async function(){
-			axios.get('/get-user-chooses')
-				.then((response) => {
-					this.chooses = response.data.chooses
-				})
-		},
-		getSiteSettings: async function(){
-			axios.get('/get-site-settings')
-				.then((response) => {
-					this.sitesettings = response.data.sitesettings
-				})
-		},
-		applyForAJob: async function(){
-			this.$notify({
-            	group: 'home',
-                type: 'info',
-                title: 'No positions for now',
-                text: 'Please keep checking for any job posting'
+    fileLinkEvent(name) {
+      return "/uploads/img/event/" + name;
+    },
+    fileLinkFaq(name) {
+      return "/uploads/img/faq/" + name;
+    },
+    fileLinkCarousel(name) {
+      return "/uploads/img/carousel/" + name;
+    },
+    fileLinkChoose(name) {
+      return "/uploads/img/choose/" + name;
+    },
+    getAllGalleries: async function(){
+      axios.get('get-all-galleries')
+        .then((response) => {
+          this.allgalleries = response.data.allgalleries
+        })
+    },
+    getUserAbout: async function () {
+      axios.get("/get-user-about").then((response) => {
+        this.abouts = response.data.abouts;
+      });
+    },
+    getUserCarousel: async function () {
+      axios.get("/get-user-carousels").then((response) => {
+        this.carousels = response.data.carousels;
+      });
+    },
+    getUserFaqs: async function () {
+      axios.get("/get-user-faqs").then((response) => {
+        this.faqs = response.data.faqs;
+      });
+    },
+    getUserEvents: async function () {
+      axios.get("/get-user-events").then((response) => {
+        this.events = response.data.events;
+      });
+    },
+    getAboutHistory: async function () {
+      axios.get("/get-about-history").then((response) => {
+        this.abouthistories = response.data.abouthistories;
+      });
+    },
+    getUserGrades: async function () {
+      axios.get("/get-user-grades").then((response) => {
+        this.grades = response.data.grades;
+      });
+    },
+    getUserChooses: async function () {
+      axios.get("/get-user-chooses").then((response) => {
+        this.chooses = response.data.chooses;
+      });
+    },
+    getSiteSettings: async function () {
+      axios.get("/get-site-settings").then((response) => {
+        this.sitesettings = response.data.sitesettings;
+      });
+    },
+    applyForAJob: async function () {
+      this.$notify({
+        group: "home",
+        type: "info",
+        title: "No positions for now",
+        text: "Please keep checking for any job posting",
+      });
+    },
+    submitApplication: async function () {
+      this.loading = true;
+      axios
+        .post("/submit-application", this.form)
+        .then(() => {
+          this.$notify({
+            group: "home",
+            type: "success",
+            title: "Application submited",
+            text: "We'll get back to you",
+          });
+          (this.form.grade_id = ""),
+            (this.form.parent_name = ""),
+            (this.form.parent_phone = ""),
+            (this.form.parent_email = ""),
+            (this.form.student_name = ""),
+            (this.form.student_age = ""),
+            (this.loading = false);
+          this.errors = {};
+        })
+        .catch((error) => {
+          if (error.response.status === 422) {
+            this.errors = error.response.data.errors;
+          } else if (error.response.status === 500) {
+            this.$notify({
+              group: "home",
+              type: "danger",
+              title: "Application failed",
+              text: "Please contact support for advice. Thank you",
             });
-		},
-		submitApplication: async function(){
-			this.loading = true
-			axios.post('/submit-application', this.form)
-				.then(() => {
-					this.$notify({
-						group: 'home',
-						type: 'success',
-						title: 'Application submited',
-						text: "We'll get back to you"
-					});
-					this.form.grade_id = '',
-					this.form.parent_name = '',
-					this.form.parent_phone = '',
-					this.form.parent_email = '',
-					this.form.student_name = '',
-					this.form.student_age = '',
-					this.loading = false
-					this.errors = {}
-				})
-				.catch(error => {
-					if (error.response.status === 422) {
-						this.errors = error.response.data.errors
-					}
-					else if(error.response.status === 500) {
-						this.$notify({
-							group: 'home',
-							type: 'danger',
-							title: 'Application failed',
-							text: "Please contact support for advice. Thank you"
-						});
-					}
-					else if(error.response.status === 405) {
-						this.$notify({
-							group: 'home',
-							type: 'danger',
-							title: 'Application failed',
-							text: "Please contact  support for advice. Thank you"
-						});
-					}
-					this.loading = false
-				})
-		},
-		sendMessage: async function(){
-			this.loading = true
-			axios.post('/send-message', this.contactForm)
-				.then(() => {
-					this.contactForm.name = '',
-					this.contactForm.email = '',
-					this.contactForm.subject = '',
-					this.contactForm.message = '',
-					this.errors = '',
-					this.loading = false,
-					this.$notify({
-                        group: 'contactus',
-                        type: 'success',
-                        text: 'Message Sent. We will get back to you'
-                    });
-				})
-				.catch((error) => {
-					if (error.response.status === 422) {
-						this.errors = error.response.data.errors
-					}
-					else if (error.response.status === 500) {
-						this.$notify({
-							group: 'contactus',
-							type: 'error',
-							text: 'Error occured please wait while we take a look'
-                    	});
-					}
-					else if(error.response.status === 405) {
-						this.$notify({
-							group: 'contactus',
-							type: 'error',
-							text: 'Error occured please wait while we take a look'
-                    	});
-					}
-					this.loading = false
-				})
-		}
+          } else if (error.response.status === 405) {
+            this.$notify({
+              group: "home",
+              type: "danger",
+              title: "Application failed",
+              text: "Please contact  support for advice. Thank you",
+            });
+          }
+          this.loading = false;
+        });
     },
-    computed:{},
-    created(){
-        this.getUserAbout()
-        this.getAboutHistory()
-		this.getUserEvents()
-		this.getUserFaqs()
-		this.getUserCarousel()
-		this.getUserGrades()
-		this.getUserChooses()
-		this.getSiteSettings()
-    }
-}
+    sendMessage: async function () {
+      this.loading = true;
+      axios
+        .post("/send-message", this.contactForm)
+        .then(() => {
+          (this.contactForm.name = ""),
+            (this.contactForm.email = ""),
+            (this.contactForm.subject = ""),
+            (this.contactForm.message = ""),
+            (this.errors = ""),
+            (this.loading = false),
+            this.$notify({
+              group: "contactus",
+              type: "success",
+              text: "Message Sent. We will get back to you",
+            });
+        })
+        .catch((error) => {
+          if (error.response.status === 422) {
+            this.errors = error.response.data.errors;
+          } else if (error.response.status === 500) {
+            this.$notify({
+              group: "contactus",
+              type: "error",
+              text: "Error occured please wait while we take a look",
+            });
+          } else if (error.response.status === 405) {
+            this.$notify({
+              group: "contactus",
+              type: "error",
+              text: "Error occured please wait while we take a look",
+            });
+          }
+          this.loading = false;
+        });
+    },
+  },
+  computed: {},
+  created() {
+    this.getAllGalleries();
+    this.getUserAbout();
+    this.getAboutHistory();
+    this.getUserEvents();
+    this.getUserFaqs();
+    this.getUserCarousel();
+    this.getUserGrades();
+    this.getUserChooses();
+    this.getSiteSettings();
+  },
+};
 </script>

@@ -1,97 +1,182 @@
 <template>
-    <div id="user_footer">
-<!-- start footer Area -->		
-			<footer class="footer-area section-gap" style="padding:20px">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-md-6 col-sm-12 text-center">
-							<div class="single-footer-widget">
-								<img src="/frontend/img/logo/changed.png" alt="PPinecrest Logo" width="180" height="180">								
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12 text-center">
-							<div class="single-footer-widget">
-								<h4><strong>Quick links</strong></h4>
-								<ul>
-									<li><a style="color:white" href="/">Home</a></li>
-									<li><a style="color:white" href="/about-us">About Us</a></li>
-									<li><a style="color:white" href="/events">Events</a></li>
-									<li><a style="color:white" href="/contact-us">Contact Us</a></li>
-								</ul>								
-							</div>
-						</div>																		
-						<div class="col-lg-4 col-md-6 col-sm-12 text-center">
-							<div class="single-footer-widget">
-								<h4><strong>Newsletter</strong></h4>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-									 <form>
-									  <div class="input-group">
-									    <input type="text" class="form-control" name="email" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="">
-											
-										<div class="input-group-btn">
-									      <button class="btn btn-default" type="submit"
-										  @click.prevent="subscribe">
-									        <span class="lnr lnr-arrow-right"></span>
-									      </button>    
-									    </div>
-									    	<div class="info">
-												<p class="text-danger text-sm" v-if="errors.email">
-													{{ errors.email[0] }}
-												</p>
-											</div>  
-									  </div>
-									</form> 
-								</div>
-							</div>
-						</div>											
-					</div>
-					<div class="footer-bottom row align-items-center justify-content-between">
-						<p class="footer-text m-0 col-lg-6 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
-							Copyright Pinecrest Academy 2022. All rights reserved
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						<div class="col-lg-6 col-sm-12 footer-social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-						</div>
-					</div>						
-				</div>
-			</footer>	
-			<!-- End footer Area -->
+  <div id="user_footer">
+    <!--Start footer area Style4-->
+    <footer class="footer-area style4">
+      <div class="container">
+        <div class="row">
+          <!--Start single footer widget-->
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div class="single-footer-widget marbtm50-s4">
+              <div class="our-info-box">
+                <div class="footer-logo text-center">
+                  <a href="index-2.html">
+                    <img
+                      src="frontend/images/resources/changed.png"
+                      alt="Pinecrest Logo"
+                      width="200"
+                      height="200"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End single footer widget-->
+          <!--Start single footer widget-->
+          <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+            <div class="single-footer-widget s4">
+              <div class="title-style2">
+                <h3>Useful Links</h3>
+              </div>
+              <div class="usefull-links">
+                <ul class="float-left">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about-us">About Us</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--End single footer widget-->
+          <!--Start single footer widget-->
+          <div class="col-xl-4 col-lg-3 col-md-12 col-sm-12">
+            <div class="single-footer-widget pdtop50-s4">
+              <div class="title-style2">
+                <h3>Subscribe Us</h3>
+              </div>
+              <div class="subscribe-box">
+                <form class="subscribe-form" action="#">
+                  <input type="email" name="email" placeholder="Your Email" v-model="form.email"/>
+                  <p class="text-danger text-sm" v-if="errors.email">
+										{{ errors.email[0] }}
+									</p>
+                  <button class="btn-one" type="submit" @click.prevent="subscribe">
+                    Subscribe<span class="flaticon-next"></span>
+                  </button>
+                </form>
+                <div class="text">
+                  <p>
+                    <span>*</span>Subscribe us and get latest news and updates
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End single footer widget-->
+        </div>
+      </div>
+    </footer>
+    <!--End footer area style4-->
 
-			<button class="back-to-top hidden">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" 
-					fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M5 11l7-7 7 7M5 19l7-7 7 7" />
-				</svg>
-			</button>
-    </div>
+    <!--Start Footer Contact Info Area-->
+    <section class="footer-contact-info-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <ul class="footer-contact-info clearfix">
+              <li>
+                <div class="single-footer-contact-info">
+                  <div class="inner">
+                    <div class="icon">
+                      <span class="icon-global"></span>
+                    </div>
+                    <div class="text">
+                      <p>
+                        Juja, Nairobi Kenya<br />
+                        Juja South Estate
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="single-footer-contact-info">
+                  <div class="inner">
+                    <div class="icon">
+                      <span class="icon-support1"></span>
+                    </div>
+                    <div class="text">
+                      <p>
+                        <a href="tel:+254 794 6697 92" class="text-muted">
+                          +254 794 6697 92</a
+                        ><br />
+                        <span>Mon - Friday:</span> 8.00am to 5.00pm
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="single-footer-contact-info">
+                  <div class="inner">
+                    <div class="icon">
+                      <span class="icon-shipping-and-delivery"></span>
+                    </div>
+                    <div class="text">
+                      <p>
+                        Send us a message<br />
+                        <a
+                          href="mailto:info@pinecrestacademy.co.ke"
+                          class="text-muted"
+                          >info@pinecrestacademy.co.ke</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Footer Contact Info Area-->
+
+    <!--Start footer bottom area-->
+    <section class="footer-bottom-area style3">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="copyright-text text-center">
+              <p>
+                <a> Copyright Pinecrest Academy 2022. All rights reserved </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End footer bottom area-->
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'UserFooter',
-	data(){
-		return {
-			loading: false,
-			form: {
-				email: ''
-			},
-			errors: {}
-		}
-	},
-	methods: {
-		subscribe: async function(){
-			axios.post('/subscribe-newsletter', this.form)
-				.then(() => {})
-				.catch((error) => {
-					if (error.response.status === 422) {
-						this.errors = error.response.data.errors
-					}
-				})
-		}
-	},
-	computed: {},
-	created() {}
-}
+  name: "UserFooter",
+  data() {
+    return {
+      loading: false,
+      form: {
+        email: "",
+      },
+      errors: {},
+    };
+  },
+  methods: {
+    subscribe: async function () {
+      axios
+        .post("/subscribe-newsletter", this.form)
+        .then(() => {})
+        .catch((error) => {
+          if (error.response.status === 422) {
+            this.errors = error.response.data.errors;
+          }
+        });
+    },
+  },
+  computed: {},
+  created() {},
+};
 </script>

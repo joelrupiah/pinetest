@@ -1,100 +1,92 @@
-<!doctype html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="/frontend/img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="pinecrest">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Pinecrest</title>
+<!DOCTYPE html>
+<html lang="en">
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--
-			CSS
-			============================================= -->
-			<link rel="stylesheet" href="/frontend/css/linearicons.css">
-			<link rel="stylesheet" href="/frontend/css/font-awesome.min.css">
-			<link rel="stylesheet" href="/frontend/css/bootstrap.css">
-			<link rel="stylesheet" href="/frontend/css/magnific-popup.css">
-			<link rel="stylesheet" href="/frontend/css/nice-select.css">							
-			<link rel="stylesheet" href="/frontend/css/animate.min.css">
-			<link rel="stylesheet" href="/frontend/css/owl.carousel.css">			
-			<link rel="stylesheet" href="/frontend/css/jquery-ui.css">			
-			<link rel="stylesheet" href="/frontend/css/main.css">
-		</head>
-		<body>	
 
-			<div id="user">
-				<user-master></user-master>
-			</div>
+<!-- index-2 06:41:43 GMT -->
 
-			<script src="{{ asset('js/user.js') }}"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Pinecrest Academy</title>
 
-			<script src="/frontend/js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-			<script src="/frontend/js/vendor/bootstrap.min.js"></script>			
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkCmExXT9LSI1HCL-yQvgSOdH4t8oMdqY"></script>
-  			<script src="/frontend/js/easing.min.js"></script>			
-			<script src="/frontend/js/hoverIntent.js"></script>
-			<script src="/frontend/js/superfish.min.js"></script>	
-			<script src="/frontend/js/jquery.ajaxchimp.min.js"></script>
-			<script src="/frontend/js/jquery.magnific-popup.min.js"></script>	
-    		<script src="/frontend/js/jquery.tabs.min.js"></script>						
-			<script src="/frontend/js/jquery.nice-select.min.js"></script>	
-			<script src="/frontend/js/owl.carousel.min.js"></script>									
-			<script src="/frontend/js/mail-script.js"></script>	
-			<script src="/frontend/js/main.js"></script>
-			<script type="text/javascript">
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-			// Whatsapp button
-				(function () {
-					var options = {
-						whatsapp: "+254(794) 669-792", // WhatsApp number
-						call_to_action: "Message us", // Call to action
-						button_color: "#FF6550", // Color of button
-						position: "right", // Position may be 'right' or 'left'
-					};
-					var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-					var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-					s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-					var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-				})();
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="frontend/css/style.css">
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="frontend/css/responsive.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
 
-				// Whatsapp button end
+	<!-- Website Icon Start -->
+    <link rel="icon" type="image/png" href="/frontend/images/resources/changed.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/frontend/images/resources/changed.png" sizes="16x16">
+    {{-- <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16"> --}}
+	<!-- Website Icon Start -->
 
-				// Scroll to top button
-				const showOnPx = 100;
-				const backToTopButton = document.querySelector(".back-to-top")
+</head>
 
-				const scrollContainer = () => {
-					return document.documentElement || document.body;
-				};
+<body>
 
-				const goToTop = () => {
-					document.body.scrollIntoView({
-						behavior: "smooth",
-					});
-				};
+	<div id="user">
+		<user-master></user-master>
+	</div>
 
-				document.addEventListener("scroll", () => {
-					if (scrollContainer().scrollTop > showOnPx) {
-						backToTopButton.classList.remove("hidden")
-					} else {
-						backToTopButton.classList.add("hidden")
-					}
-				})
 
-				backToTopButton.addEventListener("click", goToTop)
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
-				//Scroll to top end
-			</script>
-		</body>
-	</html>
+
+
+	<script src="{{ asset('js/user.js') }}"></script>
+
+    <script src="frontend/js/jquery.js"></script>
+    <script src="frontend/js/appear.js"></script>
+    <script src="frontend/js/bootstrap.bundle.min.js"></script>
+    <script src="frontend/js/bootstrap-select.min.js"></script>
+    <script src="frontend/js/isotope.js"></script>
+    <script src="frontend/js/jquery.bootstrap-touchspin.js"></script>
+    <script src="frontend/js/jquery.countTo.js"></script>
+    <script src="frontend/js/jquery.easing.min.js"></script>
+    <script src="frontend/js/jquery.enllax.min.js"></script>
+    <script src="frontend/js/jquery.fancybox.js"></script>
+    <script src="frontend/js/jquery.mixitup.min.js"></script>
+    <script src="frontend/js/jquery.paroller.min.js"></script>
+    <script src="frontend/js/owl.js"></script>
+    <script src="frontend/js/validation.js"></script>
+    <script src="frontend/js/wow.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkCmExXT9LSI1HCL-yQvgSOdH4t8oMdqY"></script>
+    <!-- <script src="js/gmaps.js"></script>
+    <script src="js/map-helper.js"></script> -->
+
+    <script src="frontend/assets/language-switcher/jquery.polyglot.language.switcher.js"></script>
+    <script src="frontend/assets/timepicker/timePicker.js"></script>
+    <script src="frontend/assets/html5lightbox/html5lightbox.js"></script>
+
+    <!--Revolution Slider-->
+    <script src="frontend/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="frontend/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="frontend/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="frontend/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="frontend/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="frontend/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="frontend/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="frontend/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="frontend/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="frontend/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="frontend/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="frontend/js/main-slider-script.js"></script>
+
+    <!-- thm custom script -->
+    <script src="frontend/js/custom.js"></script>
+
+
+
+</body>
+
+<!-- index-2 06:43:55 GMT -->
+
+</html>
