@@ -38,7 +38,7 @@
               data-rotate="0"
               data-saveperformance="off"
               data-slotamount="default"
-              data-thumb="frontend/images/slides/v2-1.jpg"
+              data-thumb="frontend/images/slides/slide-one.jpg"
               data-title="Slide Title"
               data-transition="parallaxvertical"
             >
@@ -164,7 +164,7 @@
               data-rotate="0"
               data-saveperformance="off"
               data-slotamount="default"
-              data-thumb="frontend/images/slides/v2-2.jpg"
+              data-thumb="frontend/images/slides/slide-two.jpg"
               data-title="Slide Title"
               data-transition="parallaxvertical"
             >
@@ -290,7 +290,7 @@
               data-rotate="0"
               data-saveperformance="off"
               data-slotamount="default"
-              data-thumb="frontend/images/slides/v2-3.jpg"
+              data-thumb="frontend/images/slides/slide-three.jpg"
               data-title="Slide Title"
               data-transition="parallaxvertical"
             >

@@ -6,7 +6,7 @@
         <div class="logo-box-style2 float-left">
           <a href="/">
             <img
-              src="frontend/images/resources/changed.png"
+              src="frontend/images/resources/changed.jpg"
               alt="Pinecrest Logo"
               style="width: 50px; height: 50px"
             />

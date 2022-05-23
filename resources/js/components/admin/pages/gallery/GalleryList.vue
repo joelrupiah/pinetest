@@ -51,6 +51,8 @@
                           </tr>
                         </tbody>
                       </table>
+                      <Page :total="pageInfo.total" size="small" :current="pageInfo.current_page" 
+                            :page-size="parseInt(pageInfo.per_page)" v-if="pageInfo" @on-change="getAllGalleries" />
                     </div>
                   </div>
                 </div> <!-- simple table -->
@@ -68,6 +70,8 @@ export default {
     name: 'GalleryList',
     data(){
         return{
+            total: 10,
+            pageInfo: null,
             galleries: [],
             errors: {}
         }
@@ -76,10 +80,11 @@ export default {
         fileLink(name){
             return '/uploads/img/gallery/' + name
         },
-        getAllGalleries: async function(){
-            Api().get('/admin/gallery')
+        getAllGalleries: async function(page = 1){
+            Api().get(`/admin/gallery?page=${page}&total=${this.total}`)
                 .then(response => {
-                    this.galleries = response.data.galleries
+                    this.galleries = response.data.galleries.data
+                    this.pageInfo = response.data.galleries
                 })
         },
         deleteGallery(id){

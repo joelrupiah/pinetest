@@ -31,7 +31,7 @@
     </section>
     <!--End breadcrumb area-->
 	        <!--Start Main project area style4-->
-        <section class="main-project-area style4">
+        <section class="main-project-area style4" style="padding-bottom:0px">
             <div class="container">
                 <ul class="project-filter post-filter has-dynamic-filters-counter">
                     <li><span><h5 style="color:green"><u>Education</u></h5></span></li>
@@ -40,8 +40,8 @@
 			<div class="container-fluid main-project-style4">
                 <div class="row filter-layout masonary-layout">
                     <!--Start single project item-->
-                    <div class="row" v-if="educationGalleries < 5">
-						<h5 class="text-center mb-4">No data</h5>
+                    <div class="row" v-if="educationGalleries < 1">
+						<h5 class="mb-4">No data</h5>
 					</div>
                     <!--End single project item-->
                 </div>
@@ -63,6 +63,142 @@
                 </div>
 				<Page class="text-center" :total="educationPage.total" size="small" :current="educationPage.current_page" 
 								:page-size="parseInt(educationPage.per_page)" v-if="educationPage" @on-change="getEducationCategories" />
+            </div>
+        </section>
+		<section class="main-project-area style4" style="padding-bottom:0px">
+            <div class="container">
+                <ul class="project-filter post-filter has-dynamic-filters-counter">
+                    <li><span><h5 style="color:green"><u>Sports</u></h5></span></li>
+                </ul>
+            </div>
+			<div class="container-fluid main-project-style4">
+                <div class="row filter-layout masonary-layout">
+                    <!--Start single project item-->
+                    <div class="row" v-if="sportGalleries < 1">
+						<h5 class="text-center mb-4">No data</h5>
+					</div>
+                    <!--End single project item-->
+                </div>
+            </div>
+            <div class="container-fluid main-project-style4">
+                <div class="row filter-layout masonary-layout">
+                    <!--Start single project item-->
+                    <div class="col-6 col-md-3 col-lg-3 filter-item contem trad" v-for="sportGallery in sportGalleries" :key="sportGallery.id">
+                        <div class="single-project-style7" v-if="sportGallery.category.name === 'Sports'">
+                            <div class="img-holder">
+                                <img :src="fileLink(sportGallery.image)" alt="Sports Image"
+								style="width:100%;height:230px;object-fit:cover">
+                            </div>
+                        </div>
+						
+                    </div>
+					
+                    <!--End single project item-->
+                </div>
+				<Page class="text-center" :total="sportPage.total" size="small" :current="sportPage.current_page" 
+								:page-size="parseInt(sportPage.per_page)" v-if="sportPage" @on-change="getSportCategories" />
+            </div>
+        </section>
+		<section class="main-project-area style4" style="padding-bottom:0px">
+            <div class="container">
+                <ul class="project-filter post-filter has-dynamic-filters-counter">
+                    <li><span><h5 style="color:green"><u>Agriculture</u></h5></span></li>
+                </ul>
+            </div>
+			<div class="container-fluid main-project-style4">
+                <div class="row filter-layout masonary-layout">
+                    <!--Start single project item-->
+                    <div class="row" v-if="agricultureGalleries < 1">
+						<h5 class="text-center mb-4">No data</h5>
+					</div>
+                    <!--End single project item-->
+                </div>
+            </div>
+            <div class="container-fluid main-project-style4">
+                <div class="row filter-layout masonary-layout">
+                    <!--Start single project item-->
+                    <div class="col-6 col-md-3 col-lg-3 filter-item contem trad" v-for="agricultureGallery in agricultureGalleries" :key="agricultureGallery.id">
+                        <div class="single-project-style7" v-if="agricultureGallery.category.name === 'Agriculture'">
+                            <div class="img-holder">
+                                <img :src="fileLink(agricultureGallery.image)" alt="Sports Image"
+								style="width:100%;height:230px;object-fit:cover">
+                            </div>
+                        </div>
+						
+                    </div>
+					
+                    <!--End single project item-->
+                </div>
+				<Page class="text-center" :total="agriculturePage.total" size="small" :current="agriculturePage.current_page" 
+								:page-size="parseInt(agriculturePage.per_page)" v-if="agriculturePage" @on-change="getAgricultureCategories" />
+            </div>
+        </section>
+		<section class="main-project-area style4" style="padding-bottom:0px">
+            <div class="container">
+                <ul class="project-filter post-filter has-dynamic-filters-counter">
+                    <li><span><h5 style="color:green"><u>Social Events</u></h5></span></li>
+                </ul>
+            </div>
+			<div class="container-fluid main-project-style4">
+                <div class="row filter-layout masonary-layout">
+                    <!--Start single project item-->
+                    <div class="row" v-if="socialEventGalleries < 1">
+						<h5 class="text-center mb-4">No data</h5>
+					</div>
+                    <!--End single project item-->
+                </div>
+            </div>
+            <div class="container-fluid main-project-style4">
+                <div class="row filter-layout masonary-layout">
+                    <!--Start single project item-->
+                    <div class="col-6 col-md-3 col-lg-3 filter-item contem trad" v-for="socialEventGallery in socialEventGalleries" :key="socialEventGallery.id">
+                        <div class="single-project-style7" v-if="socialEventGallery.category.name === 'Social Events'">
+                            <div class="img-holder">
+                                <img :src="fileLink(socialEventGallery.image)" alt="Sports Image"
+								style="width:100%;height:230px;object-fit:cover">
+                            </div>
+                        </div>
+						
+                    </div>
+					
+                    <!--End single project item-->
+                </div>
+				<Page class="text-center" :total="socialEventPage.total" size="small" :current="socialEventPage.current_page" 
+								:page-size="parseInt(socialEventPage.per_page)" v-if="socialEventPage" @on-change="getSocialEventCategories" />
+            </div>
+        </section>
+		<section class="main-project-area style4" style="padding-bottom:100px">
+            <div class="container">
+                <ul class="project-filter post-filter has-dynamic-filters-counter">
+                    <li><span><h5 style="color:green"><u>Infrastructure</u></h5></span></li>
+                </ul>
+            </div>
+			<div class="container-fluid main-project-style4">
+                <div class="row filter-layout masonary-layout">
+                    <!--Start single project item-->
+                    <div class="row" v-if="infrastructureGalleries < 1">
+						<h5 class="text-center mb-4">No data</h5>
+					</div>
+                    <!--End single project item-->
+                </div>
+            </div>
+            <div class="container-fluid main-project-style4">
+                <div class="row filter-layout masonary-layout">
+                    <!--Start single project item-->
+                    <div class="col-6 col-md-3 col-lg-3 filter-item contem trad" v-for="infrastructureGallery in infrastructureGalleries" :key="infrastructureGallery.id">
+                        <div class="single-project-style7" v-if="infrastructureGallery.category.name === 'Infrastructure'">
+                            <div class="img-holder">
+                                <img :src="fileLink(infrastructureGallery.image)" alt="Sports Image"
+								style="width:100%;height:230px;object-fit:cover">
+                            </div>
+                        </div>
+						
+                    </div>
+					
+                    <!--End single project item-->
+                </div>
+				<Page class="text-center" :total="infrastructurePage.total" size="small" :current="infrastructurePage.current_page" 
+								:page-size="parseInt(infrastructurePage.per_page)" v-if="infrastructurePage" @on-change="getInfrastructureCategories" />
             </div>
         </section>
         <!--End Main project area style4-->

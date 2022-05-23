@@ -1,11 +1,10 @@
 <template>
-    <div id="contact_us">
+  <div id="contact_us">
     <notifications group="contactus" class="mt-3" />
     <!--Start breadcrumb area-->
     <section
       class="breadcrumb-area style2"
-      style="
-        background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(/frontend/images/about-page.jpg);
+      style="background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(/frontend/images/about-page.jpg);
         height: 380px;
         width: 100%;
         object-fit: cover;
@@ -17,12 +16,12 @@
             <div class="inner-content-box clearfix">
               <div class="title-s2 text-center">
                 <span>Pinecrest Academy</span>
-                <h1>About Us Page</h1>
+                <h1>Contact Us Page</h1>
               </div>
               <div class="breadcrumb-menu float-left">
                 <ul class="clearfix">
                   <li><a href="/">Home</a></li>
-                  <li class="active">About Us</li>
+                  <li class="active">Contact Us</li>
                 </ul>
               </div>
             </div>
@@ -30,27 +29,10 @@
         </div>
       </div>
     </section>
-    <!--End breadcrumb area-->	
-	    <!--Start home google map area-->
-    <section class="home-google-map-area mt-5">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="google-map-box">
-              <div
-                class="map-wrap"
-                style="width: 100%; height: 445px"
-                id="map"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--End home google map area-->
+    <!--End breadcrumb area-->
 
     <!--Start Contact details Area-->
-    <section class="contact-details-area">
+    <section class="contact-details-area mb-5">
       <div class="sec-title text-center">
         <p>Contact Details</p>
         <div class="title text-muted">How Can We <span>Help You?</span></div>
@@ -143,7 +125,7 @@
                         <div class="row">
                           <div class="col-xl-6">
                             <div class="single-box">
-								<p
+                              <p
                                 class="text-danger text-sm mb-2"
                                 v-if="errors.name"
                               >
@@ -161,7 +143,7 @@
                           </div>
                           <div class="col-xl-6">
                             <div class="single-box">
-								<p
+                              <p
                                 class="text-danger text-sm mb-2"
                                 v-if="errors.email"
                               >
@@ -181,7 +163,7 @@
                         <div class="row">
                           <div class="col-xl-12">
                             <div class="single-box">
-								<p
+                              <p
                                 class="text-danger text-sm mb-2"
                                 v-if="errors.subject"
                               >
@@ -202,7 +184,7 @@
                         <div class="row">
                           <div class="col-xl-12">
                             <div class="single-box">
-								<p
+                              <p
                                 class="text-danger text-sm"
                                 v-if="errors.message"
                               >
@@ -244,74 +226,90 @@
         </div>
       </div>
     </section>
-    <!--End Contact details Area-->		  
-    </div>
+    <!--End Contact details Area-->
+
+    <!--Start home google map area-->
+    <section class="home-google-map-area mt-5 mb-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="google-map-box">
+              <div
+                class="map-wrap"
+                style="width: 100%; height: 445px"
+                id="map"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End home google map area-->
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'ContactUs',
-	data(){
-		return {
-			sitesettings: [],
-			loading: false,
-			form: {
-				name: '',
-				email: '',
-				subject: '',
-				message: ''
-			},
-			errors: {},
-		}
-	},
-	methods: {
-		getSiteSettings: async function(){
-			axios.get('/get-site-settings')
-				.then((response) => {
-					this.sitesettings = response.data.sitesettings
-				})
-		},
-		sendMessage: async function(){
-			this.loading = true
-			axios.post('/send-message', this.form)
-				.then(() => {
-					this.form.name = '',
-					this.form.email = '',
-					this.form.subject = '',
-					this.form.message = '',
-					this.errors = '',
-					this.loading = false,
-					this.$notify({
-                        group: 'contactus',
-                        type: 'success',
-                        text: 'Message Sent. We will get back to you'
-                    });
-				})
-				.catch((error) => {
-					if (error.response.status === 422) {
-						this.errors = error.response.data.errors
-					}
-					else if (error.response.status === 500) {
-						this.$notify({
-							group: 'contactus',
-							type: 'error',
-							text: 'Error occured please wait while we take a look'
-                    	});
-					}
-					else if(error.response.status === 405) {
-						this.$notify({
-							group: 'contactus',
-							type: 'error',
-							text: 'Error occured please wait while we take a look'
-                    	});
-					}
-					this.loading = false
-				})
-		}
-	},
-	computed: {},
-	mounted() {
-		this.getSiteSettings()
-	}
-}
+  name: "ContactUs",
+  data() {
+    return {
+      sitesettings: [],
+      loading: false,
+      form: {
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      },
+      errors: {},
+    };
+  },
+  methods: {
+    getSiteSettings: async function () {
+      axios.get("/get-site-settings").then((response) => {
+        this.sitesettings = response.data.sitesettings;
+      });
+    },
+    sendMessage: async function () {
+      this.loading = true;
+      axios
+        .post("/send-message", this.form)
+        .then(() => {
+          (this.form.name = ""),
+            (this.form.email = ""),
+            (this.form.subject = ""),
+            (this.form.message = ""),
+            (this.errors = ""),
+            (this.loading = false),
+            this.$notify({
+              group: "contactus",
+              type: "success",
+              text: "Message Sent. We will get back to you",
+            });
+        })
+        .catch((error) => {
+          if (error.response.status === 422) {
+            this.errors = error.response.data.errors;
+          } else if (error.response.status === 500) {
+            this.$notify({
+              group: "contactus",
+              type: "error",
+              text: "Error occured please wait while we take a look",
+            });
+          } else if (error.response.status === 405) {
+            this.$notify({
+              group: "contactus",
+              type: "error",
+              text: "Error occured please wait while we take a look",
+            });
+          }
+          this.loading = false;
+        });
+    },
+  },
+  computed: {},
+  mounted() {
+    this.getSiteSettings();
+  },
+};
 </script>
