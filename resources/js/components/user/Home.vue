@@ -130,11 +130,11 @@
                     <a
                       class="html5lightbox play-button"
                       title="crystalo Video Gallery"
-                      href="https://www.youtube.com/watch?v=p25gICT63ek"
+                      href="https://www.youtube.com/watch?v=dNdhCMEv09M"
                     >
                       <span class="flaticon-play-button"></span>
                     </a>
-                    <a class="slide-style2-button" href="#">More About Us</a>
+                    <a class="slide-style2-button" href="/about-us">More About Us</a>
                   </div>
                 </div>
               </div>
@@ -256,11 +256,11 @@
                     <a
                       class="html5lightbox play-button"
                       title="crystalo Video Gallery"
-                      href="https://www.youtube.com/watch?v=p25gICT63ek"
+                      href="https://www.youtube.com/watch?v=dNdhCMEv09M"
                     >
                       <span class="flaticon-play-button"></span>
                     </a>
-                    <a class="slide-style2-button" href="#">More About Us</a>
+                    <a class="slide-style2-button" href="/about-us">More About Us</a>
                   </div>
                 </div>
               </div>
@@ -382,11 +382,11 @@
                     <a
                       class="html5lightbox play-button"
                       title="crystalo Video Gallery"
-                      href="https://www.youtube.com/watch?v=p25gICT63ek"
+                      href="https://www.youtube.com/watch?v=dNdhCMEv09M"
                     >
                       <span class="flaticon-play-button"></span>
                     </a>
-                    <a class="slide-style2-button" href="#">More About Us</a>
+                    <a class="slide-style2-button" href="/about-us">More About Us</a>
                   </div>
                 </div>
               </div>
