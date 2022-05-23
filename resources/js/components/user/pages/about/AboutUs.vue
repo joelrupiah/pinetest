@@ -4,7 +4,7 @@
     <section
       class="breadcrumb-area style2"
       style="
-        background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(/frontend/images/about-page.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(frontend/images/about-page.jpg);
         height: 380px;
         width: 100%;
         object-fit: cover;
@@ -50,7 +50,7 @@
                 </div>
                 <div class="img-box">
                   <img
-                    src="/frontend/images/resources/changed.jpg"
+                    src="frontend/images/resources/changed.jpg"
                     alt="Logo Image"
                   />
                 </div>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="img-box">
                   <img
-                    src="/frontend/images/resources/changed.jpg"
+                    src="frontend/images/resources/changed.jpg"
                     alt="Logo Image"
                   />
                 </div>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="img-box">
                   <img
-                    src="/frontend/images/resources/changed.jpg"
+                    src="frontend/images/resources/changed.jpg"
                     alt="Logo Image"
                   />
                 </div>
