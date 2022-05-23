@@ -50,7 +50,7 @@
                 </div>
                 <div class="img-box">
                   <img
-                    src="/frontend/images/resources/changed.png"
+                    src="/frontend/images/resources/changed.jpg"
                     alt="Logo Image"
                   />
                 </div>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="img-box">
                   <img
-                    src="/frontend/images/resources/changed.png"
+                    src="/frontend/images/resources/changed.jpg"
                     alt="Logo Image"
                   />
                 </div>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="img-box">
                   <img
-                    src="/frontend/images/resources/changed.png"
+                    src="/frontend/images/resources/changed.jpg"
                     alt="Logo Image"
                   />
                 </div>
