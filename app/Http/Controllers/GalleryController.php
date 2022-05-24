@@ -20,7 +20,7 @@ class GalleryController extends Controller
 
     public function getAllGalleries()
     {
-        $allgalleries = Gallery::get()->take(6);
+        $allgalleries = Gallery::inRandomOrder()->get()->take(6);
 
         return response()->json([
             'allgalleries' => $allgalleries
