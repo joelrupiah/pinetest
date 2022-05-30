@@ -4,7 +4,7 @@
     <section
       class="breadcrumb-area style2"
       style="
-        background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(/frontend/images/about-page.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(frontend/images/about-page.jpg);
         height: 380px;
         width: 100%;
         object-fit: cover;
@@ -16,12 +16,12 @@
             <div class="inner-content-box clearfix">
               <div class="title-s2 text-center">
                 <span>Pinecrest Academy</span>
-                <h1>School Gallery Page</h1>
+                <h1>School Gallery</h1>
               </div>
               <div class="breadcrumb-menu float-left">
                 <ul class="clearfix">
                   <li><a href="/">Home</a></li>
-                  <li class="active">School Gallery</li>
+                  <li class="active">Gallery</li>
                 </ul>
               </div>
             </div>
@@ -49,7 +49,7 @@
             <div class="container-fluid main-project-style4">
                 <div class="row filter-layout masonary-layout">
                     <!--Start single project item-->
-                    <div class="col-6 col-md-3 col-lg-3 filter-item contem trad" v-for="educationGallery in educationGalleries" :key="educationGallery.id">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 filter-item contem trad" v-for="educationGallery in educationGalleries" :key="educationGallery.id">
                         <div class="single-project-style7" v-if="educationGallery.category.name === 'Education'">
                             <div class="img-holder">
                                 <img :src="fileLink(educationGallery.image)" alt="Educational Image"
@@ -83,7 +83,7 @@
             <div class="container-fluid main-project-style4">
                 <div class="row filter-layout masonary-layout">
                     <!--Start single project item-->
-                    <div class="col-6 col-md-3 col-lg-3 filter-item contem trad" v-for="sportGallery in sportGalleries" :key="sportGallery.id">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 filter-item contem trad" v-for="sportGallery in sportGalleries" :key="sportGallery.id">
                         <div class="single-project-style7" v-if="sportGallery.category.name === 'Sports'">
                             <div class="img-holder">
                                 <img :src="fileLink(sportGallery.image)" alt="Sports Image"
@@ -117,7 +117,7 @@
             <div class="container-fluid main-project-style4">
                 <div class="row filter-layout masonary-layout">
                     <!--Start single project item-->
-                    <div class="col-6 col-md-3 col-lg-3 filter-item contem trad" v-for="agricultureGallery in agricultureGalleries" :key="agricultureGallery.id">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 filter-item contem trad" v-for="agricultureGallery in agricultureGalleries" :key="agricultureGallery.id">
                         <div class="single-project-style7" v-if="agricultureGallery.category.name === 'Agriculture'">
                             <div class="img-holder">
                                 <img :src="fileLink(agricultureGallery.image)" alt="Sports Image"
@@ -151,7 +151,7 @@
             <div class="container-fluid main-project-style4">
                 <div class="row filter-layout masonary-layout">
                     <!--Start single project item-->
-                    <div class="col-6 col-md-3 col-lg-3 filter-item contem trad" v-for="socialEventGallery in socialEventGalleries" :key="socialEventGallery.id">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 filter-item contem trad" v-for="socialEventGallery in socialEventGalleries" :key="socialEventGallery.id">
                         <div class="single-project-style7" v-if="socialEventGallery.category.name === 'Social Events'">
                             <div class="img-holder">
                                 <img :src="fileLink(socialEventGallery.image)" alt="Sports Image"
@@ -185,7 +185,7 @@
             <div class="container-fluid main-project-style4">
                 <div class="row filter-layout masonary-layout">
                     <!--Start single project item-->
-                    <div class="col-6 col-md-3 col-lg-3 filter-item contem trad" v-for="infrastructureGallery in infrastructureGalleries" :key="infrastructureGallery.id">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 filter-item contem trad" v-for="infrastructureGallery in infrastructureGalleries" :key="infrastructureGallery.id">
                         <div class="single-project-style7" v-if="infrastructureGallery.category.name === 'Infrastructure'">
                             <div class="img-holder">
                                 <img :src="fileLink(infrastructureGallery.image)" alt="Sports Image"
@@ -217,7 +217,7 @@ export default {
 			agricultureGalleries: [],
 			socialEventGalleries: [],
 			infrastructureGalleries: [],
-			total: 8,
+			total: 4,
 			pageInfo: null,
 			educationPage: null,
 			sportPage: null,

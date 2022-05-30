@@ -11,7 +11,7 @@
                 <div class="footer-logo text-center">
                   <a href="index-2.html">
                     <img
-                      src="frontend/images/resources/changed.jpg"
+                      src="frontend/images/resources/changed.png"
                       alt="Pinecrest Logo"
                       width="200"
                       height="200"

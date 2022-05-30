@@ -4,7 +4,8 @@
     <!--Start breadcrumb area-->
     <section
       class="breadcrumb-area style2"
-      style="background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(/frontend/images/about-page.jpg);
+      style="
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(frontend/images/about-page.jpg);
         height: 380px;
         width: 100%;
         object-fit: cover;
@@ -16,7 +17,7 @@
             <div class="inner-content-box clearfix">
               <div class="title-s2 text-center">
                 <span>Pinecrest Academy</span>
-                <h1>Contact Us Page</h1>
+                <h1>Contact Us</h1>
               </div>
               <div class="breadcrumb-menu float-left">
                 <ul class="clearfix">

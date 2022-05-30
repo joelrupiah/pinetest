@@ -494,18 +494,11 @@
         <div class="row">
           <!--Start Single Working Box-->
           <div
-            class="col-xl-4 col-lg-4"
-            v-for="choose in chooses"
-            :key="choose.id"
-          >
+            class="col-xl-4 col-lg-4">
             <div class="single-working-box wow fadeInDown" data-wow-delay="0ms">
               <div class="img-holder">
                 <div class="inner">
-                  <img
-                    :src="fileLinkChoose(choose.image)"
-                    alt=""
-                    style="width: 100%; height: 250px; object-fit: cover"
-                  />
+                  <img src="/frontend/images/resources/choose-image-one.jpg" alt="" style="width: 100%; height: 250px; object-fit: cover"/>
                   <div class="overlay-style-one"></div>
                 </div>
               </div>
@@ -520,8 +513,153 @@
                     </div>
                   </div>
                   <div class="text">
-                    <h3>{{ choose.title }}</h3>
-                    <p v-html="choose.description"></p>
+                    <h3>Respect</h3>
+                    <p>We treat everyone with respect and courtesy.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Box-->
+          <!--Start Single Working Box-->
+          <div
+            class="col-xl-4 col-lg-4">
+            <div class="single-working-box wow fadeInDown" data-wow-delay="0ms">
+              <div class="img-holder">
+                <div class="inner">
+                  <img src="/frontend/images/resources/choose-image-two.jpg" alt="" style="width: 100%; height: 250px; object-fit: cover"/>
+                  <div class="overlay-style-one"></div>
+                </div>
+              </div>
+              <div class="text-holder">
+                <div class="plus-icon-box"><span class="icon-plus"></span></div>
+                <div class="outer-box">
+                  <div class="icon">
+                    <div class="inner">
+                      <div class="box">
+                        <span class="icon-architecture-and-city1"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h3>Integrity</h3>
+                    <p>We speak truthfully and act honestly.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Box-->
+          <!--Start Single Working Box-->
+          <div
+            class="col-xl-4 col-lg-4">
+            <div class="single-working-box wow fadeInDown" data-wow-delay="0ms">
+              <div class="img-holder">
+                <div class="inner">
+                  <img src="/frontend/images/resources/choose-image-three.jpg" alt="" style="width: 100%; height: 250px; object-fit: cover"/>
+                  <div class="overlay-style-one"></div>
+                </div>
+              </div>
+              <div class="text-holder">
+                <div class="plus-icon-box"><span class="icon-plus"></span></div>
+                <div class="outer-box">
+                  <div class="icon">
+                    <div class="inner">
+                      <div class="box">
+                        <span class="icon-architecture-and-city1"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h3>Independence</h3>
+                    <p>We seek to be achievers and self-reliant.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Box-->
+          <!--Start Single Working Box-->
+          <div
+            class="col-xl-4 col-lg-4">
+            <div class="single-working-box wow fadeInDown" data-wow-delay="0ms">
+              <div class="img-holder">
+                <div class="inner">
+                  <img src="/frontend/images/resources/choose-image-four.jpg" alt="" style="width: 100%; height: 250px; object-fit: cover"/>
+                  <div class="overlay-style-one"></div>
+                </div>
+              </div>
+              <div class="text-holder">
+                <div class="plus-icon-box"><span class="icon-plus"></span></div>
+                <div class="outer-box">
+                  <div class="icon">
+                    <div class="inner">
+                      <div class="box">
+                        <span class="icon-architecture-and-city1"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h3>Creativity</h3>
+                    <p>We aim to be conveyors of new positive ideas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Box-->
+          <!--Start Single Working Box-->
+          <div
+            class="col-xl-4 col-lg-4">
+            <div class="single-working-box wow fadeInDown" data-wow-delay="0ms">
+              <div class="img-holder">
+                <div class="inner">
+                  <img src="/frontend/images/resources/choose-image-five.jpg" alt="" style="width: 100%; height: 250px; object-fit: cover"/>
+                  <div class="overlay-style-one"></div>
+                </div>
+              </div>
+              <div class="text-holder">
+                <div class="plus-icon-box"><span class="icon-plus"></span></div>
+                <div class="outer-box">
+                  <div class="icon">
+                    <div class="inner">
+                      <div class="box">
+                        <span class="icon-architecture-and-city1"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h3>Collaboration</h3>
+                    <p>We seek to work with all to achieve excellence.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Box-->
+          <!--Start Single Working Box-->
+          <div
+            class="col-xl-4 col-lg-4">
+            <div class="single-working-box wow fadeInDown" data-wow-delay="0ms">
+              <div class="img-holder">
+                <div class="inner">
+                  <img src="/frontend/images/resources/choose-image-six.jpg" alt="" style="width: 100%; height: 250px; object-fit: cover"/>
+                  <div class="overlay-style-one"></div>
+                </div>
+              </div>
+              <div class="text-holder">
+                <div class="plus-icon-box"><span class="icon-plus"></span></div>
+                <div class="outer-box">
+                  <div class="icon">
+                    <div class="inner">
+                      <div class="box">
+                        <span class="icon-architecture-and-city1"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h3>Humility</h3>
+                    <p>We treat others as we would like them to treat us.</p>
                   </div>
                 </div>
               </div>
@@ -859,10 +997,7 @@
             <div class="contact-details-content">
               <div class="row">
                 <div
-                  class="col-xl-6 col-lg-6"
-                  v-for="sitesetting in sitesettings"
-                  :key="sitesetting.id"
-                >
+                  class="col-xl-6 col-lg-6">
                   <div
                     class="content-info-box"
                     style="
@@ -882,7 +1017,7 @@
                           <div class="text">
                             <h3>Visit Our Office</h3>
                             <p>
-                              {{ sitesetting.town }}, {{ sitesetting.address }}
+                              Juja, Nairobi Kenya, Juja South Estate
                             </p>
                           </div>
                         </div>
@@ -897,7 +1032,7 @@
                           <div class="text">
                             <h3>Call us on</h3>
                             <p>
-                              {{ sitesetting.phone }}
+                              +254 794 6697 92
                             </p>
                             <p>Mon to Fri 8am to 5pm</p>
                           </div>
@@ -914,7 +1049,7 @@
                           <div class="text">
                             <h3>Email us at</h3>
                             <p>
-                              {{ sitesetting.email }}
+                              info@pinecrestacademy.co.ke
                             </p>
                           </div>
                         </div>
