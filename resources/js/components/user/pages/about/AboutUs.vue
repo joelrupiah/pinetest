@@ -5,7 +5,7 @@
       class="breadcrumb-area style2"
       style="
         background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(frontend/images/about-page.jpg);
-        height: 380px;
+        height: 230px;
         width: 100%;
         object-fit: cover;
       "
@@ -16,9 +16,9 @@
             <div class="inner-content-box clearfix">
               <div class="title-s2 text-center">
                 <span>Pinecrest Academy</span>
-                <h1>About Us Page</h1>
+                <h1>About Us</h1>
               </div>
-              <div class="breadcrumb-menu float-left">
+              <div class="breadcrumb-menu float-left" style="margin-top:-50px">
                 <ul class="clearfix">
                   <li><a href="/">Home</a></li>
                   <li class="active">About Us</li>
@@ -31,7 +31,7 @@
     </section>
     <!--End breadcrumb area-->
     <!--Start Motto, Vision, Mission Area-->
-    <section class="testimonial-area">
+    <section class="testimonial-area" style="margin-top:-150px">
       <div class="container">
         <div class="row">
           <div class="col-xl-12">

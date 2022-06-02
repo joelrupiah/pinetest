@@ -5,7 +5,7 @@
       class="breadcrumb-area style2"
       style="
         background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(frontend/images/about-page.jpg);
-        height: 380px;
+        height: 230px;
         width: 100%;
         object-fit: cover;
       "
@@ -18,7 +18,7 @@
                 <span>Pinecrest Academy</span>
                 <h1>School Gallery</h1>
               </div>
-              <div class="breadcrumb-menu float-left">
+              <div class="breadcrumb-menu float-left" style="margin-top:-50px">
                 <ul class="clearfix">
                   <li><a href="/">Home</a></li>
                   <li class="active">Gallery</li>

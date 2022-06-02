@@ -433,38 +433,14 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-7 col-lg-7">
+          <div class="col-xl-7 col-lg-7" v-for="about in abouts" :key="about.id">
             <div class="about-text">
               <div class="sec-title">
-                <p class="title" style="color: green">
-                  About Pinecrest Academy
-                </p>
+                <p class="title" style="color: green" v-html="about.heading"></p>
               </div>
               <div class="inner-content">
                 <div class="text">
-                  <p>
-                    Pinecrest Academy is a private school located within Juja
-                    South Estate in Juja. The school aims to set a standard of
-                    educational excellence and is an institution whose ethos and
-                    practice is based upon Christian teachings. We aim to
-                    provide a private school education that will be acknowledged
-                    for effective teaching and encouragement of personal growth
-                    and excellence in learning. We consider it a privilege to
-                    share in your child’s educational journey and we look
-                    forward to working together with you to provide an
-                    environment that is positive, stimulating and focused on
-                    academic achievements accompanied with high moral
-                    characteristics.
-                  </p>
-                  <strong>CURRICULUM</strong>
-                  <p>
-                    For Kindergaten (Little Pines & Playgroup), we use the
-                    highly effective and internationally acclaimed Montessori
-                    method of teaching before ushering in the CBC (Competency
-                    Based Curriculum) Kenyan curriculum for PP1 classes and
-                    beyond. We have highly qualified teachers for both
-                    programmes.
-                  </p>
+                  <p v-html="about.description"></p>
                 </div>
               </div>
             </div>
