@@ -102,7 +102,7 @@
                         <a href="tel:+254 794 6697 92" class="text-muted">
                           +254 794 6697 92</a
                         ><br />
-                        <span>Mon - Friday:</span> 8.00am to 5.00pm
+                        <span>Mon - Friday:</span> 8.00am to 4.30pm
                       </p>
                     </div>
                   </div>

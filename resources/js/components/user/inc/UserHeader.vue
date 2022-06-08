@@ -16,7 +16,7 @@
                 >info@pinecrestacademy.co.ke</a
               >
             </li>
-            <li>Mon - Fri: 8am to 5pm</li>
+            <li>Mon - Fri: 8am to 4.30pm</li>
           </ul>
         </div>
         <div class="top-style2-right">
