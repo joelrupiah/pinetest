@@ -137,8 +137,25 @@ class AboutUsController extends Controller
 
     }
 
-    public function destroy(AboutUs $aboutUs)
+    public function destroy(Request $request, $id)
     {
-        //
+        $aboutUs = AboutUs::find($id);
+
+        // return $aboutUs->imageTwo;
+        $imageOne = $aboutUs->imageOne;
+        $imagePathOne = public_path('/uploads/img/about/').$imageOne;
+
+        $imageTwo = $aboutUs->imageTwo;
+        $imagePathTwo = public_path('/uploads/img/about/').$imageTwo;
+
+        if (file_exists($imagePathOne)) {
+            unlink($imagePathOne);
+        }
+
+        if (file_exists($imagePathTwo)) {
+            unlink($imagePathTwo);
+        }
+
+        $aboutUs->delete();
     }
 }

@@ -16,7 +16,8 @@ class Application extends Model
         'parent_phone',
         'parent_email',
         'student_name',
-        'student_age'
+        'student_age',
+        'track_code'
     ];
 
     public function grade(): BelongsTo

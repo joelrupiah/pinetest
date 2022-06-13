@@ -90,7 +90,7 @@
                             <p>
                               {{ sitesetting.phone }}
                             </p>
-                            <p>Mon to Fri 8am to 5pm</p>
+                            <p>Mon to Fri 8am to 4.30pm</p>
                           </div>
                         </div>
                         <div

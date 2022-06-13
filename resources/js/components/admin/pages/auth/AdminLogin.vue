@@ -57,7 +57,7 @@ export default {
     },
     methods:{
         login(){
-          this.loading = true
+        this.loading = true
         Admin.login(this.form)
           .then(response => {
             this.$store.commit('admin/LOGIN', true)
@@ -80,7 +80,7 @@ export default {
             }
             else if (error.response.status === 500) {
               this.$notify({
-                group: 'grade',
+                group: 'login',
                 type: 'error',
                 title: 'Request failed',
                 text: 'Please contact IT Admin'

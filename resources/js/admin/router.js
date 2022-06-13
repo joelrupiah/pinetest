@@ -8,6 +8,9 @@ import ResetPassword from '../components/admin/pages/auth/ResetPassword'
 
 import AdminProfile from '../components/admin/pages/profile/AdminProfile'
 
+import FeeRequests from '../components/admin/pages/fees/FeeRequests'
+import EditFeeRequests from '../components/admin/pages/fees/EditFeeRequests'
+
 import RoleList from '../components/admin/pages/role/RoleList.vue'
 
 import PermissionList from '../components/admin/pages/permission/PermissionList.vue'
@@ -73,6 +76,9 @@ const router = new VueRouter({
 
         {path:'/admin/admin-login', component: AdminLogin, name: 'AdminLogin', meta: { requiresVisitor: true } },
         {path:'/admin/admin-reset-password', component: ResetPassword, name: 'ResetPassword', meta: { requiresVisitor: true } },
+
+        {path: '/admin/fee-requests', component: FeeRequests, name: 'FeeRequests', meta: { requiresAuth: true } },
+        {path: '/admin/edit-fee-request/:id', component: EditFeeRequests, name: 'EditFeeRequests', meta: { requiresAuth: true } },
 
         {path: '/admin/admin-profile', component: AdminProfile, name: 'AdminProfile', meta: { requiresAuth: true } },
 

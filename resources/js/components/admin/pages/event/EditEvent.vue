@@ -4,7 +4,7 @@
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-12">
-              <h2 class="page-title">Create Event</h2>
+              <h2 class="page-title">Edit Event</h2>
               <p class="text-muted mb-1">Form for creating event content.</p>
               <div class="card shadow mb-4">
                 <div class="card-header">

@@ -139,10 +139,15 @@ class EventController extends Controller
 
     }
 
-    public function destroy(Event $event)
+    public function destroy(Request $request, $id)
     {
+        $event = Event::find($id);
+        // return $gallery->image;
+        $image = $event->image;
+        $imagePath = public_path('/uploads/img/event/').$image;
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
         $event->delete();
-        
-        return response()->json('Success delete', 200);
     }
 }

@@ -22,6 +22,7 @@ class CreateApplicationsTable extends Migration
             $table->string('student_name');
             $table->string('student_age');
             $table->string('status')->default(0);
+            $table->string('track_code');
             $table->timestamps();
         });
     }

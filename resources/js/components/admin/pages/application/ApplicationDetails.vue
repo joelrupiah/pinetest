@@ -15,7 +15,7 @@
                   <div class="card shadow mb-4">
                     <div class="card-header">
                       <strong class="card-title">{{ applicationData.student_name }}.</strong>
-                      <span class="float-right"><i class="fe fe-flag mr-2"></i>
+                      <span class="float-right">Track Code: {{ applicationData.track_code }}
                         <span :class="statusColor(applicationData.status)">
                           <span class="status">
                             {{ statusName(applicationData.status) }}
@@ -96,7 +96,8 @@ export default {
               student_age: '',
               grade: '',
               status: '',
-              date_applied: ''
+              date_applied: '',
+              track_code: ''
             },
             form: {
               status: []
@@ -128,6 +129,7 @@ export default {
                 this.applicationData.grade = response.data.application.grade.name
                 this.applicationData.status = response.data.application.status
                 this.applicationData.date_applied = response.data.application.created_at
+                this.applicationData.track_code = response.data.application.track_code
               })
               .catch((error) => {})
         },

@@ -20,4 +20,14 @@ class Grade extends Model
         return $this->hasMany(Application::class);
     }
 
+    // public function fee(): BelongsTo
+    // {
+    //     return $this->belongsTo(Fee::class);
+    // }
+
+    public function fees(): HasMany
+    {
+        return $this->hasMany(Fee::class);
+    }
+
 }

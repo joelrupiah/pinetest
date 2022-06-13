@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <notifications group="home" class="mt-3" />
+    <notifications group="application" class="mt-3" />
     <!--Main Slider-->
     <section class="main-slider style2 mb-5">
       <div
@@ -660,7 +660,7 @@
         </div>
         <div class="row">
           <!--Start single blog post-->
-          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12" v-for="event in events" :key="event.id">
             <div
               class="single-blog-post wow fadeInLeft"
               data-wow-delay="0ms"
@@ -668,14 +668,14 @@
             >
               <div class="img-holder">
                 <img
-                  src="frontend/images/event-one.jpg"
+                  :src="fileLinkEvent(event.image)"
                   alt="Awesome Image"
                   style="width: 100%; height: 240px; object-fit: cover"
                 />
               </div>
               <div class="text-holder">
                 <div class="post-date">
-                  <h3>02 <span>Mar 2022</span></h3>
+                  <h3><span>{{ event.start_date | time }}</span></h3>
                 </div>
                 <div class="meta-box">
                   <ul class="meta-info">
@@ -683,85 +683,10 @@
                   </ul>
                 </div>
                 <h3 class="blog-title">
-                  <a href="blog-single.html">First Event Header</a>
+                  <a href="#" v-html="event.title"></a>
                 </h3>
                 <div class="text">
-                  <p>
-                    First event descriptionirst event descriptionirst event
-                    descriptionirst event description.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--End single blog post-->
-          <!--Start single blog post-->
-          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-            <div
-              class="single-blog-post wow fadeInLeft"
-              data-wow-delay="200ms"
-              data-wow-duration="1500ms"
-            >
-              <div class="img-holder">
-                <img
-                  src="frontend/images/event-two.jpg"
-                  alt="Awesome Image"
-                  style="width: 100%; height: 240px; object-fit: cover"
-                />
-              </div>
-              <div class="text-holder">
-                <div class="post-date">
-                  <h3>24 <span>Feb 2022</span></h3>
-                </div>
-                <div class="meta-box">
-                  <ul class="meta-info">
-                    <li>By <a href="#">Pinecrest Management</a></li>
-                  </ul>
-                </div>
-                <h3 class="blog-title">
-                  <a href="blog-single.html">Second Event Header</a>
-                </h3>
-                <div class="text">
-                  <p>
-                    Second event descriptionSecond event descriptionSecond event
-                    description.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--End single blog post-->
-          <!--Start single blog post-->
-          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-            <div
-              class="single-blog-post wow fadeInLeft"
-              data-wow-delay="400ms"
-              data-wow-duration="1500ms"
-            >
-              <div class="img-holder">
-                <img
-                  src="frontend/images/event-three.jpg"
-                  alt="Awesome Image"
-                  style="width: 100%; height: 240px; object-fit: cover"
-                />
-              </div>
-              <div class="text-holder">
-                <div class="post-date">
-                  <h3>18 <span>Jan 2022</span></h3>
-                </div>
-                <div class="meta-box">
-                  <ul class="meta-info">
-                    <li>By <a href="">Pinecrest Management</a></li>
-                  </ul>
-                </div>
-                <h3 class="blog-title">
-                  <a href="blog-single.html">Third Event Header</a>
-                </h3>
-                <div class="text">
-                  <p>
-                    Third event descriptionThird event descriptionThird event
-                    description.
-                  </p>
+                  <p v-html="event.description"></p>
                 </div>
               </div>
             </div>
@@ -912,18 +837,29 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-xl-12">
+                    <div class="col-xl-6">
                       <div class="single-box">
                         <el-button
                           :loading="loading"
                           size="mini"
-                          style="background-color: royalblue; color: white"
+                          style="background-color: #023020; color: white"
                           @click.prevent="submitApplication()"
                           >{{
                             loading
                               ? "Submitting Application....."
                               : "Submit Application"
                           }}
+                        </el-button>
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="single-box">
+                        <el-button
+                          size="mini"
+                          style="background-color: #023020; color: white"
+                          @click="trackApplicationDialog = true"
+                          >
+                          Application Status
                         </el-button>
                       </div>
                     </div>
@@ -1010,7 +946,7 @@
                             <p>
                               +254 794 6697 92
                             </p>
-                            <p>Mon to Fri 8am to 5pm</p>
+                            <p>Mon to Fri 8am to 4.30pm</p>
                           </div>
                         </div>
                         <div
@@ -1183,6 +1119,39 @@
       </div>
     </section>
     <!--End Gallery Area-->
+
+    <!-- Start Track Application Dialog -->
+    <el-dialog
+      title="Retrieve Application Status"
+      :visible.sync="trackApplicationDialog"
+      width="30%"
+      center>
+      <span>
+        <Form label-position="top">
+        <FormItem label="Input Code">
+            <Input v-model="trackApplication.code"></Input>
+        </FormItem>
+        <p>Application Status</p>
+            <span :class="statusColor(trackData.status)">
+              {{ statusName(trackData.status) }}
+            </span>
+    </Form>
+      </span>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="trackApplicationDialog = false" size="mini" style="background-color: red; color: white">Cancel</el-button>
+        <el-button type="primary" @click="trackApplicationSubmit()" 
+        size="mini" style="background-color: #023020; color: white"
+        :loading="loading"
+        >
+        {{
+          loading
+            ? "Retrieving status....."
+            : "Retrieve Status"
+        }}
+        </el-button>
+      </span>
+    </el-dialog>
+    <!-- End Track Application Dialog -->
   </div>
 </template>
 
@@ -1191,6 +1160,7 @@ export default {
   name: "Home",
   data() {
     return {
+      trackApplicationDialog: false,
       loading: false,
       abouts: [],
       abouthistories: [],
@@ -1201,6 +1171,12 @@ export default {
       chooses: [],
       sitesettings: [],
       allgalleries: [],
+      trackApplication: {
+        code: ''
+      },
+      trackData: {
+        status: ''
+      },
       form: {
         grade_id: "",
         parent_name: "",
@@ -1219,6 +1195,16 @@ export default {
     };
   },
   methods: {
+    statusName: function(status){
+          let data = { 0: "New", 1: "Reviewing", 2: "Processing", 3: "Complete", 4: "Rejected" }
+          return data[status]
+        },
+        statusColor: function(status){
+          let data = { 0: "badge badge-dark", 1: "badge badge-warning", 
+          2: "badge badge-info", 3: "badge badge-success", 
+          4: "badge badge-danger" }
+          return data[status]
+        },
     fileLink(name){
 			return '/uploads/img/gallery/' + name
 		},
@@ -1291,17 +1277,26 @@ export default {
         text: "Please keep checking for any job posting",
       });
     },
+    trackApplicationSubmit: async function(){
+      this.loading = true
+      axios.post('track-application', this.trackApplication)
+        .then((response) => {
+          console.log(response)
+          this.trackData.status = response.data.trackedApplication.status
+        })
+        this.loading = false
+    },
     submitApplication: async function () {
       this.loading = true;
       axios
         .post("/submit-application", this.form)
         .then(() => {
           this.$notify({
-            group: "home",
-            type: "success",
-            title: "Application submited",
-            text: "We'll get back to you",
-          });
+              group: 'application',
+              type: 'success',
+              title: 'Request complete',
+              text: 'Application successful'
+            });
           (this.form.grade_id = ""),
             (this.form.parent_name = ""),
             (this.form.parent_phone = ""),
@@ -1314,16 +1309,22 @@ export default {
         .catch((error) => {
           if (error.response.status === 422) {
             this.errors = error.response.data.errors;
+            this.$notify({
+              group: 'application',
+              type: 'danger',
+              title: 'Enter details required',
+              text: 'Please contact support for advice. Thank you'
+            });
           } else if (error.response.status === 500) {
             this.$notify({
-              group: "home",
-              type: "danger",
-              title: "Application failed",
-              text: "Please contact support for advice. Thank you",
+              group: 'application',
+              type: 'danger',
+              title: 'Application failed',
+              text: 'Please contact support for advice. Thank you'
             });
           } else if (error.response.status === 405) {
             this.$notify({
-              group: "home",
+              group: "application",
               type: "danger",
               title: "Application failed",
               text: "Please contact  support for advice. Thank you",

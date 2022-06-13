@@ -21,6 +21,7 @@ use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ContactSettingController;
 use App\Http\Controllers\ChooseController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FeeController;
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
@@ -84,6 +85,7 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::get('get-all-admin-about-data', [AboutUsController::class, 'index']);
     Route::get('get-about-data/{id}', [AboutUsController::class, 'show']);
     Route::post('update-about-us/{id}', [AboutUsController::class, 'update']);
+    Route::delete('delete-about/{id}', [AboutUsController::class, 'destroy']);
 
     Route::post('create-about-history', [AboutHistoryController::class, 'store']);
     Route::get('get-admin-about-history', [AboutHistoryController::class, 'index']);
@@ -99,6 +101,7 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::post('create-event', [EventController::class, 'store']);
     Route::get('get-event/{id}', [EventController::class, 'show']);
     Route::post('edit-event/{id}', [EventController::class, 'update']);
+    Route::delete('delete-event', [EventController::class, 'destroy']);
 
     Route::post('create-carousel', [CarouselController::class, 'store']);
     Route::get('get-admin-carousels', [CarouselController::class, 'index']);
@@ -115,6 +118,11 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::get('get-choose/{id}', [ChooseController::class, 'show']);
     Route::post('edit-choose/{id}', [ChooseController::class, 'update']);
     Route::delete('delete-admin-choose/{id}', [ChooseController::class, 'destroy']);
+
+    Route::get('get-fee-requests', [FeeController::class, 'index']);
+    Route::get('get-fee-request/{id}', [FeeController::class, 'getFeeRequest']);
+
+    Route::post('send-fee-request-email/{id}', [FeeController::class, 'sendFeeEmail']);
 
 });
 
@@ -144,6 +152,10 @@ Route::post('subscribe-newsletter', [SubscriptionController::class, 'store']);
 Route::post('send-message', [InboxController::class, 'store']);
 
 Route::post('submit-application', [ApplicationController::class, 'store']);
+
+Route::post('track-application', [ApplicationController::class, 'trackApplication']);
+
+Route::post('request-fees', [FeeController::class, 'store']);
 
 Route::prefix('admin')->group(function(){
     Route::post('reset-admin-password', [ResetAdminPasswordController::class, 'resetAdminPassword']);
