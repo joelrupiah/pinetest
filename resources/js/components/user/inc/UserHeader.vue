@@ -19,18 +19,6 @@
             <li>Mon - Fri: 8am to 4.30pm</li>
           </ul>
         </div>
-        <div class="top-style2-right">
-          <ul class="topbar-social-links">
-            <li>
-              <a
-                href="https://www.facebook.com/pinecrestjujasouth/?ref=page_internal"
-                target="_blank"
-              >
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
     <!-- End Top Bar style2 -->

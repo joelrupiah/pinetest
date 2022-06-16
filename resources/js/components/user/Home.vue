@@ -648,52 +648,31 @@
     <!--End Choice Area-->
 
     <!--Start Events area-->
-    <section class="latest-blog-area style2">
-      <div class="container inner-content">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="sec-title float-left">
-              <p>Events</p>
-              <div class="title">Upcoming <span>Events</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!--Start single blog post-->
-          <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12" v-for="event in events" :key="event.id">
-            <div
-              class="single-blog-post wow fadeInLeft"
-              data-wow-delay="0ms"
-              data-wow-duration="1500ms"
-            >
-              <div class="img-holder">
-                <img
-                  :src="fileLinkEvent(event.image)"
-                  alt="Awesome Image"
-                  style="width: 100%; height: 240px; object-fit: cover"
-                />
-              </div>
-              <div class="text-holder">
-                <div class="post-date">
-                  <h3><span>{{ event.start_date | time }}</span></h3>
-                </div>
-                <div class="meta-box">
-                  <ul class="meta-info">
-                    <li>By <a href="#">Pinecrest Management</a></li>
-                  </ul>
-                </div>
-                <h3 class="blog-title">
-                  <a href="#" v-html="event.title"></a>
-                </h3>
-                <div class="text">
-                  <p v-html="event.description"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--End single blog post-->
-        </div>
+    <section class="latest-blog-area">
+      <div class="sec-title text-center">
+        <p>Events</p>
+        <div class="title">Upcoming School <span>Events</span></div>
       </div>
+      <div class="container inner-content min-vh-50 d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-md-4" v-for="event in events" :key="event.id">
+                <div class="card1 mt-3 p-3 g-2">
+                    <div class="d-flex align-items-center">
+                        <small class="first">{{ event.start_date | time }}</small>
+                    </div>
+                    <div class="mt-3">
+                        <h3 class="text1" v-html="event.title"></h3>
+                    </div>
+                    <div class="detail mt-5">
+                        <p v-html="event.description"></p>
+                    </div>
+                    <div class="mt-3 d-flex justify-content-end px-2">
+                        <span class="badge badge-light">By Pinecrest Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
     <!--End Events area-->
 
@@ -849,17 +828,6 @@
                               ? "Submitting Application....."
                               : "Submit Application"
                           }}
-                        </el-button>
-                      </div>
-                    </div>
-                    <div class="col-xl-6">
-                      <div class="single-box">
-                        <el-button
-                          size="mini"
-                          style="background-color: #023020; color: white"
-                          @click="trackApplicationDialog = true"
-                          >
-                          Application Status
                         </el-button>
                       </div>
                     </div>
@@ -1120,38 +1088,6 @@
     </section>
     <!--End Gallery Area-->
 
-    <!-- Start Track Application Dialog -->
-    <el-dialog
-      title="Retrieve Application Status"
-      :visible.sync="trackApplicationDialog"
-      width="30%"
-      center>
-      <span>
-        <Form label-position="top">
-        <FormItem label="Input Code">
-            <Input v-model="trackApplication.code"></Input>
-        </FormItem>
-        <p>Application Status</p>
-            <span :class="statusColor(trackData.status)">
-              {{ statusName(trackData.status) }}
-            </span>
-    </Form>
-      </span>
-      <span slot="footer" class="dialog-footer">
-        <el-button @click="trackApplicationDialog = false" size="mini" style="background-color: red; color: white">Cancel</el-button>
-        <el-button type="primary" @click="trackApplicationSubmit()" 
-        size="mini" style="background-color: #023020; color: white"
-        :loading="loading"
-        >
-        {{
-          loading
-            ? "Retrieving status....."
-            : "Retrieve Status"
-        }}
-        </el-button>
-      </span>
-    </el-dialog>
-    <!-- End Track Application Dialog -->
   </div>
 </template>
 
@@ -1160,7 +1096,6 @@ export default {
   name: "Home",
   data() {
     return {
-      trackApplicationDialog: false,
       loading: false,
       abouts: [],
       abouthistories: [],
@@ -1171,12 +1106,6 @@ export default {
       chooses: [],
       sitesettings: [],
       allgalleries: [],
-      trackApplication: {
-        code: ''
-      },
-      trackData: {
-        status: ''
-      },
       form: {
         grade_id: "",
         parent_name: "",
@@ -1195,16 +1124,6 @@ export default {
     };
   },
   methods: {
-    statusName: function(status){
-          let data = { 0: "New", 1: "Reviewing", 2: "Processing", 3: "Complete", 4: "Rejected" }
-          return data[status]
-        },
-        statusColor: function(status){
-          let data = { 0: "badge badge-dark", 1: "badge badge-warning", 
-          2: "badge badge-info", 3: "badge badge-success", 
-          4: "badge badge-danger" }
-          return data[status]
-        },
     fileLink(name){
 			return '/uploads/img/gallery/' + name
 		},
@@ -1268,23 +1187,6 @@ export default {
       axios.get("/get-site-settings").then((response) => {
         this.sitesettings = response.data.sitesettings;
       });
-    },
-    applyForAJob: async function () {
-      this.$notify({
-        group: "home",
-        type: "info",
-        title: "No positions for now",
-        text: "Please keep checking for any job posting",
-      });
-    },
-    trackApplicationSubmit: async function(){
-      this.loading = true
-      axios.post('track-application', this.trackApplication)
-        .then((response) => {
-          console.log(response)
-          this.trackData.status = response.data.trackedApplication.status
-        })
-        this.loading = false
     },
     submitApplication: async function () {
       this.loading = true;
@@ -1384,3 +1286,22 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.card1{
+    background-color:#023020;
+    border-radius:15px;
+    height:auto;
+    border:2px solid #919ba9;
+}
+.first {
+    color:#a4adb8;
+}
+.text1{
+    color:#fff;
+    font-weight:700;
+}
+.detail{
+    color:#a4adb8;
+}
+</style>

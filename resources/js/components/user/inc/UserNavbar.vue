@@ -59,49 +59,12 @@
               </ul>
             </div>
             <div class="button">
-              <a class="btn-one" href="#" @click="feeModal = true"
-                >Request Fees Structure<span class="flaticon-next"></span
-              ></a>
+              <a href="https://www.facebook.com/pinecrestjujasouth/?ref=page_internal"
+                target="_blank" class="fa fa-facebook"></a>
             </div>
           </div>
         </div>
       </div>
-
-<el-dialog
-      title="Request for Fees"
-      :visible.sync="feeModal"
-      width="30%"
-      center>
-      <span>
-        <Form label-position="top">
-        <FormItem label="Input Email">
-            <Input v-model="fees.email"></Input>
-        </FormItem>
-        <FormItem label="Select Grade">
-            <div class="form-check form-check-inline" v-for="grade in grades" :key="grade.id">
-              <input class="form-check-input" type="checkbox" :id="grade.id" :value="grade.name" v-model="fees.checked">
-              <label class="form-check-label" :for="grade.id">{{ grade.name }}</label>
-            </div>
-        </FormItem>
-    </Form>
-      </span>
-      <span slot="footer" class="dialog-footer">
-        <el-button @click="feeModal = false" size="mini" style="background-color: red; color: white">
-          Cancel
-        </el-button>
-        <el-button type="primary" @click="requestFees()" 
-        size="mini" style="background-color: #023020; color: white"
-        :loading="loading"
-        >
-        {{
-          loading
-            ? "Sending request....."
-            : "Send request"
-        }}
-        </el-button>
-      </span>
-    </el-dialog>
-
     </header>
     <!--End Main Header-->
   </div>
@@ -110,16 +73,11 @@
 <script>
 export default {
   name: "UserNavbar",
-  data(){
+  data() {
     return {
       loading: false,
-      feeModal: false,
       grades: [],
-      fees: {
-        email: '',
-        checked: []
-      }
-    }
+    };
   },
   methods: {
     getUserGrades: async function () {
@@ -127,14 +85,29 @@ export default {
         this.grades = response.data.grades;
       });
     },
-    requestFees: async function() {
-      axios.post('request-fees', this.fees)
-        .then(() =>{})
-        .catch(() => {})
-    }
   },
   created() {
     this.getUserGrades();
-  }
+  },
 };
 </script>
+
+<style scoped>
+/* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+} */
+
+/* .fa:hover {
+  opacity: 0.7;
+} */
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+</style>
