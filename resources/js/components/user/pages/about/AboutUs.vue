@@ -166,7 +166,7 @@
     </section>
     <!--End Video Image Gallery Area-->
     <!--Start Video Image Holder Area-->
-    <section class="video-image-holder-area mb-5">
+    <!-- <section class="video-image-holder-area mb-5">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xl-6 col-lg-6 col-md-6">
@@ -174,7 +174,6 @@
               <div class="img-holder">
                 <div class="faq-content-box">
                   <div class="accordion-box">
-                    <!--Start single accordion box-->
                     <div class="accordion accordion-block" v-for="adminfaq in adminfaqs" :key="adminfaq.id">
                       <div class="accord-btn">
                         <h4 v-html="adminfaq.title"></h4>
@@ -183,7 +182,6 @@
                         <p v-html="adminfaq.description"></p>
                       </div>
                     </div>
-                    <!--End single accordion box-->
                   </div>
                 </div>
               </div>
@@ -200,7 +198,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--End Video Image Gallery Area-->
   </div>
 </template>

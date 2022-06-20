@@ -84,7 +84,7 @@
                     </div>
                     <div class="text">
                       <p>
-                        Juja, Nairobi Kenya<br />
+                        Juja, Kiambu County Kenya<br />
                         Juja South Estate
                       </p>
                     </div>

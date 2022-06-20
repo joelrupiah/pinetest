@@ -408,7 +408,7 @@
                   src="frontend/images/resources/pine-about.jpg"
                   alt="School Image"
                 />
-                <div class="overlay">
+                <!-- <div class="overlay">
                   <div class="box">
                     <div
                       class="icon wow zoomIn"
@@ -422,7 +422,7 @@
                       />
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="text-box">
                 <p>
@@ -663,9 +663,9 @@
                     <div class="mt-3">
                         <h3 class="text1" v-html="event.title"></h3>
                     </div>
-                    <div class="detail mt-5">
+                    <!-- <div class="detail mt-5">
                         <p v-html="event.description"></p>
-                    </div>
+                    </div> -->
                     <div class="mt-3 d-flex justify-content-end px-2">
                         <span class="badge badge-light">By Pinecrest Management</span>
                     </div>
@@ -897,7 +897,7 @@
                           <div class="text">
                             <h3>Visit Our Office</h3>
                             <p>
-                              Juja, Nairobi Kenya, Juja South Estate
+                              Juja, Kiambu County, Kenya, Juja South Estate
                             </p>
                           </div>
                         </div>
