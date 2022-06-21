@@ -89,6 +89,13 @@ a:focus {
 }
 
 
+@media (max-width: 767px) {
+    .about-text {
+        padding-left: 0;
+        margin-top: 60px;
+        height: 350px;
+    }
+}
 
 @media (min-width: 1200px) {
     .container {
@@ -1760,6 +1767,7 @@ select:focus {
     display: block;
     padding-top: 60px;
     padding-bottom: 110px;
+    /* height: auto; */
 }
 .about-image-box {
     position: relative;
@@ -1856,7 +1864,7 @@ select:focus {
     padding-left: 100px;
 }
 .about-text .sec-title {
-    padding-bottom: 44px;
+    padding-bottom: 34px;
 }
 .about-text .inner-content{
     position: relative;

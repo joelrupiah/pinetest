@@ -8,6 +8,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ResetAdminPasswordController;
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AboutHistoryController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\GalleryController;
@@ -81,11 +82,11 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::get('get-asked-question/{id}', [FaqController::class, 'getAdminQuestion']);
     Route::post('reply-asked-question/{id}', [FaqController::class, 'replyQuestion']);
 
-    Route::post('create-about', [AboutUsController::class, 'store']);
-    Route::get('get-all-admin-about-data', [AboutUsController::class, 'index']);
-    Route::get('get-about-data/{id}', [AboutUsController::class, 'show']);
-    Route::post('update-about-us/{id}', [AboutUsController::class, 'update']);
-    Route::delete('delete-about/{id}', [AboutUsController::class, 'destroy']);
+    Route::post('create-about', [AboutController::class, 'store']);
+    Route::get('get-all-admin-about-data', [AboutController::class, 'index']);
+    Route::get('get-about-data/{id}', [AboutController::class, 'show']);
+    Route::post('update-about-us/{id}', [AboutController::class, 'update']);
+    Route::delete('delete-about/{id}', [AboutController::class, 'destroy']);
 
     Route::post('create-about-history', [AboutHistoryController::class, 'store']);
     Route::get('get-admin-about-history', [AboutHistoryController::class, 'index']);
@@ -126,7 +127,7 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
 
 });
 
-Route::get('get-user-about', [AboutUsController::class, 'getUserAbout']);
+Route::get('get-user-about', [AboutController::class, 'getUserAbout']);
 Route::get('get-about-history', [AboutHistoryController::class, 'getAboutHistory']);
 Route::get('get-galleries', [GalleryController::class, 'getGalleries']);
 Route::get('get-grades', [GradeController::class, 'getGrades']);

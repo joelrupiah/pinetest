@@ -21,6 +21,13 @@
                     </div>
 					<div class="col-md-8">
                       <div class="form-group mb-3">
+                        <label for="select-grade">Curriculum</label>
+						<ckeditor :editor="editor" v-model="form.curriculum" :config="editorConfig"></ckeditor>
+                        <span class="help-block text-danger" v-if="errors.curriculum"><small>{{ errors.curriculum[0] }}</small></span>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group mb-3">
                         <label for="select-grade">Description</label>
 						<ckeditor :editor="editor" v-model="form.description" :config="editorConfig"></ckeditor>
                         <span class="help-block text-danger" v-if="errors.description"><small>{{ errors.description[0] }}</small></span>
@@ -85,13 +92,14 @@
 import Api from '../../../../apis/admin/Api'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 export default {
-    name: 'CreateAdminAboutUs',
+    name: 'EditAdminAboutUs',
     data(){
         return {
           loading: false,
             form: {
                 id: '',
                 heading: '',
+                curriculum: '',
                 description: '',
                 imageOne: '',
                 imageTwo: '',
@@ -106,6 +114,7 @@ export default {
     methods: {
         clear(){
             this.heading = '',
+            this.curriculum = '',
             this.description = '',
             this.imageOne = '',
             this.imageTwo = '',
@@ -153,6 +162,7 @@ export default {
                     const this_ = this
                     this.form.id = response.data.about.id
                     this.form.heading = response.data.about.heading
+                    this.form.curriculum = response.data.about.curriculum
                     this.form.description = response.data.about.description
                     this.form.imageOne = response.data.about.imageOne
                     this.form.imageTwo = response.data.about.imageTwo
@@ -161,8 +171,12 @@ export default {
         },
         update: async function(){
             Api().post('/admin/update-about-us/'+this.$route.params.id, this.form)
-                .then(() => {})
-                .catch(error => {})
+                .then(() => {
+                  this.loading = false
+                })
+                .catch(error => {
+                  this.loading = false
+                })
         }
     },
     computed:{},

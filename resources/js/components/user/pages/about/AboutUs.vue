@@ -166,31 +166,25 @@
     </section>
     <!--End Video Image Gallery Area-->
     <!--Start Video Image Holder Area-->
-    <!-- <section class="video-image-holder-area mb-5">
+    <section class="video-image-holder-area mb-5">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6">
+          <div class="col-xl-6 col-lg-6 col-md-6" v-for="abo in abouts" :key="abo.id">
             <div class="video-holder-box">
               <div class="img-holder">
                 <div class="faq-content-box">
-                  <div class="accordion-box">
-                    <div class="accordion accordion-block" v-for="adminfaq in adminfaqs" :key="adminfaq.id">
-                      <div class="accord-btn">
-                        <h4 v-html="adminfaq.title"></h4>
-                      </div>
-                      <div class="accord-content">
-                        <p v-html="adminfaq.description"></p>
-                      </div>
-                    </div>
+                  <div class="inner-content">
+                    <!-- <pre><p v-html="abo.curriculum"></p></pre> -->
+                    <p v-html="abo.curriculum"></p><br>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6" v-for="abo in abouts" :key="abo.id">
+          <div class="col-xl-6 col-lg-6 col-md-6" v-for="ab in abouts" :key="ab.id">
             <div class="single-project-image-gallery">
               <img
-                :src="fileLinkTwo(abo.imageTwo)"
+                :src="fileLinkTwo(ab.imageTwo)"
                 alt="About Image"
                 style="width: 100%; height: 650; object-fit: cover;"
               />
@@ -198,7 +192,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!--End Video Image Gallery Area-->
   </div>
 </template>

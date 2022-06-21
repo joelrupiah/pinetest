@@ -21,6 +21,13 @@
                     </div>
 					<div class="col-md-8">
                       <div class="form-group mb-3">
+                        <label for="select-grade">Curriculum</label>
+						<ckeditor :editor="editor" v-model="form.curriculum" :config="editorConfig"></ckeditor>
+                        <span class="help-block text-danger" v-if="errors.curriculum"><small>{{ errors.curriculum[0] }}</small></span>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group mb-3">
                         <label for="select-grade">Description</label>
 						<ckeditor :editor="editor" v-model="form.description" :config="editorConfig"></ckeditor>
                         <span class="help-block text-danger" v-if="errors.description"><small>{{ errors.description[0] }}</small></span>
@@ -91,6 +98,7 @@ export default {
           loading: false,
             form: {
                 heading: '',
+                curriculum: '',
                 description: '',
                 imageOne: '',
                 imageTwo: '',
@@ -105,6 +113,7 @@ export default {
     methods: {
         clear(){
             this.heading = '',
+            this.curriculum = '',
             this.description = '',
             this.imageOne = '',
             this.imageTwo = '',
@@ -141,6 +150,7 @@ export default {
                     if(error.response.status === 422){
                         this.errors = error.response.data.errors
                     }
+                    this.loading = false
                 })
         }
     }
