@@ -653,7 +653,7 @@
         <p>Events</p>
         <div class="title">Upcoming School <span>Events</span></div>
       </div>
-      <div class="container inner-content min-vh-50 d-flex justify-content-center align-items-center">
+      <div class="container inner-content min-vh-50 d-flex justify-content-center align-items-start">
         <div class="row">
             <div class="col-md-4" v-for="event in events" :key="event.id">
                 <div class="card1 mt-3 p-3 g-2">

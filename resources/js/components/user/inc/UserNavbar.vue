@@ -10,7 +10,9 @@
               alt="Pinecrest Logo"
               style="width: 50px; height: 50px"
             />
+            <strong class="text-muted font-weight-bolder">Pinecrest Academy</strong>
           </a>
+          
         </div>
         <div class="main-menu-box float-right">
           <nav class="main-menu style2 clearfix">
@@ -32,7 +34,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About</a></li>
                 <li><a href="/gallery">Gallery</a></li>
-                <li><a href="#">Events</a></li>
+                <!-- <li><a href="#">Events</a></li> -->
                 <li><a href="/contact-us">Contact</a></li>
               </ul>
             </div>
