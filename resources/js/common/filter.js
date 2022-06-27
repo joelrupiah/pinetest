@@ -1,8 +1,12 @@
 import moment from "moment";
 import Vue from "vue";
 
+// Vue.filter('time', (a) => {
+//     return moment(a).format('MMM Do YYYY')
+// })
+
 Vue.filter('time', (a) => {
-    return moment(a).format('MMM Do YYYY')
+    return moment(a).format('Do MMMM YYYY')
 })
 
 Vue.filter('subString', (content, length) => {

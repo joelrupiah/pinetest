@@ -666,9 +666,9 @@
                     <!-- <div class="detail mt-5">
                         <p v-html="event.description"></p>
                     </div> -->
-                    <div class="mt-3 d-flex justify-content-end px-2">
+                    <!-- <div class="mt-3 d-flex justify-content-end px-2">
                         <span class="badge badge-light">By Pinecrest Management</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -816,7 +816,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-12">
                       <div class="single-box">
                         <el-button
                           :loading="loading"
@@ -831,6 +831,16 @@
                         </el-button>
                       </div>
                     </div>
+                    <!-- <div class="col-xl-6">
+                      <div class="single-box">
+                        <el-button
+                          size="mini"
+                          style="background-color: #023020; color: white"
+                          @click="checkStatusDialog = true">
+                          Check Status
+                        </el-button>
+                      </div>
+                    </div> -->
                   </div>
                 </form>
               </div>
@@ -1088,6 +1098,35 @@
     </section>
     <!--End Gallery Area-->
 
+    <!-- Start Status Dialog -->
+    <el-dialog
+      title="Check Status"
+      :visible.sync="checkStatusDialog"
+      width="30%"
+      center>
+      <span><el-input placeholder="Please input code" v-model="statusCheck.code"></el-input></span>
+      <span :class="statusColor(statusData.status)">
+        <span class="status">
+          {{ statusName(statusData.status) }}
+        </span>
+      </span>
+      <span slot="footer" class="dialog-footer">
+        <el-button
+          size="mini"
+          style="background-color: red; color: white"
+          @click="checkStatusDialog = false"
+          >Cancel
+        </el-button>
+        <el-button
+          size="mini"
+          style="background-color: #023020; color: white"
+          @click.prevent="getApplicationStatus()"
+          >Check Status
+        </el-button>
+      </span>
+    </el-dialog>
+    <!-- End Status Dialog -->
+
   </div>
 </template>
 
@@ -1096,6 +1135,7 @@ export default {
   name: "Home",
   data() {
     return {
+      checkStatusDialog: false,
       loading: false,
       abouts: [],
       abouthistories: [],
@@ -1120,10 +1160,26 @@ export default {
         subject: "",
         message: "",
       },
+      statusCheck: {
+        code: ''
+      },
+      statusData: {
+        status: ""
+      },
       errors: {},
     };
   },
   methods: {
+    statusName: function(status){
+          let data = { 0: "New", 1: "Reviewing", 2: "Processing", 3: "Complete", 4: "Rejected" }
+          return data[status]
+        },
+        statusColor: function(status){
+          let data = { 0: "badge badge-dark", 1: "badge badge-warning", 
+          2: "badge badge-info", 3: "badge badge-success", 
+          4: "badge badge-danger" }
+          return data[status]
+        },
     fileLink(name){
 			return '/uploads/img/gallery/' + name
 		},
@@ -1187,6 +1243,12 @@ export default {
       axios.get("/get-site-settings").then((response) => {
         this.sitesettings = response.data.sitesettings;
       });
+    },
+    getApplicationStatus: async function() {
+      axios.post("/track-application", this.statusCheck)
+        .then((response) => {
+          this.statusData.status = response.data.trackedApplication.status
+        })
     },
     submitApplication: async function () {
       this.loading = true;
