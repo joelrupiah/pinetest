@@ -188,7 +188,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 filter-item contem trad" v-for="infrastructureGallery in infrastructureGalleries" :key="infrastructureGallery.id">
                         <div class="single-project-style7" v-if="infrastructureGallery.category.name === 'Infrastructure'">
                             <div class="img-holder">
-                                <img :src="fileLink(infrastructureGallery.image)" alt="Sports Image"
+                                <img :src="fileLink(infrastructureGallery.image)" alt="Infrastructure Image"
 								style="width:100%;height:230px;object-fit:cover">
                             </div>
                         </div>
