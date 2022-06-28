@@ -683,11 +683,11 @@
           <div class="col-xl-6 col-lg-6">
             <div class="map-content-box">
               <div class="sec-title">
-                <div class="title" style="color: green">
+                <div class="title mb-2" style="color: green">
                   Get quality education
                 </div>
-                <h2 class="text-white">Curriculum</h2>
-                <p class="text-white text-muted">
+                <h2 class="text-white mb-2">Curriculum</h2>
+                <p style="color:white">
                   For Kindergarten, we use the highly effective and
                   internationally acclaimed Montessori method of teaching before
                   ushering in the CBC (Competency Based Curriculum) Kenyan
