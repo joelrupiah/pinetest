@@ -1102,7 +1102,7 @@
     <el-dialog
       title="Check Status"
       :visible.sync="checkStatusDialog"
-      width="30%"
+      width="auto"
       center>
       <span><el-input placeholder="Please input code" v-model="statusCheck.code"></el-input></span>
       <span :class="statusColor(statusData.status)">
