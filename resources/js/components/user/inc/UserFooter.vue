@@ -118,9 +118,9 @@
                       <p>
                         Send us a message<br />
                         <a
-                          href="mailto:info@pinecrestacademy.co.ke"
+                          href="mailto:info@pinecrest-academy.com"
                           class="text-muted"
-                          >info@pinecrestacademy.co.ke</a
+                          >info@pinecrest-academy.com</a
                         >
                       </p>
                     </div>

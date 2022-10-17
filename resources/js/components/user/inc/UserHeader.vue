@@ -12,8 +12,8 @@
               >
             </li>
             <li>
-              <a href="mailto:info@pinecrestacademy.co.ke" class="text-muted"
-                >info@pinecrestacademy.co.ke</a
+              <a href="mailto:info@pinecrest-academy.com" class="text-muted"
+                >info@pinecrest-academy.com</a
               >
             </li>
             <li>Mon - Fri: 8am to 4.30pm</li>

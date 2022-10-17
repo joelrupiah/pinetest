@@ -63,7 +63,8 @@
                                 <i class="fe fe-eye fe-16" style="color:black;cursor:pointer"></i>
                             </router-link>
                             <a>
-                                <i class="fe fe-phone fe-16" style="color:blue;cursor:pointer"></i>
+                                <i class="fe fe-trash-2 fe-16" style="color:red;cursor:pointer"
+                                @click.prevent="deleteApplication(application.id)"></i>
                             </a>
                         </td>
                       </tr>
@@ -117,6 +118,12 @@ export default {
                         alert('server error please contact IT department')
                     }
                 })
+        },
+        deleteApplication(id){
+          Api().delete('/admin/delete-application/'+id)
+            .then(() => {
+              this.getAllApplications()
+            })
         }
     },
     computed:{},

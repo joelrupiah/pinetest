@@ -816,7 +816,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-xl-12">
+                    <div class="col-xl-6">
                       <div class="single-box">
                         <el-button
                           :loading="loading"
@@ -831,7 +831,7 @@
                         </el-button>
                       </div>
                     </div>
-                    <!-- <div class="col-xl-6">
+                    <div class="col-xl-6">
                       <div class="single-box">
                         <el-button
                           size="mini"
@@ -840,7 +840,7 @@
                           Check Status
                         </el-button>
                       </div>
-                    </div> -->
+                    </div>
                   </div>
                 </form>
               </div>
@@ -939,7 +939,7 @@
                           <div class="text">
                             <h3>Email us at</h3>
                             <p>
-                              info@pinecrestacademy.co.ke
+                              info@pinecrest-academy.com
                             </p>
                           </div>
                         </div>
