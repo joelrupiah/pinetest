@@ -29,7 +29,7 @@ class AdminController extends Controller
         $request->validate([
             'name' => 'required|string',
             'password' => 'required|min:6',
-            'role' => 'required',
+            // 'role' => 'required',
             'email' => 'required|email|unique:users'
         ]);
 
@@ -38,10 +38,10 @@ class AdminController extends Controller
         $admin->email = $request->email;
         $admin->password = bcrypt($request->password);
 
-        $admin->assignRole($request->role);
-        if ($request->has('permissions')) {
-            $admin->givePermissionTo($request->permissions);
-        }
+        // $admin->assignRole($request->role);
+        // if ($request->has('permissions')) {
+        //     $admin->givePermissionTo($request->permissions);
+        // }
 
         $data = [
             'title' => 'Pinecrest Academy',
@@ -64,7 +64,7 @@ class AdminController extends Controller
         $request->validate([
             'name' => 'string',
             'password' => 'nullable|min:6',
-            'role' => 'required',
+            // 'role' => 'required',
             'email' => 'email|unique:users,email,'.$id
         ]);
 
@@ -77,23 +77,23 @@ class AdminController extends Controller
             $user->password = bcrypt($request->password);
         }
 
-        if ($request->has('role')) {
-            $userRole = $user->getRoleNames();
-            foreach ($userRole as $role) {
-                $user->removeRole($role);
-            }
+        // if ($request->has('role')) {
+        //     $userRole = $user->getRoleNames();
+        //     foreach ($userRole as $role) {
+        //         $user->removeRole($role);
+        //     }
 
-            $user->assignRole($request->role);
-        }
+        //     $user->assignRole($request->role);
+        // }
 
-        if ($request->has('permissions')) {
-            $userPermissions = $user->getPermissionNames();
-            foreach ($userPermissions as $permission) {
-                $user->revokePermissionTo($permission);
-            }
+        // if ($request->has('permissions')) {
+        //     $userPermissions = $user->getPermissionNames();
+        //     foreach ($userPermissions as $permission) {
+        //         $user->revokePermissionTo($permission);
+        //     }
 
-            $user->givePermissionTo($request->permissions);
-        }
+        //     $user->givePermissionTo($request->permissions);
+        // }
 
         $details = [
             'title' => 'Mail from Pinecrest Academy',

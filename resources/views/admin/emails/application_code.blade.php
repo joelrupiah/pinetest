@@ -7,6 +7,6 @@
     <h1>{{ $data['title'] }}</h1>
     <p>{{ $data['body'] }}</p>
     <a href="https://pinecrest-academy.com/">www.pinecrest-academy.com</a>
-    <p>Thank you</p>
+    <p>Regards</p>
 </body>
 </html>

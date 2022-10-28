@@ -9,6 +9,6 @@
     <p>Email: {{ $data['email'] }}</p>
     <p>Password: {{ $data['password'] }}</p>
    
-    <p>Thank you</p>
+    <p>Regards</p>
 </body>
 </html>

@@ -79,9 +79,9 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::post('edit-gallery/{id}', [GalleryController::class, 'update']);
     Route::delete('delete-gallery/{id}', [GalleryController::class, 'destroy']);
 
-    Route::get('get-faqs', [FaqController::class, 'index']);
-    Route::get('get-asked-question/{id}', [FaqController::class, 'getAdminQuestion']);
-    Route::post('reply-asked-question/{id}', [FaqController::class, 'replyQuestion']);
+    Route::get('get-faqs', [InboxController::class, 'index']);
+    Route::get('get-asked-question/{id}', [InboxController::class, 'getAdminQuestion']);
+    Route::post('reply-asked-question/{id}', [InboxController::class, 'replyQuestion']);
 
     Route::post('create-about', [AboutController::class, 'store']);
     Route::get('get-all-admin-about-data', [AboutController::class, 'index']);
