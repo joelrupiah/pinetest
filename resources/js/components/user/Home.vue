@@ -14,7 +14,8 @@
               data-thumb="frontend/images/slides/slide-one.jpg" data-title="Slide Title"
               data-transition="parallaxvertical">
               <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center"
-                data-bgrepeat="no-repeat" data-no-retina="" src="frontend/images/slides/slide-one.jpg" />
+                data-bgrepeat="no-repeat" data-no-retina="" src="frontend/images/slides/slide-one.jpg" 
+                />
 
               <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                 data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text"
@@ -245,9 +246,13 @@
     <!--End about Area-->
 
     <!--Start Choice Area-->
-    <section class="contact-details-area">
+    <section class="choose-us-area">
       <div class="sec-title text-center">
-        <div class="title text-muted">Why choose us</div>
+        <div class="title text-white">Why choose us</div>
+        <p class="bottom-text text-white">
+            We are enthusiastic and passionate about young learners, our values
+            are dear to us.
+          </p>
       </div>
       <div class="parallax-background" style="
           background-image: url(frontend/images/parallax-background/contact-details-bg.html);
@@ -255,7 +260,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-12">
-            <div class="contact-details-content">
+            <div class="contact-details-content" style="background:transparent">
               <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-4">
                   <vs-row vs-justify="center">

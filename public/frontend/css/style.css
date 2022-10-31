@@ -1959,7 +1959,35 @@ select:focus {
     border-color: #023020;
 }
 
+/*** 
+=============================================
+    Choose Area style
+=============================================
+***/
 
+.choose-us-area{
+    background-image: url('/frontend/images/resources/choose-image-six.jpg');
+    position: relative;
+    display: block;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 110px 0 60px;
+    z-index: 1;
+}
+
+.choose-us-area::before{
+    background: rgba(0, 0, 0, 0.50);
+    /* background: rgba(67, 67, 68, 0.97) none repeat scroll 0 0; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    z-index: -1;
+}
 
 /*** 
 =============================================

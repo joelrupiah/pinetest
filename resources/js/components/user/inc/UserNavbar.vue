@@ -60,7 +60,7 @@
                 </li>
               </ul>
             </div>
-            <div class="button">
+            <div class="button" style="width:20px;height:20px">
               <a href="https://www.facebook.com/pinecrestjujasouth/?ref=page_internal"
                 target="_blank" class="fa fa-facebook"></a>
             </div>
