@@ -4,14 +4,16 @@
     <section class="top-bar-style2">
       <div class="top-style2 clearfix">
         <div class="top-style2-left">
-          <p><span class="icon-music"></span>Contact Us</p>
+          <!-- <p><span class="icon-music"></span>Contact Us</p> -->
           <ul>
             <li>
+              <span class="fa fa-phone text-white mr-1"></span>           
               <a href="tel:+254 794 6697 92" class="text-muted"
                 >+254 794 6697 92</a
               >
             </li>
             <li>
+              <span class="fa fa-envelope text-white mr-1"></span>
               <a href="mailto:info@pinecrest-academy.com" class="text-muted"
                 >info@pinecrest-academy.com</a
               >

@@ -12,6 +12,12 @@ Vue.component('user-master', require('./components/user/UserMaster.vue').default
 
 //Start VueJS component frameworks
 
+import Vuesax from 'vuesax'
+import 'vuesax/dist/vuesax.css'
+
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
 import ViewUI from 'view-design'
 import 'view-design/dist/styles/iview.css'
 
@@ -35,6 +41,8 @@ Vue.use(VueGoogleMaps, {
   },
 })
 
+Vue.use(Vuesax)
+Vue.use(Vuetify)
 Vue.use(VueCompositionAPI)
 Vue.use( CKEditor )
 Vue.use(ViewUI)

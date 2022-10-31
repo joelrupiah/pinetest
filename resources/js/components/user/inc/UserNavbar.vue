@@ -10,7 +10,7 @@
               alt="Pinecrest Logo"
               style="width: 50px; height: 50px"
             />
-            <strong class="text-muted font-weight-bolder">Pinecrest Academy</strong>
+            <strong class="text-muted font-weight-bolder">Pinecrest Academy <br /></strong>
           </a>
           
         </div>
