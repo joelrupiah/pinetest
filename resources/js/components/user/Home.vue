@@ -270,7 +270,7 @@
                           <img src="/frontend/images/resources/choose-image-one.jpg">
                         </div>
                         <div>
-                          <h5>Little Pines & Playgroup</h5>
+                          <h5>Little Pines</h5>
                           <span>
                             It has survived not only five centuries, but also the leap into electronic typesetting,
                             remaining essentially unchanged. It was popularised in the 1960s with the release of
@@ -290,7 +290,7 @@
                           <img src="/frontend/images/resources/choose-image-one.jpg">
                         </div>
                         <div>
-                          <h5>Pre-Primary One</h5>
+                          <h5>Playgroup</h5>
                           <span>
                             It has survived not only five centuries, but also the leap into electronic typesetting,
                             remaining essentially unchanged. It was popularised in the 1960s with the release of
@@ -310,131 +310,7 @@
                           <img src="/frontend/images/resources/choose-image-one.jpg">
                         </div>
                         <div>
-                          <h5>Pre-Primary Two</h5>
-                          <span>
-                            It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                            software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </span>
-                        </div>
-                      </vs-card>
-                    </vs-col>
-                  </vs-row>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4">
-                  <vs-row vs-justify="center">
-                    <vs-col type="flex" vs-justify="center" vs-align="center">
-                      <vs-card actionable class="cardx">
-                        <div slot="media">
-                          <img src="/frontend/images/resources/choose-image-one.jpg">
-                        </div>
-                        <div>
-                          <h5>Grade One</h5>
-                          <span>
-                            It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                            software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </span>
-                        </div>
-                      </vs-card>
-                    </vs-col>
-                  </vs-row>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4">
-                  <vs-row vs-justify="center">
-                    <vs-col type="flex" vs-justify="center" vs-align="center">
-                      <vs-card actionable class="cardx">
-                        <div slot="media">
-                          <img src="/frontend/images/resources/choose-image-one.jpg">
-                        </div>
-                        <div>
-                          <h5>Grade Two</h5>
-                          <span>
-                            It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                            software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </span>
-                        </div>
-                      </vs-card>
-                    </vs-col>
-                  </vs-row>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4">
-                  <vs-row vs-justify="center">
-                    <vs-col type="flex" vs-justify="center" vs-align="center">
-                      <vs-card actionable class="cardx">
-                        <div slot="media">
-                          <img src="/frontend/images/resources/choose-image-one.jpg">
-                        </div>
-                        <div>
-                          <h5>Grade Three</h5>
-                          <span>
-                            It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                            software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </span>
-                        </div>
-                      </vs-card>
-                    </vs-col>
-                  </vs-row>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4">
-                  <vs-row vs-justify="center">
-                    <vs-col type="flex" vs-justify="center" vs-align="center">
-                      <vs-card actionable class="cardx">
-                        <div slot="media">
-                          <img src="/frontend/images/resources/choose-image-one.jpg">
-                        </div>
-                        <div>
-                          <h5>Grade Four</h5>
-                          <span>
-                            It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                            software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </span>
-                        </div>
-                      </vs-card>
-                    </vs-col>
-                  </vs-row>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4">
-                  <vs-row vs-justify="center">
-                    <vs-col type="flex" vs-justify="center" vs-align="center">
-                      <vs-card actionable class="cardx">
-                        <div slot="media">
-                          <img src="/frontend/images/resources/choose-image-one.jpg">
-                        </div>
-                        <div>
-                          <h5>Grade Five</h5>
-                          <span>
-                            It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                            software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </span>
-                        </div>
-                      </vs-card>
-                    </vs-col>
-                  </vs-row>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-4">
-                  <vs-row vs-justify="center">
-                    <vs-col type="flex" vs-justify="center" vs-align="center">
-                      <vs-card actionable class="cardx">
-                        <div slot="media">
-                          <img src="/frontend/images/resources/choose-image-one.jpg">
-                        </div>
-                        <div>
-                          <h5>Grade Six</h5>
+                          <h5>CBC</h5>
                           <span>
                             It has survived not only five centuries, but also the leap into electronic typesetting,
                             remaining essentially unchanged. It was popularised in the 1960s with the release of

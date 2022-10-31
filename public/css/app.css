@@ -11841,14 +11841,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-5 {
   margin-top: 1.25rem;
 }
+.ml-3 {
+  margin-left: 0.75rem;
+}
+.mr-4 {
+  margin-right: 1rem;
+}
 .mr-3 {
   margin-right: 0.75rem;
 }
 .mr-auto {
   margin-right: auto;
-}
-.ml-3 {
-  margin-left: 0.75rem;
 }
 .mr-1 {
   margin-right: 0.25rem;
@@ -11870,9 +11873,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-10 {
   margin-top: 2.5rem;
-}
-.mr-4 {
-  margin-right: 1rem;
 }
 .inline {
   display: inline;
