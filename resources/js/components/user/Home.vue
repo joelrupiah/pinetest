@@ -514,26 +514,7 @@
     <!--End home google map area-->
 
     <!--Start Contact details Area-->
-    <section class="contact-details-area">
-      <div class="sec-title text-center">
-        <p>Contact Details</p>
-        <div class="title text-muted">How Can We <span>Help You?</span></div>
-      </div>
-      <div class="parallax-background" style="
-          background-image: url(frontend/images/parallax-background/contact-details-bg.html);
-        "></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-3">
-            <div class="contact-details-content">
-              <div class="row">
-                <div class="card">dsjkfsjdfh</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <help-contact></help-contact>
     <!--End Contact details Area-->
 
     <!--Start Gallery Area-->
@@ -586,7 +567,11 @@
 </template>
 
 <script>
+import HelpContact from '../temp/HelpContact.vue';
 export default {
+  components: {
+    HelpContact
+  },
   name: "Home",
   data() {
     return {
