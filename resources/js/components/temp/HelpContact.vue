@@ -9,7 +9,7 @@
         <div class="parallax-background" style="
           background-image: url(frontend/images/parallax-background/contact-details-bg.html);
         "></div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="contact-details-content">
