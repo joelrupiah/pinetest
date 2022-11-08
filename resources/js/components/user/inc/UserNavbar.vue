@@ -5,14 +5,18 @@
       <div class="inner-container clearfix">
         <div class="logo-box-style2 float-left">
           <a href="/">
-            <img
-              src="frontend/images/resources/changed.png"
-              alt="Pinecrest Logo"
-              style="width: 50px; height: 50px"
-            />
-            <strong class="text-muted font-weight-bolder">Pinecrest Academy <br /></strong>
+
+              <img
+                src="frontend/images/resources/changed.png"
+                alt="Pinecrest Logo"
+                style="width: 50px; height: 50px"
+              />
+              <strong class="text-muted font-weight-bolder"> Pinecrest Academy
+                <!-- <span>Learn Adapt Excel</span>  -->
+                <br /></strong>
+
           </a>
-          
+
         </div>
         <div class="main-menu-box float-right">
           <nav class="main-menu style2 clearfix">
@@ -95,18 +99,6 @@ export default {
 </script>
 
 <style scoped>
-/* .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-} */
-
-/* .fa:hover {
-  opacity: 0.7;
-} */
 
 .fa-facebook {
   background: #3b5998;
