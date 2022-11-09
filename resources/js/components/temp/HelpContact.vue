@@ -22,7 +22,11 @@
                                         </div>
                                         <div class="col-md-8" style="background:#343434;color:white">
                                             <div class="card-body">
-                                                <p class="card-text lead"><small><strong>Entry to Pinecrest Academy</strong></small></p>
+                                                <p class="card-text lead" style="color:lightgreen"><small><strong>
+                                                            <u style="padding-bottom:1px;text-decoration:none;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
+                                                                Entry to Pinecrest Academy
+                                                            </u>
+                                                        </strong></small></p>
                                                 <p class="card-text"><small>
                                                         It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
                                                         Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
@@ -49,11 +53,15 @@
                                         </div>
                                         <div class="col-md-8" style="background:#343434;color:white">
                                             <div class="card-body">
-                                                <p class="card-text lead"><small><strong>Book a tour</strong></small></p>
+                                                <p class="card-text lead" style="color:lightgreen"><small><strong>
+                                                            <u style="padding-bottom:1px;text-decoration:none;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
+                                                                Book a tour
+                                                            </u>
+                                                        </strong></small></p>
                                                 <p class="card-text"><small>
-                                                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                  Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
-                                                </small></p>
+                                                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                                        Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+                                                    </small></p>
                                                 <p class="card-text float-right mb-2 mt-2"><button class="button-89" role="button">Read More</button> </p>
                                             </div>
                                         </div>
@@ -69,13 +77,18 @@
                                         </div>
                                         <div class="col-md-8" style="background:#343434;color:white">
                                             <div class="card-body">
-                                                <p class="card-text lead"><small><strong>Submit an enquiry</strong></small></p>
+                                                <p class="card-text lead" style="color:lightgreen"><small><strong>
+                                                            <u style="padding-bottom:1px;text-decoration:none;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
+                                                                Submit an enquiry
+                                                            </u>
+                                                        </strong></small></p>
                                                 <p class="card-text"><small>
                                                         <blockquote class="blockquote">
                                                             <footer class="blockquote-footer text-white"><small>
-                                                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                              Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
-                                                            </small></footer>
+                                                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+                                                                    versions of
+                                                                    Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+                                                                </small></footer>
                                                         </blockquote>
                                                     </small></p>
                                                 <p class="card-text float-right mb-2"><button class="button-89" role="button">Read More</button> </p>
@@ -93,13 +106,18 @@
                                         </div>
                                         <div class="col-md-8" style="background:#343434;color:white">
                                             <div class="card-body">
-                                                <p class="card-text lead"><small><strong>Contact Us</strong></small></p>
+                                                <p class="card-text lead" style="color:lightgreen"><small><strong>
+                                                            <u style="padding-bottom:1px;text-decoration:none;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
+                                                                Contact Us
+                                                            </u>
+                                                        </strong></small></p>
                                                 <p class="card-text"><small>
                                                         <blockquote class="blockquote">
                                                             <footer class="blockquote-footer text-white"><small>
-                                                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                              Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
-                                                            </small></footer>
+                                                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+                                                                    versions of
+                                                                    Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+                                                                </small></footer>
                                                         </blockquote>
                                                     </small></p>
                                                 <p class="card-text float-right mb-2"><button class="button-89" role="button">Read More</button> </p>
