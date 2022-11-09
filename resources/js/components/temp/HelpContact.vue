@@ -1,21 +1,21 @@
 <template>
 <div>
 
-    <section class="contact-details-area mt-3" style="background:white">
+    <section class="contact-details-area" style="background:#E5E4E2">
         <div class="sec-title text-center" style="line-height:10px">
             <p>Contact Details</p>
-            <div class="title text-muted">How Can We <span>Help You?</span></div>
+            <div class="title text-dark">How Can We <span>Help You?</span></div>
         </div>
         <div class="parallax-background" style="
           background-image: url(frontend/images/parallax-background/contact-details-bg.html);
         "></div>
-        <div class="container-fluid">
+        <div class="container-fluid" style="background:#E5E4E2">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="contact-details-content">
-                        <div class="row mb-2" style="background:white">
+                        <div class="row mb-2" style="background:#E5E4E2">
                             <div class="col-xl-6 col-lg-6">
-                                <div class="card" style="width:100%;height:auto">
+                                <div class="card border-0 rounded" style="width:100%;height:auto">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
                                             <img src="frontend/images/resources/choose-image-one.jpg" class="card-img" alt="..." style="width:100%;height:100%">
@@ -39,7 +39,7 @@
 
                             </div>
                             <div class="col-xl-6 col-lg-6">
-                                <div class="card" style="width:100%;height:auto">
+                                <div class="card border-0" style="width:100%;height:auto">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
                                             <video class="video__container" autoplay muted loop>
@@ -62,7 +62,7 @@
 
                             </div>
                             <div class="col-xl-6 col-lg-6">
-                                <div class="card" style="width:100%;height:auto">
+                                <div class="card border-0" style="width:100%;height:auto">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
                                             <img src="frontend/images/resources/choose-image-one.jpg" class="card-img" alt="..." style="width:100%;height:100%">
@@ -86,7 +86,7 @@
 
                             </div>
                             <div class="col-xl-6 col-lg-6">
-                                <div class="card" style="width:100%;height:auto">
+                                <div class="card border-0" style="width:100%;height:auto">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
                                             <img src="frontend/images/resources/choose-image-one.jpg" class="card-img" alt="..." style="width:100%;height:100%">
