@@ -25,9 +25,7 @@
                                                 <p class="card-text lead"><small><strong>Entry to Pinecrest Academy</strong></small></p>
                                                 <p class="card-text"><small>
                                                         It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                        Lorem Ipsum.
-                                                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                        Lorem Ipsum.
+                                                        Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
                                                     </small></p>
                                                 <p class="card-text float-right mb-2 mt-2">
                                                     <button class="button-89" role="button">
@@ -54,9 +52,7 @@
                                                 <p class="card-text lead"><small><strong>Book a tour</strong></small></p>
                                                 <p class="card-text"><small>
                                                   It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                  Lorem Ipsum.
-                                                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                  Lorem Ipsum.
+                                                  Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
                                                 </small></p>
                                                 <p class="card-text float-right mb-2 mt-2"><button class="button-89" role="button">Read More</button> </p>
                                             </div>
@@ -78,9 +74,7 @@
                                                         <blockquote class="blockquote">
                                                             <footer class="blockquote-footer text-white"><small>
                                                               It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                              Lorem Ipsum.
-                                                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                              Lorem Ipsum.
+                                                              Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
                                                             </small></footer>
                                                         </blockquote>
                                                     </small></p>
@@ -104,9 +98,7 @@
                                                         <blockquote class="blockquote">
                                                             <footer class="blockquote-footer text-white"><small>
                                                               It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                              Lorem Ipsum.
-                                                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                              Lorem Ipsum.
+                                                              Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
                                                             </small></footer>
                                                         </blockquote>
                                                     </small></p>
