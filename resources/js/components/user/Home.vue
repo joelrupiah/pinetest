@@ -218,7 +218,7 @@
                                                 <img src="/frontend/images/resources/choose-image-one.jpg">
                                             </div>
                                             <div>
-                                                <h5>Little Pines</h5>
+                                                <p class="lead text-dark">Little Pines</p>
                                                 <span>
                                                     It has survived not only five centuries, but also the leap into electronic typesetting,
                                                     remaining essentially unchanged. It was popularised in the 1960s with the release of
@@ -402,52 +402,18 @@
     </section>
     <!--End Application Area-->
 
+    <!--Start Contact details Area-->
+    <help-contact></help-contact>
+    <!--End Contact details Area-->
+
     <!--Start home google map area-->
-    <section class="home-google-map-area mt-5">
+    <section class="home-google-map-area mt-2 mb-3">
         <div class="container-fluid">
             <!-- <div class="sec-title text-center">
         <div class="title text-muted">Locate Us <span>Locate Us</span></div>
       </div> -->
             <div class="row">
-                <div class="col-xl-3">
-                    <div class="google-map-box">
-                        <div class="content-info-box ml-3 mr-4" style="
-                      background-image: url(frontend/images/parallax-background/contact-info-box-bg.jpg);
-                    ">
-                            <div class="inner-content">
-                                <div class="inner">
-                                    <div class="single-info-box wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
-                                        <div class="icon">
-                                            <span class="fa fa-map-marker"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>Visit Our Office</h3>
-                                            <p>
-                                                Juja, Kiambu County, Kenya, Juja South Estate
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="single-info-box white-bg wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1200ms">
-                                        <div class="icon">
-                                            <span class="fa fa-phone"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>Reach us on</h3>
-                                            <p>
-                                                +254 794 6697 92
-                                            </p>
-                                            <p>
-                                                info@pinecrest-academy.com
-                                            </p>
-                                            <p>Mon to Fri 8am to 4.30pm</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-9">
+                <div class="col-xl-12">
                     <div class="google-map-box">
                         <div class="map-wrap" style="width: 100%; height: 680px" id="map"></div>
                     </div>
@@ -456,10 +422,6 @@
         </div>
     </section>
     <!--End home google map area-->
-
-    <!--Start Contact details Area-->
-    <help-contact></help-contact>
-    <!--End Contact details Area-->
 
     <!--Start Gallery Area-->
     <section class="instagram-area">

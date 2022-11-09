@@ -15,7 +15,7 @@
                     <div class="contact-details-content">
                         <div class="row mb-2" style="background:white">
                             <div class="col-xl-6 col-lg-6">
-                                <div class="card" style="width:100%">
+                                <div class="card" style="width:100%;height:auto">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
                                             <img src="frontend/images/resources/choose-image-one.jpg" class="card-img" alt="..." style="width:100%;height:100%">
@@ -23,7 +23,12 @@
                                         <div class="col-md-8" style="background:#343434;color:white">
                                             <div class="card-body">
                                                 <p class="card-text lead"><small><strong>Entry to Pinecrest Academy</strong></small></p>
-                                                <p class="card-text"><small>This is a description on how to join us at Pinecrest</small></p>
+                                                <p class="card-text"><small>
+                                                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                                        Lorem Ipsum.
+                                                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                                        Lorem Ipsum.
+                                                    </small></p>
                                                 <p class="card-text float-right mb-2 mt-2">
                                                     <button class="button-89" role="button">
                                                         Read More
@@ -36,7 +41,7 @@
 
                             </div>
                             <div class="col-xl-6 col-lg-6">
-                                <div class="card" style="width:100%">
+                                <div class="card" style="width:100%;height:auto">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
                                             <video class="video__container" autoplay muted loop>
@@ -47,7 +52,12 @@
                                         <div class="col-md-8" style="background:#343434;color:white">
                                             <div class="card-body">
                                                 <p class="card-text lead"><small><strong>Book a tour</strong></small></p>
-                                                <p class="card-text"><small>This is a description on how to join us at Pinecrest</small></p>
+                                                <p class="card-text"><small>
+                                                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                                  Lorem Ipsum.
+                                                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                                  Lorem Ipsum.
+                                                </small></p>
                                                 <p class="card-text float-right mb-2 mt-2"><button class="button-89" role="button">Read More</button> </p>
                                             </div>
                                         </div>
@@ -56,7 +66,7 @@
 
                             </div>
                             <div class="col-xl-6 col-lg-6">
-                                <div class="card" style="width:100%">
+                                <div class="card" style="width:100%;height:auto">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
                                             <img src="frontend/images/resources/choose-image-one.jpg" class="card-img" alt="..." style="width:100%;height:100%">
@@ -66,7 +76,12 @@
                                                 <p class="card-text lead"><small><strong>Submit an enquiry</strong></small></p>
                                                 <p class="card-text"><small>
                                                         <blockquote class="blockquote">
-                                                            <footer class="blockquote-footer text-white"><small>This is a description on how to join us at Pinecrest</small></footer>
+                                                            <footer class="blockquote-footer text-white"><small>
+                                                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                                              Lorem Ipsum.
+                                                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                                              Lorem Ipsum.
+                                                            </small></footer>
                                                         </blockquote>
                                                     </small></p>
                                                 <p class="card-text float-right mb-2"><button class="button-89" role="button">Read More</button> </p>
@@ -77,7 +92,7 @@
 
                             </div>
                             <div class="col-xl-6 col-lg-6">
-                                <div class="card" style="width:100%">
+                                <div class="card" style="width:100%;height:auto">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
                                             <img src="frontend/images/resources/choose-image-one.jpg" class="card-img" alt="..." style="width:100%;height:100%">
@@ -87,7 +102,12 @@
                                                 <p class="card-text lead"><small><strong>Contact Us</strong></small></p>
                                                 <p class="card-text"><small>
                                                         <blockquote class="blockquote">
-                                                            <footer class="blockquote-footer text-white"><small>This is a description on how to join us at Pinecrest</small></footer>
+                                                            <footer class="blockquote-footer text-white"><small>
+                                                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                                              Lorem Ipsum.
+                                                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+                                                              Lorem Ipsum.
+                                                            </small></footer>
                                                         </blockquote>
                                                     </small></p>
                                                 <p class="card-text float-right mb-2"><button class="button-89" role="button">Read More</button> </p>
@@ -123,7 +143,7 @@ export default {
     /* clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%); */
     height: auto;
     min-height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
 }
 
