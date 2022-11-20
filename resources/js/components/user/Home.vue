@@ -210,7 +210,7 @@
                 <div class="col-xl-12">
                     <div class="contact-details-content" style="background:transparent">
                         <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
                                 <vs-row vs-justify="center">
                                     <vs-col type="flex" vs-justify="center" vs-align="center">
                                         <vs-card actionable class="cardx">
@@ -218,39 +218,22 @@
                                                 <img src="/frontend/images/resources/choose-image-one.jpg">
                                             </div>
                                             <div>
-                                                <p class="lead text-dark">Little Pines</p>
+                                                <h5>Montessori</h5>
                                                 <span>
-                                                    It has survived not only five centuries, but also the leap into electronic typesetting,
-                                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                                                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                    Montessori education is based on self directed activity, hands on learning and collaborative play.
+                                                    The children in a Montessori class make creative choices in their learning while the highly trained
+                                                    teachers offer appropriate activities to guide the process.
+                                                    Children work in groups and individually to discover and explore knowledge of the world and to develop their maximum potential.
+                                                    Every material in a Montessori classroom supports an aspect of a child development, creating a match between a child's natutal interest and the available activities.
+                                                    Children can learn through their own experiences and at their own pace.
+                                                    They can respond at any moment the natutal curiosities that exist in all humans and build a solid foundation for life long learning.
                                                 </span>
                                             </div>
                                         </vs-card>
                                     </vs-col>
                                 </vs-row>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4">
-                                <vs-row vs-justify="center">
-                                    <vs-col type="flex" vs-justify="center" vs-align="center">
-                                        <vs-card actionable class="cardx">
-                                            <div slot="media">
-                                                <img src="/frontend/images/resources/choose-image-one.jpg">
-                                            </div>
-                                            <div>
-                                                <h5>Playgroup</h5>
-                                                <span>
-                                                    It has survived not only five centuries, but also the leap into electronic typesetting,
-                                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                                                    software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                </span>
-                                            </div>
-                                        </vs-card>
-                                    </vs-col>
-                                </vs-row>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
                                 <vs-row vs-justify="center">
                                     <vs-col type="flex" vs-justify="center" vs-align="center">
                                         <vs-card actionable class="cardx">
@@ -260,10 +243,13 @@
                                             <div>
                                                 <h5>CBC</h5>
                                                 <span>
-                                                    It has survived not only five centuries, but also the leap into electronic typesetting,
-                                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                                                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                    CBC focuses on the knowledge, skills and abilities of learners, which allow for self-paced progress.
+                                                    It provides learners with the support they need to succeed.
+                                                    It also provides more specialized learning that allow one to progress as the learners demonstrate mastery of the subject matters.
+                                                    It relies on the teachers for the development, articulation and assessment of specific knowledge,
+                                                    skills and abilities of which learners must demonstrate mastery. In Competency Based Curriculum,
+                                                    learners are assissted by their teachers to bring out their various competencies.
+                                                    In CBC, learners are not taught by their teachers in the traditional sense, but are guided to self discovery.
                                                 </span>
                                             </div>
                                         </vs-card>
@@ -290,15 +276,18 @@
                     <div class="map-content-box">
                         <div class="sec-title">
                             <div class="title mb-2" style="color: green">
-                                  Get quality education
+                                Get quality education
                             </div>
                             <h2 class="text-white mb-2">Curriculum</h2>
                             <p style="color:white;">
-                                For Kindergarten, we use the highly effective and
+                                <!-- For Kindergarten, we use the highly effective and
                                 internationally acclaimed Montessori method of teaching before
                                 ushering in the CBC (Competency Based Curriculum) Kenyan
                                 Curriculum. We have highly qualified teachers for both
-                                programmes.
+                                programmes. -->
+                                Pinecrest Academy is an institution whose ethos and practise is based upon Christian teachings.
+                                We seek to provide an environment that is positive, stimulating and focused on academic excellence accompanied with high moral characteristics and values.
+                                We aim to provide a private school education that enhances the learners competencies which will enable them compete effectively in today's and tomorrow's ever changing world.
                             </p>
                         </div>
                     </div>
