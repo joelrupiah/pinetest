@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row">
           <!--Start single footer widget-->
-          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
             <div class="single-footer-widget marbtm50-s4">
               <div class="our-info-box">
                 <div class="footer-logo text-center">
@@ -18,28 +18,50 @@
           </div>
           <!--End single footer widget-->
           <!--Start single footer widget-->
-          <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
             <div class="single-footer-widget s4">
               <div class="title-style2">
-                <h3>Useful Links</h3>
+                <p style="color:gold;font-size:large;font-weight:bold;">Useful Links</p>
               </div>
               <div class="usefull-links">
                 <ul class="float-left">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/about-us">About Us</a></li>
-                  <li><a href="/gallery">Gallery</a></li>
+                  <li><a class="text-white" href="/">Home</a></li>
+                  <li><a class="text-white" href="/about-us">About Us</a></li>
+                  <li><a class="text-white" href="/gallery">Gallery</a></li>
                   <!-- <li><a href="/events">Events</a></li> -->
-                  <li><a href="/contact-us">Contact Us</a></li>
+                  <li><a class="text-white" href="/contact-us">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+            <div class="single-footer-widget s4">
+              <div class="title-style2">
+                <p style="color:gold;font-size:large;font-weight:bold;">Social Links</p>
+              </div>
+              <div class="usefull-links">
+                <ul class="float-left">
+                  <li>
+                    <a href="https://www.facebook.com/pinecrestjujasouth/?ref=page_internal" target="_blank" style="color:#4267B2">
+                      Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/@pinecrestacademy3555" target="_blank" style="color:#FF0000">
+                      Youtube
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <!--End single footer widget-->
+
           <!--Start single footer widget-->
-          <div class="col-xl-4 col-lg-3 col-md-12 col-sm-12">
+          <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
             <div class="single-footer-widget pdtop50-s4">
               <div class="title-style2">
-                <h3>Subscribe Us</h3>
+                <p style="color:gold;font-size:large;font-weight:bold;">Subscribe to Our Newsletter</p>
               </div>
               <div class="subscribe-box">
                 <form class="subscribe-form" action="#">
@@ -47,13 +69,14 @@
                   <p class="text-danger text-sm" v-if="errors.email">
                     {{ errors.email[0] }}
                   </p>
-                  <button class="btn-one" type="submit" @click.prevent="subscribe">
+                  <button class="btn-one" type="submit" @click.prevent="subscribe"
+                  style="background-color:royalblue;color:gold">
                     Subscribe<span class="flaticon-next"></span>
                   </button>
                 </form>
                 <div class="text">
-                  <p>
-                    <span>*</span>Subscribe us and get latest news and updates
+                  <p class="text-white">
+                    <small>Subscribe to get the latest news and updates</small>
                   </p>
                 </div>
               </div>

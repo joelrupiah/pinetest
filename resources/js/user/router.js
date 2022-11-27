@@ -11,6 +11,8 @@ import EventDetail from '../components/user/pages/event/EventDetail'
 import AboutHistory from '../components/user/pages/about/AboutHistory'
 import ContactUs from '../components/user/pages/contact/ContactUs'
 import UserFaq from '../components/user/pages/faq/UserFaq'
+import FacilitiesAndActivities from '../components/user/pages/additional/FacilitiesAndActivities'
+import EnquiryAndAdmission from '../components/user/pages/additional/EnquiryAndAdmission'
 import UserGallery from '../components/user/pages/gallery/UserGallery'
 
 const router = new VueRouter({
@@ -27,6 +29,8 @@ const router = new VueRouter({
         {path:'/gallery', component: UserGallery, name: 'UserGallery'},
         {path:'/events', component: Event, name: 'Event'},
         {path:'/careers', component: Career, name: 'Career'},
+        {path: '/activites-and-facilities', component: FacilitiesAndActivities, name: 'FacilitiesAndActivities'},
+        {path: '/enquiry-and-admission', component: FacilitiesAndActivities, name: 'FacilitiesAndActivities'},
         {path:'/event-details/:eventSlug', component: EventDetail, name: 'EventDetail'},
 
     ]

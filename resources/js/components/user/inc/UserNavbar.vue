@@ -7,7 +7,8 @@
           <a href="/">
 
             <img src="frontend/images/resources/changed.png" alt="Pinecrest Logo" style="width: 50px; height: 50px" />
-            <strong class="text-muted font-weight-bolder"> Pinecrest Academy
+            <strong class="text-dark font-weight-bolder" style="font-size:20px">
+              <span style="color:black">Pinecrest Academy</span>
               <!-- <span>Learn Adapt Excel</span>  -->
               <br />
             </strong>
@@ -25,12 +26,18 @@
             </div>
             <div class="navbar-collapse collapse clearfix">
               <ul class="navigation clearfix">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/about-us">About</a></li>
-                  <li><a href="/gallery">Gallery</a></li>
-                  <!-- <li><a href="#">Events</a></li> -->
-                  <li><a href="/contact-us">Contact</a></li>
-                </ul>
+                <li><a href="/">Home</a></li>
+                <li class="dropdown"><a href="#!">Pages</a>
+                  <ul>
+                    <li><a href="/activites-and-facilities">School Facilities & Activities</a></li>
+                    <li><a href="/enquiry-and-admission">Enquiries and Admission</a></li>
+                  </ul>
+                </li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <!-- <li><a href="#">Events</a></li> -->
+                <li><a href="/contact-us">Contact</a></li>
+              </ul>
             </div>
           </nav>
           <div class="mainmenu-right style2">
@@ -51,7 +58,8 @@
               <a href="shoping-cart.html"><span class="icon-bag"><span class="number">0</span></span></a>
             </div> -->
             <div class="button">
-              <a style="background-color:royalblue;color:gold" class="btn-one" href="#request-admission">Request for admission<span class="flaticon-next"></span></a>
+              <a style="background-color:royalblue;color:gold" class="btn-one" href="#request-admission">Request for
+                admission<span class="flaticon-next"></span></a>
             </div>
           </div>
         </div>
