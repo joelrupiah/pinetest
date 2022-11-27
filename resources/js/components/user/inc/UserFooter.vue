@@ -10,12 +10,7 @@
               <div class="our-info-box">
                 <div class="footer-logo text-center">
                   <a href="index-2.html">
-                    <img
-                      src="frontend/images/resources/changed.png"
-                      alt="Pinecrest Logo"
-                      width="200"
-                      height="200"
-                    />
+                    <img src="frontend/images/resources/changed.png" alt="Pinecrest Logo" width="200" height="200" />
                   </a>
                 </div>
               </div>
@@ -32,9 +27,9 @@
                 <ul class="float-left">
                   <li><a href="/">Home</a></li>
                   <li><a href="/about-us">About Us</a></li>
-                <li><a href="/gallery">Gallery</a></li>
-                <!-- <li><a href="/events">Events</a></li> -->
-                <li><a href="/contact-us">Contact Us</a></li>
+                  <li><a href="/gallery">Gallery</a></li>
+                  <!-- <li><a href="/events">Events</a></li> -->
+                  <li><a href="/contact-us">Contact Us</a></li>
                 </ul>
               </div>
             </div>
@@ -48,10 +43,10 @@
               </div>
               <div class="subscribe-box">
                 <form class="subscribe-form" action="#">
-                  <input type="email" name="email" placeholder="Your Email" v-model="form.email"/>
+                  <input type="email" name="email" placeholder="Your Email" v-model="form.email" />
                   <p class="text-danger text-sm" v-if="errors.email">
-										{{ errors.email[0] }}
-									</p>
+                    {{ errors.email[0] }}
+                  </p>
                   <button class="btn-one" type="submit" @click.prevent="subscribe">
                     Subscribe<span class="flaticon-next"></span>
                   </button>
@@ -100,8 +95,7 @@
                     <div class="text">
                       <p>
                         <a href="tel:+254 794 6697 92" class="text-muted">
-                          +254 794 6697 92</a
-                        ><br />
+                          +254 794 6697 92</a><br />
                         <span>Mon - Friday:</span> 8.00am to 4.30pm
                       </p>
                     </div>
@@ -117,11 +111,7 @@
                     <div class="text">
                       <p>
                         Send us a message<br />
-                        <a
-                          href="mailto:info@pinecrest-academy.com"
-                          class="text-muted"
-                          >info@pinecrest-academy.com</a
-                        >
+                        <a href="mailto:info@pinecrest-academy.com" class="text-muted">info@pinecrest-academy.com</a>
                       </p>
                     </div>
                   </div>
@@ -141,7 +131,8 @@
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div class="copyright-text text-center">
               <p>
-                <a> Copyright Pinecrest Academy 2022. All rights reserved </a>
+                <a style="color:royalblue"> Copyright Pinecrest Academy &copy;
+                  2022. All rights reserved </a>
               </p>
             </div>
           </div>
@@ -168,7 +159,7 @@ export default {
     subscribe: async function () {
       axios
         .post("/subscribe-newsletter", this.form)
-        .then(() => {})
+        .then(() => { })
         .catch((error) => {
           if (error.response.status === 422) {
             this.errors = error.response.data.errors;
@@ -177,6 +168,6 @@ export default {
     },
   },
   computed: {},
-  created() {},
+  created() { },
 };
 </script>

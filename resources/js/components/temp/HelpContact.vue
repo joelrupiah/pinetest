@@ -15,34 +15,6 @@
                     <div class="contact-details-content">
                         <div class="row mb-2" style="background:#E5E4E2">
                             <div class="col-xl-6 col-lg-6">
-                                <div class="card border-0 rounded" style="width:100%;height:auto">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-4">
-                                            <img src="frontend/images/resources/choose-image-one.jpg" class="card-img" alt="..." style="width:100%;height:100%">
-                                        </div>
-                                        <div class="col-md-8" style="background:#343434;color:white">
-                                            <div class="card-body">
-                                                <p class="card-text lead" style="color:lightgreen"><small><strong>
-                                                            <u style="padding-bottom:1px;text-decoration:none;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
-                                                                Entry to Pinecrest Academy
-                                                            </u>
-                                                        </strong></small></p>
-                                                <p class="card-text"><small>
-                                                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
-                                                        Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
-                                                    </small></p>
-                                                <p class="card-text float-right mb-2 mt-2">
-                                                    <button class="button-89" role="button">
-                                                        Read More
-                                                    </button>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
                                 <div class="card border-0" style="width:100%;height:auto">
                                     <div class="row no-gutters">
                                         <div class="col-md-4">
@@ -54,7 +26,7 @@
                                         <div class="col-md-8" style="background:#343434;color:white">
                                             <div class="card-body">
                                                 <p class="card-text lead" style="color:lightgreen"><small><strong>
-                                                            <u style="padding-bottom:1px;text-decoration:none;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
+                                                            <u style="padding-bottom:1px;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
                                                                 Book a tour
                                                             </u>
                                                         </strong></small></p>
@@ -78,37 +50,8 @@
                                         <div class="col-md-8" style="background:#343434;color:white">
                                             <div class="card-body">
                                                 <p class="card-text lead" style="color:lightgreen"><small><strong>
-                                                            <u style="padding-bottom:1px;text-decoration:none;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
+                                                            <u style="padding-bottom:1px;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
                                                                 Submit an enquiry
-                                                            </u>
-                                                        </strong></small></p>
-                                                <p class="card-text"><small>
-                                                        <blockquote class="blockquote">
-                                                            <footer class="blockquote-footer text-white"><small>
-                                                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-                                                                    versions of
-                                                                    Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
-                                                                </small></footer>
-                                                        </blockquote>
-                                                    </small></p>
-                                                <p class="card-text float-right mb-2"><button class="button-89" role="button">Read More</button> </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="card border-0" style="width:100%;height:auto">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-4">
-                                            <img src="frontend/images/resources/choose-image-one.jpg" class="card-img" alt="..." style="width:100%;height:100%">
-                                        </div>
-                                        <div class="col-md-8" style="background:#343434;color:white">
-                                            <div class="card-body">
-                                                <p class="card-text lead" style="color:lightgreen"><small><strong>
-                                                            <u style="padding-bottom:1px;text-decoration:none;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
-                                                                Contact Us
                                                             </u>
                                                         </strong></small></p>
                                                 <p class="card-text"><small>
@@ -162,7 +105,7 @@ export default {
     /* border thickness */
     --s: .20em;
     /* size of the corner */
-    --color: darkgreen;
+    --color: royalblue;
 
     padding: calc(.2em + var(--s)) calc(.4em + var(--s));
     color: var(--color);
