@@ -30,7 +30,7 @@ const router = new VueRouter({
         {path:'/events', component: Event, name: 'Event'},
         {path:'/careers', component: Career, name: 'Career'},
         {path: '/activites-and-facilities', component: FacilitiesAndActivities, name: 'FacilitiesAndActivities'},
-        {path: '/enquiry-and-admission', component: FacilitiesAndActivities, name: 'FacilitiesAndActivities'},
+        {path: '/enquiry-and-admission', component: EnquiryAndAdmission, name: 'EnquiryAndAdmission'},
         {path:'/event-details/:eventSlug', component: EventDetail, name: 'EventDetail'},
 
     ]
