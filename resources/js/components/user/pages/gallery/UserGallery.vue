@@ -34,7 +34,12 @@
         <section class="main-project-area style4" style="padding-bottom:0px">
             <div class="container">
                 <ul class="project-filter post-filter has-dynamic-filters-counter">
-                    <li><span><h5 style="color:green"><u>Education</u></h5></span></li>
+                    <!-- <li><span><h5 style="color:green"><u>Education</u></h5></span></li> -->
+                    <li data-filter=".mod">
+                        <span style="color:royalblue;font-weight:bold;font-size:20px">
+                            Education
+                        </span>
+                    </li>
                 </ul>
             </div>
 			<div class="container-fluid main-project-style4">
@@ -68,7 +73,12 @@
 		<section class="main-project-area style4" style="padding-bottom:0px">
             <div class="container">
                 <ul class="project-filter post-filter has-dynamic-filters-counter">
-                    <li><span><h5 style="color:green"><u>Sports</u></h5></span></li>
+                    <!-- <li><span><h5 style="color:green"><u>Sports</u></h5></span></li> -->
+                    <li data-filter=".mod">
+                        <span style="color:royalblue;font-weight:bold;font-size:20px">
+                            Sports
+                        </span>
+                    </li>
                 </ul>
             </div>
 			<div class="container-fluid main-project-style4">
@@ -102,7 +112,12 @@
 		<section class="main-project-area style4" style="padding-bottom:0px">
             <div class="container">
                 <ul class="project-filter post-filter has-dynamic-filters-counter">
-                    <li><span><h5 style="color:green"><u>Agriculture</u></h5></span></li>
+                    <!-- <li><span><h5 style="color:green"><u>Agriculture</u></h5></span></li> -->
+                    <li data-filter=".mod">
+                        <span style="color:royalblue;font-weight:bold;font-size:20px">
+                            Agriculture
+                        </span>
+                    </li>
                 </ul>
             </div>
 			<div class="container-fluid main-project-style4">
@@ -136,7 +151,12 @@
 		<section class="main-project-area style4" style="padding-bottom:0px">
             <div class="container">
                 <ul class="project-filter post-filter has-dynamic-filters-counter">
-                    <li><span><h5 style="color:green"><u>Social Events</u></h5></span></li>
+                    <!-- <li><span><h5 style="color:green"><u>Social Events</u></h5></span></li> -->
+                    <li data-filter=".mod">
+                        <span style="color:royalblue;font-weight:bold;font-size:20px">
+                            Social Events
+                        </span>
+                    </li>
                 </ul>
             </div>
 			<div class="container-fluid main-project-style4">
@@ -170,7 +190,12 @@
 		<section class="main-project-area style4" style="padding-bottom:100px">
             <div class="container">
                 <ul class="project-filter post-filter has-dynamic-filters-counter">
-                    <li><span><h5 style="color:green"><u>Infrastructure</u></h5></span></li>
+                    <!-- <li><span><h5 style="color:green"><u>Infrastructure</u></h5></span></li> -->
+                    <li data-filter=".mod">
+                        <span style="color:royalblue;font-weight:bold;font-size:20px">
+                            Infrastructure
+                        </span>
+                    </li>
                 </ul>
             </div>
 			<div class="container-fluid main-project-style4">

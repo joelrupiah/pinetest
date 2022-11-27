@@ -34,7 +34,9 @@
                                                         It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
                                                         Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
                                                     </small></p>
-                                                <p class="card-text float-right mb-2 mt-2"><button class="button-89" role="button">Read More</button> </p>
+                                                    <a href="/enquiry-and-admission">
+                                                        <p class="card-text float-right mb-2"><button class="button-89" role="button">Read More</button> </p>
+                                                    </a>
                                             </div>
                                         </div>
                                     </div>
@@ -63,7 +65,10 @@
                                                                 </small></footer>
                                                         </blockquote>
                                                     </small></p>
-                                                <p class="card-text float-right mb-2"><button class="button-89" role="button">Read More</button> </p>
+                                                    <a href="/enquiry-and-admission">
+                                                        <p class="card-text float-right mb-2"><button class="button-89" role="button">Read More</button> </p>
+                                                    </a>
+                                                
                                             </div>
                                         </div>
                                     </div>
