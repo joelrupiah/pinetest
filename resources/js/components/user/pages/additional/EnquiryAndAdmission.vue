@@ -232,7 +232,7 @@
 export default {
     name: 'EnquiryAndAdmission',
     data(){
-
+        return {}
     }
 }
 </script>

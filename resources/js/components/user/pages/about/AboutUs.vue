@@ -1,15 +1,12 @@
 <template>
   <div id="about_us">
     <!--Start breadcrumb area-->
-    <section
-      class="breadcrumb-area style2"
-      style="
+    <section class="breadcrumb-area style2" style="
         background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(frontend/images/about-page.jpg);
         height: 230px;
         width: 100%;
         object-fit: cover;
-      "
-    >
+      ">
       <div class="container">
         <div class="row">
           <div class="col-xl-12">
@@ -49,10 +46,7 @@
                   <h3>Vision</h3>
                 </div>
                 <div class="img-box">
-                  <img
-                    src="frontend/images/resources/changed.jpg"
-                    alt="Logo Image"
-                  />
+                  <img src="frontend/images/resources/changed.jpg" alt="Logo Image" />
                 </div>
                 <div class="text-box">
                   <p>
@@ -71,10 +65,7 @@
                   <h3>Mission</h3>
                 </div>
                 <div class="img-box">
-                  <img
-                    src="frontend/images/resources/changed.jpg"
-                    alt="Logo Image"
-                  />
+                  <img src="frontend/images/resources/changed.jpg" alt="Logo Image" />
                 </div>
                 <div class="text-box">
                   <p>
@@ -96,10 +87,7 @@
                   <h3>Motto</h3>
                 </div>
                 <div class="img-box">
-                  <img
-                    src="frontend/images/resources/changed.jpg"
-                    alt="Logo Image"
-                  />
+                  <img src="frontend/images/resources/changed.jpg" alt="Logo Image" />
                 </div>
                 <div class="text-box">
                   <p>Learn, Adapt and Excel.</p>
@@ -112,32 +100,121 @@
       </div>
     </section>
     <!--End Motto, Vision, Mission Area-->
+
+    <!--Start Working Process Area-->
+    <section class="working-process-area" style="margin-top:-150px">
+      <div class="container">
+        <div class="sec-title text-center">
+          <div class="title">Why Choose <span>Us</span></div>
+          <p>We are enthusiastic and passionate about young learners, our values
+            are dear to us.</p>
+          <!-- <div class="title">Main Header <span>process</span></div> -->
+        </div>
+        <div class="row">
+          <!--Start Single Working Process-->
+          <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+            <div class="single-working-process text-center">
+              <div class="top-box"><span>01</span></div>
+              <div class="inner">
+                <h3>Respect</h3>
+                <p>We treat everyone with respect and courtesy.</p>
+                <div class="icon-holder">
+                  <!-- <i class="fa-solid fa-face-saluting"></i> -->
+                  <!-- <span class="icon-productive"></span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Process-->
+          <!--Start Single Working Process-->
+          <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+            <div class="single-working-process text-center">
+              <div class="top-box"><span>02</span></div>
+              <div class="inner">
+                <h3>Integrity</h3>
+                <p>We speak truthfully and act honestly.</p>
+                <div class="icon-holder">
+                  <!-- <span class="icon-document"></span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Process-->
+          <!--Start Single Working Process-->
+          <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="single-working-process text-center">
+              <div class="top-box"><span>03</span></div>
+              <div class="inner">
+                <h3>Independence</h3>
+                <p>We seek to be achievers and self-reliant.</p>
+                <div class="icon-holder">
+                  <!-- <span class="icon-kitchen"></span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Process-->
+          <!--Start Single Working Process-->
+          <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="single-working-process text-center">
+              <div class="top-box"><span>04</span></div>
+              <div class="inner">
+                <h3>Creativity</h3>
+                <p>We aim to be conveyors of new positive ideas.</p>
+                <div class="icon-holder">
+                  <!-- <span class="icon-kitchen"></span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Process-->
+          <!--Start Single Working Process-->
+          <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="single-working-process text-center">
+              <div class="top-box"><span>05</span></div>
+              <div class="inner">
+                <h3>Collaboration</h3>
+                <p>We seek to work with all to achieve excellence.</p>
+                <div class="icon-holder">
+                  <!-- <span class="icon-kitchen"></span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Process-->
+          <!--Start Single Working Process-->
+          <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+            <div class="single-working-process text-center">
+              <div class="top-box"><span>06</span></div>
+              <div class="inner">
+                <h3>Humility</h3>
+                <p>We treat others as we would like them to treat us.</p>
+                <div class="icon-holder">
+                  <!-- <span class="icon-kitchen"></span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Single Working Process-->
+        </div>
+      </div>
+    </section>
+    <!--End Working Process Area-->
+
     <!--Start Video Image Holder Area-->
     <section class="video-image-holder-area mb-5">
       <div class="container-fluid">
         <div class="row">
-          <div
-            class="col-xl-6 col-lg-6 col-md-6"
-            v-for="about in abouts"
-            :key="about.id"
-          >
+          <div class="col-xl-6 col-lg-6 col-md-6" v-for="about in abouts" :key="about.id">
             <div class="video-holder-box">
               <div class="img-holder">
-                <img
-                  :src="fileLinkOne(about.imageOne)"
-                  alt="About Image"
-                  style="width: 100%; height: 650; object-fit: cover"
-                />
+                <img :src="fileLinkOne(about.imageOne)" alt="About Image"
+                  style="width: 100%; height: 650; object-fit: cover" />
                 <div class="icon-holder">
                   <div class="icon">
                     <div class="inner text-center">
-                      <a
-                        class="html5lightbox wow zoomIn"
-                        data-wow-delay="300ms"
-                        data-wow-duration="1500ms"
-                        :href="about.video"
-                        target="_blank"
-                      >
+                      <a class="html5lightbox wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms"
+                        :href="about.video" target="_blank">
                         <span class="flaticon-play-button"></span>
                       </a>
                     </div>
@@ -146,11 +223,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="col-xl-6 col-lg-6 col-md-6"
-            v-for="abou in abouts"
-            :key="abou.id"
-          >
+          <div class="col-xl-6 col-lg-6 col-md-6" v-for="abou in abouts" :key="abou.id">
             <div class="project-description-content">
               <div class="sec-title">
                 <p v-html="abou.heading"></p>
@@ -165,35 +238,9 @@
       </div>
     </section>
     <!--End Video Image Gallery Area-->
-    <!--Start Video Image Holder Area-->
-    <section class="video-image-holder-area mb-5">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6" v-for="abo in abouts" :key="abo.id">
-            <div class="video-holder-box">
-              <div class="img-holder">
-                <div class="faq-content-box">
-                  <div class="inner-content">
-                    <!-- <pre><p v-html="abo.curriculum"></p></pre> -->
-                    <p v-html="abo.curriculum"></p><br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6" v-for="ab in abouts" :key="ab.id">
-            <div class="single-project-image-gallery">
-              <img
-                :src="fileLinkTwo(ab.imageTwo)"
-                alt="About Image"
-                style="width: 100%; height: 650; object-fit: cover;"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--End Video Image Gallery Area-->
+
+    
+
   </div>
 </template>
 
