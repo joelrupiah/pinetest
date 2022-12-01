@@ -27,13 +27,13 @@
             <div class="navbar-collapse collapse clearfix">
               <ul class="navigation clearfix">
                 <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About</a></li>
                 <li class="dropdown"><a href="#!">Pages</a>
                   <ul>
                     <li><a href="/activites-and-facilities">Facilities & Activities</a></li>
                     <li><a href="/enquiry-and-admission">Enquiries and Admission</a></li>
                   </ul>
                 </li>
-                <li><a href="/about-us">About</a></li>
                 <li><a href="/gallery">Gallery</a></li>
                 <!-- <li><a href="#">Events</a></li> -->
                 <li><a href="/contact-us">Contact</a></li>

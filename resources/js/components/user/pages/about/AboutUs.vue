@@ -27,8 +27,47 @@
       </div>
     </section>
     <!--End breadcrumb area-->
+
+    <!--Start Video Image Holder Area-->
+    <section class="video-image-holder-area mb-5 mt-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6" v-for="about in abouts" :key="about.id">
+            <div class="video-holder-box">
+              <div class="img-holder">
+                <img :src="fileLinkOne(about.imageOne)" alt="About Image"
+                  style="width: 100%; height: 650; object-fit: cover" />
+                <div class="icon-holder">
+                  <div class="icon">
+                    <div class="inner text-center">
+                      <a class="html5lightbox wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms"
+                        :href="about.video" target="_blank">
+                        <span class="flaticon-play-button"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6" v-for="abou in abouts" :key="abou.id">
+            <div class="project-description-content">
+              <div class="sec-title">
+                <p v-html="abou.heading"></p>
+                <div class="title">About Us</div>
+              </div>
+              <div class="inner-content">
+                <p v-html="abou.description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Video Image Gallery Area-->
+
     <!--Start Motto, Vision, Mission Area-->
-    <section class="testimonial-area" style="margin-top:-150px">
+    <section class="testimonial-area" style="margin-top:-200px">
       <div class="container">
         <div class="row">
           <div class="col-xl-12">
@@ -200,46 +239,6 @@
       </div>
     </section>
     <!--End Working Process Area-->
-
-    <!--Start Video Image Holder Area-->
-    <section class="video-image-holder-area mb-5">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6" v-for="about in abouts" :key="about.id">
-            <div class="video-holder-box">
-              <div class="img-holder">
-                <img :src="fileLinkOne(about.imageOne)" alt="About Image"
-                  style="width: 100%; height: 650; object-fit: cover" />
-                <div class="icon-holder">
-                  <div class="icon">
-                    <div class="inner text-center">
-                      <a class="html5lightbox wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms"
-                        :href="about.video" target="_blank">
-                        <span class="flaticon-play-button"></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6" v-for="abou in abouts" :key="abou.id">
-            <div class="project-description-content">
-              <div class="sec-title">
-                <p v-html="abou.heading"></p>
-                <div class="title">About Us</div>
-              </div>
-              <div class="inner-content">
-                <p v-html="abou.description"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--End Video Image Gallery Area-->
-
-    
 
   </div>
 </template>
