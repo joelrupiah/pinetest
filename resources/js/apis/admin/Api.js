@@ -1,8 +1,8 @@
 import axios from "axios";
 
 let BaseApi = axios.create({
-    // baseURL: "http://127.0.0.1:8000"
-    baseURL: "https://pinecrest-academy.com"
+    baseURL: "http://127.0.0.1:8000"
+    // baseURL: "https://pinecrest-academy.com"
 })
 
 let Api = function(){
