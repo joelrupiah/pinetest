@@ -487,10 +487,6 @@
         </section>
         <!--End Choice Area-->
 
-        <!--Start Events area-->
-        <!-- INSERT EVENTS DATA -->
-        <!--End Events area-->
-
         <!--Start Application Area-->
         <section class="appointment-area" id="request-admission">
             <div class="container">
@@ -628,95 +624,10 @@
         </section>
         <!--End Application Area-->
 
-        <!--Start latest blog area style2-->
-        <section class="latest-blog-area style2">
-            <div class="container inner-content">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="sec-title float-left">
-                            <h5 style="color:royalblue;font-weight:bolder">News & Events</h5>
-                            <div class="title">Upcoming Events<span></span></div>
-                        </div>
-                        <div class="more-blog-button float-right">
-                            <a class="btn-two" href="#!">More News & Events<span class="flaticon-next"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!--Start single blog post-->
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                        <div class="single-blog-post">
-                            <div class="img-holder">
-                                <img src="frontend/images/resources/choose-image-one.jpg" alt="Image">
-                            </div>
-                            <div class="text-holder">
-                                <div class="post-date">
-                                    <h3>02 <span>Mar 2019</span></h3>
-                                </div>
-                                <div class="meta-box">
-                                    <ul class="meta-info">
-                                        <li>In <a href="#">School Hall</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="blog-title"><a href="blog-single.html">Low cost interior designing ideas</a></h3>
-                                <div class="text">
-                                    <p>Same as saying through shrinkings from toil & our pain these cases perfectly simple.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                        <div class="single-blog-post wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div class="img-holder">
-                                <img src="frontend/images/resources/choose-image-one.jpg" alt="Awesome Image">
-                            </div>
-                            <div class="text-holder">
-                                <div class="post-date">
-                                    <h3>24 <span>Feb 2019</span></h3>
-                                </div>
-                                <div class="meta-box">
-                                    <ul class="meta-info">
-                                        <li>In <a href="#">School Hall</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="blog-title"><a href="blog-single.html">Commercial design for project</a></h3>
-                                <div class="text">
-                                    <p>Which is the same as saying through shrinking from toil and pain. These cases are perfectly.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-                    <!--Start single blog post-->
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                        <div class="single-blog-post wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div class="img-holder">
-                                <img src="frontend/images/resources/choose-image-one.jpg" alt="Awesome Image">
-                            </div>
-                            <div class="text-holder">
-                                <div class="post-date">
-                                    <h3>18 <span>Jan 2019</span></h3>
-                                </div>
-                                <div class="meta-box">
-                                    <ul class="meta-info">
-                                        <li>In <a href="#">Juja City Mall</a></li>
-                                    </ul>
-                                </div>
-                                <h3 class="blog-title"><a href="blog-single.html">Our interior design prediction 2019</a></h3>
-                                <div class="text">
-                                    <p>Every pleasure is to be welcomed every pain avoided. in certain circumstances obligations.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single blog post-->
-
-                </div>
-            </div>
-        </section>
-        <!--End latest blog area style2-->
+        <!--Start latest events area style2-->
+        <!-- EVENTS FROM RESOURCES PATH -->
+        <home-events></home-events>
+        <!--End latest events area style2-->
 
         <!--Start Contact details Area-->
         <help-contact></help-contact>
@@ -796,10 +707,12 @@
 </template>
     
 <script>
+import HomeEvents from '../temp/HomeEvents.vue';
 import HelpContact from '../temp/HelpContact.vue';
 export default {
     components: {
-        HelpContact
+        HelpContact,
+        HomeEvents
     },
     name: "Home",
     data() {
@@ -809,7 +722,6 @@ export default {
             loading: false,
             abouts: [],
             abouthistories: [],
-            events: [],
             faqs: [],
             carousels: [],
             grades: [],
@@ -866,9 +778,6 @@ export default {
         fileLinkOne(name) {
             return "/uploads/img/about/" + name;
         },
-        fileLinkEvent(name) {
-            return "/uploads/img/event/" + name;
-        },
         fileLinkFaq(name) {
             return "/uploads/img/faq/" + name;
         },
@@ -897,11 +806,6 @@ export default {
         getUserFaqs: async function () {
             axios.get("/get-user-faqs").then((response) => {
                 this.faqs = response.data.faqs;
-            });
-        },
-        getUserEvents: async function () {
-            axios.get("/get-user-events").then((response) => {
-                this.events = response.data.events;
             });
         },
         getAboutHistory: async function () {
@@ -1019,7 +923,6 @@ export default {
         this.getAllGalleries();
         this.getUserAbout();
         this.getAboutHistory();
-        this.getUserEvents();
         this.getUserFaqs();
         this.getUserCarousel();
         this.getUserGrades();

@@ -122,10 +122,6 @@ export default {
         }
     },
     methods: {
-        closeDeleteModal(){
-          this.category = '',
-          this.toggleDeleteModal = false
-        },
         clearData(){
             this.form.name = ''
         },
@@ -144,6 +140,10 @@ export default {
         deleteModal(category){
           this.category = category
           this.toggleDeleteModal = true
+        },
+        closeDeleteModal(){
+          this.category = '',
+          this.toggleDeleteModal = false
         },
         getAllCategories: async function(page = 1){
             Api().get(`/admin/category?page=${page}&total=${this.total}`)
@@ -201,7 +201,8 @@ export default {
         },
         deleteCategory: async function(){
           this.loading = true
-          await this.$store.dispatch('category/deleteCategory', this.category.id)
+          await Api().delete('/admin/delete-category/' + this.category.id)
+          // await this.$store.dispatch('category/deleteCategory', this.category.id)
           this.loading = false
           this.$notify({
             group: 'category',
@@ -211,6 +212,7 @@ export default {
           });
           this.getAllCategories()
           this.closeDeleteModal()
+          window.location.href = '/admin/category-list'
         }
     },
     computed: {},

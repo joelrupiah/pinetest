@@ -53,7 +53,7 @@ class EventController extends Controller
             'title' => 'required',
             'image' => 'required',
             'start_date' => 'required',
-            'end_date' => 'required',
+            'end_date' => 'nullable',
             'description' => 'required',
             'start_time' => 'nullable',
             'end_time' => 'nullable',

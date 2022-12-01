@@ -49,6 +49,7 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
     Route::resource('grade', GradeController::class);
     Route::resource('gallery', GalleryController::class);
     Route::resource('category', CategoryController::class);
+    Route::delete('delete-category/{id}', [CategoryController::class, 'destroy']);
     // Route::resource('event', EventController::class);
     Route::get('get-admin-grade', [GradeController::class, 'getAdminGrades']);
 

@@ -10,7 +10,7 @@ export const category = {
     },
     actions: {
         deleteCategory(payload){
-            Api().delete(`/admin/category/${payload}`)
+            Api().delete(`/admin/delete-category/${payload}`)
                 .then(() => {
                 })
         }
