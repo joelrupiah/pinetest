@@ -202,7 +202,7 @@
         </section>
         <!--End Gallery Area-->
 
-        
+
 
         <!-- Application Dialog -->
 
@@ -210,7 +210,7 @@
 
     </div>
 </template>
-    
+
 <script>
 import HomeSlider from '../temp/HomeSlider.vue'
 import HomeEvents from '../temp/HomeEvents.vue';
@@ -228,7 +228,6 @@ export default {
         return {
             abouts: [],
             abouthistories: [],
-            faqs: [],
             carousels: [],
             chooses: [],
             sitesettings: [],
@@ -271,11 +270,6 @@ export default {
         getUserCarousel: async function () {
             axios.get("/get-user-carousels").then((response) => {
                 this.carousels = response.data.carousels;
-            });
-        },
-        getUserFaqs: async function () {
-            axios.get("/get-user-faqs").then((response) => {
-                this.faqs = response.data.faqs;
             });
         },
         getAboutHistory: async function () {
@@ -335,14 +329,13 @@ export default {
         this.getAllGalleries();
         this.getUserAbout();
         this.getAboutHistory();
-        this.getUserFaqs();
         this.getUserCarousel();
         this.getUserChooses();
         this.getSiteSettings();
     },
 };
 </script>
-    
+
 <style scoped>
 .card1 {
     background-color: #023020;
@@ -364,4 +357,3 @@ export default {
     color: #a4adb8;
 }
 </style>
-    
