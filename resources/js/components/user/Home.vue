@@ -80,10 +80,11 @@
                                                     <img src="/frontend/images/resources/choose-image-one.jpg">
                                                 </div>
                                                 <div>
-                                                    <h5
-                                                        style="color:royalblue;padding-bottom:1px;border-bottom:2px solid royalblue;width:22%;text-decoration:none">
-                                                        Montessori</h5>
-                                                    <span>
+                                                    <a href="/enquiry-and-admission"><h5
+                                                        style="font-size:20px;color:royalblue;padding-bottom:1px;border-bottom:2px solid royalblue;width:22%;text-decoration:none">
+                                                        Montessori
+                                                    </h5></a>
+                                                    <span style="font-size:15px">
                                                         Montessori education is based on self directed activity, hands
                                                         on learning and collaborative play.
                                                         The children in a Montessori class make creative choices in
@@ -113,10 +114,11 @@
                                                     <img src="/frontend/images/resources/choose-image-one.jpg">
                                                 </div>
                                                 <div>
-                                                    <h5
-                                                        style="color:royalblue;padding-bottom:1px;border-bottom:2px solid royalblue;width:8%;text-decoration:none">
+                                                    <a href="/enquiry-and-admission"><h5
+                                                        style="font-size:20px;color:royalblue;padding-bottom:1px;border-bottom:2px solid royalblue;width:8%;text-decoration:none">
                                                         CBC</h5>
-                                                    <span>
+                                                    </a>
+                                                    <span style="font-size:15px">
                                                         CBC focuses on the knowledge, skills and abilities of learners,
                                                         which allow for self-paced progress.
                                                         It provides learners with the support they need to succeed.

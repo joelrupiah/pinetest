@@ -6,24 +6,39 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="map-content-box">
                             <div class="sec-title">
-                                <div class="title mb-2" style="color: green">
+                                <div class="title mb-2" style="color: royalblue">
                                     Get quality education
                                 </div>
                                 <!-- <h2 class="text-white mb-2">Curriculum</h2> -->
-                                <p style="color:white;">
+                                <p class="mb-4" style="color:white;font-size: larger;">
                                     <!-- For Kindergarten, we use the highly effective and
                                     internationally acclaimed Montessori method of teaching before
                                     ushering in the CBC (Competency Based Curriculum) Kenyan
                                     Curriculum. We have highly qualified teachers for both
                                     programmes. -->
-                                    Pinecrest Academy is an institution whose ethos and practise is based upon Christian
+                                    <!-- Pinecrest Academy is an institution whose ethos and practise is based upon Christian
                                     teachings.
                                     We seek to provide an environment that is positive, stimulating and focused on
                                     academic excellence accompanied with high moral characteristics and values.
                                     We aim to provide a private school education that enhances the learners competencies
                                     which will enable them compete effectively in today's and tomorrow's ever changing
-                                    world.
+                                    world. -->
+                                    Pinecrest Academy is a private school located within Juja South Estate in Juja.
+                                    The school aims to set a standard of educational excellence and is an institution
+                                    whose ethos and practice is based upon Christian teachings.
                                 </p>
+                                <p class="mb-4" style="color:white;font-size: larger;">
+                                    We aim to provide a private school education that will be acknowledged for effective
+                                    teaching and encouragement or personal excellence.
+                                </p>
+
+                                <p style="color:white;font-size: larger;">
+                                    We consider it a priviledge to share in your child's educational journey
+                                    and we look forward to working together with you to provide an environment 
+                                    that is positive, stimulating and focused on academic excellence accompanied
+                                    with high moral characteristics.
+                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -109,7 +124,7 @@
                                         <div class="col-xl-6">
                                             <div class="single-box">
                                                 <el-button :loading="loading" size="mini"
-                                                    style="background-color: #023020; color: white"
+                                                    style="background-color:royalblue;color:gold;font-weight:bold"
                                                     @click.prevent="submitApplication()">{{
                                                             loading
                                                                 ? "Submitting Application....."
@@ -120,7 +135,7 @@
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="single-box">
-                                                <el-button size="mini" style="background-color: #023020; color: white"
+                                                <el-button size="mini" style="background-color:royalblue;color:gold;font-weight:bold"
                                                     @click="checkStatusDialog = true">
                                                     Check Status
                                                 </el-button>
@@ -161,7 +176,7 @@
 <script>
 export default {
     name: 'HomeApplication',
-    data(){
+    data() {
         return {
             show: false,
             checkStatusDialog: false,

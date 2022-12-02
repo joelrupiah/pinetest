@@ -28,13 +28,13 @@
                                                 <div class="card-body">
                                                     <p class="card-text lead" style="color:lightgreen"><small><strong>
                                                                 <u
-                                                                    style="padding-bottom:1px;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
+                                                                    style="padding-bottom:1px;border-bottom:2px solid lightgreen;width:30%;text-decoration:none;font-size:30px">
                                                                     Book a tour
                                                                 </u>
                                                             </strong></small></p>
                                                     <p class="card-text"><small>
                                                             <blockquote class="blockquote">
-                                                                <footer class="blockquote-footer text-white"><small>
+                                                                <footer class="blockquote-footer text-white" style="font-size:20px"><small>
                                                                         Schedule a tour of our school and meet with the
                                                                         office administration
                                                                         and school staff. Please click the button to
@@ -53,7 +53,7 @@
 
                                 </div>
                                 <div class="col-xl-6 col-lg-6">
-                                    <div class="card border-0" style="width:100%;height:auto">
+                                    <div class="card border-0" style="width:100%;height:205px">
                                         <div class="row no-gutters">
                                             <div class="col-md-4">
                                                 <img src="frontend/images/resources/choose-image-one.jpg"
@@ -63,13 +63,13 @@
                                                 <div class="card-body">
                                                     <p class="card-text lead" style="color:lightgreen"><small><strong>
                                                                 <u
-                                                                    style="padding-bottom:1px;border-bottom:2px solid lightgreen;width:30%;text-decoration:none">
+                                                                    style="padding-bottom:1px;border-bottom:2px solid lightgreen;width:30%;text-decoration:none;font-size:30px">
                                                                     Submit an enquiry
                                                                 </u>
                                                             </strong></small></p>
                                                     <p class="card-text"><small>
                                                             <blockquote class="blockquote">
-                                                                <footer class="blockquote-footer text-white"><small>
+                                                                <footer class="blockquote-footer text-white" style="font-size:20px"><small>
                                                                         For more information and admission requirements
                                                                         and procedures, click the link below.
                                                                     </small></footer>
