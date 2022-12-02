@@ -131,7 +131,7 @@
                     </p>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-10">
                         <div class="appointment-box wow slideInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="title-box">
                                 <!-- <h2 class="text-center" style="color: royalblue">Book a tour</h2> -->
@@ -202,7 +202,7 @@
                                                 <el-button size="mini"
                                                     style="background-color:royalblue;color:gold;font-weight:bold"
                                                     @click.prevent="sendEnquiry()">
-                                                    Send an enquiry
+                                                    Book a tour
                                                 </el-button>
                                             </div>
                                         </div>
