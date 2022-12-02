@@ -222,7 +222,7 @@
                                             <small class="text-danger text-sm" v-if="errors.message">
                                                 {{ errors.message[0] }}
                                             </small>
-                                            <el-input type="textarea" :autosize="{ minRows: 4, maxRows: 8}" placeholder="Message (required)" size="mini" v-model="enquiryform.message">
+                                            <el-input type="textarea" :autosize="{ minRows: 6, maxRows: 10}" placeholder="Message (required)" size="mini" v-model="enquiryform.message">
                                             </el-input>
                                         </div>
                                     </div>
