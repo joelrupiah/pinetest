@@ -144,7 +144,7 @@
     <section class="working-process-area" style="margin-top:-150px">
       <div class="container">
         <div class="sec-title text-center">
-          <div class="title">Why Choose <span>Us</span></div>
+          <div class="title">Why Choose Us</div>
           <p>We are enthusiastic and passionate about young learners, our values
             are dear to us.</p>
           <!-- <div class="title">Main Header <span>process</span></div> -->
