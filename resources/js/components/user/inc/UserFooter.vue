@@ -42,12 +42,14 @@
               <div class="usefull-links">
                 <ul class="float-left">
                   <li>
-                    <a href="https://www.facebook.com/pinecrestjujasouth/?ref=page_internal" target="_blank" style="color:#4267B2">
+                    <a href="https://www.facebook.com/pinecrestjujasouth/?ref=page_internal" target="_blank"
+                    style="color:#4267B2;font-weight:bold">
                       Facebook
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/@pinecrestacademy3555" target="_blank" style="color:#FF0000">
+                    <a href="https://www.youtube.com/@pinecrestacademy3555" target="_blank"
+                    style="color:#FF0000;font-weight:bold">
                       Youtube
                     </a>
                   </li>
@@ -61,7 +63,7 @@
           <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
             <div class="single-footer-widget pdtop50-s4">
               <div class="title-style2">
-                <p style="color:gold;font-size:large;font-weight:bold;">Subscribe to Our Newsletter</p>
+                <p style="color:gold;font-size:large;font-weight:bold;">Get more information</p>
               </div>
               <div class="subscribe-box">
                 <form class="subscribe-form" action="#">
@@ -71,12 +73,12 @@
                   </p>
                   <button class="btn-one" type="submit" @click.prevent="subscribe"
                   style="background-color:royalblue;color:gold">
-                    Subscribe<span class="flaticon-next"></span>
+                    More Info<span class="flaticon-next"></span>
                   </button>
                 </form>
                 <div class="text">
                   <p class="text-white">
-                    <small>Subscribe to get the latest news and updates</small>
+                    <small>Get the latest news and updates</small>
                   </p>
                 </div>
               </div>

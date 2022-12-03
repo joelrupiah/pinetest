@@ -6991,7 +6991,6 @@ box-shadow: 0px -4px 10px 3px #e8e8e8;
     font-size: 14px;
     line-height: 18px;
     font-weight: 600;
-    text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
 }
 .breadcrumb-area .inner-content-box .title-s2 h1{
@@ -7000,7 +6999,6 @@ box-shadow: 0px -4px 10px 3px #e8e8e8;
     line-height: 62px;
     font-weight: 700;
     margin: 14px 0 0;
-    text-transform: capitalize;
 }
 
 

@@ -28,7 +28,7 @@
                         <ul class="navigation clearfix">
                             <li><a href="/">Home</a></li>
                             <li><a href="/about-us">About</a></li>
-                            <li class="dropdown"><a href="#!">Pages</a>
+                            <li class="dropdown"><a href="#!">Programmes</a>
                                 <ul>
                                     <li><a href="/activites-and-facilities">Facilities & Activities</a></li>
                                     <li><a href="/enquiry-and-admission">Enquiries and Admission</a></li>

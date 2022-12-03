@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="button">
                                     <a class="btn-one wow slideInUp" data-wow-delay="0ms" data-wow-duration="1500ms" href="#send-an-inquiry" style="background-color:royalblue;color:gold">
-                                        Send and Enquiry
+                                        Send an Enquiry
                                         <span class="flaticon-next"></span>
                                     </a>
                                 </div>
@@ -95,7 +95,7 @@
                                                     <span class="icon-tick"></span>
                                                 </div>
                                                 <div class="text">
-                                                    <span style="color:royalblue">Stage 3</span>
+                                                    <span style="color:royalblue">Stage 4</span>
                                                     <h3>Acceptance and Admission</h3>
                                                     <p>If the interview is successful, you will be sent an admission form which you will
                                                         fill an produce it during the admission day.</p>
@@ -129,7 +129,7 @@
                                 <img src="frontend/images/about-page.jpg" alt="Image" style="height:350px">
                             </div> -->
                         <div class="text">
-                            <p style="font-size: 25px;font-weight: bold;color:lightgreen;padding-bottom:1px;border-bottom:2px solid lightgreen;width:25%;text-decoration:none">
+                            <!-- <p style="font-size: 25px;font-weight: bold;color:lightgreen;padding-bottom:1px;border-bottom:2px solid lightgreen;width:25%;text-decoration:none">
                                 Pinecrest Academy
                             </p>
                             <div class="inner">
@@ -141,7 +141,7 @@
                                     We consider it a privilege to share in your child’s educational journey and we look forward to working
                                     together with you to provide an environment that is positive, stimulating and focussed on academic
                                     excellence accompanied with high moral characteristics.</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
