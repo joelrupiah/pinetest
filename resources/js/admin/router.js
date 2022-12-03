@@ -23,6 +23,8 @@ import GradeList from '../components/admin/pages/grade/GradeList'
 
 import CategoryList from '../components/admin/pages/category/CategoryList'
 
+import BookingList from '../components/admin/pages/booking/BookingList'
+
 import ApplicationList from '../components/admin/pages/application/ApplicationList'
 import ReplyEmailApplication from '../components/admin/pages/application/ReplyEmailApplication'
 import ApplicationDetails from '../components/admin/pages/application/ApplicationDetails'
@@ -92,7 +94,7 @@ const router = new VueRouter({
         {path:'/admin/category-list', component: CategoryList, name: 'CategoryList', meta: { requiresAuth: true } },
 
         {path:'/admin/grade-list', component: GradeList, name: 'GradeList', meta: { requiresAuth: true } },
-        
+
         {path:'/admin/application-list', component: ApplicationList, name: 'ApplicationList', meta: { requiresAuth: true } },
         {path:'/admin/reply-email-application/:id', component: ReplyEmailApplication, name: 'ReplyEmailApplication', meta: { requiresAuth: true } },
         {path:'/admin/show-application-details/:id', component: ApplicationDetails, name: 'ApplicationDetails', meta: { requiresAuth: true } },
@@ -107,7 +109,7 @@ const router = new VueRouter({
         {path:'/admin/admin-about-us-list', component: AdminAboutUsList, name: 'AdminAboutUsList', meta: { requiresAuth: true } },
         {path:'/admin/create-admin-about-us', component: CreateAdminAboutUs, name: 'CreateAdminAboutUs', meta: { requiresAuth: true } },
         {path:'/admin/edit-admin-about-us/:id', component: EditAdminAboutUs, name: 'EditAdminAboutUs', meta: { requiresAuth: true } },
-       
+
         {path:'/admin/admin-about-history-list', component: AdminAboutHistoryList, name: 'AdminAboutHistoryList', meta: { requiresAuth: true } },
         {path:'/admin/create-about-history', component: CreateAboutHistory, name: 'CreateAboutHistory', meta: { requiresAuth: true } },
         {path:'/admin/edit-about-history/:id', component: EditAboutHistory, name: 'EditAboutHistory', meta: { requiresAuth: true } },

@@ -14,7 +14,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <router-link :to="{name: 'CreateEvent'}">
-                                <el-button type="primary" icon="el-icon-plus" size="mini" class="mb-2"> 
+                                <el-button type="primary" icon="el-icon-plus" size="mini" class="mb-2">
                                     Create Event</el-button>
                             </router-link>
                             <p class="card-text d-flex justify-content-end">Search Input.</p>
