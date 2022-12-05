@@ -195,7 +195,7 @@
                             <!-- <span>Leave your information here and get reply from our expert in 24 hours, don’t hesitate to ask.</span> -->
                         </div>
                         <div class="appointment">
-                            <form class="appointment-form">
+                            <form class="appointment-form" style="padding-bottom: 22px;">
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="single-box">

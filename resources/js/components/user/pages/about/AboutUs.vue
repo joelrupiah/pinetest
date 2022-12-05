@@ -53,8 +53,8 @@
           <div class="col-xl-6 col-lg-6 col-md-6" v-for="abou in abouts" :key="abou.id">
             <div class="project-description-content">
               <div class="sec-title">
-                <!-- <p style="font-size: 30px">fwfefefe</p> -->
-                <p v-html="abou.heading" style="font-size: 30px"></p>
+                <p style="font-size: 30px">Pinecrest Academy History</p>
+                <!-- <p v-html="abou.heading" style="font-size: 30px"></p> -->
               </div>
               <div class="inner-content">
                 <p v-html="abou.description"></p>
