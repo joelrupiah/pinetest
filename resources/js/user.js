@@ -34,6 +34,8 @@ import VueGeolocation from 'vue-browser-geolocation'
 
 import * as VueGoogleMaps from 'vue2-google-maps'
 
+import Datepicker from 'vuejs-datepicker';
+
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyA2QkTkJ6WGUlGQnhjI46VvmyGWLfALy64',
@@ -49,6 +51,7 @@ Vue.use(ViewUI)
 Vue.use(ElementUI)
 Vue.use(Notifications)
 Vue.use(VueGeolocation)
+Vue.use(Datepicker)
 // End VueJs frontend frameworks
 
 const admin = new Vue({

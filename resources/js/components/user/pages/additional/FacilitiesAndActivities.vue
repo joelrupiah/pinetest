@@ -1,5 +1,6 @@
 <template>
 <div id="facilities-and-activities">
+    <notifications group="booking" position="top right" />
     <!--Start breadcrumb area-->
     <section class="breadcrumb-area style2" style="
         background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(frontend/images/about-page.jpg);
@@ -214,68 +215,66 @@
                             <!-- <span>Leave your information here and get reply from our expert in 24 hours, don’t hesitate to ask.</span> -->
                         </div>
                         <div class="appointment">
-                            <form class="appointment-form">
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="single-box">
-                                            <small class="text-danger text-sm" v-if="errors.full_name">
-                                                {{ errors.full_name[0] }}
-                                            </small>
-                                            <el-input placeholder="Full Name (required)" size="mini" v-model="enquiryform.full_name">
-                                            </el-input>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="single-box">
-                                            <small class="text-danger text-sm" v-if="errors.email">
-                                                {{ errors.email[0] }}
-                                            </small>
-                                            <el-input placeholder="Email (required)" size="mini" v-model="enquiryform.email">
-                                            </el-input>
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>Full Name</div>
+                                    <el-input placeholder="Please enter your name" v-model="form.name" size="mini"></el-input>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="single-box">
-                                            <small class="text-danger text-sm" v-if="errors.phone_number">
-                                                {{ errors.phone_number[0] }}
-                                            </small>
-                                            <el-input placeholder="Mobile Number (required)" size="mini" v-model="enquiryform.phone_number">
-                                            </el-input>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="single-box">
-                                            <small class="text-danger text-sm" v-if="errors.date">
-                                                {{ errors.date[0] }}
-                                            </small>
-                                            <el-input placeholder="Date for the tour (required)" size="mini" v-model="enquiryform.date">
-                                            </el-input>
-                                        </div>
-                                    </div>
+                                <div class="col-md-6">
+                                    <div>Email Address</div>
+                                    <el-input placeholder="Please email address" v-model="form.email" size="mini"></el-input>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="single-box">
-                                            <small class="text-danger text-sm" v-if="errors.message">
-                                                {{ errors.message[0] }}
-                                            </small>
-                                            <el-input type="textarea" :autosize="{ minRows: 4, maxRows: 8 }" placeholder="Where did you hear about us (required)" size="mini" v-model="enquiryform.message">
-                                            </el-input>
-                                        </div>
-                                    </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>Mobile Number</div>
+                                    <el-input placeholder="Please enter your mobile number" v-model="form.phone" size="mini"></el-input>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="single-box">
-                                            <el-button size="mini" style="background-color:royalblue;color:gold;font-weight:bold" @click.prevent="sendEnquiry()">
-                                                Book a tour
-                                            </el-button>
-                                        </div>
-                                    </div>
+                                <div class="col-md-6">
+                                    <div>Date of Visit</div>
+                                    <el-date-picker v-model="form.date" size="mini" type="date" placeholder="Pick a day">
+                                    </el-date-picker>
                                 </div>
-                            </form>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>Current physical address</div>
+                                    <el-input placeholder="Juja, Kiambu Kenya" v-model="form.address" size="mini"></el-input>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>Ages of children to enrol</div>
+                                    <el-input placeholder="2, 4, 6" v-model="form.ages" size="mini"></el-input>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>Where did you hear about us</div>
+                                    <el-select v-model="form.heard" class="mb-2" size="mini" placeholder="Please select an option" style="width:100%">
+                                        <el-option label="Facebook" value="0"></el-option>
+                                        <el-option label="Youtube" value="1"></el-option>
+                                        <el-option label="Twitter" value="2"></el-option>
+                                        <el-option label="Broncures/Fliers" value="3"></el-option>
+                                        <el-option label="Word of mouth" value="4"></el-option>
+                                        <el-option label="Other(s) please specify" value="5"></el-option>
+                                    </el-select>
+                                    <div>If (other) please specify</div>
+                                    <el-input placeholder="Please specify" v-model="form.other" size="mini"></el-input>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <el-button @click="bookTour()" size="mini" :loading="loading" style="background-color:royalblue;color:gold;font-weight:bold">
+                                        {{
+                                              loading ? "Submitting data....." : "Book a tour"
+                                          }}
+                                    </el-button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -288,25 +287,59 @@
 </template>
 
 <script>
+import Axios from 'axios'
 export default {
     name: 'FacilitiesAndActivities',
     data() {
         return {
             loading: false,
-            enquiryform: {
-                full_name: '',
+            form: {
+                name: '',
                 email: '',
-                phone_number: '',
+                phone: '',
                 date: '',
-                subject: '',
-                message: ''
+                ages: '',
+                address: '',
+                heard: '',
+                other: ''
             },
             errors: {},
         }
     },
     methods: {
-        sendEnquiry: async function() {
-            console.log(this.enquiryform)
+        bookTour: async function() {
+            this.loading = true
+            Axios.post('book-tour', this.form)
+                .then(() => {
+
+                })
+                .catch((error) => {
+                    if (error.response.status === 422) {
+                        this.errors = error.response.data.errors;
+                        this.$notify({
+                            group: 'booking',
+                            type: 'danger',
+                            title: 'Enter required details',
+                            text: 'Please contact support for advice. Thank you'
+                        });
+                    } else if (error.response.status === 500) {
+                        this.$notify({
+                            group: 'booking',
+                            type: 'danger',
+                            title: 'Application failed',
+                            text: 'Please contact support for advice. Thank you'
+                        });
+                    } else if (error.response.status === 405) {
+                        this.$notify({
+                            group: "booking",
+                            type: "danger",
+                            title: "Application failed",
+                            text: "Please contact  support for advice. Thank you",
+                        });
+                    }
+                    this.loading = false;
+                })
+            this.loading = false
         },
     },
 }
