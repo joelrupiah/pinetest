@@ -80,7 +80,8 @@
                                                 <img src="/frontend/images/resources/choose-image-one.jpg">
                                             </div>
                                             <div>
-                                                <p style="font-size:20px;font-weight:bold;color:royalblue;padding-bottom:1px;border-bottom:2px solid royalblue;width:50%;text-decoration:none">
+                                                <p class="mb-1"
+                                                style="font-size:20px;font-weight:bold;color:royalblue;width:50%;text-decoration:none">
                                                     Montessori ( 2 yrs to 4 yrs )
                                                 </p>
                                                 <span style="font-size:15px">
@@ -111,11 +112,12 @@
                                         <vs-card actionable class="cardx">
                                             <div slot="media">
                                                 <img 
-                                                src="/frontend/images/cbc.jpg"
+                                                src="/frontend/images/cbc-one.jpg"
                                                 style="width:100%;height:320px;object-fit: cover;">
                                             </div>
                                             <div style="padding-bottom: 22px;">
-                                                <p style="font-size:20px;font-weight:bold;color:royalblue;padding-bottom:1px;border-bottom:2px solid royalblue;width:50%;text-decoration:none">
+                                                <p class="mb-1"
+                                                style="font-size:20px;font-weight:bold;color:royalblue;width:50%;text-decoration:none">
                                                     CBC ( PP2 to Grade 6 )</p>
                                                 <span style="font-size:15px;">
                                                     CBC focuses on the knowledge, skills and abilities of learners,
