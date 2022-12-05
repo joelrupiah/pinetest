@@ -92,7 +92,7 @@
                                                     Children work in groups and individually to discover and explore
                                                     knowledge of the world and to develop their maximum potential.
                                                     Every material in a Montessori classroom supports an aspect of a
-                                                    child development, creating a match between a child's natutal
+                                                    child's development, creating a match between a child's natutal
                                                     interest and the available activities.
                                                     Children can learn through their own experiences and at their
                                                     own pace.
@@ -110,12 +110,14 @@
                                     <vs-col type="flex" vs-justify="center" vs-align="center">
                                         <vs-card actionable class="cardx">
                                             <div slot="media">
-                                                <img src="/frontend/images/resources/choose-image-one.jpg">
+                                                <img 
+                                                src="/frontend/images/cbc.jpg"
+                                                style="width:100%;height:320px;object-fit: cover;">
                                             </div>
-                                            <div>
+                                            <div style="padding-bottom: 22px;">
                                                 <p style="font-size:20px;font-weight:bold;color:royalblue;padding-bottom:1px;border-bottom:2px solid royalblue;width:50%;text-decoration:none">
                                                     CBC ( PP2 to Grade 6 )</p>
-                                                <span style="font-size:15px">
+                                                <span style="font-size:15px;">
                                                     CBC focuses on the knowledge, skills and abilities of learners,
                                                     which allow for self-paced progress.
                                                     It provides learners with the support they need to succeed.
