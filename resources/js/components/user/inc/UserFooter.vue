@@ -104,8 +104,8 @@
                     </div>
                     <div class="text">
                       <p>
-                        Juja, Kiambu County Kenya<br />
-                        Juja South Estate
+                        Juja South Estate, Juja<br />
+                        Kiambu County Kenya
                       </p>
                     </div>
                   </div>

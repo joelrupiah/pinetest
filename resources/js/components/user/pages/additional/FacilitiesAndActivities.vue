@@ -199,7 +199,7 @@
         width: 100%;
         object-fit: cover;
       ">
-        <div class="container" style="margin-top:-80px">
+        <div class="container" style="margin-top:-80px;width:100%">
             <div class="sec-title with-text max-width text-center wow fadeInDown" data-wow-delay="100ms" data-wow-duration="1200ms">
                 <div class="title clr-white" style="color: royalblue">Book a Tour</div>
                 <p class="bottom-text text-white">

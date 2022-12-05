@@ -35,8 +35,8 @@
           <div class="col-xl-6 col-lg-6 col-md-6" v-for="about in abouts" :key="about.id">
             <div class="video-holder-box">
               <div class="img-holder">
-                <img :src="fileLinkOne(about.imageOne)" alt="About Image"
-                  style="width: 100%; height: 650; object-fit: cover" />
+                <img :src="fileLinkOne(about.imageOne)" alt="About Image" 
+                style="width: 100%; height: 650px; object-fit: cover" />
                 <div class="icon-holder">
                   <div class="icon">
                     <div class="inner text-center">
