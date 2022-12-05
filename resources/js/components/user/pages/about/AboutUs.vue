@@ -12,8 +12,8 @@
           <div class="col-xl-12">
             <div class="inner-content-box clearfix">
               <div class="title-s2 text-center">
-                <span style="color:royalblue">Pinecrest Academy</span>
-                <h1>About Us</h1>
+                <span style="color:royalblue;font-size: 40px;">Pinecrest Academy</span>
+                <h4 style="color:white">About Us</h4>
               </div>
               <div class="breadcrumb-menu float-left" style="margin-top:-50px">
                 <ul class="clearfix">
