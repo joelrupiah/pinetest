@@ -13,12 +13,12 @@
                     <div class="inner-content-box clearfix">
                         <div class="title-s2 text-center">
                             <span style="color:royalblue;font-size: 40px;">Pinecrest Academy</span>
-                            <h4>Enquiries and Admission</h4>
+                            <h4 style="color:white">Enquiries and Admission</h4>
                         </div>
                         <div class="breadcrumb-menu float-left" style="margin-top:-50px">
                             <ul class="clearfix">
                                 <li><a href="/">Home</a></li>
-                                <li class="active">Enquiries and Admission</li>
+                                <!-- <li class="active">Enquiries and Admission</li> -->
                             </ul>
                         </div>
                     </div>
