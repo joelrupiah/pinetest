@@ -184,7 +184,7 @@
         background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)),url(frontend/images/slides/tution-block.jpg);
         width: 100%;
         object-fit: cover;
-        margin-top: -120px
+        margin-top: -100px
       ">
         <div class="container">
             <div class="row">
