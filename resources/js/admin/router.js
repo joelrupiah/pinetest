@@ -24,6 +24,7 @@ import GradeList from '../components/admin/pages/grade/GradeList'
 import CategoryList from '../components/admin/pages/category/CategoryList'
 
 import BookingList from '../components/admin/pages/booking/BookingList'
+import BookingDetails from '../components/admin/pages/booking/BookingDetails'
 
 import ApplicationList from '../components/admin/pages/application/ApplicationList'
 import ReplyEmailApplication from '../components/admin/pages/application/ReplyEmailApplication'
@@ -69,6 +70,9 @@ import ChooseList from '../components/admin/pages/choose/ChooseList.vue'
 import CreateChoose from '../components/admin/pages/choose/CreateChoose.vue'
 import EditChoose from '../components/admin/pages/choose/EditChoose.vue'
 
+import EnquiryList from '../components/admin/pages/enquiry/EnquiryList.vue'
+import EnquiryDetails from '../components/admin/pages/enquiry/EnquiryDetails.vue'
+
 const router = new VueRouter({
     mode: 'history',
     linkActiveClass: 'active',
@@ -95,9 +99,15 @@ const router = new VueRouter({
 
         {path:'/admin/grade-list', component: GradeList, name: 'GradeList', meta: { requiresAuth: true } },
 
+        {path:'/admin/bookings-list', component: BookingList, name: 'BookingList', meta: { requiresAuth: true } },
+        {path:'/admin/booking-details/:id', component: BookingDetails, name: 'BookingDetails', meta: { requiresAuth: true } },
+
         {path:'/admin/application-list', component: ApplicationList, name: 'ApplicationList', meta: { requiresAuth: true } },
         {path:'/admin/reply-email-application/:id', component: ReplyEmailApplication, name: 'ReplyEmailApplication', meta: { requiresAuth: true } },
         {path:'/admin/show-application-details/:id', component: ApplicationDetails, name: 'ApplicationDetails', meta: { requiresAuth: true } },
+
+        {path:'/admin/enquiries-list', component: EnquiryList, name: 'EnquiryList', meta: { requiresAuth: true } },
+        {path:'/admin/enquiry-details/:id', component: EnquiryDetails, name: 'EnquiryDetails', meta: { requiresAuth: true } },
 
         {path:'/admin/gallery-list', component: GalleryList, name: 'GalleryList', meta: { requiresAuth: true } },
         {path:'/admin/create-gallery', component: CreateGallery, name: 'CreateGallery', meta: { requiresAuth: true } },

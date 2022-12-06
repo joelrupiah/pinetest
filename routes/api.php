@@ -23,6 +23,8 @@ use App\Http\Controllers\ContactSettingController;
 use App\Http\Controllers\ChooseController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FeeController;
+use App\Http\Controllers\EnquiryController;
+use App\Http\Controllers\BookingController;
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
@@ -127,6 +129,14 @@ Route::middleware('auth:api')->prefix('admin')->group(function () {
 
     Route::post('send-fee-request-email/{id}', [FeeController::class, 'sendFeeEmail']);
 
+    Route::get('get-all-enquiries', [EnquiryController::class, 'index']);
+    Route::get('get-enquiry-detail/{id}', [EnquiryController::class, 'show']);
+    Route::post('update-enquiry/{id}', [EnquiryController::class, 'update']);
+
+    Route::get('get-all-bookings', [BookingController::class, 'index']);
+    Route::post('update-booking/{id}', [BookingController::class, 'update']);
+    Route::get('get-booking-detail/{id}', [BookingController::class, 'show']);
+
 });
 
 Route::get('get-user-about', [AboutController::class, 'getUserAbout']);
@@ -157,6 +167,10 @@ Route::post('send-message', [InboxController::class, 'store']);
 Route::post('submit-application', [ApplicationController::class, 'store']);
 
 Route::post('track-application', [ApplicationController::class, 'trackApplication']);
+
+Route::post('submit-enquiry', [EnquiryController::class, 'store']);
+
+Route::post('send-booking-application', [BookingController::class, 'store']);
 
 Route::post('request-fees', [FeeController::class, 'store']);
 

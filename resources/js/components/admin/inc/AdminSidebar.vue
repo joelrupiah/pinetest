@@ -51,6 +51,11 @@
                 </router-link>
               </li>
               <li class="nav-item">
+                <router-link class="nav-link pl-3" :to="{ name: 'EnquiryList' }">
+                  <span class="ml-1 item-text">Enquiries</span>
+                </router-link>
+              </li>
+              <li class="nav-item">
                 <router-link class="nav-link pl-3" :to="{ name: 'BookingList' }">
                   <span class="ml-1 item-text">Bookings</span>
                 </router-link>

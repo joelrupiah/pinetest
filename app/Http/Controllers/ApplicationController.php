@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Application;
 use Illuminate\Http\Request;
 use App\Mail\ApplicationCode;
+use App\Mail\AdminApplication;
 
 class ApplicationController extends Controller
 {
@@ -75,10 +76,18 @@ class ApplicationController extends Controller
             'title' => 'Pinecrest Academy',
             'student_name' => $request->student_name,
             'body' => 'Dear ' . $request->parent_name . '. Following your application for ' . $request->student_name . 
-            ', the track code generated is ' . $track_code . '. Go back to the application to track your application status',
+            ', the track code generated is ' . $track_code . '. Please access the website to track your application status',
             'track_code' => $track_code,
         ];
 
+        $userData = [
+            'title' => 'Pinecrest Academy',
+            'student_name' => $request->student_name,
+            'parent_name' => $request->parent_name,
+            'body' => 'There was an application from ' . $request->parent_name . 'applying for ' . $request->student_name . '. Please login to the administrator page to process the application.'
+        ];
+
+        \Mail::to(env('MAIL_USERNAME'))->send(new AdminApplication($userData));
         \Mail::to($request->parent_email)->send(new ApplicationCode($data));
 
         return response()->json('success', 200);

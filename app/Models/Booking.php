@@ -10,12 +10,17 @@ class Booking extends Model
     use HasFactory;
 
     protected $fillable = [
-      'name',
-      'email',
-      'phone',
-      'date',
-      'ages',
-      'address',
-      'heard'
-    ];
+        'name',
+        'email',
+        'phone',
+        'date',
+        'ages',
+        'address',
+        'heard',
+        'other'
+      ];
+
+      protected $casts = [
+        'date' => 'datetime'
+      ];
 }
