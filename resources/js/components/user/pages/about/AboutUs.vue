@@ -11,15 +11,9 @@
         <div class="row">
           <div class="col-xl-12">
             <div class="inner-content-box clearfix">
-              <div class="title-s2 text-center">
-                <span style="color:royalblue;font-size: 40px;">Pinecrest Academy</span>
-                <h4 style="color:white">About Us</h4>
-              </div>
-              <div class="breadcrumb-menu float-left" style="margin-top:-50px">
-                <ul class="clearfix">
-                  <li><a href="/">Home</a></li>
-                  <li class="active">About Us</li>
-                </ul>
+              <div class="title-s2 text-center" style="vertical-align: middle;">
+                <span style="color:royalblue;font-size: 25px;">Pinecrest Academy</span>
+                <h4 style="color:white;font-size: 30px;">About Us</h4>
               </div>
             </div>
           </div>
@@ -53,11 +47,12 @@
           <div class="col-xl-6 col-lg-6 col-md-6" v-for="abou in abouts" :key="abou.id">
             <div class="project-description-content">
               <div class="sec-title">
-                <p style="font-size: 30px">Pinecrest Academy History</p>
+                <p style="font-size: 30px">Pinecrest History</p>
                 <!-- <p v-html="abou.heading" style="font-size: 30px"></p> -->
               </div>
               <div class="inner-content">
-                <p v-html="abou.description"></p>
+                <p style="font-size:15px" 
+                  v-html="abou.description"></p>
               </div>
             </div>
           </div>
@@ -88,7 +83,7 @@
                   <img src="frontend/images/resources/changed.jpg" alt="Logo Image" />
                 </div>
                 <div class="text-box">
-                  <p>
+                  <p style="font-size:15px">
                     To create and provide an atmosphere for learners to excel.
                   </p>
                 </div>
@@ -107,7 +102,7 @@
                   <img src="frontend/images/resources/changed.jpg" alt="Logo Image" />
                 </div>
                 <div class="text-box">
-                  <p>
+                  <p style="font-size:15px">
                     To provide every learner with an opportunity to achieve
                     their full potential academically, emotionally, physically
                     and socially within a healthy, safe and enjoyable school
@@ -129,7 +124,7 @@
                   <img src="frontend/images/resources/changed.jpg" alt="Logo Image" />
                 </div>
                 <div class="text-box">
-                  <p>Learn, Adapt and Excel.</p>
+                  <p style="font-size:15px">Learn, Adapt and Excel.</p>
                 </div>
               </div>
             </div>
@@ -145,7 +140,7 @@
       <div class="container">
         <div class="sec-title text-center">
           <div class="title">Why Choose Us</div>
-          <p>We are enthusiastic and passionate about young learners, our values
+          <p style="font-size:20px">We are enthusiastic and passionate about young learners, our <strong style="color:black;font-size:20px">Values</strong>
             are dear to us.</p>
           <!-- <div class="title">Main Header <span>process</span></div> -->
         </div>
@@ -156,7 +151,7 @@
               <div class="top-box"><span>01</span></div>
               <div class="inner">
                 <h3>Respect</h3>
-                <p>We treat everyone with respect and courtesy.</p>
+                <p style="font-size:15px">We treat everyone with respect and courtesy.</p>
                 <div class="icon-holder">
                   <!-- <i class="fa-solid fa-face-saluting"></i> -->
                   <!-- <span class="icon-productive"></span> -->
@@ -171,7 +166,7 @@
               <div class="top-box"><span>02</span></div>
               <div class="inner">
                 <h3>Integrity</h3>
-                <p>We speak truthfully and act honestly.</p>
+                <p style="font-size:15px">We speak truthfully and act honestly.</p>
                 <div class="icon-holder">
                   <!-- <span class="icon-document"></span> -->
                 </div>
@@ -185,7 +180,7 @@
               <div class="top-box"><span>03</span></div>
               <div class="inner">
                 <h3>Independence</h3>
-                <p>We seek to be achievers and self-reliant.</p>
+                <p style="font-size:15px">We seek to be achievers and self-reliant.</p>
                 <div class="icon-holder">
                   <!-- <span class="icon-kitchen"></span> -->
                 </div>
@@ -199,7 +194,7 @@
               <div class="top-box"><span>04</span></div>
               <div class="inner">
                 <h3>Creativity</h3>
-                <p>We aim to be conveyors of new positive ideas.</p>
+                <p style="font-size:15px">We aim to be conveyors of new positive ideas.</p>
                 <div class="icon-holder">
                   <!-- <span class="icon-kitchen"></span> -->
                 </div>
@@ -213,7 +208,7 @@
               <div class="top-box"><span>05</span></div>
               <div class="inner">
                 <h3>Collaboration</h3>
-                <p>We seek to work with all to achieve excellence.</p>
+                <p style="font-size:15px">We seek to work with all to achieve excellence.</p>
                 <div class="icon-holder">
                   <!-- <span class="icon-kitchen"></span> -->
                 </div>
@@ -227,7 +222,7 @@
               <div class="top-box"><span>06</span></div>
               <div class="inner">
                 <h3>Humility</h3>
-                <p>We treat others as we would like them to treat us.</p>
+                <p style="font-size:15px">We treat others as we would like them to treat us.</p>
                 <div class="icon-holder">
                   <!-- <span class="icon-kitchen"></span> -->
                 </div>

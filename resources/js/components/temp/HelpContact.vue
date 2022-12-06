@@ -34,7 +34,8 @@
                                                             </strong></small></p>
                                                     <p class="card-text"><small>
                                                             <blockquote class="blockquote">
-                                                                <footer class="blockquote-footer text-white" style="font-size:20px"><small>
+                                                                <footer class="blockquote-footer text-white"
+                                                                    style="font-size:20px"><small>
                                                                         Schedule a tour of our school and meet with the
                                                                         office administration
                                                                         and school staff. Please click the button to
@@ -69,7 +70,8 @@
                                                             </strong></small></p>
                                                     <p class="card-text"><small>
                                                             <blockquote class="blockquote">
-                                                                <footer class="blockquote-footer text-white" style="font-size:20px"><small>
+                                                                <footer class="blockquote-footer text-white"
+                                                                    style="font-size:20px"><small>
                                                                         For more information and admission requirements
                                                                         and procedures, click the link below.
                                                                     </small></footer>
