@@ -116,11 +116,7 @@
       <section class="video-image-holder-area mb-5">
         <div class="container-fluid">
           <div class="row">
-            <div
-              class="col-xl-6 col-lg-6 col-md-6"
-              v-for="about in abouts"
-              :key="about.id"
-            >
+            <div class="col-xl-6 col-lg-6 col-md-6" v-for="about in abouts" :key="about.id">
               <div class="video-holder-box">
                 <div class="img-holder">
                   <img
@@ -196,7 +192,7 @@
       <!--End Video Image Gallery Area-->
     </div>
   </template>
-  
+
   <script>
   export default {
     name: "AboutUs",

@@ -169,7 +169,9 @@
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 filter-item contem trad">
                         <div class="single-project-style7">
                             <div class="img-holder">
-                                <img src="/frontend/images/transport.jpg" alt="Transport Image">
+                                <img 
+                                    style="width: 100%;height: 280px;object-fit: cover;"
+                                    src="/frontend/images/computer-one.jpg" alt="Computer Image">
                                 <div class="overlay-content">
                                     <div class="inner-content">
                                         <div class="title-box">

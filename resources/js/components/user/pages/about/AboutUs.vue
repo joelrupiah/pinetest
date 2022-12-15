@@ -29,7 +29,7 @@
           <div class="col-xl-6 col-lg-6 col-md-6" v-for="about in abouts" :key="about.id">
             <div class="video-holder-box">
               <div class="img-holder">
-                <img :src="fileLinkOne(about.imageOne)" alt="About Image" 
+                <img :src="fileLinkOne(about.imageOne)" alt="About Image"
                 style="width: 100%; height: 650px; object-fit: cover" />
                 <div class="icon-holder">
                   <div class="icon">
@@ -47,11 +47,11 @@
           <div class="col-xl-6 col-lg-6 col-md-6" v-for="abou in abouts" :key="abou.id">
             <div class="project-description-content">
               <div class="sec-title">
-                <p style="font-size: 30px">Pinecrest History</p>
+                <p style="font-size: 30px">History</p>
                 <!-- <p v-html="abou.heading" style="font-size: 30px"></p> -->
               </div>
               <div class="inner-content">
-                <p style="font-size:15px" 
+                <p style="font-size:15px"
                   v-html="abou.description"></p>
               </div>
             </div>
@@ -140,7 +140,7 @@
       <div class="container">
         <div class="sec-title text-center">
           <div class="title">Why Choose Us</div>
-          <p style="font-size:20px">We are enthusiastic and passionate about young learners, our <strong style="color:black;font-size:20px">Values</strong>
+          <p>We are enthusiastic and passionate about young learners, our <strong style="color:black">Values</strong>
             are dear to us.</p>
           <!-- <div class="title">Main Header <span>process</span></div> -->
         </div>

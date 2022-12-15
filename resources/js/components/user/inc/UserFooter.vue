@@ -43,7 +43,7 @@
                 <ul class="float-left">
                   <li>
                     <a href="https://www.facebook.com/pinecrestjujasouth/?ref=page_internal" target="_blank"
-                    style="color:#4267B2;font-weight:bold">
+                    style="color:royalblue;font-weight:bold">
                       Facebook
                     </a>
                   </li>
